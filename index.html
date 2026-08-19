@@ -1,14 +1,993 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Anit Kuckian</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Anit Kuckian | Mathematics</title>
+
+  <meta
+    name="description"
+    content="Personal academic website of Anit Kuckian, Sabarmati Bridge Fellow at IIT Gandhinagar."
+  >
+
+  <style>
+
+    /* =========================================================
+       BASIC SETTINGS
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background: #ffffff;
+      color: #202124;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #0b6574;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #083f49;
+    }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    .nav-container {
+      max-width: 1050px;
+      margin: auto;
+
+      padding: 16px 25px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #123f48;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #3d4548;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #0b6574;
+    }
+
+    /* =========================================================
+       MAIN CONTAINER
+    ========================================================= */
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 0 25px;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 520px;
+
+      display: flex;
+      align-items: center;
+
+      padding: 80px 0 70px;
+    }
+
+    .hero-content {
+      max-width: 820px;
+    }
+
+    .hero-small {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      font-size: 0.82rem;
+      font-weight: 600;
+
+      color: #0b6574;
+
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(3rem, 8vw, 5.3rem);
+      line-height: 1.05;
+
+      font-weight: 500;
+
+      color: #173f46;
+
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.5rem;
+
+      color: #4b5558;
+
+      margin-bottom: 22px;
+    }
+
+    .hero-description {
+      font-size: 1.08rem;
+      max-width: 720px;
+
+      color: #555f62;
+
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button-primary,
+    .button-secondary {
+      display: inline-block;
+
+      padding: 10px 19px;
+
+      border-radius: 5px;
+
+      font-size: 0.95rem;
+      font-weight: 500;
+
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: #0b6574;
+      color: white;
+      border: 1px solid #0b6574;
+    }
+
+    .button-primary:hover {
+      background: #084c57;
+      color: white;
+    }
+
+    .button-secondary {
+      border: 1px solid #b7c4c6;
+      color: #31535a;
+      background: white;
+    }
+
+    .button-secondary:hover {
+      border-color: #0b6574;
+      background: #f5fafb;
+    }
+
+    /* =========================================================
+       SECTIONS
+    ========================================================= */
+
+    section {
+      padding: 72px 0;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 2rem;
+      font-weight: 500;
+
+      color: #173f46;
+
+      margin-bottom: 30px;
+    }
+
+    .section-intro {
+      max-width: 800px;
+      color: #555f62;
+
+      margin-bottom: 30px;
+    }
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-text {
+      max-width: 850px;
+
+      font-size: 1.03rem;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+    }
+
+    /* =========================================================
+       RESEARCH
+    ========================================================= */
+
+    .research-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+      gap: 20px;
+    }
+
+    .research-card {
+      border: 1px solid #e2e7e8;
+
+      padding: 24px;
+
+      border-radius: 7px;
+
+      background: #ffffff;
+
+      transition: 0.2s ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 7px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .research-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.2rem;
+
+      color: #174f59;
+
+      margin-bottom: 10px;
+    }
+
+    .research-card p {
+      font-size: 0.95rem;
+
+      color: #5c6466;
+    }
+
+    /* =========================================================
+       PUBLICATIONS
+    ========================================================= */
+
+    .publication {
+      margin-bottom: 30px;
+
+      padding-left: 18px;
+
+      border-left: 3px solid #0b6574;
+    }
+
+    .publication-title {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.15rem;
+
+      color: #173f46;
+
+      margin-bottom: 4px;
+    }
+
+    .publication-authors {
+      color: #555f62;
+
+      margin-bottom: 4px;
+    }
+
+    .publication-details {
+      font-size: 0.92rem;
+
+      color: #747c7e;
+    }
+
+    .publication-links {
+      margin-top: 8px;
+    }
+
+    .publication-links a {
+      margin-right: 15px;
+
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    /* =========================================================
+       CURRENT WORK
+    ========================================================= */
+
+    .work-item {
+      margin-bottom: 25px;
+    }
+
+    .work-item h3 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      color: #174f59;
+
+      font-size: 1.1rem;
+
+      margin-bottom: 5px;
+    }
+
+    /* =========================================================
+       EDUCATION
+    ========================================================= */
+
+    .timeline {
+      border-left: 2px solid #d7e1e3;
+
+      padding-left: 28px;
+    }
+
+    .timeline-item {
+      position: relative;
+
+      margin-bottom: 35px;
+    }
+
+    .timeline-item::before {
+      content: "";
+
+      position: absolute;
+
+      left: -35px;
+      top: 8px;
+
+      width: 12px;
+      height: 12px;
+
+      background: #0b6574;
+
+      border-radius: 50%;
+    }
+
+    .timeline-item h3 {
+      font-family: Georgia, "Times New Roman", serif;
+
+      color: #173f46;
+
+      font-size: 1.1rem;
+    }
+
+    .timeline-place {
+      color: #555f62;
+    }
+
+    .timeline-date {
+      font-size: 0.9rem;
+
+      color: #808789;
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      max-width: 700px;
+    }
+
+    .contact p {
+      margin-bottom: 18px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 18px;
+
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      font-weight: 500;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      border-top: 1px solid #eeeeee;
+
+      padding: 30px 25px;
+
+      text-align: center;
+
+      font-size: 0.86rem;
+
+      color: #858c8e;
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 700px) {
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        font-size: 0.87rem;
+      }
+
+      .hero {
+        min-height: auto;
+
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        font-size: 3.2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+    }
+
+  </style>
 </head>
 
-<body>
-    <h1>Anit Kuckian</h1>
-    <p>Mathematics researcher.</p>
 
-    <h2>Research Interests</h2>
-    <p>Finite Fields, Algebraic Coding Theory, Commutative Algebra</p>
+<body>
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <nav>
+
+    <div class="nav-container">
+
+      <div class="nav-name">
+        Anit Kuckian
+      </div>
+
+      <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#research">Research</a>
+
+        <a href="#publications">Publications</a>
+
+        <a href="#education">Education</a>
+
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="hero-small">
+          Mathematics
+        </div>
+
+        <h1>
+          Anit Kuckian
+        </h1>
+
+        <div class="hero-subtitle">
+          Sabarmati Bridge Fellow · IIT Gandhinagar
+        </div>
+
+        <p class="hero-description">
+          I am interested in finite fields, algebraic coding theory,
+          commutative algebra, and related problems in algebra and
+          arithmetic.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#research"
+            class="button-primary"
+          >
+            Research
+          </a>
+
+          <a
+            href="#publications"
+            class="button-secondary"
+          >
+            Publications
+          </a>
+
+          <!--
+          Later upload your CV to the repository
+          and change href to "CV.pdf"
+          -->
+
+          <a
+            href="#"
+            class="button-secondary"
+          >
+            CV
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          About
+        </h2>
+
+        <div class="about-text">
+
+          <p>
+            I am currently a Sabarmati Bridge Fellow at the
+            Indian Institute of Technology Gandhinagar, where I
+            continue my research in mathematics.
+          </p>
+
+          <p>
+            My interests lie broadly in algebra, with particular
+            interest in finite fields and their applications,
+            algebraic coding theory, commutative algebra, and
+            algebraic geometry.
+          </p>
+
+          <p>
+            I completed my M.Sc. in Mathematics at IIT Gandhinagar.
+            My research has involved rational points over finite
+            fields, Danielewski-type varieties, and questions
+            connected with the Zariski Cancellation Problem.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESEARCH
+    ====================================================== -->
+
+    <section id="research">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Research
+        </h2>
+
+        <p class="section-intro">
+          My research interests lie at the intersection of
+          algebra, finite fields, and arithmetic geometry.
+        </p>
+
+
+        <div class="research-grid">
+
+
+          <div class="research-card">
+
+            <h3>
+              Finite Fields
+            </h3>
+
+            <p>
+              Polynomial constructions over finite fields,
+              rational point counting, and combinatorial and
+              arithmetic structures over finite fields.
+            </p>
+
+          </div>
+
+
+          <div class="research-card">
+
+            <h3>
+              Algebraic Coding Theory
+            </h3>
+
+            <p>
+              Algebraic and finite-field methods arising in
+              coding theory, with particular interest in the
+              structural mathematics underlying codes.
+            </p>
+
+          </div>
+
+
+          <div class="research-card">
+
+            <h3>
+              Commutative Algebra
+            </h3>
+
+            <p>
+              Affine algebras, polynomial rings, locally nilpotent
+              derivations, exponential maps, and cancellation-type
+              problems.
+            </p>
+
+          </div>
+
+
+          <div class="research-card">
+
+            <h3>
+              Algebraic Geometry
+            </h3>
+
+            <p>
+              Affine varieties over finite fields, rational points,
+              Danielewski-type varieties, and algebraic constructions
+              arising from affine geometry.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PUBLICATIONS
+    ====================================================== -->
+
+    <section id="publications">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Publications & Preprints
+        </h2>
+
+
+        <div class="publication">
+
+          <div class="publication-title">
+
+            Counting F<sub>q</sub>-Rational Points on
+            Danielewski and Double Danielewski Surfaces
+
+          </div>
+
+          <div class="publication-authors">
+
+            Neena Gupta, Anit Kuckian, Indranath Sengupta
+
+          </div>
+
+          <div class="publication-details">
+
+            Preprint, 2026
+
+          </div>
+
+          <div class="publication-links">
+
+            <!-- Replace # with your exact arXiv link -->
+
+            <a href="#" target="_blank">
+              arXiv
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CURRENT WORK
+    ====================================================== -->
+
+    <section id="current-work">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Current Work
+        </h2>
+
+
+        <div class="work-item">
+
+          <h3>
+            Polygonal Number Sequences over Finite Fields
+          </h3>
+
+          <p>
+            Investigating polynomial and geometric constructions
+            that realize polygonal-number-type sequences through
+            rational point counts over finite fields.
+          </p>
+
+        </div>
+
+
+        <div class="work-item">
+
+          <h3>
+            Zariski Cancellation Problem
+          </h3>
+
+          <p>
+            Studying affine algebraic constructions related to
+            cancellation phenomena and possible new families of
+            counterexamples.
+          </p>
+
+        </div>
+
+
+        <div class="work-item">
+
+          <h3>
+            Mathieu-Zhao Subspaces
+          </h3>
+
+          <p>
+            Exploring algebraic questions concerning
+            Mathieu-Zhao subspaces and related structures.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EDUCATION
+    ====================================================== -->
+
+    <section id="education">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Education & Academic Positions
+        </h2>
+
+
+        <div class="timeline">
+
+
+          <div class="timeline-item">
+
+            <h3>
+              Sabarmati Bridge Fellow
+            </h3>
+
+            <div class="timeline-place">
+              Indian Institute of Technology Gandhinagar
+            </div>
+
+            <div class="timeline-date">
+              2026 – Present
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item">
+
+            <h3>
+              M.Sc. Mathematics
+            </h3>
+
+            <div class="timeline-place">
+              Indian Institute of Technology Gandhinagar
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item">
+
+            <h3>
+              B.Sc.
+            </h3>
+
+            <div class="timeline-place">
+              Mathematics
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Contact
+        </h2>
+
+
+        <div class="contact">
+
+          <p>
+            I am happy to discuss mathematics, research,
+            collaborations, and related academic questions.
+          </p>
+
+
+          <div class="contact-links">
+
+            <!-- REPLACE EMAIL BELOW -->
+
+            <a href="mailto:YOUR_EMAIL">
+              Email
+            </a>
+
+
+            <a
+              href="https://github.com/Anit-Kuckian"
+              target="_blank"
+            >
+              GitHub
+            </a>
+
+
+            <!-- Add Google Scholar once you have the link -->
+
+            <a
+              href="#"
+              target="_blank"
+            >
+              Google Scholar
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    © 2026 Anit Kuckian ·
+    Last updated August 2026
+
+  </footer>
+
+
 </body>
 </html>
