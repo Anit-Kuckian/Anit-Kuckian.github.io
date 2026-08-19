@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic website of Anit Kuckian">
+  <title>Publications | Anit Kuckian</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="publications">
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">Anit Kuckian</a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="cv.html" data-page="cv">CV</a>
+      <a href="research.html" data-page="research">Research</a>
+      <a href="publications.html" data-page="publications">Publications</a>
+      <a href="notes.html" data-page="notes">Notes</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Research output</div>
+      <h1 class="page-title">Publications</h1>
+      <p class="page-intro">
+        Papers, preprints, and research manuscripts. Use the search box or filters as this list grows.
+      </p>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container content-narrow">
+      <input class="search" id="publicationSearch" type="search" placeholder="Search by title, author, topic, or year…">
+      <div class="chips">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="preprint">Preprints</button>
+        <button class="chip" data-filter="published">Published</button>
+      </div>
+
+      <div class="pub-list">
+        <article class="pub reveal" data-category="preprint">
+          <div class="pub-number">Preprint · 2026</div>
+          <h3>Counting F<sub>q</sub>-Rational Points on Danielewski and Double Danielewski Surfaces</h3>
+          <p>Neena Gupta, Anit Kuckian, Indranath Sengupta</p>
+          <p>Rational point counting · affine algebraic geometry · finite fields</p>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2605.24821" target="_blank" rel="noopener">arXiv</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <span>© <span data-year></span> Anit Kuckian</span>
+    <span>Mathematics · IIT Gandhinagar</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
