@@ -20,6 +20,7 @@ content="Academic website of Anit Kuckian, Sabarmati Bridge Fellow at IIT Gandhi
 
 <meta name="theme-color" content="#081522">
 
+
 <link
 rel="canonical"
 href="https://anit-kuckian.github.io/">
@@ -50,11 +51,8 @@ href="https://anit-kuckian.github.io/">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-
   "name": "Anit Kuckian",
-
   "url": "https://anit-kuckian.github.io/",
-
   "jobTitle": "Sabarmati Bridge Fellow",
 
   "affiliation": {
@@ -88,9 +86,7 @@ href="https://anit-kuckian.github.io/">
 (function () {
 
     const theme =
-    localStorage.getItem(
-        "anit-theme"
-    );
+    localStorage.getItem("anit-theme");
 
     if (theme) {
 
@@ -1366,6 +1362,65 @@ section {
 }
 
 
+.polynomial-game-header {
+
+    display: flex;
+
+    justify-content:
+    space-between;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+
+}
+
+
+.polynomial-score {
+
+    display: inline-flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.score-chip {
+
+    padding:
+    6px 10px;
+
+    border:
+    1px solid
+    var(--border);
+
+    border-radius: 30px;
+
+    background:
+    var(--card);
+
+    color:
+    var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+.score-chip strong {
+
+    color:
+    var(--heading);
+
+}
+
+
 .difficulty-row {
 
     display: flex;
@@ -1373,8 +1428,6 @@ section {
     flex-wrap: wrap;
 
     gap: 8px;
-
-    margin-bottom: 20px;
 
 }
 
@@ -2279,12 +2332,13 @@ section {
 
 
 /* =========================================================
-   FOOTER
+   FOOTER + QED EASTER EGG
 ========================================================= */
 
 .site-footer {
 
-    padding: 27px;
+    padding:
+    27px 20px;
 
     background:
     var(--surface);
@@ -2299,6 +2353,80 @@ section {
     var(--muted);
 
     font-size: 12px;
+
+}
+
+
+.footer-normal {
+
+    display: block;
+
+}
+
+
+.footer-proof {
+
+    display: none;
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    color:
+    var(--text);
+
+    font-family:
+    var(--serif);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+.site-footer.proof-mode
+.footer-normal {
+
+    display: none;
+
+}
+
+
+.site-footer.proof-mode
+.footer-proof {
+
+    display: block;
+
+}
+
+
+.qed-button {
+
+    margin-left: 8px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color:
+    var(--accent-dark);
+
+    font-family:
+    var(--serif);
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.qed-button:hover {
+
+    text-decoration: underline;
 
 }
 
@@ -2756,7 +2884,6 @@ aria-label="Main navigation">
 
 
 <li>
-
 <a
 class="nav-link active"
 href="#home">
@@ -2768,12 +2895,10 @@ href="#home">
 Home
 
 </a>
-
 </li>
 
 
 <li>
-
 <a
 class="nav-link"
 href="#about">
@@ -2785,12 +2910,10 @@ href="#about">
 About
 
 </a>
-
 </li>
 
 
 <li>
-
 <a
 class="nav-link"
 href="#focus">
@@ -2802,12 +2925,10 @@ href="#focus">
 Current Focus
 
 </a>
-
 </li>
 
 
 <li>
-
 <a
 class="nav-link"
 href="#research">
@@ -2819,12 +2940,10 @@ href="#research">
 Research
 
 </a>
-
 </li>
 
 
 <li>
-
 <a
 class="nav-link"
 href="#polynomial">
@@ -2836,12 +2955,10 @@ href="#polynomial">
 Polynomial of the Day
 
 </a>
-
 </li>
 
 
 <li>
-
 <a
 class="nav-link"
 href="#publications">
@@ -2853,12 +2970,10 @@ href="#publications">
 Publications
 
 </a>
-
 </li>
 
 
 <li>
-
 <a
 class="nav-link"
 href="#news">
@@ -2870,12 +2985,10 @@ href="#news">
 News
 
 </a>
-
 </li>
 
 
 <li>
-
 <a
 class="nav-link"
 href="#cv">
@@ -2887,12 +3000,10 @@ href="#cv">
 CV
 
 </a>
-
 </li>
 
 
 <li>
-
 <a
 class="nav-link"
 href="#learning">
@@ -2904,12 +3015,10 @@ href="#learning">
 Reading & Learning
 
 </a>
-
 </li>
 
 
 <li>
-
 <a
 class="nav-link"
 href="#contact">
@@ -2921,7 +3030,6 @@ href="#contact">
 Contact
 
 </a>
-
 </li>
 
 
@@ -3403,16 +3511,11 @@ The main themes I currently think about.
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Finite Fields and Applications
-
 </h3>
 
-
 <p>
-
 Polynomial arithmetic,
 irreducibility,
 primitive elements,
@@ -3420,103 +3523,73 @@ factorization,
 rational points,
 and algebraic applications
 of finite fields.
-
 </p>
-
 
 </div>
 
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Algebraic Coding Theory
-
 </h3>
 
-
 <p>
-
 Codes over finite fields,
 covering problems,
 algebraic constructions,
 and structural questions
 arising in coding theory.
-
 </p>
-
 
 </div>
 
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Commutative Algebra
-
 </h3>
 
-
 <p>
-
 Affine domains,
 polynomial rings,
 filtrations,
 exponential maps,
 and related invariants.
-
 </p>
-
 
 </div>
 
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Affine Algebraic Geometry
-
 </h3>
 
-
 <p>
-
 Danielewski-type varieties,
 Makar-Limanov invariants,
 and questions related to cancellation.
-
 </p>
-
 
 </div>
 
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Computational Algebra
-
 </h3>
 
-
 <p>
-
 Symbolic and experimental mathematics
 using SageMath,
 Macaulay2,
 Python,
 and related tools.
-
 </p>
-
 
 </div>
 
@@ -3570,7 +3643,10 @@ is reducible or irreducible.
 </div>
 
 
-<div class="difficulty-row reveal">
+<div class="polynomial-game-header reveal">
+
+
+<div class="difficulty-row">
 
 
 <button
@@ -3611,6 +3687,31 @@ data-difficulty="extreme">
 Extreme
 
 </button>
+
+
+</div>
+
+
+<div class="polynomial-score">
+
+
+<span class="score-chip">
+
+Today:
+<strong id="todayScore">0/4</strong>
+
+</span>
+
+
+<span class="score-chip">
+
+Streak:
+<strong id="streakScore">0 days</strong>
+
+</span>
+
+
+</div>
 
 
 </div>
@@ -3768,8 +3869,7 @@ Publications & preprints
 
 <p>
 
-Search and filter the list
-as it grows.
+Search and filter the list as it grows.
 
 </p>
 
@@ -3962,16 +4062,14 @@ July 2026
 
 <h3>
 
-Joined IIT Gandhinagar
-as a Sabarmati Bridge Fellow
+Joined IIT Gandhinagar as a Sabarmati Bridge Fellow
 
 </h3>
 
 
 <p>
 
-Continuing research in mathematics
-at IIT Gandhinagar.
+Continuing research in mathematics at IIT Gandhinagar.
 
 </p>
 
@@ -4005,8 +4103,7 @@ Preprint available on arXiv
 <p>
 
 Joint work on rational points
-of Danielewski and
-Double Danielewski surfaces.
+of Danielewski and Double Danielewski surfaces.
 
 </p>
 
@@ -4041,8 +4138,7 @@ Summer Research Internship Program
 
 Research on Danielewski-type surfaces,
 finite-field point counting,
-and cancellation
-at IIT Gandhinagar.
+and cancellation at IIT Gandhinagar.
 
 </p>
 
@@ -4132,9 +4228,7 @@ Education
 
 
 <h3>
-
 M.Sc. Mathematics
-
 </h3>
 
 
@@ -4159,9 +4253,7 @@ Graduate study in mathematics.
 
 
 <h3>
-
 B.Sc.
-
 </h3>
 
 
@@ -4575,9 +4667,7 @@ Affiliation
 </small>
 
 <strong>
-
 Indian Institute of Technology Gandhinagar
-
 </strong>
 
 </div>
@@ -4590,9 +4680,7 @@ Position
 </small>
 
 <strong>
-
 Sabarmati Bridge Fellow
-
 </strong>
 
 </div>
@@ -4605,11 +4693,9 @@ Location
 </small>
 
 <strong>
-
 Gandhinagar,
 Gujarat,
 India
-
 </strong>
 
 </div>
@@ -4622,9 +4708,7 @@ Email
 </small>
 
 <strong>
-
 YOUR_EMAIL
-
 </strong>
 
 </div>
@@ -4708,10 +4792,15 @@ Send an email
 
 
 <!-- =========================================================
-     FOOTER
+     FOOTER + QED EASTER EGG
 ========================================================= -->
 
-<footer class="site-footer">
+<footer
+class="site-footer"
+id="siteFooter">
+
+
+<div class="footer-normal">
 
 ©
 <span id="year"></span>
@@ -4720,6 +4809,62 @@ Anit Kuckian
 &nbsp; · &nbsp;
 
 Mathematics
+
+&nbsp; · &nbsp;
+
+<button
+class="qed-button"
+id="qedButton"
+type="button"
+aria-label="QED">
+
+Q.E.D.
+
+</button>
+
+</div>
+
+
+<div class="footer-proof">
+
+
+<strong>
+
+Lemma.
+
+</strong>
+
+You have reached the end of the page.
+
+<br>
+
+
+<strong>
+
+Proof.
+
+</strong>
+
+There is nowhere left to scroll.
+
+&nbsp; □
+
+
+<br><br>
+
+
+<button
+class="qed-button"
+id="qedReturn"
+type="button">
+
+Return to ordinary mathematics
+
+</button>
+
+
+</div>
+
 
 </footer>
 
@@ -4766,537 +4911,537 @@ window
 
 const greetingLanguages = [
 
-    {
-        language: "Mandarin Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Spanish",
-        morning: "Buenos días",
-        afternoon: "Buenas tardes",
-        evening: "Buenas noches"
-    },
-
-    {
-        language: "English",
-        morning: "Good morning",
-        afternoon: "Good afternoon",
-        evening: "Good evening"
-    },
-
-    {
-        language: "Bengali",
-        morning: "শুভ সকাল",
-        afternoon: "শুভ অপরাহ্ন",
-        evening: "শুভ সন্ধ্যা"
-    },
-
-    {
-        language: "Hindi",
-        morning: "सुप्रभात",
-        afternoon: "नमस्कार",
-        evening: "शुभ संध्या"
-    },
-
-    {
-        language: "Portuguese",
-        morning: "Bom dia",
-        afternoon: "Boa tarde",
-        evening: "Boa noite"
-    },
-
-    {
-        language: "Russian",
-        morning: "Доброе утро",
-        afternoon: "Добрый день",
-        evening: "Добрый вечер"
-    },
-
-    {
-        language: "Japanese",
-        morning: "おはようございます",
-        afternoon: "こんにちは",
-        evening: "こんばんは"
-    },
-
-    {
-        language: "German",
-        morning: "Guten Morgen",
-        afternoon: "Guten Tag",
-        evening: "Guten Abend"
-    },
-
-    {
-        language: "Wu Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Javanese",
-        morning: "Sugeng enjing",
-        afternoon: "Sugeng siang",
-        evening: "Sugeng sonten"
-    },
-
-    {
-        language: "Korean",
-        morning: "좋은 아침입니다",
-        afternoon: "안녕하세요",
-        evening: "좋은 저녁입니다"
-    },
-
-    {
-        language: "French",
-        morning: "Bonjour",
-        afternoon: "Bon après-midi",
-        evening: "Bonsoir"
-    },
-
-    {
-        language: "Vietnamese",
-        morning: "Chào buổi sáng",
-        afternoon: "Chào buổi chiều",
-        evening: "Chào buổi tối"
-    },
-
-    {
-        language: "Telugu",
-        morning: "శుభోదయం",
-        afternoon: "శుభ మధ్యాహ్నం",
-        evening: "శుభ సాయంత్రం"
-    },
-
-    {
-        language: "Cantonese",
-        morning: "早晨",
-        afternoon: "午安",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Marathi",
-        morning: "शुभ सकाळ",
-        afternoon: "शुभ दुपार",
-        evening: "शुभ संध्याकाळ"
-    },
-
-    {
-        language: "Tamil",
-        morning: "காலை வணக்கம்",
-        afternoon: "மதிய வணக்கம்",
-        evening: "மாலை வணக்கம்"
-    },
-
-    {
-        language: "Turkish",
-        morning: "Günaydın",
-        afternoon: "İyi günler",
-        evening: "İyi akşamlar"
-    },
-
-    {
-        language: "Urdu",
-        morning: "صبح بخیر",
-        afternoon: "دوپہر بخیر",
-        evening: "شام بخیر"
-    },
-
-    {
-        language: "Min Nan Chinese",
-        morning: "早安",
-        afternoon: "午安",
-        evening: "暗安"
-    },
-
-    {
-        language: "Jinyu Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Gujarati",
-        morning: "સુપ્રભાત",
-        afternoon: "શુભ બપોર",
-        evening: "શુભ સાંજ"
-    },
-
-    {
-        language: "Polish",
-        morning: "Dzień dobry",
-        afternoon: "Dzień dobry",
-        evening: "Dobry wieczór"
-    },
-
-    {
-        language: "Egyptian Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Ukrainian",
-        morning: "Доброго ранку",
-        afternoon: "Добрий день",
-        evening: "Добрий вечір"
-    },
-
-    {
-        language: "Italian",
-        morning: "Buongiorno",
-        afternoon: "Buon pomeriggio",
-        evening: "Buonasera"
-    },
-
-    {
-        language: "Xiang Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Malayalam",
-        morning: "സുപ്രഭാതം",
-        afternoon: "ശുഭ ഉച്ചതിരിഞ്ഞ്",
-        evening: "ശുഭ സായാഹ്നം"
-    },
-
-    {
-        language: "Hakka Chinese",
-        morning: "早晨",
-        afternoon: "午安",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Kannada",
-        morning: "ಶುಭೋದಯ",
-        afternoon: "ಶುಭ ಮಧ್ಯಾಹ್ನ",
-        evening: "ಶುಭ ಸಂಜೆ"
-    },
-
-    {
-        language: "Odia",
-        morning: "ଶୁଭ ସକାଳ",
-        afternoon: "ଶୁଭ ଅପରାହ୍ନ",
-        evening: "ଶୁଭ ସନ୍ଧ୍ୟା"
-    },
-
-    {
-        language: "Western Punjabi",
-        morning: "صبح بخیر",
-        afternoon: "دوپہر بخیر",
-        evening: "شام بخیر"
-    },
-
-    {
-        language: "Sundanese",
-        morning: "Wilujeng enjing",
-        afternoon: "Wilujeng siang",
-        evening: "Wilujeng sonten"
-    },
-
-    {
-        language: "Eastern Punjabi",
-        morning: "ਸ਼ੁਭ ਸਵੇਰ",
-        afternoon: "ਸ਼ੁਭ ਦੁਪਹਿਰ",
-        evening: "ਸ਼ੁਭ ਸ਼ਾਮ"
-    },
-
-    {
-        language: "Romanian",
-        morning: "Bună dimineața",
-        afternoon: "Bună ziua",
-        evening: "Bună seara"
-    },
-
-    {
-        language: "Bhojpuri",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहरिया",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "South Azerbaijani",
-        morning: "Sabahınız xeyir",
-        afternoon: "Gününüz xeyir",
-        evening: "Axşamınız xeyir"
-    },
-
-    {
-        language: "Persian",
-        morning: "صبح بخیر",
-        afternoon: "ظهر بخیر",
-        evening: "عصر بخیر"
-    },
-
-    {
-        language: "Maithili",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहर",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "Hausa",
-        morning: "Barka da safiya",
-        afternoon: "Barka da rana",
-        evening: "Barka da yamma"
-    },
-
-    {
-        language: "Algerian Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك مبروك",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Burmese",
-        morning: "မင်္ဂလာနံနက်ခင်းပါ",
-        afternoon: "မင်္ဂလာနေ့လယ်ခင်းပါ",
-        evening: "မင်္ဂလာညနေခင်းပါ"
-    },
-
-    {
-        language: "Serbo-Croatian",
-        morning: "Dobro jutro",
-        afternoon: "Dobar dan",
-        evening: "Dobro veče"
-    },
-
-    {
-        language: "Gan Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Awadhi",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहर",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "Thai",
-        morning: "สวัสดีตอนเช้า",
-        afternoon: "สวัสดีตอนบ่าย",
-        evening: "สวัสดีตอนเย็น"
-    },
-
-    {
-        language: "Dutch",
-        morning: "Goedemorgen",
-        afternoon: "Goedemiddag",
-        evening: "Goedenavond"
-    },
-
-    {
-        language: "Yoruba",
-        morning: "Ẹ káàárọ̀",
-        afternoon: "Ẹ káàsán",
-        evening: "Ẹ káalẹ́"
-    },
-
-    {
-        language: "Sindhi",
-        morning: "صبح جو سلام",
-        afternoon: "منجهند جو سلام",
-        evening: "شام جو سلام"
-    },
-
-    {
-        language: "Moroccan Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك مبروك",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Saidi Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Northern Uzbek",
-        morning: "Xayrli tong",
-        afternoon: "Xayrli kun",
-        evening: "Xayrli kech"
-    },
-
-    {
-        language: "Malay",
-        morning: "Selamat pagi",
-        afternoon: "Selamat tengah hari",
-        evening: "Selamat petang"
-    },
-
-    {
-        language: "Amharic",
-        morning: "እንደምን አደሩ",
-        afternoon: "እንደምን ዋሉ",
-        evening: "መልካም ምሽት"
-    },
-
-    {
-        language: "Indonesian",
-        morning: "Selamat pagi",
-        afternoon: "Selamat siang",
-        evening: "Selamat malam"
-    },
-
-    {
-        language: "Igbo",
-        morning: "Ụtụtụ ọma",
-        afternoon: "Ehihie ọma",
-        evening: "Mgbede ọma"
-    },
-
-    {
-        language: "Tagalog",
-        morning: "Magandang umaga",
-        afternoon: "Magandang hapon",
-        evening: "Magandang gabi"
-    },
-
-    {
-        language: "Nepali",
-        morning: "शुभ प्रभात",
-        afternoon: "शुभ दिउँसो",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "Sudanese Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Saraiki",
-        morning: "صبح بخیر",
-        afternoon: "دوپہر بخیر",
-        evening: "شام بخیر"
-    },
-
-    {
-        language: "Cebuano",
-        morning: "Maayong buntag",
-        afternoon: "Maayong hapon",
-        evening: "Maayong gabii"
-    },
-
-    {
-        language: "North Levantine Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مسا الخير"
-    },
-
-    {
-        language: "Northeastern Thai",
-        morning: "สวัสดีตอนเช้า",
-        afternoon: "สวัสดีตอนบ่าย",
-        evening: "สวัสดีตอนเย็น"
-    },
-
-    {
-        language: "Assamese",
-        morning: "সুপ্ৰভাত",
-        afternoon: "শুভ আবেলি",
-        evening: "শুভ সন্ধিয়া"
-    },
-
-    {
-        language: "Hungarian",
-        morning: "Jó reggelt",
-        afternoon: "Jó napot",
-        evening: "Jó estét"
-    },
-
-    {
-        language: "Chittagonian",
-        morning: "শুভ সকাল",
-        afternoon: "শুভ অপরাহ্ন",
-        evening: "শুভ সন্ধ্যা"
-    },
-
-    {
-        language: "Mesopotamian Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Madurese",
-        morning: "Salamet lagghu",
-        afternoon: "Salamet siang",
-        evening: "Salamet malem"
-    },
-
-    {
-        language: "Sinhala",
-        morning: "සුභ උදෑසනක්",
-        afternoon: "සුභ දහවලක්",
-        evening: "සුභ සන්ධ්‍යාවක්"
-    },
-
-    {
-        language: "Haryanvi",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दोपहर",
-        evening: "शुभ संध्या"
-    },
-
-    {
-        language: "Marwari",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दोपहर",
-        evening: "शुभ संध्या"
-    },
-
-    {
-        language: "Czech",
-        morning: "Dobré ráno",
-        afternoon: "Dobré odpoledne",
-        evening: "Dobrý večer"
-    },
-
-    {
-        language: "Greek",
-        morning: "Καλημέρα",
-        afternoon: "Καλό απόγευμα",
-        evening: "Καλησπέρα"
-    },
-
-    {
-        language: "Magahi",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहर",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "Chhattisgarhi",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहर",
-        evening: "शुभ संझा"
-    }
+{
+language: "Mandarin Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Spanish",
+morning: "Buenos días",
+afternoon: "Buenas tardes",
+evening: "Buenas noches"
+},
+
+{
+language: "English",
+morning: "Good morning",
+afternoon: "Good afternoon",
+evening: "Good evening"
+},
+
+{
+language: "Bengali",
+morning: "শুভ সকাল",
+afternoon: "শুভ অপরাহ্ন",
+evening: "শুভ সন্ধ্যা"
+},
+
+{
+language: "Hindi",
+morning: "सुप्रभात",
+afternoon: "नमस्कार",
+evening: "शुभ संध्या"
+},
+
+{
+language: "Portuguese",
+morning: "Bom dia",
+afternoon: "Boa tarde",
+evening: "Boa noite"
+},
+
+{
+language: "Russian",
+morning: "Доброе утро",
+afternoon: "Добрый день",
+evening: "Добрый вечер"
+},
+
+{
+language: "Japanese",
+morning: "おはようございます",
+afternoon: "こんにちは",
+evening: "こんばんは"
+},
+
+{
+language: "German",
+morning: "Guten Morgen",
+afternoon: "Guten Tag",
+evening: "Guten Abend"
+},
+
+{
+language: "Wu Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Javanese",
+morning: "Sugeng enjing",
+afternoon: "Sugeng siang",
+evening: "Sugeng sonten"
+},
+
+{
+language: "Korean",
+morning: "좋은 아침입니다",
+afternoon: "안녕하세요",
+evening: "좋은 저녁입니다"
+},
+
+{
+language: "French",
+morning: "Bonjour",
+afternoon: "Bon après-midi",
+evening: "Bonsoir"
+},
+
+{
+language: "Vietnamese",
+morning: "Chào buổi sáng",
+afternoon: "Chào buổi chiều",
+evening: "Chào buổi tối"
+},
+
+{
+language: "Telugu",
+morning: "శుభోదయం",
+afternoon: "శుభ మధ్యాహ్నం",
+evening: "శుభ సాయంత్రం"
+},
+
+{
+language: "Cantonese",
+morning: "早晨",
+afternoon: "午安",
+evening: "晚上好"
+},
+
+{
+language: "Marathi",
+morning: "शुभ सकाळ",
+afternoon: "शुभ दुपार",
+evening: "शुभ संध्याकाळ"
+},
+
+{
+language: "Tamil",
+morning: "காலை வணக்கம்",
+afternoon: "மதிய வணக்கம்",
+evening: "மாலை வணக்கம்"
+},
+
+{
+language: "Turkish",
+morning: "Günaydın",
+afternoon: "İyi günler",
+evening: "İyi akşamlar"
+},
+
+{
+language: "Urdu",
+morning: "صبح بخیر",
+afternoon: "دوپہر بخیر",
+evening: "شام بخیر"
+},
+
+{
+language: "Min Nan Chinese",
+morning: "早安",
+afternoon: "午安",
+evening: "暗安"
+},
+
+{
+language: "Jinyu Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Gujarati",
+morning: "સુપ્રભાત",
+afternoon: "શુભ બપોર",
+evening: "શુભ સાંજ"
+},
+
+{
+language: "Polish",
+morning: "Dzień dobry",
+afternoon: "Dzień dobry",
+evening: "Dobry wieczór"
+},
+
+{
+language: "Egyptian Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مساء الخير"
+},
+
+{
+language: "Ukrainian",
+morning: "Доброго ранку",
+afternoon: "Добрий день",
+evening: "Добрий вечір"
+},
+
+{
+language: "Italian",
+morning: "Buongiorno",
+afternoon: "Buon pomeriggio",
+evening: "Buonasera"
+},
+
+{
+language: "Xiang Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Malayalam",
+morning: "സുപ്രഭാതം",
+afternoon: "ശുഭ ഉച്ചതിരിഞ്ഞ്",
+evening: "ശുഭ സായാഹ്നം"
+},
+
+{
+language: "Hakka Chinese",
+morning: "早晨",
+afternoon: "午安",
+evening: "晚上好"
+},
+
+{
+language: "Kannada",
+morning: "ಶುಭೋದಯ",
+afternoon: "ಶುಭ ಮಧ್ಯಾಹ್ನ",
+evening: "ಶುಭ ಸಂಜೆ"
+},
+
+{
+language: "Odia",
+morning: "ଶୁଭ ସକାଳ",
+afternoon: "ଶୁଭ ଅପରାହ୍ନ",
+evening: "ଶୁଭ ସନ୍ଧ୍ୟା"
+},
+
+{
+language: "Western Punjabi",
+morning: "صبح بخیر",
+afternoon: "دوپہر بخیر",
+evening: "شام بخیر"
+},
+
+{
+language: "Sundanese",
+morning: "Wilujeng enjing",
+afternoon: "Wilujeng siang",
+evening: "Wilujeng sonten"
+},
+
+{
+language: "Eastern Punjabi",
+morning: "ਸ਼ੁਭ ਸਵੇਰ",
+afternoon: "ਸ਼ੁਭ ਦੁਪਹਿਰ",
+evening: "ਸ਼ੁਭ ਸ਼ਾਮ"
+},
+
+{
+language: "Romanian",
+morning: "Bună dimineața",
+afternoon: "Bună ziua",
+evening: "Bună seara"
+},
+
+{
+language: "Bhojpuri",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहरिया",
+evening: "शुभ साँझ"
+},
+
+{
+language: "South Azerbaijani",
+morning: "Sabahınız xeyir",
+afternoon: "Gününüz xeyir",
+evening: "Axşamınız xeyir"
+},
+
+{
+language: "Persian",
+morning: "صبح بخیر",
+afternoon: "ظهر بخیر",
+evening: "عصر بخیر"
+},
+
+{
+language: "Maithili",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहर",
+evening: "शुभ साँझ"
+},
+
+{
+language: "Hausa",
+morning: "Barka da safiya",
+afternoon: "Barka da rana",
+evening: "Barka da yamma"
+},
+
+{
+language: "Algerian Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك مبروك",
+evening: "مساء الخير"
+},
+
+{
+language: "Burmese",
+morning: "မင်္ဂလာနံနက်ခင်းပါ",
+afternoon: "မင်္ဂလာနေ့လယ်ခင်းပါ",
+evening: "မင်္ဂလာညနေခင်းပါ"
+},
+
+{
+language: "Serbo-Croatian",
+morning: "Dobro jutro",
+afternoon: "Dobar dan",
+evening: "Dobro veče"
+},
+
+{
+language: "Gan Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Awadhi",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहर",
+evening: "शुभ साँझ"
+},
+
+{
+language: "Thai",
+morning: "สวัสดีตอนเช้า",
+afternoon: "สวัสดีตอนบ่าย",
+evening: "สวัสดีตอนเย็น"
+},
+
+{
+language: "Dutch",
+morning: "Goedemorgen",
+afternoon: "Goedemiddag",
+evening: "Goedenavond"
+},
+
+{
+language: "Yoruba",
+morning: "Ẹ káàárọ̀",
+afternoon: "Ẹ káàsán",
+evening: "Ẹ káalẹ́"
+},
+
+{
+language: "Sindhi",
+morning: "صبح جو سلام",
+afternoon: "منجهند جو سلام",
+evening: "شام جو سلام"
+},
+
+{
+language: "Moroccan Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك مبروك",
+evening: "مساء الخير"
+},
+
+{
+language: "Saidi Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مساء الخير"
+},
+
+{
+language: "Northern Uzbek",
+morning: "Xayrli tong",
+afternoon: "Xayrli kun",
+evening: "Xayrli kech"
+},
+
+{
+language: "Malay",
+morning: "Selamat pagi",
+afternoon: "Selamat tengah hari",
+evening: "Selamat petang"
+},
+
+{
+language: "Amharic",
+morning: "እንደምን አደሩ",
+afternoon: "እንደምን ዋሉ",
+evening: "መልካም ምሽት"
+},
+
+{
+language: "Indonesian",
+morning: "Selamat pagi",
+afternoon: "Selamat siang",
+evening: "Selamat malam"
+},
+
+{
+language: "Igbo",
+morning: "Ụtụtụ ọma",
+afternoon: "Ehihie ọma",
+evening: "Mgbede ọma"
+},
+
+{
+language: "Tagalog",
+morning: "Magandang umaga",
+afternoon: "Magandang hapon",
+evening: "Magandang gabi"
+},
+
+{
+language: "Nepali",
+morning: "शुभ प्रभात",
+afternoon: "शुभ दिउँसो",
+evening: "शुभ साँझ"
+},
+
+{
+language: "Sudanese Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مساء الخير"
+},
+
+{
+language: "Saraiki",
+morning: "صبح بخیر",
+afternoon: "دوپہر بخیر",
+evening: "شام بخیر"
+},
+
+{
+language: "Cebuano",
+morning: "Maayong buntag",
+afternoon: "Maayong hapon",
+evening: "Maayong gabii"
+},
+
+{
+language: "North Levantine Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مسا الخير"
+},
+
+{
+language: "Northeastern Thai",
+morning: "สวัสดีตอนเช้า",
+afternoon: "สวัสดีตอนบ่าย",
+evening: "สวัสดีตอนเย็น"
+},
+
+{
+language: "Assamese",
+morning: "সুপ্ৰভাত",
+afternoon: "শুভ আবেলি",
+evening: "শুভ সন্ধিয়া"
+},
+
+{
+language: "Hungarian",
+morning: "Jó reggelt",
+afternoon: "Jó napot",
+evening: "Jó estét"
+},
+
+{
+language: "Chittagonian",
+morning: "শুভ সকাল",
+afternoon: "শুভ অপরাহ্ন",
+evening: "শুভ সন্ধ্যা"
+},
+
+{
+language: "Mesopotamian Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مساء الخير"
+},
+
+{
+language: "Madurese",
+morning: "Salamet lagghu",
+afternoon: "Salamet siang",
+evening: "Salamet malem"
+},
+
+{
+language: "Sinhala",
+morning: "සුභ උදෑසනක්",
+afternoon: "සුභ දහවලක්",
+evening: "සුභ සන්ධ්‍යාවක්"
+},
+
+{
+language: "Haryanvi",
+morning: "सुप्रभात",
+afternoon: "शुभ दोपहर",
+evening: "शुभ संध्या"
+},
+
+{
+language: "Marwari",
+morning: "सुप्रभात",
+afternoon: "शुभ दोपहर",
+evening: "शुभ संध्या"
+},
+
+{
+language: "Czech",
+morning: "Dobré ráno",
+afternoon: "Dobré odpoledne",
+evening: "Dobrý večer"
+},
+
+{
+language: "Greek",
+morning: "Καλημέρα",
+afternoon: "Καλό απόγευμα",
+evening: "Καλησπέρα"
+},
+
+{
+language: "Magahi",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहर",
+evening: "शुभ साँझ"
+},
+
+{
+language: "Chhattisgarhi",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहर",
+evening: "शुभ संझा"
+}
 
 ];
 
@@ -5502,7 +5647,7 @@ if (reducedMotion) {
 
 
 /* =========================================================
-   MODULAR ARITHMETIC
+   POLYNOMIAL ARITHMETIC
 ========================================================= */
 
 function mod(a, p) {
@@ -5972,7 +6117,7 @@ function polynomialIsIrreducible(
 
 
 /* =========================================================
-   POLYNOMIAL DISPLAY
+   DISPLAY POLYNOMIAL
 ========================================================= */
 
 function polynomialToHTML(
@@ -6322,7 +6467,7 @@ const difficultySettings = {
 
 
 /* =========================================================
-   GENERATE POLYNOMIAL
+   GENERATE DAILY POLYNOMIAL
 ========================================================= */
 
 function generateCandidatePolynomial(
@@ -6516,6 +6661,290 @@ function generateDailyPolynomial(
 
 
 /* =========================================================
+   SCORE + STREAK
+========================================================= */
+
+const SCORE_KEY =
+"anit-polynomial-score";
+
+
+const STREAK_KEY =
+"anit-polynomial-streak";
+
+
+function loadDailyScore() {
+
+    const date =
+    utcDateKey();
+
+
+    let data = null;
+
+
+    try {
+
+        data =
+        JSON.parse(
+            localStorage.getItem(
+                SCORE_KEY
+            )
+        );
+
+    } catch {
+
+        data = null;
+
+    }
+
+
+    if (
+        !data
+        ||
+        data.date !== date
+    ) {
+
+        data = {
+
+            date:
+            date,
+
+            levels: {
+
+                easy:
+                null,
+
+                medium:
+                null,
+
+                hard:
+                null,
+
+                extreme:
+                null
+
+            }
+
+        };
+
+
+        localStorage.setItem(
+            SCORE_KEY,
+            JSON.stringify(
+                data
+            )
+        );
+
+    }
+
+
+    return data;
+
+}
+
+
+function saveDailyScore(data) {
+
+    localStorage.setItem(
+        SCORE_KEY,
+        JSON.stringify(
+            data
+        )
+    );
+
+}
+
+
+function calculateScore(data) {
+
+    return Object
+    .values(
+        data.levels
+    )
+    .filter(
+        value =>
+        value === true
+    )
+    .length;
+
+}
+
+
+function previousUTCDate(
+    dateString
+) {
+
+    const parts =
+    dateString
+    .split("-")
+    .map(Number);
+
+
+    const date =
+    new Date(
+        Date.UTC(
+            parts[0],
+            parts[1] - 1,
+            parts[2]
+        )
+    );
+
+
+    date.setUTCDate(
+        date.getUTCDate() - 1
+    );
+
+
+    return date
+    .toISOString()
+    .slice(
+        0,
+        10
+    );
+
+}
+
+
+function loadStreak() {
+
+    let streak = null;
+
+
+    try {
+
+        streak =
+        JSON.parse(
+            localStorage.getItem(
+                STREAK_KEY
+            )
+        );
+
+    } catch {
+
+        streak = null;
+
+    }
+
+
+    if (!streak) {
+
+        streak = {
+
+            count:
+            0,
+
+            lastCorrectDate:
+            null
+
+        };
+
+    }
+
+
+    return streak;
+
+}
+
+
+function registerCorrectDay() {
+
+    const today =
+    utcDateKey();
+
+
+    const streak =
+    loadStreak();
+
+
+    if (
+        streak.lastCorrectDate
+        ===
+        today
+    ) {
+
+        return streak.count;
+
+    }
+
+
+    if (
+        streak.lastCorrectDate
+        ===
+        previousUTCDate(
+            today
+        )
+    ) {
+
+        streak.count++;
+
+    } else {
+
+        streak.count =
+        1;
+
+    }
+
+
+    streak.lastCorrectDate =
+    today;
+
+
+    localStorage.setItem(
+        STREAK_KEY,
+        JSON.stringify(
+            streak
+        )
+    );
+
+
+    return streak.count;
+
+}
+
+
+function displayScore() {
+
+    const data =
+    loadDailyScore();
+
+
+    const score =
+    calculateScore(
+        data
+    );
+
+
+    const streak =
+    loadStreak();
+
+
+    document
+    .getElementById(
+        "todayScore"
+    )
+    .textContent =
+    score + "/4";
+
+
+    document
+    .getElementById(
+        "streakScore"
+    )
+    .textContent =
+
+    streak.count
+    +
+    (
+        streak.count === 1
+        ?
+        " day"
+        :
+        " days"
+    );
+
+}
+
+
+/* =========================================================
    POLYNOMIAL UI
 ========================================================= */
 
@@ -6604,6 +7033,164 @@ null;
 
 
 /* =========================================================
+   DISPLAY SAVED RESULT
+========================================================= */
+
+function displaySavedResult() {
+
+    const data =
+    loadDailyScore();
+
+
+    const saved =
+    data.levels[
+        selectedDifficulty
+    ];
+
+
+    if (
+        saved === null
+    ) {
+
+        return false;
+
+    }
+
+
+    const polynomial =
+    currentChallenge.polynomial;
+
+
+    const p =
+    currentChallenge.p;
+
+
+    const irreducible =
+
+    polynomialIsIrreducible(
+        polynomial,
+        p
+    );
+
+
+    polynomialResult.hidden =
+    false;
+
+
+    resultHeading.className =
+
+    "result-heading "
+    +
+    (
+        saved
+        ?
+        "correct-answer"
+        :
+        "wrong-answer"
+    );
+
+
+    resultHeading.textContent =
+
+    saved
+    ?
+    (
+        "Correct — "
+        +
+        (
+            irreducible
+            ?
+            "Irreducible"
+            :
+            "Reducible"
+        )
+    )
+    :
+    (
+        "Answer: "
+        +
+        (
+            irreducible
+            ?
+            "Irreducible"
+            :
+            "Reducible"
+        )
+    );
+
+
+    if (
+        irreducible
+    ) {
+
+        factorizationBox.innerHTML =
+
+        polynomialToHTML(
+            polynomial
+        )
+        +
+        " is irreducible over "
+        +
+        "𝔽<sub>"
+        +
+        p
+        +
+        "</sub>[x].";
+
+    } else {
+
+        const factors =
+
+        factorPolynomial(
+            polynomial,
+            p
+        );
+
+
+        factorizationBox.innerHTML =
+
+        polynomialToHTML(
+            polynomial
+        )
+        +
+        " = "
+        +
+        factorizationToHTML(
+            factors
+        )
+        +
+        " &nbsp; in &nbsp; "
+        +
+        "𝔽<sub>"
+        +
+        p
+        +
+        "</sub>[x].";
+
+    }
+
+
+    guessButtons
+    .forEach(
+        button => {
+
+            button.disabled =
+            true;
+
+        }
+    );
+
+
+    checkPolynomial.disabled =
+    true;
+
+
+    return true;
+
+}
+
+
+/* =========================================================
    LOAD CHALLENGE
 ========================================================= */
 
@@ -6615,7 +7202,11 @@ function loadPolynomialChallenge() {
 
     guessButtons
     .forEach(
-        function (button) {
+        button => {
+
+            button.disabled =
+            false;
+
 
             button
             .classList
@@ -6687,6 +7278,9 @@ function loadPolynomialChallenge() {
     +
     "</sub>[x]";
 
+
+    displaySavedResult();
+
 }
 
 
@@ -6705,7 +7299,7 @@ difficultyButtons
 
                 difficultyButtons
                 .forEach(
-                    function (item) {
+                    item => {
 
                         item
                         .classList
@@ -6750,9 +7344,18 @@ guessButtons
             "click",
             function () {
 
+                if (
+                    button.disabled
+                ) {
+
+                    return;
+
+                }
+
+
                 guessButtons
                 .forEach(
-                    function (item) {
+                    item => {
 
                         item
                         .classList
@@ -6803,6 +7406,25 @@ checkPolynomial
         }
 
 
+        const dailyData =
+        loadDailyScore();
+
+
+        if (
+            dailyData.levels[
+                selectedDifficulty
+            ]
+            !==
+            null
+        ) {
+
+            displaySavedResult();
+
+            return;
+
+        }
+
+
         const polynomial =
         currentChallenge.polynomial;
 
@@ -6835,101 +7457,28 @@ checkPolynomial
         correctAnswer;
 
 
-        polynomialResult.hidden =
-        false;
+        dailyData.levels[
+            selectedDifficulty
+        ] =
+        correct;
 
 
-        resultHeading.className =
-
-        "result-heading "
-        +
-        (
-            correct
-            ?
-            "correct-answer"
-            :
-            "wrong-answer"
+        saveDailyScore(
+            dailyData
         );
 
 
-        resultHeading.textContent =
+        if (correct) {
 
-        correct
-        ?
-        (
-            "Correct — "
-            +
-            (
-                irreducible
-                ?
-                "Irreducible"
-                :
-                "Reducible"
-            )
-        )
-        :
-        (
-            "Answer: "
-            +
-            (
-                irreducible
-                ?
-                "Irreducible"
-                :
-                "Reducible"
-            )
-        );
-
-
-        if (
-            irreducible
-        ) {
-
-            factorizationBox.innerHTML =
-
-            polynomialToHTML(
-                polynomial
-            )
-            +
-            " is irreducible over "
-            +
-            "𝔽<sub>"
-            +
-            p
-            +
-            "</sub>[x].";
-
-        } else {
-
-            const factors =
-
-            factorPolynomial(
-                polynomial,
-                p
-            );
-
-
-            factorizationBox.innerHTML =
-
-            polynomialToHTML(
-                polynomial
-            )
-            +
-            " = "
-            +
-            factorizationToHTML(
-                factors
-            )
-            +
-            " &nbsp; in &nbsp; "
-            +
-            "𝔽<sub>"
-            +
-            p
-            +
-            "</sub>[x].";
+            registerCorrectDay();
 
         }
+
+
+        displayScore();
+
+
+        displaySavedResult();
 
     }
 );
@@ -6939,7 +7488,61 @@ checkPolynomial
    INITIAL POLYNOMIAL
 ========================================================= */
 
+displayScore();
+
 loadPolynomialChallenge();
+
+
+/* =========================================================
+   QED EASTER EGG
+========================================================= */
+
+const siteFooter =
+document.getElementById(
+    "siteFooter"
+);
+
+
+const qedButton =
+document.getElementById(
+    "qedButton"
+);
+
+
+const qedReturn =
+document.getElementById(
+    "qedReturn"
+);
+
+
+qedButton
+.addEventListener(
+    "click",
+    function () {
+
+        siteFooter
+        .classList
+        .add(
+            "proof-mode"
+        );
+
+    }
+);
+
+
+qedReturn
+.addEventListener(
+    "click",
+    function () {
+
+        siteFooter
+        .classList
+        .remove(
+            "proof-mode"
+        );
+
+    }
+);
 
 
 /* =========================================================
