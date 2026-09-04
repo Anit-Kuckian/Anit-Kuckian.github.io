@@ -1,127 +1,1946 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Academic website of Anit Kuckian">
-  <title>Anit Kuckian | Mathematics</title>
-  <link rel="stylesheet" href="styles.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Anit Kuckian | Mathematics</title>
+
+<meta name="description"
+      content="Academic website of Anit Kuckian">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@500;600;700&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+:root {
+    --sidebar: #040b14;
+    --accent: #149ddd;
+    --soft: #f5f8fd;
+    --text: #272829;
+    --muted: #6f7180;
+    --sidebar-width: 300px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background: var(--sidebar);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+
+.profile {
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid #2c2f3f;
+    margin: 0 auto 14px;
+}
+
+.profile h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 13px;
+}
+
+.social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #212431;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+}
+
+.social a:hover {
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+    padding: 12px 18px 35px;
+}
+
+nav a {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    color: #a8a9b4;
+    padding: 11px 14px;
+    border-radius: 6px;
+    margin: 4px 0;
+    transition: 0.25s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #101821;
+    color: white;
+}
+
+nav i {
+    width: 20px;
+    text-align: center;
+}
+
+nav a.active i,
+nav a:hover i {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+#main,
+footer {
+    margin-left: var(--sidebar-width);
+}
+
+section {
+    padding: 76px 6%;
+}
+
+.section-bg {
+    background: var(--soft);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+
+    background:
+    linear-gradient(
+        rgba(4,11,20,0.58),
+        rgba(4,11,20,0.58)
+    ),
+    url("https://picsum.photos/seed/anit-hero/1600/1000")
+    center center / cover no-repeat;
+}
+
+#hero h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: clamp(52px, 7vw, 78px);
+    line-height: 1.05;
+}
+
+#hero p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: clamp(24px, 3vw, 34px);
+}
+
+.typed {
+    border-bottom: 3px solid var(--accent);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+    margin-bottom: 34px;
+}
+
+.section-title h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #173b6c;
+    padding-bottom: 13px;
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 52px;
+    height: 3px;
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #173b6c;
+    margin-bottom: 12px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 22px;
+    margin: 20px 0;
+}
+
+.info strong {
+    color: #333;
+}
+
+.info i {
+    color: var(--accent);
+    font-size: 11px;
+    margin-right: 7px;
+}
+
+
+/* =========================================================
+   RESEARCH CARDS
+========================================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e4ebf2;
+    padding: 24px;
+    border-radius: 7px;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+.card i {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+.card h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #173b6c;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PUBLICATIONS
+========================================================= */
+
+.publication {
+    padding: 20px 0;
+    border-bottom: 1px solid #e5ebf1;
+}
+
+.publication h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #173b6c;
+    margin-bottom: 6px;
+}
+
+.publication p {
+    color: #666;
+}
+
+.badge {
+    display: inline-block;
+    background: #e4f4fb;
+    color: #0e7fae;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   RESUME
+========================================================= */
+
+.resume {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.resume h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.resume-item {
+    position: relative;
+    border-left: 2px solid #1f5297;
+    padding: 0 0 24px 22px;
+}
+
+.resume-item::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #1f5297;
+}
+
+.resume-item h4 {
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.resume-item span {
+    display: inline-block;
+    background: #e4edf9;
+    padding: 4px 10px;
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TALKS
+========================================================= */
+
+.event-list {
+    display: grid;
+    gap: 16px;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    border: 1px solid #e4ebf2;
+    padding: 19px;
+    border-radius: 6px;
+}
+
+.event-date {
+    color: #0f7fb3;
+    font-weight: 700;
+}
+
+.event h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #173b6c;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 25px;
+}
+
+.contact-box {
+    background: white;
+    box-shadow: 0 0 24px rgba(0,0,0,0.08);
+    padding: 27px;
+    border-radius: 6px;
+}
+
+.contact-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.contact-row i {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #dff3fc;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d7e1ea;
+    margin-bottom: 12px;
+    font-family: inherit;
+}
+
+.contact-box textarea {
+    min-height: 140px;
+}
+
+.send-btn {
+    border: 0;
+    background: var(--accent);
+    color: white;
+    padding: 11px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    text-align: center;
+    padding: 24px;
+    background: var(--soft);
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-nav-toggle {
+    display: none;
+    position: fixed;
+    right: 14px;
+    top: 14px;
+    z-index: 1200;
+    border: 0;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(15px);
+    transition:
+        opacity 0.55s,
+        transform 0.55s;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    #sidebar {
+        transform: translateX(-100%);
+    }
+
+    #sidebar.open {
+        transform: none;
+    }
+
+    #main,
+    footer {
+        margin-left: 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .about,
+    .resume,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    section {
+        padding: 62px 24px;
+    }
+
+    .cards,
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .event {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
 </head>
-<body data-page="home">
-<header class="site-header">
-  <div class="nav-wrap">
-    <a class="brand" href="index.html">Anit Kuckian</a>
-    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a href="index.html" data-page="home">Home</a>
-      <a href="cv.html" data-page="cv">CV</a>
-      <a href="research.html" data-page="research">Research</a>
-      <a href="publications.html" data-page="publications">Publications</a>
-      <a href="notes.html" data-page="notes">Notes</a>
-      <a href="contact.html" data-page="contact">Contact</a>
-    </nav>
-  </div>
-</header>
 
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="reveal">
-        <div class="eyebrow">Mathematics · IIT Gandhinagar</div>
-        <h1>Anit<br>Kuckian</h1>
-        <p class="hero-role">Sabarmati Bridge Fellow</p>
-        <p class="hero-copy">
-          I work broadly in algebra, with interests in finite fields, algebraic coding theory,
-          commutative algebra, affine algebraic geometry, and rational points over finite fields.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="research.html">Explore research</a>
-          <a class="btn secondary" href="publications.html">Publications</a>
-          <a class="btn secondary" href="cv.html">Curriculum Vitae</a>
-        </div>
-      </div>
-      <div class="portrait-shell reveal">
-        <img class="portrait"
-             src="https://picsum.photos/seed/anit-kuckian/900/900"
-             alt="Temporary profile image">
-      </div>
-    </div>
-  </section>
+<body>
 
-  <section class="quick-links">
-    <div class="container card-grid">
-      <a class="portal-card reveal" href="cv.html"
-         style="--bg:url('https://picsum.photos/seed/cv-ak/900/700')">
-        <span class="card-label"><span class="card-kicker">Profile</span>Curriculum Vitae</span>
-      </a>
-      <a class="portal-card reveal" href="publications.html"
-         style="--bg:url('https://picsum.photos/seed/papers-ak/900/700')">
-        <span class="card-label"><span class="card-kicker">Research output</span>Publications</span>
-      </a>
-      <a class="portal-card reveal" href="research.html"
-         style="--bg:url('https://picsum.photos/seed/research-ak/900/700')">
-        <span class="card-label"><span class="card-kicker">Current directions</span>Research</span>
-      </a>
-      <a class="portal-card reveal" href="notes.html"
-         style="--bg:url('https://picsum.photos/seed/notes-ak/900/700')">
-        <span class="card-label"><span class="card-kicker">Exposition</span>Notes & Ideas</span>
-      </a>
-    </div>
-  </section>
 
-  <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="about-copy reveal">
-        <div class="eyebrow">About</div>
-        <h2>Algebra, finite fields, and geometry.</h2>
-        <p>
-          I am currently a Sabarmati Bridge Fellow at the Indian Institute of Technology Gandhinagar.
-          My research interests center on algebraic structures over finite fields and their interactions
-          with coding theory and affine algebraic geometry.
-        </p>
-        <p>
-          My recent work includes rational point counting on Danielewski-type varieties and questions
-          related to the Zariski Cancellation Problem. I am also exploring polynomial constructions over
-          finite fields and algebraic coding theory.
-        </p>
-        <a class="text-link" href="research.html">Read more about my research →</a>
-      </div>
-      <div class="reveal">
-        <ul class="interest-list">
-          <li><span>Finite Fields</span><span>algebra · arithmetic</span></li>
-          <li><span>Algebraic Coding Theory</span><span>codes · structure</span></li>
-          <li><span>Commutative Algebra</span><span>affine algebras</span></li>
-          <li><span>Affine Algebraic Geometry</span><span>cancellation</span></li>
-          <li><span>Rational Points</span><span>finite fields</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
 
-  <section class="section alt">
-    <div class="container feature">
-      <div class="reveal">
-        <div class="eyebrow">Selected preprint</div>
-        <h2>Counting rational points on Danielewski-type surfaces</h2>
-        <p class="section-lead">
-          Joint work on counting \u2113<sub>q</sub>-rational points on Danielewski and Double Danielewski surfaces.
-        </p>
-      </div>
-      <article class="feature-card reveal">
-        <h3>Counting F<sub>q</sub>-Rational Points on Danielewski and Double Danielewski Surfaces</h3>
-        <p class="meta">Neena Gupta · Anit Kuckian · Indranath Sengupta · 2026</p>
-        <a class="text-link" href="https://arxiv.org/abs/2605.24821" target="_blank" rel="noopener">View on arXiv →</a>
-      </article>
+<button
+class="mobile-nav-toggle"
+id="mobileToggle">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside id="sidebar">
+
+<div class="profile">
+
+    <img
+    src="https://picsum.photos/seed/anit-profile/500/500"
+    alt="Temporary profile image">
+
+    <h1>
+        Anit Kuckian
+    </h1>
+
+    <div class="social">
+
+        <a
+        href="https://github.com/Anit-Kuckian"
+        target="_blank">
+
+            <i class="fa-brands fa-github"></i>
+
+        </a>
+
+        <a href="#">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+        </a>
+
+        <a href="mailto:YOUR_EMAIL">
+
+            <i class="fa-solid fa-envelope"></i>
+
+        </a>
+
     </div>
-  </section>
+
+</div>
+
+
+<nav>
+
+<a
+class="nav-link active"
+href="#hero">
+
+<i class="fa-solid fa-house"></i>
+Home
+
+</a>
+
+<a
+class="nav-link"
+href="#about">
+
+<i class="fa-regular fa-user"></i>
+About
+
+</a>
+
+<a
+class="nav-link"
+href="#research">
+
+<i class="fa-solid fa-flask"></i>
+Research
+
+</a>
+
+<a
+class="nav-link"
+href="#publications">
+
+<i class="fa-regular fa-file-lines"></i>
+Publications
+
+</a>
+
+<a
+class="nav-link"
+href="#resume">
+
+<i class="fa-regular fa-file"></i>
+Resume
+
+</a>
+
+<a
+class="nav-link"
+href="#talks">
+
+<i class="fa-solid fa-chalkboard-user"></i>
+Talks & Conferences
+
+</a>
+
+<a
+class="nav-link"
+href="#notes">
+
+<i class="fa-solid fa-book-open"></i>
+Notes & Projects
+
+</a>
+
+<a
+class="nav-link"
+href="#contact">
+
+<i class="fa-regular fa-envelope"></i>
+Contact
+
+</a>
+
+</nav>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main id="main">
+
+
+<!-- =========================================================
+     HOME
+========================================================= -->
+
+<section id="hero">
+
+<div class="reveal">
+
+<h1>
+Anit Kuckian
+</h1>
+
+<p>
+
+I'm interested in
+
+<span
+class="typed"
+id="typedText"></span>
+
+</p>
+
+<p
+style="
+font-family:'Open Sans',sans-serif;
+font-size:17px;
+font-weight:400;
+margin-top:18px;
+color:#e8edf2;
+">
+
+Sabarmati Bridge Fellow ·
+Mathematics ·
+IIT Gandhinagar
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+<div class="section-title reveal">
+
+<h2>
+About
+</h2>
+
+<p>
+
+I am currently a Sabarmati Bridge Fellow
+at the Indian Institute of Technology Gandhinagar.
+
+My interests lie broadly in algebra,
+finite fields and their applications.
+
+</p>
+
+</div>
+
+
+<div class="about">
+
+<img
+
+class="reveal"
+
+src="https://picsum.photos/seed/anit-about/700/850"
+
+alt="Temporary photograph">
+
+
+<div class="reveal">
+
+<h3>
+Mathematics Researcher
+</h3>
+
+<p>
+
+<em>
+
+Finite fields,
+algebraic coding theory,
+commutative algebra
+and affine algebraic geometry.
+
+</em>
+
+</p>
+
+
+<div class="info">
+
+<div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+<strong>Position:</strong>
+
+Sabarmati Bridge Fellow
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+<strong>Institution:</strong>
+
+IIT Gandhinagar
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+<strong>Degree:</strong>
+
+M.Sc. Mathematics
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+<strong>Location:</strong>
+
+Gandhinagar, India
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+<strong>Email:</strong>
+
+YOUR_EMAIL
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+<strong>GitHub:</strong>
+
+Anit-Kuckian
+
+</div>
+
+</div>
+
+
+<p>
+
+My recent work concerns rational points
+over finite fields, Danielewski-type varieties,
+and questions related to the
+Zariski Cancellation Problem.
+
+I am also interested in developing stronger
+connections with algebraic coding theory.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
+
+<section
+id="research"
+class="section-bg">
+
+<div class="section-title reveal">
+
+<h2>
+Research Interests
+</h2>
+
+<p>
+
+Some of the mathematical areas
+and problems I am currently studying.
+
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+<i class="fa-solid fa-square-root-variable"></i>
+
+<h3>
+Finite Fields
+</h3>
+
+<p>
+
+Polynomial constructions,
+arithmetic over finite fields,
+primitive elements,
+factorization,
+and rational-point counting.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<i class="fa-solid fa-code"></i>
+
+<h3>
+Algebraic Coding Theory
+</h3>
+
+<p>
+
+Finite-field methods,
+algebraic codes,
+covering questions,
+and related structural problems.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<i class="fa-solid fa-cubes"></i>
+
+<h3>
+Commutative Algebra
+</h3>
+
+<p>
+
+Affine domains,
+polynomial rings,
+exponential maps,
+invariants,
+and cancellation phenomena.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<i class="fa-solid fa-shapes"></i>
+
+<h3>
+Affine Algebraic Geometry
+</h3>
+
+<p>
+
+Danielewski-type varieties,
+Makar-Limanov invariants,
+and the Zariski Cancellation Problem.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>
+Rational Point Counting
+</h3>
+
+<p>
+
+Counting rational points
+on algebraic varieties
+over finite fields.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<i class="fa-solid fa-diagram-project"></i>
+
+<h3>
+Current Explorations
+</h3>
+
+<p>
+
+Polygonal-number generating varieties,
+generalized covering radius,
+and computational algebra.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section id="publications">
+
+<div class="section-title reveal">
+
+<h2>
+Publications & Preprints
+</h2>
+
+<p>
+Research papers and preprints.
+</p>
+
+</div>
+
+
+<article class="publication reveal">
+
+<span class="badge">
+Preprint · 2026
+</span>
+
+<h3>
+
+Counting
+F<sub>q</sub>-Rational Points
+on Danielewski and
+Double Danielewski Surfaces
+
+</h3>
+
+<p>
+
+Neena Gupta,
+Anit Kuckian,
+Indranath Sengupta
+
+</p>
+
+<p>
+
+Finite fields ·
+Affine algebraic geometry ·
+Rational points
+
+</p>
+
+<p>
+
+<a
+href="https://arxiv.org/abs/2605.24821"
+target="_blank">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+arXiv
+
+</a>
+
+</p>
+
+</article>
+
+</section>
+
+
+<!-- =========================================================
+     RESUME
+========================================================= -->
+
+<section
+id="resume"
+class="section-bg">
+
+<div class="section-title reveal">
+
+<h2>
+Resume
+</h2>
+
+<p>
+
+A short academic résumé.
+A downloadable PDF CV can be added here later.
+
+</p>
+
+</div>
+
+
+<div class="resume">
+
+
+<div>
+
+<h3>
+Education
+</h3>
+
+<div class="resume-item reveal">
+
+<h4>
+M.Sc. Mathematics
+</h4>
+
+<span>
+IIT Gandhinagar
+</span>
+
+<p>
+
+Graduate study in mathematics
+with emphasis on algebra
+and related areas.
+
+</p>
+
+</div>
+
+
+<div class="resume-item reveal">
+
+<h4>
+B.Sc.
+</h4>
+
+<span>
+Add institution here
+</span>
+
+<p>
+
+Add your undergraduate institution
+and dates here.
+
+</p>
+
+</div>
+
+
+<h3>
+Awards
+</h3>
+
+<div class="resume-item reveal">
+
+<h4>
+INSPIRE Scholarship
+</h4>
+
+<p>
+
+Department of Science
+and Technology,
+Government of India.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>
+Research Experience
+</h3>
+
+<div class="resume-item reveal">
+
+<h4>
+Sabarmati Bridge Fellow
+</h4>
+
+<span>
+2026 – Present
+</span>
+
+<p>
+
+Indian Institute of Technology Gandhinagar.
+
+</p>
+
+</div>
+
+
+<div class="resume-item reveal">
+
+<h4>
+Summer Research Internship Program
+</h4>
+
+<span>
+2025
+</span>
+
+<p>
+
+Research on Danielewski and
+Double Danielewski surfaces,
+Zariski Cancellation,
+and finite-field point counting.
+
+</p>
+
+</div>
+
+
+<h3>
+Tools
+</h3>
+
+<div class="resume-item reveal">
+
+<h4>
+Mathematical Computing
+</h4>
+
+<p>
+
+SageMath ·
+Macaulay2 ·
+Python ·
+LaTeX
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     TALKS
+========================================================= -->
+
+<section id="talks">
+
+<div class="section-title reveal">
+
+<h2>
+Talks & Conferences
+</h2>
+
+<p>
+
+Seminars,
+workshops,
+conference presentations,
+and research talks.
+
+</p>
+
+</div>
+
+
+<div class="event-list">
+
+
+<div class="event reveal">
+
+<div class="event-date">
+2026
+</div>
+
+<div>
+
+<h3>
+Add your recent talk here
+</h3>
+
+<p>
+Institution · City · Talk title
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event reveal">
+
+<div class="event-date">
+2025
+</div>
+
+<div>
+
+<h3>
+Summer Research Internship Program
+</h3>
+
+<p>
+
+IIT Gandhinagar ·
+Research Presentation
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     NOTES
+========================================================= -->
+
+<section
+id="notes"
+class="section-bg">
+
+<div class="section-title reveal">
+
+<h2>
+Notes & Projects
+</h2>
+
+<p>
+
+Expository notes,
+computational experiments,
+and ongoing mathematical ideas.
+
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card reveal">
+
+<i class="fa-solid fa-shapes"></i>
+
+<h3>
+
+Polygonal Numbers
+over Finite Fields
+
+</h3>
+
+<p>
+
+Working notes
+and point-counting constructions
+related to polygonal and
+pyramidal sequences.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<i class="fa-solid fa-book"></i>
+
+<h3>
+Finite Fields Notes
+</h3>
+
+<p>
+
+Examples,
+factorization methods,
+primitive elements,
+and finite-field computations.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<i class="fa-solid fa-cube"></i>
+
+<h3>
+Danielewski Surfaces
+</h3>
+
+<p>
+
+Expository notes on
+cancellation,
+filtrations,
+exponential maps,
+and invariants.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+id="contact"
+class="section-bg">
+
+<div class="section-title reveal">
+
+<h2>
+Contact
+</h2>
+
+<p>
+
+For academic correspondence,
+research discussions,
+or collaboration.
+
+</p>
+
+</div>
+
+
+<div class="contact">
+
+
+<div class="contact-box reveal">
+
+
+<div class="contact-row">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<div>
+
+<strong>
+Location
+</strong>
+
+<p>
+
+Indian Institute of Technology Gandhinagar,
+Gujarat,
+India
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="contact-row">
+
+<i class="fa-solid fa-envelope"></i>
+
+<div>
+
+<strong>
+Email
+</strong>
+
+<p>
+YOUR_EMAIL
+</p>
+
+</div>
+
+</div>
+
+
+<div class="contact-row">
+
+<i class="fa-brands fa-github"></i>
+
+<div>
+
+<strong>
+GitHub
+</strong>
+
+<p>
+
+<a
+href="https://github.com/Anit-Kuckian"
+target="_blank">
+
+github.com/Anit-Kuckian
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<form
+class="contact-box reveal"
+
+onsubmit="
+event.preventDefault();
+document.getElementById('formMessage').textContent =
+'This is currently a demo form. We can connect it later.';
+">
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+placeholder="Your Email"
+required>
+
+<input
+type="text"
+placeholder="Subject"
+required>
+
+<textarea
+placeholder="Message"
+required></textarea>
+
+<button
+class="send-btn"
+type="submit">
+
+Send Message
+
+</button>
+
+<p
+id="formMessage"
+style="
+margin-top:10px;
+color:#777;
+font-size:14px;
+">
+</p>
+
+</form>
+
+</div>
+
+</section>
+
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-wrap">
-    <span>© <span data-year></span> Anit Kuckian</span>
-    <span>Mathematics · IIT Gandhinagar</span>
-  </div>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+© <span id="year"></span>
+Anit Kuckian
+
 </footer>
-<script src="script.js"></script>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* TYPING EFFECT */
+
+const words = [
+    "Finite Fields",
+    "Algebraic Coding Theory",
+    "Commutative Algebra",
+    "Affine Algebraic Geometry"
+];
+
+const typedText =
+document.getElementById("typedText");
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+
+function typeLoop() {
+
+    const current =
+    words[wordIndex];
+
+    typedText.textContent =
+    current.slice(
+        0,
+        deleting
+        ? charIndex - 1
+        : charIndex + 1
+    );
+
+    charIndex +=
+    deleting ? -1 : 1;
+
+    if (
+        !deleting &&
+        charIndex === current.length
+    ) {
+
+        deleting = true;
+
+        setTimeout(
+            typeLoop,
+            1200
+        );
+
+        return;
+    }
+
+    if (
+        deleting &&
+        charIndex === 0
+    ) {
+
+        deleting = false;
+
+        wordIndex =
+        (wordIndex + 1)
+        %
+        words.length;
+    }
+
+    setTimeout(
+        typeLoop,
+        deleting ? 45 : 85
+    );
+}
+
+typeLoop();
+
+
+/* MOBILE MENU */
+
+const sidebar =
+document.getElementById("sidebar");
+
+const mobileToggle =
+document.getElementById("mobileToggle");
+
+
+mobileToggle.addEventListener(
+    "click",
+    function () {
+
+        sidebar
+        .classList
+        .toggle("open");
+
+        mobileToggle.innerHTML =
+
+        sidebar
+        .classList
+        .contains("open")
+
+        ?
+
+        '<i class="fa-solid fa-xmark"></i>'
+
+        :
+
+        '<i class="fa-solid fa-bars"></i>';
+
+    }
+);
+
+
+/* CLOSE MOBILE MENU */
+
+document
+.querySelectorAll(".nav-link")
+.forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function() {
+
+            if (
+                window.innerWidth < 1000
+            ) {
+
+                sidebar
+                .classList
+                .remove("open");
+
+                mobileToggle.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
+            }
+
+        }
+    );
+
+});
+
+
+/* REVEAL ANIMATION */
+
+const revealObserver =
+new IntersectionObserver(
+
+    function(entries) {
+
+        entries.forEach(
+            function(entry) {
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+                    entry.target
+                    .classList
+                    .add("show");
+                }
+
+            }
+        );
+
+    },
+
+    {
+        threshold: 0.08
+    }
+
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(function(element) {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* ACTIVE NAVIGATION */
+
+const sections =
+document.querySelectorAll("main section");
+
+const navLinks =
+document.querySelectorAll(".nav-link");
+
+
+const sectionObserver =
+new IntersectionObserver(
+
+    function(entries) {
+
+        entries.forEach(
+            function(entry) {
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+                    navLinks
+                    .forEach(
+                        function(link) {
+
+                            link
+                            .classList
+                            .remove("active");
+
+                        }
+                    );
+
+                    const activeLink =
+                    document.querySelector(
+                        '.nav-link[href="#'
+                        +
+                        entry.target.id
+                        +
+                        '"]'
+                    );
+
+                    if (activeLink) {
+
+                        activeLink
+                        .classList
+                        .add("active");
+
+                    }
+
+                }
+
+            }
+        );
+
+    },
+
+    {
+        rootMargin:
+        "-35% 0px -55%"
+    }
+
+);
+
+
+sections.forEach(
+    function(section) {
+
+        sectionObserver.observe(section);
+
+    }
+);
+
+
+/* AUTOMATIC YEAR */
+
+document
+.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+
+</script>
+
 </body>
+
 </html>
