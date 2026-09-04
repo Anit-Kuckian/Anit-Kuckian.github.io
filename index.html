@@ -11,7 +11,12 @@
 <title>Anit Kuckian | Mathematics</title>
 
 <meta name="description"
-      content="Academic website of Anit Kuckian">
+      content="Academic website of Anit Kuckian — mathematics, finite fields, algebraic coding theory, commutative algebra and affine algebraic geometry.">
+
+
+<!-- =========================================================
+     FONTS
+========================================================= -->
 
 <link rel="preconnect"
       href="https://fonts.googleapis.com">
@@ -21,45 +26,191 @@
       crossorigin>
 
 <link
-href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@500;600;700&display=swap"
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Text:wght@400;700&display=swap"
 rel="stylesheet">
+
+
+<!-- =========================================================
+     ICONS
+========================================================= -->
 
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+
+<!-- =========================================================
+     MATHJAX
+     Allows you to use $...$ and $$...$$ mathematics later
+========================================================= -->
+
+<script>
+
+window.MathJax = {
+
+    tex: {
+
+        inlineMath: [
+            ['$', '$'],
+            ['\\(', '\\)']
+        ],
+
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ]
+
+    }
+
+};
+
+</script>
+
+<script
+async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
+
 <style>
 
+/* =========================================================
+   VARIABLES
+========================================================= */
+
 :root {
-    --sidebar: #040b14;
-    --accent: #149ddd;
-    --soft: #f5f8fd;
-    --text: #272829;
-    --muted: #6f7180;
-    --sidebar-width: 300px;
+
+    --sidebar: #07111d;
+
+    --sidebar-soft: #101d2b;
+
+    --accent: #2b9bc4;
+
+    --accent-dark: #197c9f;
+
+    --accent-light: #e7f7fc;
+
+    --background: #ffffff;
+
+    --soft: #f5f8fb;
+
+    --card: #ffffff;
+
+    --text: #20252b;
+
+    --muted: #69717b;
+
+    --border: #e4e9ee;
+
+    --title: #153552;
+
+    --sidebar-width: 305px;
+
+    --shadow:
+    0 15px 40px rgba(18, 38, 58, 0.08);
+
 }
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode {
+
+    --background: #111820;
+
+    --soft: #161f28;
+
+    --card: #18232d;
+
+    --text: #e7ebef;
+
+    --muted: #aeb8c1;
+
+    --border: #2a3641;
+
+    --title: #d8edf6;
+
+    --accent-light: #17303d;
+
+    --shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+
+}
+
+
+
+/* =========================================================
+   BASIC
+========================================================= */
 
 * {
+
     box-sizing: border-box;
+
     margin: 0;
+
     padding: 0;
+
 }
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
+
 
 body {
-    font-family: "Open Sans", sans-serif;
-    color: var(--text);
-    line-height: 1.7;
-    background: white;
+
+    font-family:
+    "DM Sans",
+    sans-serif;
+
+    background:
+    var(--background);
+
+    color:
+    var(--text);
+
+    line-height: 1.75;
+
+    transition:
+    background 0.3s,
+    color 0.3s;
+
 }
 
+
 a {
+
     text-decoration: none;
-    color: var(--accent);
+
+    color:
+    var(--accent-dark);
+
 }
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+button {
+
+    font-family:
+    inherit;
+
+}
+
 
 
 /* =========================================================
@@ -67,442 +218,1595 @@ a {
 ========================================================= */
 
 #sidebar {
+
     position: fixed;
+
     top: 0;
+
     left: 0;
+
     bottom: 0;
-    width: var(--sidebar-width);
-    background: var(--sidebar);
+
+    width:
+    var(--sidebar-width);
+
+    background:
+    var(--sidebar);
+
     z-index: 1000;
+
     overflow-y: auto;
-    transition: 0.3s;
+
+    transition:
+    transform 0.3s ease;
+
 }
+
+
+/* PROFILE */
 
 .profile {
+
     text-align: center;
-    padding: 28px 20px;
+
+    padding:
+    30px 22px 20px;
+
 }
 
-.profile img {
-    width: 120px;
-    height: 120px;
+
+.profile-image {
+
+    width: 126px;
+
+    height: 126px;
+
     object-fit: cover;
+
+    margin:
+    0 auto 15px;
+
     border-radius: 50%;
-    border: 7px solid #2c2f3f;
-    margin: 0 auto 14px;
+
+    border:
+    6px solid #26394b;
+
 }
+
 
 .profile h1 {
-    font-family: "Raleway", sans-serif;
+
+    font-family:
+    "Libre Caslon Text",
+    serif;
+
     font-size: 23px;
-    font-weight: 600;
+
     color: white;
+
+    margin-bottom: 4px;
+
 }
 
-.social {
+
+.profile-position {
+
+    color: #93a4b5;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.profile-badge {
+
+    display: inline-block;
+
+    padding:
+    5px 10px;
+
+    border-radius: 20px;
+
+    background:
+    rgba(43, 155, 196, 0.14);
+
+    color: #78c8e5;
+
+    font-size: 11px;
+
+    letter-spacing: 0.04em;
+
+    margin-bottom: 17px;
+
+}
+
+
+/* SOCIAL */
+
+.social-links {
+
     display: flex;
+
     justify-content: center;
+
+    flex-wrap: wrap;
+
     gap: 8px;
-    margin-top: 13px;
+
 }
 
-.social a {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #212431;
-    color: white;
+
+.social-links a,
+.theme-button {
+
+    width: 37px;
+
+    height: 37px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
-    transition: 0.25s;
-}
 
-.social a:hover {
-    background: var(--accent);
-}
+    border-radius: 50%;
 
+    border: none;
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+    background: #172534;
 
-nav {
-    padding: 12px 18px 35px;
-}
-
-nav a {
-    display: flex;
-    gap: 13px;
-    align-items: center;
-    color: #a8a9b4;
-    padding: 11px 14px;
-    border-radius: 6px;
-    margin: 4px 0;
-    transition: 0.25s;
-}
-
-nav a:hover,
-nav a.active {
-    background: #101821;
     color: white;
+
+    cursor: pointer;
+
+    transition:
+    0.25s;
+
 }
 
-nav i {
-    width: 20px;
-    text-align: center;
+
+.social-links a:hover,
+.theme-button:hover {
+
+    background:
+    var(--accent);
+
+    transform:
+    translateY(-2px);
+
 }
 
-nav a.active i,
-nav a:hover i {
-    color: var(--accent);
-}
 
 
 /* =========================================================
-   MAIN
+   SIDEBAR NAVIGATION
 ========================================================= */
 
-#main,
-footer {
-    margin-left: var(--sidebar-width);
+.sidebar-nav {
+
+    padding:
+    20px 18px 40px;
+
 }
+
+
+.sidebar-nav a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding:
+    10px 14px;
+
+    margin-bottom: 4px;
+
+    border-radius: 6px;
+
+    color: #a4afba;
+
+    font-size: 14px;
+
+    transition:
+    0.2s;
+
+}
+
+
+.sidebar-nav a i {
+
+    width: 20px;
+
+    text-align: center;
+
+}
+
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+
+    color: white;
+
+    background:
+    var(--sidebar-soft);
+
+}
+
+
+.sidebar-nav a:hover i,
+.sidebar-nav a.active i {
+
+    color:
+    var(--accent);
+
+}
+
+
+.sidebar-cv {
+
+    margin-top: 17px;
+
+    display: flex !important;
+
+    justify-content: center;
+
+    color: white !important;
+
+    background:
+    var(--accent) !important;
+
+}
+
+
+.sidebar-cv:hover {
+
+    background:
+    var(--accent-dark) !important;
+
+}
+
+
+
+/* =========================================================
+   MOBILE NAV BUTTON
+========================================================= */
+
+.mobile-menu {
+
+    display: none;
+
+    position: fixed;
+
+    top: 14px;
+
+    right: 14px;
+
+    z-index: 1200;
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background:
+    var(--accent);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 19px;
+
+}
+
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+#main {
+
+    margin-left:
+    var(--sidebar-width);
+
+}
+
 
 section {
-    padding: 76px 6%;
+
+    padding:
+    85px 7%;
+
 }
 
-.section-bg {
-    background: var(--soft);
+
+.section-soft {
+
+    background:
+    var(--soft);
+
 }
+
+
+.section-title {
+
+    margin-bottom: 42px;
+
+}
+
+
+.section-kicker {
+
+    color:
+    var(--accent-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing:
+    0.15em;
+
+    margin-bottom: 7px;
+
+}
+
+
+.section-title h2 {
+
+    font-family:
+    "Libre Caslon Text",
+    serif;
+
+    color:
+    var(--title);
+
+    font-size:
+    clamp(30px, 4vw, 42px);
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-title p {
+
+    color:
+    var(--muted);
+
+    max-width: 850px;
+
+}
+
 
 
 /* =========================================================
    HERO
 ========================================================= */
 
-#hero {
+#home {
+
     min-height: 100vh;
+
     display: flex;
+
     align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
     color: white;
 
     background:
+
     linear-gradient(
-        rgba(4,11,20,0.58),
-        rgba(4,11,20,0.58)
+        90deg,
+        rgba(6, 15, 25, 0.91),
+        rgba(6, 15, 25, 0.61),
+        rgba(6, 15, 25, 0.35)
     ),
-    url("https://picsum.photos/seed/anit-hero/1600/1000")
-    center center / cover no-repeat;
-}
 
-#hero h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: clamp(52px, 7vw, 78px);
-    line-height: 1.05;
-}
+    url(
+    "https://picsum.photos/seed/anit-math-main/1800/1200"
+    )
 
-#hero p {
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: clamp(24px, 3vw, 34px);
-}
+    center center /
+    cover
+    no-repeat;
 
-.typed {
-    border-bottom: 3px solid var(--accent);
 }
 
 
-/* =========================================================
-   SECTION TITLE
-========================================================= */
+#home::after {
 
-.section-title {
-    margin-bottom: 34px;
-}
-
-.section-title h2 {
-    font-family: "Raleway", sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    color: #173b6c;
-    padding-bottom: 13px;
-    margin-bottom: 14px;
-    position: relative;
-}
-
-.section-title h2::after {
     content: "";
+
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 52px;
-    height: 3px;
-    background: var(--accent);
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+    rgba(43, 155, 196, 0.13);
+
+    right: -130px;
+
+    bottom: -130px;
+
+    filter:
+    blur(3px);
+
 }
+
+
+.hero-content {
+
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.hero-kicker {
+
+    display: inline-block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing:
+    0.16em;
+
+    text-transform: uppercase;
+
+    color:
+    #83d3ee;
+
+    margin-bottom: 18px;
+
+}
+
+
+.hero-content h1 {
+
+    font-family:
+    "Libre Caslon Text",
+    serif;
+
+    font-size:
+    clamp(56px, 8vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing:
+    -0.04em;
+
+    margin-bottom: 19px;
+
+}
+
+
+.hero-typed {
+
+    font-size:
+    clamp(22px, 3vw, 31px);
+
+    margin-bottom: 23px;
+
+}
+
+
+#typedText {
+
+    border-bottom:
+    3px solid
+    var(--accent);
+
+}
+
+
+.hero-description {
+
+    max-width: 700px;
+
+    font-size: 16px;
+
+    color:
+    rgba(255, 255, 255, 0.82);
+
+    margin-bottom: 32px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+    11px 18px;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    transition:
+    0.25s;
+
+}
+
+
+.button-primary {
+
+    color: white;
+
+    background:
+    var(--accent);
+
+}
+
+
+.button-primary:hover {
+
+    background:
+    var(--accent-dark);
+
+    color: white;
+
+    transform:
+    translateY(-2px);
+
+}
+
+
+.button-outline {
+
+    color: white;
+
+    border:
+    1px solid
+    rgba(255, 255, 255, 0.48);
+
+}
+
+
+.button-outline:hover {
+
+    background:
+    rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+}
+
 
 
 /* =========================================================
    ABOUT
 ========================================================= */
 
-.about {
+.about-layout {
+
     display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 40px;
+
+    grid-template-columns:
+    minmax(250px, 340px)
+    1fr;
+
+    gap: 55px;
+
+    align-items: start;
+
 }
 
-.about img {
+
+.about-image {
+
+    position: relative;
+
+}
+
+
+.about-image img {
+
     width: 100%;
-    border-radius: 5px;
+
+    border-radius: 7px;
+
+    box-shadow:
+    var(--shadow);
+
 }
 
-.about h3 {
-    font-family: "Raleway", sans-serif;
+
+.about-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 90px;
+
+    right: -18px;
+
+    bottom: -18px;
+
+    border-right:
+    3px solid
+    var(--accent);
+
+    border-bottom:
+    3px solid
+    var(--accent);
+
+}
+
+
+.about-text h3 {
+
+    font-family:
+    "Libre Caslon Text",
+    serif;
+
+    color:
+    var(--title);
+
     font-size: 25px;
-    font-weight: 600;
-    color: #173b6c;
-    margin-bottom: 12px;
+
+    margin-bottom: 15px;
+
 }
 
-.info {
+
+.about-text p {
+
+    margin-bottom: 17px;
+
+    color:
+    var(--muted);
+
+}
+
+
+.details-grid {
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 22px;
-    margin: 20px 0;
+
+    grid-template-columns:
+    repeat(2, minmax(220px, 1fr));
+
+    gap:
+    13px 24px;
+
+    margin:
+    25px 0;
+
 }
 
-.info strong {
-    color: #333;
+
+.detail {
+
+    padding-bottom:
+    10px;
+
+    border-bottom:
+    1px solid
+    var(--border);
+
 }
 
-.info i {
-    color: var(--accent);
-    font-size: 11px;
-    margin-right: 7px;
+
+.detail strong {
+
+    color:
+    var(--text);
+
+    margin-right: 5px;
+
 }
+
+
+.detail i {
+
+    color:
+    var(--accent);
+
+    margin-right: 8px;
+
+}
+
 
 
 /* =========================================================
-   RESEARCH CARDS
+   CURRENT FOCUS
 ========================================================= */
 
-.cards {
+.focus-grid {
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+    grid-template-columns:
+    repeat(3, 1fr);
+
+    gap: 22px;
+
 }
 
-.card {
-    background: white;
-    border: 1px solid #e4ebf2;
-    padding: 24px;
-    border-radius: 7px;
-    transition: 0.25s;
+
+.focus-card {
+
+    background:
+    var(--card);
+
+    border:
+    1px solid
+    var(--border);
+
+    padding: 28px;
+
+    border-radius: 8px;
+
+    box-shadow:
+    0 8px 22px
+    rgba(30, 50, 70, 0.04);
+
+    transition:
+    0.25s;
+
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+
+.focus-card:hover {
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    var(--shadow);
+
 }
 
-.card i {
-    width: 46px;
-    height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--accent);
-    color: white;
-    border-radius: 6px;
-    margin-bottom: 14px;
-}
 
-.card h3 {
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #173b6c;
+.focus-number {
+
+    font-family:
+    "Libre Caslon Text",
+    serif;
+
+    color:
+    var(--accent);
+
+    font-size: 34px;
+
     margin-bottom: 8px;
+
 }
 
-.card p {
-    color: #666;
-    font-size: 14px;
+
+.focus-card h3 {
+
+    color:
+    var(--title);
+
+    font-size: 18px;
+
+    margin-bottom: 9px;
+
 }
+
+
+.focus-card p {
+
+    color:
+    var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================================================
+   RESEARCH
+========================================================= */
+
+.research-grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(3, 1fr);
+
+    gap: 21px;
+
+}
+
+
+.research-card {
+
+    padding: 25px;
+
+    border:
+    1px solid
+    var(--border);
+
+    background:
+    var(--card);
+
+    border-radius: 8px;
+
+    transition:
+    0.25s;
+
+}
+
+
+.research-card:hover {
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    var(--shadow);
+
+}
+
+
+.research-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+    var(--accent-light);
+
+    color:
+    var(--accent-dark);
+
+    font-size: 18px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.research-card h3 {
+
+    color:
+    var(--title);
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+}
+
+
+.research-card p {
+
+    color:
+    var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================================================
+   SELECTED WORK
+========================================================= */
+
+.featured-work {
+
+    display: grid;
+
+    grid-template-columns:
+    1fr
+    1fr;
+
+    gap: 30px;
+
+}
+
+
+.work-card {
+
+    padding: 30px;
+
+    border:
+    1px solid
+    var(--border);
+
+    border-radius: 8px;
+
+    background:
+    var(--card);
+
+}
+
+
+.work-label {
+
+    color:
+    var(--accent-dark);
+
+    font-size: 11px;
+
+    letter-spacing:
+    0.12em;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+}
+
+
+.work-card h3 {
+
+    font-family:
+    "Libre Caslon Text",
+    serif;
+
+    color:
+    var(--title);
+
+    font-size: 21px;
+
+    line-height: 1.45;
+
+    margin-bottom: 11px;
+
+}
+
+
+.work-card p {
+
+    color:
+    var(--muted);
+
+    margin-bottom: 14px;
+
+}
+
+
+.work-link {
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+}
+
 
 
 /* =========================================================
    PUBLICATIONS
 ========================================================= */
 
-.publication {
-    padding: 20px 0;
-    border-bottom: 1px solid #e5ebf1;
+.publication-tools {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 28px;
+
 }
+
+
+.publication-search {
+
+    flex: 1;
+
+    min-width: 250px;
+
+    padding:
+    11px 14px;
+
+    border:
+    1px solid
+    var(--border);
+
+    border-radius: 5px;
+
+    background:
+    var(--card);
+
+    color:
+    var(--text);
+
+    outline: none;
+
+}
+
+
+.publication-search:focus {
+
+    border-color:
+    var(--accent);
+
+}
+
+
+.filter-button {
+
+    border:
+    1px solid
+    var(--border);
+
+    background:
+    var(--card);
+
+    color:
+    var(--text);
+
+    padding:
+    9px 13px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+
+.filter-button.active {
+
+    background:
+    var(--accent);
+
+    border-color:
+    var(--accent);
+
+    color: white;
+
+}
+
+
+.publication {
+
+    padding:
+    24px 0;
+
+    border-top:
+    1px solid
+    var(--border);
+
+}
+
+
+.publication:last-child {
+
+    border-bottom:
+    1px solid
+    var(--border);
+
+}
+
+
+.publication-type {
+
+    color:
+    var(--accent-dark);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing:
+    0.1em;
+
+    text-transform: uppercase;
+
+}
+
 
 .publication h3 {
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #173b6c;
-    margin-bottom: 6px;
+
+    font-family:
+    "Libre Caslon Text",
+    serif;
+
+    color:
+    var(--title);
+
+    font-size: 20px;
+
+    margin:
+    6px 0;
+
 }
+
 
 .publication p {
-    color: #666;
+
+    color:
+    var(--muted);
+
+    margin-bottom: 3px;
+
 }
 
-.badge {
-    display: inline-block;
-    background: #e4f4fb;
-    color: #0e7fae;
-    font-size: 12px;
-    padding: 3px 8px;
-    border-radius: 20px;
-    margin-bottom: 7px;
+
+.publication-links {
+
+    margin-top: 10px;
+
 }
+
+
+.publication-links a {
+
+    margin-right: 16px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
 
 
 /* =========================================================
-   RESUME
+   NEWS
 ========================================================= */
 
-.resume {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
+.news-list {
 
-.resume h3 {
-    font-family: "Raleway", sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    margin: 20px 0;
-}
-
-.resume-item {
     position: relative;
-    border-left: 2px solid #1f5297;
-    padding: 0 0 24px 22px;
+
 }
 
-.resume-item::before {
-    content: "";
-    position: absolute;
-    left: -8px;
-    top: 4px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: white;
-    border: 2px solid #1f5297;
+
+.news-item {
+
+    display: grid;
+
+    grid-template-columns:
+    125px 1fr;
+
+    gap: 24px;
+
+    padding:
+    20px 0;
+
+    border-bottom:
+    1px solid
+    var(--border);
+
 }
 
-.resume-item h4 {
-    font-family: "Raleway", sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
 
-.resume-item span {
-    display: inline-block;
-    background: #e4edf9;
-    padding: 4px 10px;
-    margin: 5px 0;
+.news-date {
+
+    color:
+    var(--accent-dark);
+
+    font-weight: 700;
+
     font-size: 13px;
+
 }
+
+
+.news-content h3 {
+
+    color:
+    var(--title);
+
+    font-size: 16px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.news-content p {
+
+    color:
+    var(--muted);
+
+    font-size: 14px;
+
+}
+
 
 
 /* =========================================================
-   TALKS
+   CV
 ========================================================= */
 
-.event-list {
+.cv-grid {
+
     display: grid;
-    gap: 16px;
+
+    grid-template-columns:
+    repeat(2, 1fr);
+
+    gap: 50px;
+
 }
 
-.event {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 20px;
-    border: 1px solid #e4ebf2;
-    padding: 19px;
-    border-radius: 6px;
+
+.cv-heading {
+
+    font-family:
+    "Libre Caslon Text",
+    serif;
+
+    color:
+    var(--title);
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
 }
 
-.event-date {
-    color: #0f7fb3;
-    font-weight: 700;
+
+.cv-item {
+
+    position: relative;
+
+    padding:
+    0 0 27px 24px;
+
+    border-left:
+    2px solid
+    var(--accent);
+
 }
 
-.event h3 {
-    font-family: "Raleway", sans-serif;
+
+.cv-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -8px;
+
+    top: 5px;
+
+    width: 13px;
+
+    height: 13px;
+
+    background:
+    var(--background);
+
+    border:
+    2px solid
+    var(--accent);
+
+    border-radius: 50%;
+
+}
+
+
+.cv-item h3 {
+
+    color:
+    var(--title);
+
     font-size: 17px;
-    font-weight: 600;
-    color: #173b6c;
+
+    margin-bottom: 4px;
+
 }
+
+
+.cv-item .year {
+
+    display: inline-block;
+
+    padding:
+    3px 9px;
+
+    margin:
+    4px 0 8px;
+
+    background:
+    var(--accent-light);
+
+    color:
+    var(--accent-dark);
+
+    border-radius: 3px;
+
+    font-size: 12px;
+
+}
+
+
+.cv-item p {
+
+    color:
+    var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.notes-grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(3, 1fr);
+
+    gap: 21px;
+
+}
+
+
+.note-card {
+
+    border:
+    1px solid
+    var(--border);
+
+    background:
+    var(--card);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition:
+    0.25s;
+
+}
+
+
+.note-card:hover {
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    var(--shadow);
+
+}
+
+
+.note-image {
+
+    height: 170px;
+
+    object-fit: cover;
+
+    width: 100%;
+
+}
+
+
+.note-body {
+
+    padding: 22px;
+
+}
+
+
+.note-tag {
+
+    color:
+    var(--accent-dark);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing:
+    0.1em;
+
+}
+
+
+.note-body h3 {
+
+    color:
+    var(--title);
+
+    margin:
+    7px 0;
+
+}
+
+
+.note-body p {
+
+    color:
+    var(--muted);
+
+    font-size: 14px;
+
+}
+
 
 
 /* =========================================================
    CONTACT
 ========================================================= */
 
-.contact {
+.contact-layout {
+
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 25px;
+
+    grid-template-columns:
+    1fr
+    1fr;
+
+    gap: 35px;
+
 }
 
-.contact-box {
-    background: white;
-    box-shadow: 0 0 24px rgba(0,0,0,0.08);
-    padding: 27px;
-    border-radius: 6px;
+
+.contact-card {
+
+    padding: 30px;
+
+    border:
+    1px solid
+    var(--border);
+
+    border-radius: 8px;
+
+    background:
+    var(--card);
+
 }
 
-.contact-row {
+
+.contact-item {
+
     display: flex;
-    gap: 14px;
-    margin-bottom: 20px;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
 }
 
-.contact-row i {
-    width: 42px;
-    height: 42px;
+
+.contact-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex: 0 0 44px;
+
     border-radius: 50%;
-    background: #dff3fc;
-    color: var(--accent);
+
+    background:
+    var(--accent-light);
+
+    color:
+    var(--accent-dark);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
-    flex-shrink: 0;
+
 }
 
-.contact-box input,
-.contact-box textarea {
-    width: 100%;
-    padding: 11px 12px;
-    border: 1px solid #d7e1ea;
-    margin-bottom: 12px;
-    font-family: inherit;
+
+.contact-item h3 {
+
+    color:
+    var(--title);
+
+    font-size: 16px;
+
+    margin-bottom: 2px;
+
 }
 
-.contact-box textarea {
-    min-height: 140px;
+
+.contact-item p {
+
+    color:
+    var(--muted);
+
+    font-size: 14px;
+
 }
 
-.send-btn {
-    border: 0;
-    background: var(--accent);
-    color: white;
-    padding: 11px 20px;
-    border-radius: 4px;
-    cursor: pointer;
+
+.contact-message h3 {
+
+    font-family:
+    "Libre Caslon Text",
+    serif;
+
+    color:
+    var(--title);
+
+    font-size: 24px;
+
+    margin-bottom: 13px;
+
 }
+
+
+.contact-message p {
+
+    color:
+    var(--muted);
+
+    margin-bottom: 17px;
+
+}
+
 
 
 /* =========================================================
@@ -510,33 +1814,29 @@ section {
 ========================================================= */
 
 footer {
+
+    margin-left:
+    var(--sidebar-width);
+
+    background:
+    var(--soft);
+
+    border-top:
+    1px solid
+    var(--border);
+
+    padding:
+    28px;
+
+    color:
+    var(--muted);
+
     text-align: center;
-    padding: 24px;
-    background: var(--soft);
-    color: #777;
+
     font-size: 13px;
+
 }
 
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-.mobile-nav-toggle {
-    display: none;
-    position: fixed;
-    right: 14px;
-    top: 14px;
-    z-index: 1200;
-    border: 0;
-    background: var(--accent);
-    color: white;
-    border-radius: 50%;
-    width: 42px;
-    height: 42px;
-    font-size: 18px;
-    cursor: pointer;
-}
 
 
 /* =========================================================
@@ -544,68 +1844,147 @@ footer {
 ========================================================= */
 
 .reveal {
+
     opacity: 0;
-    transform: translateY(15px);
+
+    transform:
+    translateY(18px);
+
     transition:
-        opacity 0.55s,
-        transform 0.55s;
+    opacity 0.55s ease,
+    transform 0.55s ease;
+
 }
 
-.reveal.show {
+
+.reveal.visible {
+
     opacity: 1;
+
     transform: none;
+
 }
+
 
 
 /* =========================================================
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media
+(max-width: 1100px) {
 
-    #sidebar {
-        transform: translateX(-100%);
-    }
+    .research-grid,
+    .focus-grid,
+    .notes-grid {
 
-    #sidebar.open {
-        transform: none;
-    }
+        grid-template-columns:
+        repeat(2, 1fr);
 
-    #main,
-    footer {
-        margin-left: 0;
-    }
-
-    .mobile-nav-toggle {
-        display: block;
-    }
-
-    .about,
-    .resume,
-    .contact {
-        grid-template-columns: 1fr;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 
-@media (max-width: 650px) {
+@media
+(max-width: 1000px) {
+
+    #sidebar {
+
+        transform:
+        translateX(-100%);
+
+    }
+
+
+    #sidebar.open {
+
+        transform:
+        translateX(0);
+
+    }
+
+
+    .mobile-menu {
+
+        display: block;
+
+    }
+
+
+    #main,
+    footer {
+
+        margin-left: 0;
+
+    }
+
+
+    .about-layout,
+    .contact-layout,
+    .featured-work,
+    .cv-grid {
+
+        grid-template-columns:
+        1fr;
+
+    }
+
+
+    .about-image {
+
+        max-width: 430px;
+
+    }
+
+}
+
+
+@media
+(max-width: 680px) {
 
     section {
-        padding: 62px 24px;
+
+        padding:
+        68px 24px;
+
     }
 
-    .cards,
-    .info {
-        grid-template-columns: 1fr;
+
+    .hero-content h1 {
+
+        font-size: 54px;
+
     }
 
-    .event {
-        grid-template-columns: 1fr;
+
+    .research-grid,
+    .focus-grid,
+    .notes-grid,
+    .details-grid {
+
+        grid-template-columns:
+        1fr;
+
+    }
+
+
+    .news-item {
+
+        grid-template-columns:
+        1fr;
+
+        gap: 5px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
     }
 
 }
@@ -614,20 +1993,23 @@ footer {
 
 </head>
 
+
+
 <body>
 
 
 <!-- =========================================================
-     MOBILE MENU
+     MOBILE BUTTON
 ========================================================= -->
 
 <button
-class="mobile-nav-toggle"
-id="mobileToggle">
+class="mobile-menu"
+id="mobileMenu">
 
 <i class="fa-solid fa-bars"></i>
 
 </button>
+
 
 
 <!-- =========================================================
@@ -636,120 +2018,214 @@ id="mobileToggle">
 
 <aside id="sidebar">
 
+
 <div class="profile">
 
-    <img
-    src="https://picsum.photos/seed/anit-profile/500/500"
-    alt="Temporary profile image">
 
-    <h1>
-        Anit Kuckian
-    </h1>
+<img
 
-    <div class="social">
+class="profile-image"
 
-        <a
-        href="https://github.com/Anit-Kuckian"
-        target="_blank">
+src="https://picsum.photos/seed/anit-profile-new/500/500"
 
-            <i class="fa-brands fa-github"></i>
+alt="Temporary profile photograph">
 
-        </a>
 
-        <a href="#">
+<h1>
 
-            <i class="fa-solid fa-graduation-cap"></i>
+Anit Kuckian
 
-        </a>
+</h1>
 
-        <a href="mailto:YOUR_EMAIL">
 
-            <i class="fa-solid fa-envelope"></i>
+<p class="profile-position">
 
-        </a>
+Mathematics · IIT Gandhinagar
 
-    </div>
+</p>
+
+
+<div class="profile-badge">
+
+Sabarmati Bridge Fellow
 
 </div>
 
 
-<nav>
+<div class="social-links">
+
+
+<a
+href="https://github.com/Anit-Kuckian"
+target="_blank"
+title="GitHub">
+
+<i class="fa-brands fa-github"></i>
+
+</a>
+
+
+<a
+href="#"
+title="Google Scholar">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+</a>
+
+
+<a
+href="#"
+title="ORCID">
+
+<i class="fa-brands fa-orcid"></i>
+
+</a>
+
+
+<a
+href="mailto:YOUR_EMAIL"
+title="Email">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+
+<button
+class="theme-button"
+id="themeButton"
+title="Light / dark mode">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<nav class="sidebar-nav">
+
 
 <a
 class="nav-link active"
-href="#hero">
+href="#home">
 
 <i class="fa-solid fa-house"></i>
+
 Home
 
 </a>
+
 
 <a
 class="nav-link"
 href="#about">
 
 <i class="fa-regular fa-user"></i>
+
 About
 
 </a>
+
+
+<a
+class="nav-link"
+href="#focus">
+
+<i class="fa-solid fa-crosshairs"></i>
+
+Current Focus
+
+</a>
+
 
 <a
 class="nav-link"
 href="#research">
 
 <i class="fa-solid fa-flask"></i>
+
 Research
 
 </a>
+
 
 <a
 class="nav-link"
 href="#publications">
 
 <i class="fa-regular fa-file-lines"></i>
+
 Publications
 
 </a>
 
+
 <a
 class="nav-link"
-href="#resume">
+href="#news">
+
+<i class="fa-regular fa-newspaper"></i>
+
+News
+
+</a>
+
+
+<a
+class="nav-link"
+href="#cv">
 
 <i class="fa-regular fa-file"></i>
-Resume
+
+CV
 
 </a>
 
-<a
-class="nav-link"
-href="#talks">
-
-<i class="fa-solid fa-chalkboard-user"></i>
-Talks & Conferences
-
-</a>
 
 <a
 class="nav-link"
 href="#notes">
 
 <i class="fa-solid fa-book-open"></i>
-Notes & Projects
+
+Notes
 
 </a>
+
 
 <a
 class="nav-link"
 href="#contact">
 
 <i class="fa-regular fa-envelope"></i>
+
 Contact
 
 </a>
 
+
+<a
+class="sidebar-cv"
+href="cv.pdf"
+target="_blank">
+
+<i class="fa-solid fa-download"></i>
+
+Download CV
+
+</a>
+
+
 </nav>
 
 </aside>
+
 
 
 <!-- =========================================================
@@ -759,46 +2235,98 @@ Contact
 <main id="main">
 
 
+
 <!-- =========================================================
      HOME
 ========================================================= -->
 
-<section id="hero">
+<section id="home">
 
-<div class="reveal">
+
+<div class="hero-content reveal">
+
+
+<div class="hero-kicker">
+
+Mathematics · Algebra · Finite Fields
+
+</div>
+
 
 <h1>
+
 Anit Kuckian
+
 </h1>
 
-<p>
 
-I'm interested in
+<div class="hero-typed">
 
-<span
-class="typed"
-id="typedText"></span>
+I work in
 
-</p>
+<span id="typedText"></span>
 
-<p
-style="
-font-family:'Open Sans',sans-serif;
-font-size:17px;
-font-weight:400;
-margin-top:18px;
-color:#e8edf2;
-">
+</div>
 
-Sabarmati Bridge Fellow ·
-Mathematics ·
-IIT Gandhinagar
+
+<p class="hero-description">
+
+I am a Sabarmati Bridge Fellow at
+the Indian Institute of Technology Gandhinagar.
+
+My research interests lie broadly in algebra,
+with particular interest in finite fields,
+algebraic coding theory,
+commutative algebra,
+and affine algebraic geometry.
 
 </p>
+
+
+<div class="hero-buttons">
+
+
+<a
+class="button button-primary"
+href="#research">
+
+<i class="fa-solid fa-flask"></i>
+
+Explore Research
+
+</a>
+
+
+<a
+class="button button-outline"
+href="#publications">
+
+<i class="fa-regular fa-file-lines"></i>
+
+Publications
+
+</a>
+
+
+<a
+class="button button-outline"
+href="cv.pdf"
+target="_blank">
+
+<i class="fa-solid fa-download"></i>
+
+CV
+
+</a>
+
+
+</div>
+
 
 </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -807,59 +2335,90 @@ IIT Gandhinagar
 
 <section id="about">
 
+
 <div class="section-title reveal">
 
-<h2>
+<div class="section-kicker">
+
 About
+
+</div>
+
+<h2>
+
+A little about me
+
 </h2>
 
 <p>
 
-I am currently a Sabarmati Bridge Fellow
-at the Indian Institute of Technology Gandhinagar.
-
-My interests lie broadly in algebra,
-finite fields and their applications.
+My work sits broadly at the intersection
+of algebra,
+finite fields,
+and affine algebraic geometry.
 
 </p>
 
 </div>
 
 
-<div class="about">
+
+<div class="about-layout">
+
+
+<div class="about-image reveal">
+
 
 <img
 
-class="reveal"
-
-src="https://picsum.photos/seed/anit-about/700/850"
+src="https://picsum.photos/seed/anit-photo-large/800/1000"
 
 alt="Temporary photograph">
 
 
-<div class="reveal">
+</div>
+
+
+
+<div class="about-text reveal">
+
 
 <h3>
-Mathematics Researcher
+
+Mathematics researcher at IIT Gandhinagar
+
 </h3>
+
 
 <p>
 
-<em>
-
-Finite fields,
-algebraic coding theory,
-commutative algebra
-and affine algebraic geometry.
-
-</em>
+I am currently a Sabarmati Bridge Fellow
+at the Indian Institute of Technology Gandhinagar,
+where I continue working on problems in algebra
+and finite-field geometry.
 
 </p>
 
 
-<div class="info">
+<p>
 
-<div>
+My recent research involves rational points
+over finite fields,
+Danielewski and Double Danielewski varieties,
+and questions related to the
+Zariski Cancellation Problem.
+
+I am also increasingly interested in
+finite fields and algebraic coding theory.
+
+</p>
+
+
+
+<div class="details-grid">
+
+
+<div class="detail">
 
 <i class="fa-solid fa-chevron-right"></i>
 
@@ -870,7 +2429,7 @@ Sabarmati Bridge Fellow
 </div>
 
 
-<div>
+<div class="detail">
 
 <i class="fa-solid fa-chevron-right"></i>
 
@@ -881,7 +2440,18 @@ IIT Gandhinagar
 </div>
 
 
-<div>
+<div class="detail">
+
+<i class="fa-solid fa-chevron-right"></i>
+
+<strong>Field:</strong>
+
+Mathematics
+
+</div>
+
+
+<div class="detail">
 
 <i class="fa-solid fa-chevron-right"></i>
 
@@ -892,7 +2462,7 @@ M.Sc. Mathematics
 </div>
 
 
-<div>
+<div class="detail">
 
 <i class="fa-solid fa-chevron-right"></i>
 
@@ -903,7 +2473,7 @@ Gandhinagar, India
 </div>
 
 
-<div>
+<div class="detail">
 
 <i class="fa-solid fa-chevron-right"></i>
 
@@ -914,153 +2484,353 @@ YOUR_EMAIL
 </div>
 
 
-<div>
-
-<i class="fa-solid fa-chevron-right"></i>
-
-<strong>GitHub:</strong>
-
-Anit-Kuckian
-
-</div>
-
 </div>
 
 
 <p>
 
-My recent work concerns rational points
-over finite fields, Danielewski-type varieties,
-and questions related to the
-Zariski Cancellation Problem.
-
-I am also interested in developing stronger
-connections with algebraic coding theory.
+I enjoy approaching new mathematical problems
+through examples and computations,
+looking for structural patterns,
+and then trying to understand
+the general algebraic mechanism behind them.
 
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
+
+
+
+<!-- =========================================================
+     CURRENT FOCUS
+========================================================= -->
+
+<section
+id="focus"
+class="section-soft">
+
+
+<div class="section-title reveal">
+
+
+<div class="section-kicker">
+
+Now
+
+</div>
+
+
+<h2>
+
+Current focus
+
+</h2>
+
+
+<p>
+
+A snapshot of the mathematical directions
+I am spending most of my time on right now.
+
+</p>
+
+
+</div>
+
+
+
+<div class="focus-grid">
+
+
+<div class="focus-card reveal">
+
+
+<div class="focus-number">
+
+01
+
+</div>
+
+
+<h3>
+
+Algebraic Coding Theory
+
+</h3>
+
+
+<p>
+
+Developing a stronger foundation in
+algebraic coding theory,
+finite-field methods,
+covering problems,
+and algebraic constructions of codes.
+
+</p>
+
+
+</div>
+
+
+
+<div class="focus-card reveal">
+
+
+<div class="focus-number">
+
+02
+
+</div>
+
+
+<h3>
+
+Finite Fields
+
+</h3>
+
+
+<p>
+
+Polynomial factorization,
+primitive elements,
+cyclotomic structures,
+rational-point questions,
+and applications of finite fields.
+
+</p>
+
+
+</div>
+
+
+
+<div class="focus-card reveal">
+
+
+<div class="focus-number">
+
+03
+
+</div>
+
+
+<h3>
+
+Affine Algebra
+
+</h3>
+
+
+<p>
+
+Danielewski-type varieties,
+exponential maps,
+Makar-Limanov invariants,
+and cancellation phenomena.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
 
 
 <!-- =========================================================
      RESEARCH
 ========================================================= -->
 
-<section
-id="research"
-class="section-bg">
+<section id="research">
+
 
 <div class="section-title reveal">
 
-<h2>
-Research Interests
-</h2>
 
-<p>
+<div class="section-kicker">
 
-Some of the mathematical areas
-and problems I am currently studying.
-
-</p>
+Research
 
 </div>
 
 
-<div class="cards">
+<h2>
+
+Research interests
+
+</h2>
 
 
-<div class="card reveal">
+<p>
+
+My interests are broad within algebra,
+but the following areas currently
+form the center of my mathematical work.
+
+</p>
+
+
+</div>
+
+
+
+<div class="research-grid">
+
+
+<div class="research-card reveal">
+
+
+<div class="research-icon">
 
 <i class="fa-solid fa-square-root-variable"></i>
 
+</div>
+
+
 <h3>
+
 Finite Fields
+
 </h3>
+
 
 <p>
 
-Polynomial constructions,
-arithmetic over finite fields,
-primitive elements,
+Polynomial arithmetic,
 factorization,
-and rational-point counting.
+primitive elements,
+finite-field constructions,
+and applications.
 
 </p>
+
 
 </div>
 
 
-<div class="card reveal">
+
+<div class="research-card reveal">
+
+
+<div class="research-icon">
 
 <i class="fa-solid fa-code"></i>
 
+</div>
+
+
 <h3>
+
 Algebraic Coding Theory
+
 </h3>
+
 
 <p>
 
-Finite-field methods,
-algebraic codes,
-covering questions,
-and related structural problems.
+Codes over finite fields,
+algebraic constructions,
+covering problems,
+and structural coding questions.
 
 </p>
+
 
 </div>
 
 
-<div class="card reveal">
+
+<div class="research-card reveal">
+
+
+<div class="research-icon">
 
 <i class="fa-solid fa-cubes"></i>
 
+</div>
+
+
 <h3>
+
 Commutative Algebra
+
 </h3>
+
 
 <p>
 
 Affine domains,
 polynomial rings,
 exponential maps,
-invariants,
-and cancellation phenomena.
+filtrations,
+and algebraic invariants.
 
 </p>
+
 
 </div>
 
 
-<div class="card reveal">
+
+<div class="research-card reveal">
+
+
+<div class="research-icon">
 
 <i class="fa-solid fa-shapes"></i>
 
+</div>
+
+
 <h3>
+
 Affine Algebraic Geometry
+
 </h3>
+
 
 <p>
 
-Danielewski-type varieties,
+Danielewski varieties,
 Makar-Limanov invariants,
 and the Zariski Cancellation Problem.
 
 </p>
 
+
 </div>
 
 
-<div class="card reveal">
+
+<div class="research-card reveal">
+
+
+<div class="research-icon">
 
 <i class="fa-solid fa-chart-line"></i>
 
+</div>
+
+
 <h3>
-Rational Point Counting
+
+Rational Points
+
 </h3>
+
 
 <p>
 
@@ -1070,31 +2840,169 @@ over finite fields.
 
 </p>
 
+
 </div>
 
 
-<div class="card reveal">
 
-<i class="fa-solid fa-diagram-project"></i>
+<div class="research-card reveal">
+
+
+<div class="research-icon">
+
+<i class="fa-solid fa-computer"></i>
+
+</div>
+
 
 <h3>
-Current Explorations
+
+Computational Algebra
+
 </h3>
+
 
 <p>
 
-Polygonal-number generating varieties,
-generalized covering radius,
-and computational algebra.
+SageMath,
+Macaulay2,
+Python,
+and experimental calculations
+supporting algebraic research.
 
 </p>
 
+
 </div>
 
 
 </div>
+
 
 </section>
+
+
+
+<!-- =========================================================
+     SELECTED WORK
+========================================================= -->
+
+<section class="section-soft">
+
+
+<div class="section-title reveal">
+
+
+<div class="section-kicker">
+
+Selected work
+
+</div>
+
+
+<h2>
+
+What I am working on
+
+</h2>
+
+
+</div>
+
+
+
+<div class="featured-work">
+
+
+<div class="work-card reveal">
+
+
+<div class="work-label">
+
+Published research / preprint
+
+</div>
+
+
+<h3>
+
+Counting F<sub>q</sub>-Rational Points
+on Danielewski and
+Double Danielewski Surfaces
+
+</h3>
+
+
+<p>
+
+Joint work with Neena Gupta
+and Indranath Sengupta
+on rational-point counting
+for Danielewski-type varieties
+over finite fields.
+
+</p>
+
+
+<a
+class="work-link"
+href="https://arxiv.org/abs/2605.24821"
+target="_blank">
+
+View on arXiv →
+
+</a>
+
+
+</div>
+
+
+
+<div class="work-card reveal">
+
+
+<div class="work-label">
+
+Ongoing project
+
+</div>
+
+
+<h3>
+
+Finite-field constructions
+for polygonal-number-type sequences
+
+</h3>
+
+
+<p>
+
+Exploring algebraic varieties
+and polynomial systems whose
+finite-field rational point counts
+realize structured numerical sequences.
+
+</p>
+
+
+<a
+class="work-link"
+href="#contact">
+
+Ask me about this project →
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
 
 
 <!-- =========================================================
@@ -1103,33 +3011,112 @@ and computational algebra.
 
 <section id="publications">
 
+
 <div class="section-title reveal">
 
-<h2>
-Publications & Preprints
-</h2>
 
-<p>
-Research papers and preprints.
-</p>
+<div class="section-kicker">
+
+Research output
 
 </div>
 
 
-<article class="publication reveal">
+<h2>
 
-<span class="badge">
+Publications & preprints
+
+</h2>
+
+
+<p>
+
+Use the search and filters below
+as this list grows.
+
+</p>
+
+
+</div>
+
+
+
+<div class="publication-tools reveal">
+
+
+<input
+
+class="publication-search"
+
+id="publicationSearch"
+
+type="search"
+
+placeholder="Search title, author, topic, year...">
+
+
+<button
+
+class="filter-button active"
+
+data-filter="all">
+
+All
+
+</button>
+
+
+<button
+
+class="filter-button"
+
+data-filter="preprint">
+
+Preprints
+
+</button>
+
+
+<button
+
+class="filter-button"
+
+data-filter="published">
+
+Published
+
+</button>
+
+
+</div>
+
+
+
+<div id="publicationList">
+
+
+<article
+
+class="publication reveal"
+
+data-category="preprint">
+
+
+<div class="publication-type">
+
 Preprint · 2026
-</span>
+
+</div>
+
 
 <h3>
 
-Counting
-F<sub>q</sub>-Rational Points
+Counting F<sub>q</sub>-Rational Points
 on Danielewski and
 Double Danielewski Surfaces
 
 </h3>
+
 
 <p>
 
@@ -1139,15 +3126,18 @@ Indranath Sengupta
 
 </p>
 
+
 <p>
 
 Finite fields ·
-Affine algebraic geometry ·
-Rational points
+Rational points ·
+Affine algebraic geometry
 
 </p>
 
-<p>
+
+<div class="publication-links">
+
 
 <a
 href="https://arxiv.org/abs/2605.24821"
@@ -1159,55 +3149,260 @@ arXiv
 
 </a>
 
-</p>
-
-</article>
-
-</section>
-
-
-<!-- =========================================================
-     RESUME
-========================================================= -->
-
-<section
-id="resume"
-class="section-bg">
-
-<div class="section-title reveal">
-
-<h2>
-Resume
-</h2>
-
-<p>
-
-A short academic résumé.
-A downloadable PDF CV can be added here later.
-
-</p>
 
 </div>
 
 
-<div class="resume">
+</article>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     NEWS
+========================================================= -->
+
+<section
+id="news"
+class="section-soft">
+
+
+<div class="section-title reveal">
+
+
+<div class="section-kicker">
+
+Updates
+
+</div>
+
+
+<h2>
+
+News
+
+</h2>
+
+
+<p>
+
+Selected academic updates,
+new projects,
+talks,
+and research milestones.
+
+</p>
+
+
+</div>
+
+
+
+<div class="news-list">
+
+
+<div class="news-item reveal">
+
+
+<div class="news-date">
+
+July 2026
+
+</div>
+
+
+<div class="news-content">
+
+
+<h3>
+
+Joined IIT Gandhinagar
+as a Sabarmati Bridge Fellow
+
+</h3>
+
+
+<p>
+
+Continuing research in mathematics
+at IIT Gandhinagar.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="news-item reveal">
+
+
+<div class="news-date">
+
+2026
+
+</div>
+
+
+<div class="news-content">
+
+
+<h3>
+
+New preprint on rational points
+of Danielewski-type surfaces
+
+</h3>
+
+
+<p>
+
+Joint work with Neena Gupta
+and Indranath Sengupta
+is available on arXiv.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="news-item reveal">
+
+
+<div class="news-date">
+
+2025
+
+</div>
+
+
+<div class="news-content">
+
+
+<h3>
+
+Summer Research Internship Program
+
+</h3>
+
+
+<p>
+
+Worked on Danielewski surfaces,
+Double Danielewski surfaces,
+cancellation,
+and rational-point counting
+at IIT Gandhinagar.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     CV
+========================================================= -->
+
+<section id="cv">
+
+
+<div class="section-title reveal">
+
+
+<div class="section-kicker">
+
+Curriculum Vitae
+
+</div>
+
+
+<h2>
+
+Academic background
+
+</h2>
+
+
+<p>
+
+A short web version of my CV.
+A complete PDF can be linked using the button below.
+
+</p>
+
+
+<br>
+
+
+<a
+class="button button-primary"
+href="cv.pdf"
+target="_blank">
+
+<i class="fa-solid fa-download"></i>
+
+Download full CV
+
+</a>
+
+
+</div>
+
+
+
+<div class="cv-grid">
 
 
 <div>
 
-<h3>
+
+<h3 class="cv-heading">
+
 Education
+
 </h3>
 
-<div class="resume-item reveal">
 
-<h4>
+<div class="cv-item reveal">
+
+
+<h3>
+
 M.Sc. Mathematics
-</h4>
 
-<span>
+</h3>
+
+
+<div class="year">
+
 IIT Gandhinagar
-</span>
+
+</div>
+
 
 <p>
 
@@ -1217,18 +3412,27 @@ and related areas.
 
 </p>
 
+
 </div>
 
 
-<div class="resume-item reveal">
 
-<h4>
+<div class="cv-item reveal">
+
+
+<h3>
+
 B.Sc.
-</h4>
 
-<span>
-Add institution here
-</span>
+</h3>
+
+
+<div class="year">
+
+Add institution
+
+</div>
+
 
 <p>
 
@@ -1237,47 +3441,69 @@ and dates here.
 
 </p>
 
+
 </div>
 
 
-<h3>
+
+<h3 class="cv-heading">
+
 Awards
+
 </h3>
 
-<div class="resume-item reveal">
 
-<h4>
+<div class="cv-item reveal">
+
+
+<h3>
+
 INSPIRE Scholarship
-</h4>
+
+</h3>
+
 
 <p>
 
-Department of Science
-and Technology,
+Department of Science and Technology,
 Government of India.
 
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 
 <div>
 
-<h3>
-Research Experience
+
+<h3 class="cv-heading">
+
+Research experience
+
 </h3>
 
-<div class="resume-item reveal">
 
-<h4>
+<div class="cv-item reveal">
+
+
+<h3>
+
 Sabarmati Bridge Fellow
-</h4>
 
-<span>
+</h3>
+
+
+<div class="year">
+
 2026 – Present
-</span>
+
+</div>
+
 
 <p>
 
@@ -1285,133 +3511,81 @@ Indian Institute of Technology Gandhinagar.
 
 </p>
 
-</div>
-
-
-<div class="resume-item reveal">
-
-<h4>
-Summer Research Internship Program
-</h4>
-
-<span>
-2025
-</span>
-
-<p>
-
-Research on Danielewski and
-Double Danielewski surfaces,
-Zariski Cancellation,
-and finite-field point counting.
-
-</p>
 
 </div>
+
+
+
+<div class="cv-item reveal">
 
 
 <h3>
-Tools
+
+Summer Research Internship Program
+
 </h3>
 
-<div class="resume-item reveal">
 
-<h4>
-Mathematical Computing
-</h4>
+<div class="year">
+
+2025
+
+</div>
+
+
+<p>
+
+Research on
+Danielewski-type varieties,
+Zariski Cancellation,
+and rational-point counting.
+
+</p>
+
+
+</div>
+
+
+
+<h3 class="cv-heading">
+
+Research tools
+
+</h3>
+
+
+<div class="cv-item reveal">
+
+
+<h3>
+
+Mathematical computation
+
+</h3>
+
 
 <p>
 
 SageMath ·
 Macaulay2 ·
 Python ·
-LaTeX
+LaTeX ·
+TikZ
 
 </p>
 
-</div>
 
 </div>
 
+
 </div>
+
+
+</div>
+
 
 </section>
 
-
-<!-- =========================================================
-     TALKS
-========================================================= -->
-
-<section id="talks">
-
-<div class="section-title reveal">
-
-<h2>
-Talks & Conferences
-</h2>
-
-<p>
-
-Seminars,
-workshops,
-conference presentations,
-and research talks.
-
-</p>
-
-</div>
-
-
-<div class="event-list">
-
-
-<div class="event reveal">
-
-<div class="event-date">
-2026
-</div>
-
-<div>
-
-<h3>
-Add your recent talk here
-</h3>
-
-<p>
-Institution · City · Talk title
-</p>
-
-</div>
-
-</div>
-
-
-<div class="event reveal">
-
-<div class="event-date">
-2025
-</div>
-
-<div>
-
-<h3>
-Summer Research Internship Program
-</h3>
-
-<p>
-
-IIT Gandhinagar ·
-Research Presentation
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 
 
 <!-- =========================================================
@@ -1420,178 +3594,358 @@ Research Presentation
 
 <section
 id="notes"
-class="section-bg">
+class="section-soft">
+
 
 <div class="section-title reveal">
 
+
+<div class="section-kicker">
+
+Mathematical writing
+
+</div>
+
+
 <h2>
-Notes & Projects
+
+Notes & projects
+
 </h2>
 
+
 <p>
 
-Expository notes,
-computational experiments,
-and ongoing mathematical ideas.
+Eventually this can become a collection
+of lecture notes,
+research notes,
+computations,
+and expository mathematics.
 
 </p>
+
 
 </div>
 
 
-<div class="cards">
+
+<div class="notes-grid">
 
 
-<div class="card reveal">
+<div class="note-card reveal">
 
-<i class="fa-solid fa-shapes"></i>
 
-<h3>
+<img
 
-Polygonal Numbers
-over Finite Fields
+class="note-image"
 
-</h3>
+src="https://picsum.photos/seed/finitefields/700/400"
 
-<p>
+alt="">
 
-Working notes
-and point-counting constructions
-related to polygonal and
-pyramidal sequences.
 
-</p>
+<div class="note-body">
+
+
+<div class="note-tag">
+
+Finite Fields
 
 </div>
 
 
-<div class="card reveal">
-
-<i class="fa-solid fa-book"></i>
-
 <h3>
-Finite Fields Notes
+
+Finite-field notes
+
 </h3>
+
 
 <p>
 
-Examples,
-factorization methods,
+Factorization,
 primitive elements,
-and finite-field computations.
+cyclotomic cosets,
+and useful examples.
 
 </p>
+
 
 </div>
 
 
-<div class="card reveal">
+</div>
 
-<i class="fa-solid fa-cube"></i>
+
+
+<div class="note-card reveal">
+
+
+<img
+
+class="note-image"
+
+src="https://picsum.photos/seed/polygonal/700/400"
+
+alt="">
+
+
+<div class="note-body">
+
+
+<div class="note-tag">
+
+Current project
+
+</div>
+
 
 <h3>
-Danielewski Surfaces
+
+Polygonal numbers
+over finite fields
+
 </h3>
+
 
 <p>
 
-Expository notes on
-cancellation,
-filtrations,
-exponential maps,
-and invariants.
+Polynomial constructions
+and rational-point counting ideas.
 
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+
+<div class="note-card reveal">
+
+
+<img
+
+class="note-image"
+
+src="https://picsum.photos/seed/algebra-geometry/700/400"
+
+alt="">
+
+
+<div class="note-body">
+
+
+<div class="note-tag">
+
+Affine algebra
+
+</div>
+
+
+<h3>
+
+Danielewski surfaces
+
+</h3>
+
+
+<p>
+
+Notes on filtrations,
+exponential maps,
+invariants,
+and cancellation.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 </section>
+
 
 
 <!-- =========================================================
      CONTACT
 ========================================================= -->
 
-<section
-id="contact"
-class="section-bg">
+<section id="contact">
+
 
 <div class="section-title reveal">
 
-<h2>
+
+<div class="section-kicker">
+
 Contact
-</h2>
-
-<p>
-
-For academic correspondence,
-research discussions,
-or collaboration.
-
-</p>
 
 </div>
 
 
-<div class="contact">
+<h2>
 
+Get in touch
 
-<div class="contact-box reveal">
+</h2>
 
-
-<div class="contact-row">
-
-<i class="fa-solid fa-location-dot"></i>
-
-<div>
-
-<strong>
-Location
-</strong>
 
 <p>
 
-Indian Institute of Technology Gandhinagar,
+I am happy to discuss mathematics,
+research,
+collaboration,
+or related academic questions.
+
+</p>
+
+
+</div>
+
+
+
+<div class="contact-layout">
+
+
+<div class="contact-card reveal">
+
+
+<div class="contact-item">
+
+
+<div class="contact-icon">
+
+<i class="fa-solid fa-building-columns"></i>
+
+</div>
+
+
+<div>
+
+
+<h3>
+
+Institution
+
+</h3>
+
+
+<p>
+
+Indian Institute of Technology Gandhinagar
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="contact-item">
+
+
+<div class="contact-icon">
+
+<i class="fa-solid fa-location-dot"></i>
+
+</div>
+
+
+<div>
+
+
+<h3>
+
+Location
+
+</h3>
+
+
+<p>
+
+Gandhinagar,
 Gujarat,
 India
 
 </p>
 
-</div>
 
 </div>
 
 
-<div class="contact-row">
+</div>
+
+
+
+<div class="contact-item">
+
+
+<div class="contact-icon">
 
 <i class="fa-solid fa-envelope"></i>
 
+</div>
+
+
 <div>
 
-<strong>
+
+<h3>
+
 Email
-</strong>
+
+</h3>
+
 
 <p>
+
+<a href="mailto:YOUR_EMAIL">
+
 YOUR_EMAIL
+
+</a>
+
 </p>
 
-</div>
 
 </div>
 
 
-<div class="contact-row">
+</div>
+
+
+
+<div class="contact-item">
+
+
+<div class="contact-icon">
 
 <i class="fa-brands fa-github"></i>
 
+</div>
+
+
 <div>
 
-<strong>
+
+<h3>
+
 GitHub
-</strong>
+
+</h3>
+
 
 <p>
 
@@ -1605,65 +3959,69 @@ github.com/Anit-Kuckian
 
 </p>
 
-</div>
 
 </div>
 
+
 </div>
 
 
-<form
-class="contact-box reveal"
+</div>
 
-onsubmit="
-event.preventDefault();
-document.getElementById('formMessage').textContent =
-'This is currently a demo form. We can connect it later.';
-">
 
-<input
-type="text"
-placeholder="Your Name"
-required>
 
-<input
-type="email"
-placeholder="Your Email"
-required>
+<div class="contact-card contact-message reveal">
 
-<input
-type="text"
-placeholder="Subject"
-required>
 
-<textarea
-placeholder="Message"
-required></textarea>
+<h3>
 
-<button
-class="send-btn"
-type="submit">
+Research correspondence
 
-Send Message
+</h3>
 
-</button>
 
-<p
-id="formMessage"
-style="
-margin-top:10px;
-color:#777;
-font-size:14px;
-">
+<p>
+
+If you would like to discuss
+finite fields,
+coding theory,
+commutative algebra,
+or one of my current projects,
+feel free to email me.
+
 </p>
 
-</form>
+
+<p>
+
+For research-related correspondence,
+email is the best way to reach me.
+
+</p>
+
+
+<a
+class="button button-primary"
+href="mailto:YOUR_EMAIL">
+
+<i class="fa-solid fa-envelope"></i>
+
+Send an email
+
+</a>
+
 
 </div>
+
+
+</div>
+
 
 </section>
 
+
 </main>
+
 
 
 <!-- =========================================================
@@ -1672,10 +4030,18 @@ font-size:14px;
 
 <footer>
 
-© <span id="year"></span>
+
+©
+<span id="currentYear"></span>
 Anit Kuckian
 
+&nbsp; · &nbsp;
+
+Mathematics
+
+
 </footer>
+
 
 
 <!-- =========================================================
@@ -1685,98 +4051,163 @@ Anit Kuckian
 <script>
 
 
-/* TYPING EFFECT */
+/* =========================================================
+   TYPING EFFECT
+========================================================= */
 
 const words = [
+
     "Finite Fields",
+
     "Algebraic Coding Theory",
+
     "Commutative Algebra",
+
     "Affine Algebraic Geometry"
+
 ];
 
+
 const typedText =
-document.getElementById("typedText");
+document.getElementById(
+    "typedText"
+);
+
 
 let wordIndex = 0;
+
 let charIndex = 0;
+
 let deleting = false;
 
 
-function typeLoop() {
+function typingLoop() {
 
-    const current =
+
+    const word =
     words[wordIndex];
 
-    typedText.textContent =
-    current.slice(
-        0,
-        deleting
-        ? charIndex - 1
-        : charIndex + 1
-    );
 
-    charIndex +=
-    deleting ? -1 : 1;
+    if (!deleting) {
 
-    if (
-        !deleting &&
-        charIndex === current.length
-    ) {
 
-        deleting = true;
-
-        setTimeout(
-            typeLoop,
-            1200
+        typedText.textContent =
+        word.substring(
+            0,
+            charIndex + 1
         );
 
-        return;
+
+        charIndex++;
+
+
+        if (
+            charIndex ===
+            word.length
+        ) {
+
+
+            deleting = true;
+
+
+            setTimeout(
+                typingLoop,
+                1300
+            );
+
+
+            return;
+
+        }
+
+
+    } else {
+
+
+        typedText.textContent =
+        word.substring(
+            0,
+            charIndex - 1
+        );
+
+
+        charIndex--;
+
+
+        if (
+            charIndex === 0
+        ) {
+
+
+            deleting = false;
+
+
+            wordIndex =
+            (
+                wordIndex + 1
+            )
+            %
+            words.length;
+
+        }
+
     }
 
-    if (
-        deleting &&
-        charIndex === 0
-    ) {
-
-        deleting = false;
-
-        wordIndex =
-        (wordIndex + 1)
-        %
-        words.length;
-    }
 
     setTimeout(
-        typeLoop,
-        deleting ? 45 : 85
+
+        typingLoop,
+
+        deleting
+        ?
+        42
+        :
+        82
+
     );
+
 }
 
-typeLoop();
+
+typingLoop();
 
 
-/* MOBILE MENU */
+
+/* =========================================================
+   MOBILE SIDEBAR
+========================================================= */
 
 const sidebar =
-document.getElementById("sidebar");
+document.getElementById(
+    "sidebar"
+);
 
-const mobileToggle =
-document.getElementById("mobileToggle");
+
+const mobileMenu =
+document.getElementById(
+    "mobileMenu"
+);
 
 
-mobileToggle.addEventListener(
+mobileMenu.addEventListener(
     "click",
     function () {
 
-        sidebar
-        .classList
-        .toggle("open");
-
-        mobileToggle.innerHTML =
 
         sidebar
         .classList
-        .contains("open")
+        .toggle(
+            "open"
+        );
+
+
+        mobileMenu.innerHTML =
+
+        sidebar
+        .classList
+        .contains(
+            "open"
+        )
 
         ?
 
@@ -1786,124 +4217,122 @@ mobileToggle.addEventListener(
 
         '<i class="fa-solid fa-bars"></i>';
 
+
     }
 );
 
 
-/* CLOSE MOBILE MENU */
+
+/* =========================================================
+   CLOSE MOBILE SIDEBAR AFTER CLICK
+========================================================= */
 
 document
-.querySelectorAll(".nav-link")
-.forEach(function(link) {
-
-    link.addEventListener(
-        "click",
-        function() {
-
-            if (
-                window.innerWidth < 1000
-            ) {
-
-                sidebar
-                .classList
-                .remove("open");
-
-                mobileToggle.innerHTML =
-                '<i class="fa-solid fa-bars"></i>';
-            }
-
-        }
-    );
-
-});
+.querySelectorAll(
+    ".nav-link"
+)
+.forEach(
+    function(link) {
 
 
-/* REVEAL ANIMATION */
+        link.addEventListener(
+            "click",
+            function() {
 
-const revealObserver =
-new IntersectionObserver(
-
-    function(entries) {
-
-        entries.forEach(
-            function(entry) {
 
                 if (
-                    entry.isIntersecting
+                    window.innerWidth
+                    <
+                    1000
                 ) {
 
-                    entry.target
+
+                    sidebar
                     .classList
-                    .add("show");
+                    .remove(
+                        "open"
+                    );
+
+
+                    mobileMenu.innerHTML =
+                    '<i class="fa-solid fa-bars"></i>';
+
                 }
 
             }
         );
 
-    },
-
-    {
-        threshold: 0.08
     }
-
 );
 
 
-document
-.querySelectorAll(".reveal")
-.forEach(function(element) {
 
-    revealObserver.observe(element);
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
 
-});
+const pageSections =
+document.querySelectorAll(
+    "main section[id]"
+);
 
-
-/* ACTIVE NAVIGATION */
-
-const sections =
-document.querySelectorAll("main section");
 
 const navLinks =
-document.querySelectorAll(".nav-link");
+document.querySelectorAll(
+    ".nav-link"
+);
 
 
-const sectionObserver =
+const navigationObserver =
 new IntersectionObserver(
 
     function(entries) {
 
+
         entries.forEach(
             function(entry) {
+
 
                 if (
                     entry.isIntersecting
                 ) {
 
+
                     navLinks
                     .forEach(
                         function(link) {
 
+
                             link
                             .classList
-                            .remove("active");
+                            .remove(
+                                "active"
+                            );
 
                         }
                     );
 
-                    const activeLink =
+
+                    const active =
                     document.querySelector(
+
                         '.nav-link[href="#'
                         +
                         entry.target.id
                         +
                         '"]'
+
                     );
 
-                    if (activeLink) {
 
-                        activeLink
+                    if (active) {
+
+
+                        active
                         .classList
-                        .add("active");
+                        .add(
+                            "active"
+                        );
 
                     }
 
@@ -1915,31 +4344,354 @@ new IntersectionObserver(
     },
 
     {
+
         rootMargin:
-        "-35% 0px -55%"
+        "-35% 0px -55% 0px"
+
     }
 
 );
 
 
-sections.forEach(
+pageSections
+.forEach(
     function(section) {
 
-        sectionObserver.observe(section);
+
+        navigationObserver.observe(
+            section
+        );
 
     }
 );
 
 
-/* AUTOMATIC YEAR */
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+const revealObserver =
+new IntersectionObserver(
+
+    function(entries) {
+
+
+        entries.forEach(
+            function(entry) {
+
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+
+                    entry.target
+                    .classList
+                    .add(
+                        "visible"
+                    );
+
+                }
+
+            }
+        );
+
+    },
+
+    {
+
+        threshold:
+        0.08
+
+    }
+
+);
+
 
 document
-.getElementById("year")
+.querySelectorAll(
+    ".reveal"
+)
+.forEach(
+    function(element) {
+
+
+        revealObserver.observe(
+            element
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   PUBLICATION SEARCH / FILTER
+========================================================= */
+
+const searchInput =
+document.getElementById(
+    "publicationSearch"
+);
+
+
+const publicationItems =
+Array.from(
+
+    document.querySelectorAll(
+        ".publication"
+    )
+
+);
+
+
+const filterButtons =
+Array.from(
+
+    document.querySelectorAll(
+        ".filter-button"
+    )
+
+);
+
+
+let publicationFilter =
+"all";
+
+
+function updatePublications() {
+
+
+    const query =
+
+    searchInput
+    .value
+    .toLowerCase()
+    .trim();
+
+
+    publicationItems
+    .forEach(
+        function(publication) {
+
+
+            const text =
+
+            publication
+            .textContent
+            .toLowerCase();
+
+
+            const category =
+
+            publication
+            .dataset
+            .category;
+
+
+            const matchesSearch =
+
+            !query
+            ||
+            text.includes(
+                query
+            );
+
+
+            const matchesCategory =
+
+            publicationFilter
+            ===
+            "all"
+
+            ||
+
+            category
+            ===
+            publicationFilter;
+
+
+            publication.style.display =
+
+            matchesSearch
+            &&
+            matchesCategory
+
+            ?
+
+            ""
+
+            :
+
+            "none";
+
+
+        }
+    );
+
+}
+
+
+searchInput.addEventListener(
+
+    "input",
+
+    updatePublications
+
+);
+
+
+filterButtons.forEach(
+    function(button) {
+
+
+        button.addEventListener(
+            "click",
+            function() {
+
+
+                filterButtons
+                .forEach(
+                    function(btn) {
+
+
+                        btn
+                        .classList
+                        .remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                button
+                .classList
+                .add(
+                    "active"
+                );
+
+
+                publicationFilter =
+                button
+                .dataset
+                .filter;
+
+
+                updatePublications();
+
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   DARK / LIGHT MODE
+========================================================= */
+
+const themeButton =
+document.getElementById(
+    "themeButton"
+);
+
+
+const storedTheme =
+localStorage.getItem(
+    "anit-site-theme"
+);
+
+
+if (
+    storedTheme
+    ===
+    "dark"
+) {
+
+
+    document.body
+    .classList
+    .add(
+        "dark-mode"
+    );
+
+
+    themeButton.innerHTML =
+    '<i class="fa-solid fa-sun"></i>';
+
+}
+
+
+themeButton.addEventListener(
+    "click",
+    function() {
+
+
+        document.body
+        .classList
+        .toggle(
+            "dark-mode"
+        );
+
+
+        const dark =
+
+        document.body
+        .classList
+        .contains(
+            "dark-mode"
+        );
+
+
+        themeButton.innerHTML =
+
+        dark
+
+        ?
+
+        '<i class="fa-solid fa-sun"></i>'
+
+        :
+
+        '<i class="fa-solid fa-moon"></i>';
+
+
+        localStorage.setItem(
+
+            "anit-site-theme",
+
+            dark
+            ?
+            "dark"
+            :
+            "light"
+
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document
+.getElementById(
+    "currentYear"
+)
 .textContent =
-new Date().getFullYear();
+new Date()
+.getFullYear();
 
 
 </script>
+
 
 </body>
 
