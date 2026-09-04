@@ -3,72 +3,152 @@
 
 <head>
 
+<!-- =========================================================
+     BASIC META
+========================================================= -->
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+      content="width=device-width, initial-scale=1">
 
-<title>Anit Kuckian | Mathematics</title>
+<title>
+Anit Kuckian | Mathematics · Finite Fields · Coding Theory
+</title>
 
-<meta name="description"
-      content="Academic website of Anit Kuckian — mathematics, finite fields, algebraic coding theory, commutative algebra and affine algebraic geometry.">
+<meta
+name="description"
+content="Academic website of Anit Kuckian, Sabarmati Bridge Fellow at IIT Gandhinagar. Research interests include finite fields, algebraic coding theory, commutative algebra, affine algebraic geometry, and rational points over finite fields.">
+
+<meta
+name="author"
+content="Anit Kuckian">
+
+<meta
+name="robots"
+content="index, follow">
+
+<meta
+name="theme-color"
+content="#081522">
+
+<meta
+name="color-scheme"
+content="light dark">
 
 
 <!-- =========================================================
-     FONTS
+     CANONICAL URL
 ========================================================= -->
 
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
 <link
-href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Text:wght@400;700&display=swap"
-rel="stylesheet">
+rel="canonical"
+href="https://anit-kuckian.github.io/">
 
 
 <!-- =========================================================
-     ICONS
+     SOCIAL PREVIEW
 ========================================================= -->
 
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta
+property="og:type"
+content="website">
+
+<meta
+property="og:title"
+content="Anit Kuckian | Mathematics">
+
+<meta
+property="og:description"
+content="Finite fields, algebraic coding theory, commutative algebra, and affine algebraic geometry.">
+
+<meta
+property="og:url"
+content="https://anit-kuckian.github.io/">
+
+<meta
+property="og:image"
+content="https://picsum.photos/id/1005/1200/630">
+
+
+<meta
+name="twitter:card"
+content="summary_large_image">
+
+<meta
+name="twitter:title"
+content="Anit Kuckian | Mathematics">
+
+<meta
+name="twitter:description"
+content="Research in finite fields, algebraic coding theory, commutative algebra, and affine algebraic geometry.">
 
 
 <!-- =========================================================
-     MATHJAX
-     Allows you to use $...$ and $$...$$ mathematics later
+     STRUCTURED DATA FOR SEARCH ENGINES
+========================================================= -->
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+
+  "name": "Anit Kuckian",
+
+  "url": "https://anit-kuckian.github.io/",
+
+  "jobTitle": "Sabarmati Bridge Fellow",
+
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Indian Institute of Technology Gandhinagar"
+  },
+
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Indian Institute of Technology Gandhinagar"
+  },
+
+  "sameAs": [
+    "https://github.com/Anit-Kuckian"
+  ],
+
+  "knowsAbout": [
+    "Finite Fields",
+    "Algebraic Coding Theory",
+    "Commutative Algebra",
+    "Affine Algebraic Geometry",
+    "Rational Points over Finite Fields"
+  ]
+}
+
+</script>
+
+
+<!-- =========================================================
+     LOAD SAVED THEME BEFORE PAGE PAINTS
 ========================================================= -->
 
 <script>
 
-window.MathJax = {
+(function () {
 
-    tex: {
+    const savedTheme =
+    localStorage.getItem("anit-theme");
 
-        inlineMath: [
-            ['$', '$'],
-            ['\\(', '\\)']
-        ],
+    if (savedTheme) {
 
-        displayMath: [
-            ['$$', '$$'],
-            ['\\[', '\\]']
-        ]
+        document.documentElement
+        .setAttribute(
+            "data-theme",
+            savedTheme
+        );
 
     }
 
-};
+})();
 
-</script>
-
-<script
-async
-src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
 
@@ -76,39 +156,62 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 <style>
 
 /* =========================================================
-   VARIABLES
+   DESIGN SYSTEM
 ========================================================= */
 
 :root {
 
-    --sidebar: #07111d;
+    --sidebar-width: 310px;
 
-    --sidebar-soft: #101d2b;
+    --navy: #081522;
 
-    --accent: #2b9bc4;
+    --navy-soft: #102234;
 
-    --accent-dark: #197c9f;
+    --navy-light: #18354b;
 
-    --accent-light: #e7f7fc;
+    --accent: #2e91ad;
 
-    --background: #ffffff;
+    --accent-dark: #146b85;
 
-    --soft: #f5f8fb;
+    --accent-soft: #e8f5f8;
+
+    --page: #ffffff;
+
+    --surface: #f6f8fa;
 
     --card: #ffffff;
 
-    --text: #20252b;
+    --text: #20262d;
 
-    --muted: #69717b;
+    --muted: #68717b;
 
-    --border: #e4e9ee;
+    --heading: #16344c;
 
-    --title: #153552;
+    --border: #e2e7eb;
 
-    --sidebar-width: 305px;
+    --focus: #e58a16;
+
+    --success: #25845e;
 
     --shadow:
-    0 15px 40px rgba(18, 38, 58, 0.08);
+    0 16px 45px
+    rgba(17, 38, 55, 0.08);
+
+    --radius: 10px;
+
+    --serif:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    --sans:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
 
 }
 
@@ -117,42 +220,68 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
    DARK MODE
 ========================================================= */
 
-body.dark-mode {
+html[data-theme="dark"] {
 
-    --background: #111820;
+    --page: #10171e;
 
-    --soft: #161f28;
+    --surface: #141e27;
 
     --card: #18232d;
 
-    --text: #e7ebef;
+    --text: #e8edf1;
 
-    --muted: #aeb8c1;
+    --muted: #adb7c0;
 
-    --border: #2a3641;
+    --heading: #dcecf3;
 
-    --title: #d8edf6;
+    --border: #293640;
 
-    --accent-light: #17303d;
+    --accent-soft: #17333e;
 
     --shadow:
-    0 15px 40px rgba(0, 0, 0, 0.25);
+    0 18px 45px
+    rgba(0, 0, 0, 0.28);
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    html:not([data-theme="light"]) {
+
+        --page: #10171e;
+
+        --surface: #141e27;
+
+        --card: #18232d;
+
+        --text: #e8edf1;
+
+        --muted: #adb7c0;
+
+        --heading: #dcecf3;
+
+        --border: #293640;
+
+        --accent-soft: #17333e;
+
+        --shadow:
+        0 18px 45px
+        rgba(0, 0, 0, 0.28);
+
+    }
 
 }
 
 
 
 /* =========================================================
-   BASIC
+   RESET
 ========================================================= */
 
 * {
 
     box-sizing: border-box;
-
-    margin: 0;
-
-    padding: 0;
 
 }
 
@@ -166,31 +295,17 @@ html {
 
 body {
 
-    font-family:
-    "DM Sans",
-    sans-serif;
+    margin: 0;
 
-    background:
-    var(--background);
+    background: var(--page);
 
-    color:
-    var(--text);
+    color: var(--text);
 
-    line-height: 1.75;
+    font-family: var(--sans);
 
-    transition:
-    background 0.3s,
-    color 0.3s;
+    line-height: 1.72;
 
-}
-
-
-a {
-
-    text-decoration: none;
-
-    color:
-    var(--accent-dark);
+    -webkit-font-smoothing: antialiased;
 
 }
 
@@ -204,10 +319,108 @@ img {
 }
 
 
+a {
+
+    color: var(--accent-dark);
+
+    text-decoration-thickness: 1px;
+
+    text-underline-offset: 3px;
+
+}
+
+
+button,
+input {
+
+    font: inherit;
+
+}
+
+
 button {
 
-    font-family:
-    inherit;
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.skip-link {
+
+    position: fixed;
+
+    z-index: 5000;
+
+    top: 12px;
+
+    left: 12px;
+
+    transform: translateY(-150%);
+
+    background: white;
+
+    color: black;
+
+    padding: 10px 16px;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+}
+
+
+.skip-link:focus {
+
+    transform: none;
+
+}
+
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+
+    outline:
+    3px solid
+    var(--focus);
+
+    outline-offset: 3px;
+
+}
+
+
+section {
+
+    scroll-margin-top: 20px;
+
+}
+
+
+.visually-hidden {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 1px;
+
+    padding: 0;
+
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0,0,0,0);
+
+    white-space: nowrap;
+
+    border: 0;
 
 }
 
@@ -217,115 +430,133 @@ button {
    SIDEBAR
 ========================================================= */
 
-#sidebar {
+.sidebar {
 
     position: fixed;
 
-    top: 0;
-
-    left: 0;
-
-    bottom: 0;
+    inset:
+    0 auto 0 0;
 
     width:
     var(--sidebar-width);
 
     background:
-    var(--sidebar);
+    linear-gradient(
+        180deg,
+        #081522,
+        #07111b
+    );
 
-    z-index: 1000;
+    color: white;
 
     overflow-y: auto;
 
+    z-index: 1000;
+
     transition:
-    transform 0.3s ease;
+    transform .3s ease;
 
 }
 
 
-/* PROFILE */
+.sidebar-inner {
+
+    min-height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding:
+    30px 23px 24px;
+
+}
+
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
 
 .profile {
 
     text-align: center;
 
-    padding:
-    30px 22px 20px;
-
 }
 
 
-.profile-image {
+.profile-photo {
 
-    width: 126px;
+    width: 132px;
 
-    height: 126px;
-
-    object-fit: cover;
+    height: 132px;
 
     margin:
-    0 auto 15px;
+    0 auto 17px;
 
     border-radius: 50%;
 
+    object-fit: cover;
+
     border:
-    6px solid #26394b;
+    5px solid
+    #264156;
 
 }
 
 
-.profile h1 {
+.profile-name {
 
-    font-family:
-    "Libre Caslon Text",
-    serif;
+    margin: 0;
 
-    font-size: 23px;
+    font-family: var(--serif);
 
-    color: white;
+    font-weight: 400;
 
-    margin-bottom: 4px;
+    font-size: 25px;
 
 }
 
 
-.profile-position {
+.profile-role {
 
-    color: #93a4b5;
+    color: #a7b8c7;
+
+    margin:
+    5px 0 10px;
 
     font-size: 13px;
 
-    margin-bottom: 15px;
-
 }
 
 
-.profile-badge {
+.status-chip {
 
     display: inline-block;
 
     padding:
     5px 10px;
 
-    border-radius: 20px;
+    border-radius: 30px;
 
     background:
-    rgba(43, 155, 196, 0.14);
+    rgba(46,145,173,.14);
 
-    color: #78c8e5;
+    color: #7cd0e5;
 
     font-size: 11px;
 
-    letter-spacing: 0.04em;
-
-    margin-bottom: 17px;
+    letter-spacing: .04em;
 
 }
 
 
-/* SOCIAL */
 
-.social-links {
+/* =========================================================
+   PROFILE LINKS
+========================================================= */
+
+.profile-links {
 
     display: flex;
 
@@ -333,186 +564,170 @@ button {
 
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 7px;
+
+    margin-top: 17px;
 
 }
 
 
-.social-links a,
-.theme-button {
+.profile-link,
+.theme-toggle {
 
-    width: 37px;
+    min-height: 38px;
 
-    height: 37px;
+    padding:
+    8px 10px;
 
-    display: flex;
+    border-radius: 6px;
 
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    border: none;
-
-    background: #172534;
-
-    color: white;
-
-    cursor: pointer;
-
-    transition:
-    0.25s;
-
-}
-
-
-.social-links a:hover,
-.theme-button:hover {
+    border:
+    1px solid #263a4c;
 
     background:
-    var(--accent);
+    #102130;
 
-    transform:
-    translateY(-2px);
+    color: #e3edf4;
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+}
+
+
+.profile-link:hover,
+.theme-toggle:hover {
+
+    background:
+    #17334a;
+
+}
+
+
+.theme-toggle {
+
+    cursor: pointer;
 
 }
 
 
 
 /* =========================================================
-   SIDEBAR NAVIGATION
+   NAVIGATION
 ========================================================= */
 
-.sidebar-nav {
+.site-nav {
 
-    padding:
-    20px 18px 40px;
+    margin-top: 27px;
 
 }
 
 
-.sidebar-nav a {
+.site-nav ul {
 
-    display: flex;
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.site-nav a {
+
+    display: grid;
+
+    grid-template-columns:
+    28px 1fr;
 
     align-items: center;
 
-    gap: 14px;
+    min-height: 44px;
 
     padding:
-    10px 14px;
+    8px 12px;
 
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 
-    border-radius: 6px;
+    border-radius: 7px;
 
-    color: #a4afba;
+    color: #aebac5;
+
+    text-decoration: none;
 
     font-size: 14px;
 
     transition:
-    0.2s;
+    background .2s,
+    color .2s;
 
 }
 
 
-.sidebar-nav a i {
-
-    width: 20px;
-
-    text-align: center;
-
-}
-
-
-.sidebar-nav a:hover,
-.sidebar-nav a.active {
+.site-nav a:hover,
+.site-nav a.active {
 
     color: white;
 
     background:
-    var(--sidebar-soft);
+    var(--navy-soft);
 
 }
 
 
-.sidebar-nav a:hover i,
-.sidebar-nav a.active i {
+.nav-number {
 
     color:
-    var(--accent);
+    #5aaec6;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .07em;
 
 }
 
 
-.sidebar-cv {
-
-    margin-top: 17px;
-
-    display: flex !important;
-
-    justify-content: center;
-
-    color: white !important;
-
-    background:
-    var(--accent) !important;
-
-}
-
-
-.sidebar-cv:hover {
-
-    background:
-    var(--accent-dark) !important;
-
-}
-
-
-
-/* =========================================================
-   MOBILE NAV BUTTON
-========================================================= */
-
-.mobile-menu {
-
-    display: none;
-
-    position: fixed;
-
-    top: 14px;
-
-    right: 14px;
-
-    z-index: 1200;
-
-    width: 44px;
-
-    height: 44px;
-
-    border-radius: 50%;
-
-    border: none;
-
-    background:
-    var(--accent);
+.site-nav a[aria-current="true"] {
 
     color: white;
 
-    cursor: pointer;
-
-    font-size: 19px;
+    background:
+    var(--navy-soft);
 
 }
 
 
 
 /* =========================================================
-   MAIN CONTENT
+   SIDEBAR FOOTER
 ========================================================= */
 
-#main {
+.sidebar-bottom {
+
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    color: #728698;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main,
+.site-footer {
 
     margin-left:
     var(--sidebar-width);
@@ -523,7 +738,8 @@ button {
 section {
 
     padding:
-    85px 7%;
+    92px
+    clamp(28px, 7vw, 100px);
 
 }
 
@@ -531,62 +747,88 @@ section {
 .section-soft {
 
     background:
-    var(--soft);
+    var(--surface);
 
 }
 
 
-.section-title {
+.content-width {
+
+    width: min(
+        1100px,
+        100%
+    );
+
+}
+
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-header {
 
     margin-bottom: 42px;
 
+    max-width: 850px;
+
 }
 
 
-.section-kicker {
+.eyebrow {
+
+    margin-bottom: 8px;
 
     color:
     var(--accent-dark);
 
-    font-size: 12px;
-
-    font-weight: 700;
-
     text-transform: uppercase;
 
-    letter-spacing:
-    0.15em;
+    font-size: 11px;
 
-    margin-bottom: 7px;
+    font-weight: 800;
+
+    letter-spacing: .16em;
 
 }
 
 
-.section-title h2 {
+.section-header h2 {
 
-    font-family:
-    "Libre Caslon Text",
-    serif;
+    margin:
+    0 0 13px;
 
     color:
-    var(--title);
+    var(--heading);
 
-    font-size:
-    clamp(30px, 4vw, 42px);
+    font-family:
+    var(--serif);
 
     font-weight: 400;
 
-    margin-bottom: 12px;
+    font-size:
+    clamp(
+        32px,
+        4vw,
+        45px
+    );
+
+    letter-spacing: -.02em;
+
+    line-height: 1.15;
 
 }
 
 
-.section-title p {
+.section-header p {
+
+    margin: 0;
 
     color:
     var(--muted);
 
-    max-width: 850px;
+    font-size: 16px;
 
 }
 
@@ -596,7 +838,9 @@ section {
    HERO
 ========================================================= */
 
-#home {
+.hero {
+
+    position: relative;
 
     min-height: 100vh;
 
@@ -604,155 +848,190 @@ section {
 
     align-items: center;
 
-    position: relative;
-
     overflow: hidden;
 
     color: white;
 
     background:
 
-    linear-gradient(
-        90deg,
-        rgba(6, 15, 25, 0.91),
-        rgba(6, 15, 25, 0.61),
-        rgba(6, 15, 25, 0.35)
+    radial-gradient(
+        circle at 85% 22%,
+        rgba(64,176,206,.18),
+        transparent 27%
     ),
 
-    url(
-    "https://picsum.photos/seed/anit-math-main/1800/1200"
-    )
+    radial-gradient(
+        circle at 75% 76%,
+        rgba(69,118,163,.20),
+        transparent 30%
+    ),
 
-    center center /
-    cover
-    no-repeat;
+    linear-gradient(
+        130deg,
+        #071522 0%,
+        #0b2031 52%,
+        #12354a 100%
+    );
 
 }
 
 
-#home::after {
+.hero::before {
 
     content: "";
 
     position: absolute;
 
-    width: 500px;
+    width: 530px;
 
-    height: 500px;
+    height: 530px;
+
+    right: -170px;
+
+    top: -150px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.09);
 
     border-radius: 50%;
 
-    background:
-    rgba(43, 155, 196, 0.13);
+}
 
-    right: -130px;
 
-    bottom: -130px;
+.hero::after {
 
-    filter:
-    blur(3px);
+    content: "";
+
+    position: absolute;
+
+    width: 340px;
+
+    height: 340px;
+
+    right: 10%;
+
+    bottom: -200px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.07);
+
+    border-radius: 50%;
 
 }
 
 
 .hero-content {
 
-    max-width: 850px;
-
     position: relative;
 
-    z-index: 5;
+    z-index: 2;
+
+    max-width: 900px;
 
 }
 
 
 .hero-kicker {
 
-    display: inline-block;
+    margin-bottom: 17px;
+
+    color: #8bd5e8;
 
     font-size: 12px;
 
-    font-weight: 700;
-
-    letter-spacing:
-    0.16em;
-
     text-transform: uppercase;
 
-    color:
-    #83d3ee;
+    letter-spacing: .16em;
 
-    margin-bottom: 18px;
+    font-weight: 700;
 
 }
 
 
-.hero-content h1 {
+.hero h1 {
+
+    margin:
+    0 0 18px;
 
     font-family:
-    "Libre Caslon Text",
-    serif;
+    var(--serif);
 
     font-size:
-    clamp(56px, 8vw, 90px);
+    clamp(
+        57px,
+        8vw,
+        92px
+    );
 
     font-weight: 400;
 
-    line-height: 1;
+    line-height: .98;
 
-    letter-spacing:
-    -0.04em;
-
-    margin-bottom: 19px;
+    letter-spacing: -.045em;
 
 }
 
 
-.hero-typed {
+.hero-research {
+
+    margin:
+    0 0 23px;
+
+    color:
+    rgba(255,255,255,.93);
+
+    font-family:
+    var(--serif);
 
     font-size:
-    clamp(22px, 3vw, 31px);
+    clamp(
+        21px,
+        3vw,
+        31px
+    );
 
-    margin-bottom: 23px;
-
-}
-
-
-#typedText {
-
-    border-bottom:
-    3px solid
-    var(--accent);
+    line-height: 1.45;
 
 }
 
 
 .hero-description {
 
-    max-width: 700px;
+    max-width: 720px;
 
-    font-size: 16px;
+    margin: 0;
 
     color:
-    rgba(255, 255, 255, 0.82);
+    rgba(255,255,255,.75);
 
-    margin-bottom: 32px;
+    font-size: 16px;
 
 }
 
 
-.hero-buttons {
+.hero-actions {
 
     display: flex;
 
     flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 11px;
+
+    margin-top: 31px;
 
 }
 
 
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
 .button {
+
+    min-height: 44px;
 
     display: inline-flex;
 
@@ -760,29 +1039,42 @@ section {
 
     justify-content: center;
 
-    gap: 8px;
-
     padding:
-    11px 18px;
+    10px 17px;
 
-    border-radius: 5px;
+    border-radius: 6px;
 
-    font-weight: 600;
+    border:
+    1px solid transparent;
 
-    font-size: 14px;
+    font-weight: 700;
+
+    font-size: 13px;
+
+    text-decoration: none;
 
     transition:
-    0.25s;
+    transform .2s,
+    background .2s,
+    border-color .2s;
+
+}
+
+
+.button:hover {
+
+    transform:
+    translateY(-2px);
 
 }
 
 
 .button-primary {
 
-    color: white;
-
     background:
     var(--accent);
+
+    color: white;
 
 }
 
@@ -794,27 +1086,26 @@ section {
 
     color: white;
 
-    transform:
-    translateY(-2px);
-
 }
 
 
-.button-outline {
+.button-ghost {
 
     color: white;
 
-    border:
-    1px solid
-    rgba(255, 255, 255, 0.48);
+    border-color:
+    rgba(255,255,255,.34);
+
+    background:
+    rgba(255,255,255,.04);
 
 }
 
 
-.button-outline:hover {
+.button-ghost:hover {
 
     background:
-    rgba(255, 255, 255, 0.12);
+    rgba(255,255,255,.11);
 
     color: white;
 
@@ -823,10 +1114,75 @@ section {
 
 
 /* =========================================================
-   ABOUT
+   HERO QUICK FACTS
 ========================================================= */
 
-.about-layout {
+.hero-facts {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(3, minmax(150px, 1fr));
+
+    gap: 1px;
+
+    max-width: 780px;
+
+    margin-top: 50px;
+
+    background:
+    rgba(255,255,255,.12);
+
+    border:
+    1px solid
+    rgba(255,255,255,.12);
+
+}
+
+
+.hero-fact {
+
+    padding:
+    17px 20px;
+
+    background:
+    rgba(5,17,28,.34);
+
+}
+
+
+.hero-fact strong {
+
+    display: block;
+
+    color: white;
+
+    font-family:
+    var(--serif);
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+}
+
+
+.hero-fact span {
+
+    color:
+    rgba(255,255,255,.58);
+
+    font-size: 11px;
+
+}
+
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.intro-grid {
 
     display: grid;
 
@@ -841,18 +1197,16 @@ section {
 }
 
 
-.about-image {
-
-    position: relative;
-
-}
-
-
-.about-image img {
+.intro-photo {
 
     width: 100%;
 
-    border-radius: 7px;
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    border-radius:
+    var(--radius);
 
     box-shadow:
     var(--shadow);
@@ -860,77 +1214,73 @@ section {
 }
 
 
-.about-image::after {
+.intro-copy {
 
-    content: "";
-
-    position: absolute;
-
-    width: 90px;
-
-    height: 90px;
-
-    right: -18px;
-
-    bottom: -18px;
-
-    border-right:
-    3px solid
-    var(--accent);
-
-    border-bottom:
-    3px solid
-    var(--accent);
+    font-size: 16px;
 
 }
 
 
-.about-text h3 {
-
-    font-family:
-    "Libre Caslon Text",
-    serif;
-
-    color:
-    var(--title);
-
-    font-size: 25px;
-
-    margin-bottom: 15px;
-
-}
-
-
-.about-text p {
-
-    margin-bottom: 17px;
+.intro-copy > p {
 
     color:
     var(--muted);
 
+    margin:
+    0 0 18px;
+
 }
 
 
-.details-grid {
+.intro-copy .lead {
+
+    color:
+    var(--text);
+
+    font-family:
+    var(--serif);
+
+    font-size: 22px;
+
+    line-height: 1.55;
+
+}
+
+
+
+/* =========================================================
+   ACADEMIC DETAILS
+========================================================= */
+
+.academic-details {
 
     display: grid;
 
     grid-template-columns:
-    repeat(2, minmax(220px, 1fr));
+    repeat(2, 1fr);
 
     gap:
-    13px 24px;
+    0 28px;
 
-    margin:
-    25px 0;
+    margin-top: 26px;
 
 }
 
 
-.detail {
+.academic-detail {
 
-    padding-bottom:
-    10px;
+    padding:
+    13px 0;
+
+    border-top:
+    1px solid
+    var(--border);
+
+}
+
+
+.academic-detail:last-child,
+.academic-detail:nth-last-child(2) {
 
     border-bottom:
     1px solid
@@ -939,22 +1289,25 @@ section {
 }
 
 
-.detail strong {
+.academic-detail small {
+
+    display: block;
 
     color:
-    var(--text);
+    var(--muted);
 
-    margin-right: 5px;
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+
+    font-size: 9px;
 
 }
 
 
-.detail i {
+.academic-detail strong {
 
-    color:
-    var(--accent);
-
-    margin-right: 8px;
+    font-size: 14px;
 
 }
 
@@ -971,12 +1324,20 @@ section {
     grid-template-columns:
     repeat(3, 1fr);
 
-    gap: 22px;
+    gap: 20px;
 
 }
 
 
 .focus-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 245px;
+
+    padding: 28px;
 
     background:
     var(--card);
@@ -985,16 +1346,12 @@ section {
     1px solid
     var(--border);
 
-    padding: 28px;
-
-    border-radius: 8px;
-
-    box-shadow:
-    0 8px 22px
-    rgba(30, 50, 70, 0.04);
+    border-radius:
+    var(--radius);
 
     transition:
-    0.25s;
+    transform .22s,
+    box-shadow .22s;
 
 }
 
@@ -1002,7 +1359,7 @@ section {
 .focus-card:hover {
 
     transform:
-    translateY(-5px);
+    translateY(-4px);
 
     box-shadow:
     var(--shadow);
@@ -1012,16 +1369,13 @@ section {
 
 .focus-number {
 
-    font-family:
-    "Libre Caslon Text",
-    serif;
-
     color:
     var(--accent);
 
-    font-size: 34px;
+    font-family:
+    var(--serif);
 
-    margin-bottom: 8px;
+    font-size: 38px;
 
 }
 
@@ -1029,11 +1383,16 @@ section {
 .focus-card h3 {
 
     color:
-    var(--title);
+    var(--heading);
 
-    font-size: 18px;
+    font-family:
+    var(--serif);
 
-    margin-bottom: 9px;
+    font-size: 21px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
 
 }
 
@@ -1044,6 +1403,28 @@ section {
     var(--muted);
 
     font-size: 14px;
+
+}
+
+
+.focus-status {
+
+    position: absolute;
+
+    left: 28px;
+
+    bottom: 23px;
+
+    color:
+    var(--success);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
 
 }
 
@@ -1060,7 +1441,7 @@ section {
     grid-template-columns:
     repeat(3, 1fr);
 
-    gap: 21px;
+    gap: 18px;
 
 }
 
@@ -1069,55 +1450,29 @@ section {
 
     padding: 25px;
 
+    background:
+    var(--card);
+
     border:
     1px solid
     var(--border);
 
-    background:
-    var(--card);
-
-    border-radius: 8px;
-
-    transition:
-    0.25s;
+    border-radius:
+    var(--radius);
 
 }
 
 
-.research-card:hover {
-
-    transform:
-    translateY(-5px);
-
-    box-shadow:
-    var(--shadow);
-
-}
-
-
-.research-icon {
-
-    width: 48px;
-
-    height: 48px;
-
-    border-radius: 8px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background:
-    var(--accent-light);
+.research-index {
 
     color:
-    var(--accent-dark);
+    var(--accent);
 
-    font-size: 18px;
+    font-size: 10px;
 
-    margin-bottom: 16px;
+    font-weight: 800;
+
+    letter-spacing: .12em;
 
 }
 
@@ -1125,16 +1480,24 @@ section {
 .research-card h3 {
 
     color:
-    var(--title);
+    var(--heading);
 
-    margin-bottom: 8px;
+    font-family:
+    var(--serif);
 
-    font-size: 18px;
+    font-weight: 400;
+
+    font-size: 19px;
+
+    margin:
+    7px 0 8px;
 
 }
 
 
 .research-card p {
+
+    margin: 0;
 
     color:
     var(--muted);
@@ -1149,87 +1512,109 @@ section {
    SELECTED WORK
 ========================================================= */
 
-.featured-work {
+.selected-work {
 
     display: grid;
 
     grid-template-columns:
-    1fr
-    1fr;
+    1.2fr .8fr;
 
-    gap: 30px;
+    gap: 24px;
 
 }
 
 
-.work-card {
+.paper-feature,
+.project-feature {
 
-    padding: 30px;
+    padding: 31px;
+
+    background:
+    var(--card);
 
     border:
     1px solid
     var(--border);
 
-    border-radius: 8px;
-
-    background:
-    var(--card);
+    border-radius:
+    var(--radius);
 
 }
 
 
-.work-label {
+.feature-label {
 
     color:
     var(--accent-dark);
 
-    font-size: 11px;
-
-    letter-spacing:
-    0.12em;
-
-    font-weight: 700;
-
     text-transform: uppercase;
 
-    margin-bottom: 10px;
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .13em;
 
 }
 
 
-.work-card h3 {
-
-    font-family:
-    "Libre Caslon Text",
-    serif;
+.paper-feature h3,
+.project-feature h3 {
 
     color:
-    var(--title);
+    var(--heading);
 
-    font-size: 21px;
+    font-family:
+    var(--serif);
+
+    font-weight: 400;
 
     line-height: 1.45;
 
-    margin-bottom: 11px;
+}
+
+
+.paper-feature h3 {
+
+    font-size: 25px;
 
 }
 
 
-.work-card p {
+.project-feature h3 {
+
+    font-size: 21px;
+
+}
+
+
+.paper-feature p,
+.project-feature p {
 
     color:
     var(--muted);
 
-    margin-bottom: 14px;
+}
+
+
+.inline-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 17px;
 
 }
 
 
-.work-link {
+.inline-links a {
 
-    font-weight: 600;
+    font-weight: 700;
 
-    font-size: 14px;
+    font-size: 13px;
 
 }
 
@@ -1239,13 +1624,13 @@ section {
    PUBLICATIONS
 ========================================================= */
 
-.publication-tools {
+.publication-controls {
 
     display: flex;
 
     flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 9px;
 
     margin-bottom: 28px;
 
@@ -1254,18 +1639,19 @@ section {
 
 .publication-search {
 
-    flex: 1;
+    flex:
+    1 1 300px;
 
-    min-width: 250px;
-
-    padding:
-    11px 14px;
+    min-height: 44px;
 
     border:
     1px solid
     var(--border);
 
-    border-radius: 5px;
+    border-radius: 6px;
+
+    padding:
+    8px 13px;
 
     background:
     var(--card);
@@ -1273,24 +1659,21 @@ section {
     color:
     var(--text);
 
-    outline: none;
-
 }
 
 
-.publication-search:focus {
+.filter {
 
-    border-color:
-    var(--accent);
-
-}
-
-
-.filter-button {
+    min-height: 44px;
 
     border:
     1px solid
     var(--border);
+
+    border-radius: 6px;
+
+    padding:
+    8px 14px;
 
     background:
     var(--card);
@@ -1298,33 +1681,33 @@ section {
     color:
     var(--text);
 
-    padding:
-    9px 13px;
-
-    border-radius: 5px;
-
-    cursor: pointer;
-
 }
 
 
-.filter-button.active {
-
-    background:
-    var(--accent);
-
-    border-color:
-    var(--accent);
+.filter.active {
 
     color: white;
+
+    background:
+    var(--accent);
+
+    border-color:
+    var(--accent);
 
 }
 
 
 .publication {
 
+    display: grid;
+
+    grid-template-columns:
+    90px 1fr;
+
+    gap: 25px;
+
     padding:
-    24px 0;
+    26px 0;
 
     border-top:
     1px solid
@@ -1342,64 +1725,62 @@ section {
 }
 
 
-.publication-type {
+.publication-year {
 
     color:
     var(--accent-dark);
 
-    font-size: 11px;
+    font-family:
+    var(--serif);
 
-    font-weight: 700;
+    font-size: 22px;
 
-    letter-spacing:
-    0.1em;
+}
+
+
+.publication-type {
+
+    color:
+    var(--muted);
 
     text-transform: uppercase;
+
+    font-size: 9px;
+
+    letter-spacing: .12em;
+
+    font-weight: 800;
 
 }
 
 
 .publication h3 {
 
-    font-family:
-    "Libre Caslon Text",
-    serif;
+    margin:
+    5px 0 6px;
 
     color:
-    var(--title);
+    var(--heading);
+
+    font-family:
+    var(--serif);
+
+    font-weight: 400;
 
     font-size: 20px;
-
-    margin:
-    6px 0;
 
 }
 
 
 .publication p {
 
+    margin:
+    3px 0;
+
     color:
     var(--muted);
 
-    margin-bottom: 3px;
-
-}
-
-
-.publication-links {
-
-    margin-top: 10px;
-
-}
-
-
-.publication-links a {
-
-    margin-right: 16px;
-
     font-size: 14px;
-
-    font-weight: 600;
 
 }
 
@@ -1411,7 +1792,7 @@ section {
 
 .news-list {
 
-    position: relative;
+    max-width: 900px;
 
 }
 
@@ -1423,10 +1804,10 @@ section {
     grid-template-columns:
     125px 1fr;
 
-    gap: 24px;
+    gap: 25px;
 
     padding:
-    20px 0;
+    21px 0;
 
     border-bottom:
     1px solid
@@ -1440,26 +1821,34 @@ section {
     color:
     var(--accent-dark);
 
-    font-weight: 700;
+    font-size: 12px;
 
-    font-size: 13px;
+    font-weight: 800;
 
 }
 
 
-.news-content h3 {
+.news-item h3 {
+
+    margin:
+    0 0 5px;
 
     color:
-    var(--title);
+    var(--heading);
 
-    font-size: 16px;
+    font-family:
+    var(--serif);
 
-    margin-bottom: 4px;
+    font-size: 18px;
+
+    font-weight: 400;
 
 }
 
 
-.news-content p {
+.news-item p {
+
+    margin: 0;
 
     color:
     var(--muted);
@@ -1474,30 +1863,29 @@ section {
    CV
 ========================================================= */
 
-.cv-grid {
+.cv-columns {
 
     display: grid;
 
     grid-template-columns:
-    repeat(2, 1fr);
+    1fr 1fr;
 
     gap: 50px;
 
 }
 
 
-.cv-heading {
-
-    font-family:
-    "Libre Caslon Text",
-    serif;
+.cv-title {
 
     color:
-    var(--title);
+    var(--heading);
 
-    font-size: 25px;
+    font-family:
+    var(--serif);
 
-    margin-bottom: 20px;
+    font-size: 24px;
+
+    font-weight: 400;
 
 }
 
@@ -1506,11 +1894,13 @@ section {
 
     position: relative;
 
+    margin-left: 7px;
+
     padding:
     0 0 27px 24px;
 
     border-left:
-    2px solid
+    1px solid
     var(--accent);
 
 }
@@ -1522,67 +1912,59 @@ section {
 
     position: absolute;
 
-    left: -8px;
+    left: -6px;
 
-    top: 5px;
+    top: 8px;
 
-    width: 13px;
+    width: 9px;
 
-    height: 13px;
-
-    background:
-    var(--background);
-
-    border:
-    2px solid
-    var(--accent);
+    height: 9px;
 
     border-radius: 50%;
+
+    background:
+    var(--accent);
 
 }
 
 
 .cv-item h3 {
 
+    margin: 0;
+
     color:
-    var(--title);
+    var(--heading);
 
-    font-size: 17px;
-
-    margin-bottom: 4px;
+    font-size: 15px;
 
 }
 
 
-.cv-item .year {
+.cv-item .cv-meta {
 
     display: inline-block;
 
-    padding:
-    3px 9px;
-
     margin:
-    4px 0 8px;
-
-    background:
-    var(--accent-light);
+    5px 0;
 
     color:
     var(--accent-dark);
 
-    border-radius: 3px;
+    font-size: 11px;
 
-    font-size: 12px;
+    font-weight: 700;
 
 }
 
 
 .cv-item p {
 
+    margin: 0;
+
     color:
     var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 
 }
 
@@ -1597,90 +1979,68 @@ section {
     display: grid;
 
     grid-template-columns:
-    repeat(3, 1fr);
+    repeat(3,1fr);
 
-    gap: 21px;
+    gap: 20px;
 
 }
 
 
-.note-card {
+.note {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 240px;
+
+    padding: 25px;
+
+    background:
+    var(--card);
 
     border:
     1px solid
     var(--border);
 
-    background:
-    var(--card);
-
-    border-radius: 8px;
-
-    overflow: hidden;
-
-    transition:
-    0.25s;
+    border-radius:
+    var(--radius);
 
 }
 
 
-.note-card:hover {
-
-    transform:
-    translateY(-5px);
-
-    box-shadow:
-    var(--shadow);
-
-}
-
-
-.note-image {
-
-    height: 170px;
-
-    object-fit: cover;
-
-    width: 100%;
-
-}
-
-
-.note-body {
-
-    padding: 22px;
-
-}
-
-
-.note-tag {
+.note-type {
 
     color:
     var(--accent-dark);
 
-    font-size: 11px;
-
-    font-weight: 700;
-
     text-transform: uppercase;
 
-    letter-spacing:
-    0.1em;
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .13em;
 
 }
 
 
-.note-body h3 {
+.note h3 {
 
     color:
-    var(--title);
+    var(--heading);
 
-    margin:
-    7px 0;
+    font-family:
+    var(--serif);
+
+    font-weight: 400;
+
+    font-size: 20px;
 
 }
 
 
-.note-body p {
+.note p {
 
     color:
     var(--muted);
@@ -1690,20 +2050,30 @@ section {
 }
 
 
+.note-footer {
+
+    margin-top: auto;
+
+    padding-top: 15px;
+
+    font-size: 12px;
+
+}
+
+
 
 /* =========================================================
    CONTACT
 ========================================================= */
 
-.contact-layout {
+.contact-grid {
 
     display: grid;
 
     grid-template-columns:
-    1fr
-    1fr;
+    .9fr 1.1fr;
 
-    gap: 35px;
+    gap: 27px;
 
 }
 
@@ -1716,7 +2086,8 @@ section {
     1px solid
     var(--border);
 
-    border-radius: 8px;
+    border-radius:
+    var(--radius);
 
     background:
     var(--card);
@@ -1724,123 +2095,235 @@ section {
 }
 
 
-.contact-item {
+.contact-row {
 
-    display: flex;
+    padding:
+    15px 0;
 
-    gap: 15px;
-
-    margin-bottom: 22px;
-
-}
-
-
-.contact-icon {
-
-    width: 44px;
-
-    height: 44px;
-
-    flex: 0 0 44px;
-
-    border-radius: 50%;
-
-    background:
-    var(--accent-light);
-
-    color:
-    var(--accent-dark);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+    border-bottom:
+    1px solid
+    var(--border);
 
 }
 
 
-.contact-item h3 {
+.contact-row:first-child {
 
-    color:
-    var(--title);
-
-    font-size: 16px;
-
-    margin-bottom: 2px;
+    padding-top: 0;
 
 }
 
 
-.contact-item p {
+.contact-row:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.contact-row small {
+
+    display: block;
 
     color:
     var(--muted);
+
+    text-transform: uppercase;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+}
+
+
+.contact-row strong {
 
     font-size: 14px;
 
 }
 
 
-.contact-message h3 {
+.contact-intro {
 
     font-family:
-    "Libre Caslon Text",
-    serif;
+    var(--serif);
 
     color:
-    var(--title);
+    var(--heading);
 
-    font-size: 24px;
+    font-size: 25px;
 
-    margin-bottom: 13px;
+    line-height: 1.5;
 
 }
 
 
-.contact-message p {
+.contact-copy {
 
     color:
     var(--muted);
 
-    margin-bottom: 17px;
+}
+
+
+.contact-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
 
 }
 
 
+.copy-button {
 
-/* =========================================================
-   FOOTER
-========================================================= */
+    min-height: 44px;
 
-footer {
+    padding:
+    9px 15px;
 
-    margin-left:
-    var(--sidebar-width);
-
-    background:
-    var(--soft);
-
-    border-top:
+    border:
     1px solid
     var(--border);
 
-    padding:
-    28px;
+    border-radius: 6px;
+
+    background:
+    var(--card);
 
     color:
-    var(--muted);
-
-    text-align: center;
-
-    font-size: 13px;
+    var(--text);
 
 }
 
 
 
 /* =========================================================
-   ANIMATION
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 900;
+
+    width: 46px;
+
+    height: 46px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+    var(--accent);
+
+    color: white;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+    translateY(12px);
+
+    transition:
+    .25s;
+
+}
+
+
+.back-to-top.visible {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+    transform: none;
+
+}
+
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-toggle {
+
+    display: none;
+
+    position: fixed;
+
+    top: 14px;
+
+    right: 14px;
+
+    z-index: 1300;
+
+    width: 46px;
+
+    height: 46px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+    var(--accent);
+
+    color: white;
+
+    font-size: 21px;
+
+}
+
+
+.mobile-backdrop {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    rgba(0,0,0,.55);
+
+    z-index: 950;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+    opacity .25s;
+
+}
+
+
+.mobile-backdrop.visible {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+
+/* =========================================================
+   REVEAL ANIMATION
 ========================================================= */
 
 .reveal {
@@ -1848,11 +2331,11 @@ footer {
     opacity: 0;
 
     transform:
-    translateY(18px);
+    translateY(15px);
 
     transition:
-    opacity 0.55s ease,
-    transform 0.55s ease;
+    opacity .5s ease,
+    transform .5s ease;
 
 }
 
@@ -1868,28 +2351,33 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE
+   LARGE TABLET
 ========================================================= */
 
 @media
 (max-width: 1100px) {
 
-    .research-grid,
     .focus-grid,
+    .research-grid,
     .notes-grid {
 
         grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2,1fr);
 
     }
 
 }
 
 
-@media
-(max-width: 1000px) {
 
-    #sidebar {
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media
+(max-width: 980px) {
+
+    .sidebar {
 
         transform:
         translateX(-100%);
@@ -1897,33 +2385,32 @@ footer {
     }
 
 
-    #sidebar.open {
+    .sidebar.open {
 
-        transform:
-        translateX(0);
-
-    }
-
-
-    .mobile-menu {
-
-        display: block;
+        transform: none;
 
     }
 
 
-    #main,
-    footer {
+    main,
+    .site-footer {
 
         margin-left: 0;
 
     }
 
 
-    .about-layout,
-    .contact-layout,
-    .featured-work,
-    .cv-grid {
+    .mobile-toggle {
+
+        display: block;
+
+    }
+
+
+    .intro-grid,
+    .selected-work,
+    .cv-columns,
+    .contact-grid {
 
         grid-template-columns:
         1fr;
@@ -1931,14 +2418,19 @@ footer {
     }
 
 
-    .about-image {
+    .intro-photo {
 
-        max-width: 430px;
+        max-width: 380px;
 
     }
 
 }
 
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media
 (max-width: 680px) {
@@ -1946,22 +2438,26 @@ footer {
     section {
 
         padding:
-        68px 24px;
+        70px 23px;
 
     }
 
 
-    .hero-content h1 {
+    .hero {
+
+        padding-top: 100px;
+
+    }
+
+
+    .hero h1 {
 
         font-size: 54px;
 
     }
 
 
-    .research-grid,
-    .focus-grid,
-    .notes-grid,
-    .details-grid {
+    .hero-facts {
 
         grid-template-columns:
         1fr;
@@ -1969,7 +2465,18 @@ footer {
     }
 
 
-    .news-item {
+    .focus-grid,
+    .research-grid,
+    .notes-grid,
+    .academic-details {
+
+        grid-template-columns:
+        1fr;
+
+    }
+
+
+    .publication {
 
         grid-template-columns:
         1fr;
@@ -1979,11 +2486,180 @@ footer {
     }
 
 
-    .hero-buttons {
+    .news-item {
 
-        flex-direction: column;
+        grid-template-columns:
+        1fr;
 
-        align-items: flex-start;
+        gap: 6px;
+
+    }
+
+
+    .academic-detail:nth-last-child(2) {
+
+        border-bottom: 0;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media
+(prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+        .01ms !important;
+
+        animation-iteration-count:
+        1 !important;
+
+        transition-duration:
+        .01ms !important;
+
+    }
+
+
+    .reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   HIGH CONTRAST PREFERENCE
+========================================================= */
+
+@media
+(prefers-contrast: more) {
+
+    :root {
+
+        --border: #67717b;
+
+    }
+
+
+    a {
+
+        text-decoration-thickness:
+        2px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   PRINT / PDF
+========================================================= */
+
+@media print {
+
+    .sidebar,
+    .mobile-toggle,
+    .mobile-backdrop,
+    .back-to-top,
+    .hero-actions,
+    .publication-controls,
+    .contact-actions {
+
+        display: none !important;
+
+    }
+
+
+    main,
+    .site-footer {
+
+        margin-left: 0;
+
+    }
+
+
+    body {
+
+        background: white;
+
+        color: black;
+
+    }
+
+
+    section {
+
+        padding:
+        30px 20px;
+
+        break-inside: avoid;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        background: white;
+
+        color: black;
+
+    }
+
+
+    .hero h1,
+    .hero-research,
+    .hero-description {
+
+        color: black;
+
+    }
+
+
+    .hero-facts {
+
+        border:
+        1px solid #bbb;
+
+        background: white;
+
+    }
+
+
+    .hero-fact {
+
+        background: white;
+
+    }
+
+
+    .hero-fact strong,
+    .hero-fact span {
+
+        color: black;
 
     }
 
@@ -1999,16 +2675,39 @@ footer {
 
 
 <!-- =========================================================
-     MOBILE BUTTON
+     SKIP LINK
+========================================================= -->
+
+<a
+class="skip-link"
+href="#main-content">
+
+Skip to main content
+
+</a>
+
+
+
+<!-- =========================================================
+     MOBILE MENU BUTTON
 ========================================================= -->
 
 <button
-class="mobile-menu"
-id="mobileMenu">
+class="mobile-toggle"
+id="mobileToggle"
+type="button"
+aria-label="Open navigation"
+aria-expanded="false">
 
-<i class="fa-solid fa-bars"></i>
+☰
 
 </button>
+
+
+<div
+class="mobile-backdrop"
+id="mobileBackdrop">
+</div>
 
 
 
@@ -2016,234 +2715,377 @@ id="mobileMenu">
      SIDEBAR
 ========================================================= -->
 
-<aside id="sidebar">
+<aside
+class="sidebar"
+id="sidebar">
+
+
+<div class="sidebar-inner">
 
 
 <div class="profile">
 
 
+<!--
+TEMPORARY PHOTO.
+Replace the URL with your own image later.
+-->
+
+
 <img
 
-class="profile-image"
+class="profile-photo"
 
-src="https://picsum.photos/seed/anit-profile-new/500/500"
+src="https://picsum.photos/id/1005/600/600"
 
-alt="Temporary profile photograph">
+width="132"
+
+height="132"
+
+alt="Temporary profile photograph for Anit Kuckian"
+
+decoding="async">
 
 
-<h1>
+<h2 class="profile-name">
 
 Anit Kuckian
 
-</h1>
+</h2>
 
 
-<p class="profile-position">
+<p class="profile-role">
 
 Mathematics · IIT Gandhinagar
 
 </p>
 
 
-<div class="profile-badge">
+<span class="status-chip">
 
 Sabarmati Bridge Fellow
 
-</div>
+</span>
 
 
-<div class="social-links">
+
+<div class="profile-links">
 
 
 <a
+
+class="profile-link"
+
 href="https://github.com/Anit-Kuckian"
+
 target="_blank"
-title="GitHub">
 
-<i class="fa-brands fa-github"></i>
+rel="noopener noreferrer">
+
+GitHub
 
 </a>
 
 
 <a
+
+class="profile-link"
+
 href="#"
-title="Google Scholar">
 
-<i class="fa-solid fa-graduation-cap"></i>
+title="Replace this with your Google Scholar URL">
+
+Scholar
 
 </a>
 
 
 <a
+
+class="profile-link"
+
 href="#"
-title="ORCID">
 
-<i class="fa-brands fa-orcid"></i>
+title="Replace this with your ORCID URL">
 
-</a>
-
-
-<a
-href="mailto:YOUR_EMAIL"
-title="Email">
-
-<i class="fa-solid fa-envelope"></i>
+ORCID
 
 </a>
 
 
 <button
-class="theme-button"
-id="themeButton"
-title="Light / dark mode">
 
-<i class="fa-solid fa-moon"></i>
+class="theme-toggle"
+
+id="themeToggle"
+
+type="button"
+
+aria-label="Switch color theme">
+
+Theme
 
 </button>
 
 
 </div>
 
+
 </div>
 
 
 
-<nav class="sidebar-nav">
+<nav
+class="site-nav"
+aria-label="Main navigation">
 
+
+<ul>
+
+
+<li>
 
 <a
 class="nav-link active"
-href="#home">
+href="#home"
+aria-current="true">
 
-<i class="fa-solid fa-house"></i>
+<span class="nav-number">
+01
+</span>
 
+<span>
 Home
+</span>
 
 </a>
 
+</li>
+
+
+
+<li>
 
 <a
 class="nav-link"
 href="#about">
 
-<i class="fa-regular fa-user"></i>
+<span class="nav-number">
+02
+</span>
 
+<span>
 About
+</span>
 
 </a>
 
+</li>
+
+
+
+<li>
 
 <a
 class="nav-link"
 href="#focus">
 
-<i class="fa-solid fa-crosshairs"></i>
+<span class="nav-number">
+03
+</span>
 
+<span>
 Current Focus
+</span>
 
 </a>
 
+</li>
+
+
+
+<li>
 
 <a
 class="nav-link"
 href="#research">
 
-<i class="fa-solid fa-flask"></i>
+<span class="nav-number">
+04
+</span>
 
+<span>
 Research
+</span>
 
 </a>
 
+</li>
+
+
+
+<li>
+
+<a
+class="nav-link"
+href="#work">
+
+<span class="nav-number">
+05
+</span>
+
+<span>
+Selected Work
+</span>
+
+</a>
+
+</li>
+
+
+
+<li>
 
 <a
 class="nav-link"
 href="#publications">
 
-<i class="fa-regular fa-file-lines"></i>
+<span class="nav-number">
+06
+</span>
 
+<span>
 Publications
+</span>
 
 </a>
 
+</li>
+
+
+
+<li>
 
 <a
 class="nav-link"
 href="#news">
 
-<i class="fa-regular fa-newspaper"></i>
+<span class="nav-number">
+07
+</span>
 
+<span>
 News
+</span>
 
 </a>
 
+</li>
+
+
+
+<li>
 
 <a
 class="nav-link"
 href="#cv">
 
-<i class="fa-regular fa-file"></i>
+<span class="nav-number">
+08
+</span>
 
+<span>
 CV
+</span>
 
 </a>
 
+</li>
+
+
+
+<li>
 
 <a
 class="nav-link"
 href="#notes">
 
-<i class="fa-solid fa-book-open"></i>
+<span class="nav-number">
+09
+</span>
 
+<span>
 Notes
+</span>
 
 </a>
 
+</li>
+
+
+
+<li>
 
 <a
 class="nav-link"
 href="#contact">
 
-<i class="fa-regular fa-envelope"></i>
+<span class="nav-number">
+10
+</span>
 
+<span>
 Contact
+</span>
 
 </a>
 
+</li>
 
-<a
-class="sidebar-cv"
-href="cv.pdf"
-target="_blank">
 
-<i class="fa-solid fa-download"></i>
-
-Download CV
-
-</a>
+</ul>
 
 
 </nav>
+
+
+
+<div class="sidebar-bottom">
+
+Academic website
+
+<br>
+
+Last updated September 2026
+
+</div>
+
+
+</div>
+
 
 </aside>
 
 
 
 <!-- =========================================================
-     MAIN
+     MAIN CONTENT
 ========================================================= -->
 
-<main id="main">
+<main id="main-content">
 
 
 
 <!-- =========================================================
-     HOME
+     HERO
 ========================================================= -->
 
-<section id="home">
+<section
+class="hero"
+id="home">
 
 
-<div class="hero-content reveal">
+<div class="content-width hero-content">
 
 
 <div class="hero-kicker">
@@ -2260,48 +3102,46 @@ Anit Kuckian
 </h1>
 
 
-<div class="hero-typed">
+<p class="hero-research">
 
-I work in
-
-<span id="typedText"></span>
-
-</div>
-
-
-<p class="hero-description">
-
-I am a Sabarmati Bridge Fellow at
-the Indian Institute of Technology Gandhinagar.
-
-My research interests lie broadly in algebra,
-with particular interest in finite fields,
-algebraic coding theory,
-commutative algebra,
-and affine algebraic geometry.
+Finite Fields ·
+Algebraic Coding Theory ·
+Commutative Algebra ·
+Affine Algebraic Geometry
 
 </p>
 
 
-<div class="hero-buttons">
+<p class="hero-description">
+
+I am a Sabarmati Bridge Fellow
+at the Indian Institute of Technology Gandhinagar.
+
+My research interests lie broadly in algebra,
+with particular interest in finite fields,
+coding theory,
+commutative algebra,
+and algebraic geometry.
+
+</p>
+
+
+
+<div class="hero-actions">
 
 
 <a
 class="button button-primary"
-href="#research">
+href="#work">
 
-<i class="fa-solid fa-flask"></i>
-
-Explore Research
+Selected work
 
 </a>
 
 
 <a
-class="button button-outline"
+class="button button-ghost"
 href="#publications">
-
-<i class="fa-regular fa-file-lines"></i>
 
 Publications
 
@@ -2309,13 +3149,11 @@ Publications
 
 
 <a
-class="button button-outline"
+class="button button-ghost"
 href="cv.pdf"
 target="_blank">
 
-<i class="fa-solid fa-download"></i>
-
-CV
+Download CV
 
 </a>
 
@@ -2323,7 +3161,66 @@ CV
 </div>
 
 
+
+<div class="hero-facts">
+
+
+<div class="hero-fact">
+
+<strong>
+
+IIT Gandhinagar
+
+</strong>
+
+<span>
+
+Current affiliation
+
+</span>
+
 </div>
+
+
+<div class="hero-fact">
+
+<strong>
+
+Finite Fields
+
+</strong>
+
+<span>
+
+Primary research direction
+
+</span>
+
+</div>
+
+
+<div class="hero-fact">
+
+<strong>
+
+Algebra & Coding Theory
+
+</strong>
+
+<span>
+
+Broader interests
+
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
@@ -2336,42 +3233,58 @@ CV
 <section id="about">
 
 
-<div class="section-title reveal">
+<div class="content-width">
 
-<div class="section-kicker">
+
+<div class="section-header reveal">
+
+
+<div class="eyebrow">
 
 About
 
 </div>
 
+
 <h2>
 
-A little about me
+Mathematics through
+examples, structure, and algebra.
 
 </h2>
 
+
 <p>
 
-My work sits broadly at the intersection
-of algebra,
-finite fields,
-and affine algebraic geometry.
+A short introduction to my background
+and mathematical interests.
 
 </p>
+
 
 </div>
 
 
 
-<div class="about-layout">
+<div class="intro-grid">
 
 
-<div class="about-image reveal">
+<div class="reveal">
 
 
 <img
 
-src="https://picsum.photos/seed/anit-photo-large/800/1000"
+class="intro-photo"
+
+src="https://picsum.photos/id/1005/600/600"
+
+width="600"
+
+height="600"
+
+loading="lazy"
+
+decoding="async"
 
 alt="Temporary photograph">
 
@@ -2380,106 +3293,121 @@ alt="Temporary photograph">
 
 
 
-<div class="about-text reveal">
+<div class="intro-copy reveal">
 
 
-<h3>
+<p class="lead">
 
-Mathematics researcher at IIT Gandhinagar
+I am interested in understanding
+algebraic structures through explicit examples,
+computations,
+and the patterns that emerge from them.
 
-</h3>
+</p>
 
 
 <p>
 
 I am currently a Sabarmati Bridge Fellow
 at the Indian Institute of Technology Gandhinagar,
-where I continue working on problems in algebra
-and finite-field geometry.
+where I continue working on problems
+in algebra and finite-field geometry.
 
 </p>
 
 
 <p>
 
-My recent research involves rational points
+My recent work involves rational points
 over finite fields,
-Danielewski and Double Danielewski varieties,
-and questions related to the
-Zariski Cancellation Problem.
+Danielewski-type varieties,
+and questions related to
+the Zariski Cancellation Problem.
 
-I am also increasingly interested in
-finite fields and algebraic coding theory.
+I am also developing my research
+in finite fields and algebraic coding theory.
 
 </p>
 
 
 
-<div class="details-grid">
+<div class="academic-details">
 
 
-<div class="detail">
+<div class="academic-detail">
 
-<i class="fa-solid fa-chevron-right"></i>
+<small>
+Current position
+</small>
 
-<strong>Position:</strong>
-
+<strong>
 Sabarmati Bridge Fellow
+</strong>
 
 </div>
 
 
-<div class="detail">
+<div class="academic-detail">
 
-<i class="fa-solid fa-chevron-right"></i>
+<small>
+Institution
+</small>
 
-<strong>Institution:</strong>
-
+<strong>
 IIT Gandhinagar
+</strong>
 
 </div>
 
 
-<div class="detail">
+<div class="academic-detail">
 
-<i class="fa-solid fa-chevron-right"></i>
+<small>
+Degree
+</small>
 
-<strong>Field:</strong>
-
-Mathematics
-
-</div>
-
-
-<div class="detail">
-
-<i class="fa-solid fa-chevron-right"></i>
-
-<strong>Degree:</strong>
-
+<strong>
 M.Sc. Mathematics
+</strong>
 
 </div>
 
 
-<div class="detail">
+<div class="academic-detail">
 
-<i class="fa-solid fa-chevron-right"></i>
+<small>
+Research area
+</small>
 
-<strong>Location:</strong>
+<strong>
+Algebra
+</strong>
 
+</div>
+
+
+<div class="academic-detail">
+
+<small>
+Location
+</small>
+
+<strong>
 Gandhinagar, India
+</strong>
 
 </div>
 
 
-<div class="detail">
+<div class="academic-detail">
 
-<i class="fa-solid fa-chevron-right"></i>
+<small>
+Email
+</small>
 
-<strong>Email:</strong>
-
+<strong>
 YOUR_EMAIL
+</strong>
 
 </div>
 
@@ -2487,15 +3415,7 @@ YOUR_EMAIL
 </div>
 
 
-<p>
-
-I enjoy approaching new mathematical problems
-through examples and computations,
-looking for structural patterns,
-and then trying to understand
-the general algebraic mechanism behind them.
-
-</p>
+</div>
 
 
 </div>
@@ -2513,14 +3433,17 @@ the general algebraic mechanism behind them.
 ========================================================= -->
 
 <section
-id="focus"
-class="section-soft">
+class="section-soft"
+id="focus">
 
 
-<div class="section-title reveal">
+<div class="content-width">
 
 
-<div class="section-kicker">
+<div class="section-header reveal">
+
+
+<div class="eyebrow">
 
 Now
 
@@ -2536,8 +3459,8 @@ Current focus
 
 <p>
 
-A snapshot of the mathematical directions
-I am spending most of my time on right now.
+The problems and topics currently
+receiving most of my attention.
 
 </p>
 
@@ -2549,7 +3472,7 @@ I am spending most of my time on right now.
 <div class="focus-grid">
 
 
-<div class="focus-card reveal">
+<article class="focus-card reveal">
 
 
 <div class="focus-number">
@@ -2561,27 +3484,33 @@ I am spending most of my time on right now.
 
 <h3>
 
-Algebraic Coding Theory
+Generalized covering problems
+in coding theory
 
 </h3>
 
 
 <p>
 
-Developing a stronger foundation in
-algebraic coding theory,
-finite-field methods,
-covering problems,
-and algebraic constructions of codes.
+Studying covering-radius questions
+for algebraic codes
+and related finite-field structures.
 
 </p>
 
 
+<div class="focus-status">
+
+Active project
+
 </div>
 
 
+</article>
 
-<div class="focus-card reveal">
+
+
+<article class="focus-card reveal">
 
 
 <div class="focus-number">
@@ -2593,27 +3522,34 @@ and algebraic constructions of codes.
 
 <h3>
 
-Finite Fields
+Finite-field point-counting
+constructions
 
 </h3>
 
 
 <p>
 
-Polynomial factorization,
-primitive elements,
-cyclotomic structures,
-rational-point questions,
-and applications of finite fields.
+Exploring polynomial systems
+and algebraic varieties
+whose rational-point counts
+produce structured numerical sequences.
 
 </p>
 
 
+<div class="focus-status">
+
+Active project
+
 </div>
 
 
+</article>
 
-<div class="focus-card reveal">
+
+
+<article class="focus-card reveal">
 
 
 <div class="focus-number">
@@ -2625,19 +3561,30 @@ and applications of finite fields.
 
 <h3>
 
-Affine Algebra
+Cancellation and
+Danielewski-type varieties
 
 </h3>
 
 
 <p>
 
-Danielewski-type varieties,
+Studying affine algebras,
 exponential maps,
-Makar-Limanov invariants,
-and cancellation phenomena.
+filtrations,
+and invariant-theoretic techniques.
 
 </p>
+
+
+<div class="focus-status">
+
+Ongoing research
+
+</div>
+
+
+</article>
 
 
 </div>
@@ -2657,10 +3604,13 @@ and cancellation phenomena.
 <section id="research">
 
 
-<div class="section-title reveal">
+<div class="content-width">
 
 
-<div class="section-kicker">
+<div class="section-header reveal">
+
+
+<div class="eyebrow">
 
 Research
 
@@ -2676,9 +3626,8 @@ Research interests
 
 <p>
 
-My interests are broad within algebra,
-but the following areas currently
-form the center of my mathematical work.
+The areas that currently define
+my mathematical interests.
 
 </p>
 
@@ -2690,15 +3639,13 @@ form the center of my mathematical work.
 <div class="research-grid">
 
 
-<div class="research-card reveal">
+<article class="research-card reveal">
 
+<div class="research-index">
 
-<div class="research-icon">
-
-<i class="fa-solid fa-square-root-variable"></i>
+AREA 01
 
 </div>
-
 
 <h3>
 
@@ -2706,31 +3653,27 @@ Finite Fields
 
 </h3>
 
-
 <p>
 
 Polynomial arithmetic,
-factorization,
+irreducibility,
 primitive elements,
-finite-field constructions,
+cyclotomic structures,
 and applications.
 
 </p>
 
+</article>
+
+
+
+<article class="research-card reveal">
+
+<div class="research-index">
+
+AREA 02
 
 </div>
-
-
-
-<div class="research-card reveal">
-
-
-<div class="research-icon">
-
-<i class="fa-solid fa-code"></i>
-
-</div>
-
 
 <h3>
 
@@ -2738,30 +3681,26 @@ Algebraic Coding Theory
 
 </h3>
 
-
 <p>
 
-Codes over finite fields,
-algebraic constructions,
+Algebraic codes,
+finite-field methods,
 covering problems,
-and structural coding questions.
+and structural questions in coding theory.
 
 </p>
 
+</article>
+
+
+
+<article class="research-card reveal">
+
+<div class="research-index">
+
+AREA 03
 
 </div>
-
-
-
-<div class="research-card reveal">
-
-
-<div class="research-icon">
-
-<i class="fa-solid fa-cubes"></i>
-
-</div>
-
 
 <h3>
 
@@ -2769,31 +3708,27 @@ Commutative Algebra
 
 </h3>
 
-
 <p>
 
 Affine domains,
 polynomial rings,
-exponential maps,
 filtrations,
+exponential maps,
 and algebraic invariants.
 
 </p>
 
+</article>
+
+
+
+<article class="research-card reveal">
+
+<div class="research-index">
+
+AREA 04
 
 </div>
-
-
-
-<div class="research-card reveal">
-
-
-<div class="research-icon">
-
-<i class="fa-solid fa-shapes"></i>
-
-</div>
-
 
 <h3>
 
@@ -2801,29 +3736,25 @@ Affine Algebraic Geometry
 
 </h3>
 
-
 <p>
 
-Danielewski varieties,
+Danielewski-type varieties,
 Makar-Limanov invariants,
-and the Zariski Cancellation Problem.
+and cancellation phenomena.
 
 </p>
 
+</article>
+
+
+
+<article class="research-card reveal">
+
+<div class="research-index">
+
+AREA 05
 
 </div>
-
-
-
-<div class="research-card reveal">
-
-
-<div class="research-icon">
-
-<i class="fa-solid fa-chart-line"></i>
-
-</div>
-
 
 <h3>
 
@@ -2831,29 +3762,25 @@ Rational Points
 
 </h3>
 
-
 <p>
 
-Counting rational points
-on algebraic varieties
-over finite fields.
+Rational point counting
+for algebraic varieties
+defined over finite fields.
 
 </p>
 
+</article>
+
+
+
+<article class="research-card reveal">
+
+<div class="research-index">
+
+AREA 06
 
 </div>
-
-
-
-<div class="research-card reveal">
-
-
-<div class="research-icon">
-
-<i class="fa-solid fa-computer"></i>
-
-</div>
-
 
 <h3>
 
@@ -2861,16 +3788,16 @@ Computational Algebra
 
 </h3>
 
-
 <p>
 
-SageMath,
+Experimental and symbolic computation
+using SageMath,
 Macaulay2,
-Python,
-and experimental calculations
-supporting algebraic research.
+and Python.
 
 </p>
+
+</article>
 
 
 </div>
@@ -2887,46 +3814,61 @@ supporting algebraic research.
      SELECTED WORK
 ========================================================= -->
 
-<section class="section-soft">
+<section
+class="section-soft"
+id="work">
 
 
-<div class="section-title reveal">
+<div class="content-width">
 
 
-<div class="section-kicker">
+<div class="section-header reveal">
 
-Selected work
+
+<div class="eyebrow">
+
+Selected Work
 
 </div>
 
 
 <h2>
 
-What I am working on
+Research highlights
 
 </h2>
+
+
+<p>
+
+A small selection of work
+rather than making visitors search
+through a long CV.
+
+</p>
 
 
 </div>
 
 
 
-<div class="featured-work">
+<div class="selected-work">
 
 
-<div class="work-card reveal">
+<article class="paper-feature reveal">
 
 
-<div class="work-label">
+<div class="feature-label">
 
-Published research / preprint
+Preprint · 2026
 
 </div>
 
 
 <h3>
 
-Counting F<sub>q</sub>-Rational Points
+Counting
+F<sub>q</sub>-Rational Points
 on Danielewski and
 Double Danielewski Surfaces
 
@@ -2935,64 +3877,92 @@ Double Danielewski Surfaces
 
 <p>
 
-Joint work with Neena Gupta
-and Indranath Sengupta
-on rational-point counting
-for Danielewski-type varieties
-over finite fields.
+Neena Gupta,
+Anit Kuckian,
+and Indranath Sengupta.
 
 </p>
 
 
+<p>
+
+The work studies finite-field
+rational point counts
+for Danielewski-type algebraic varieties.
+
+</p>
+
+
+<div class="inline-links">
+
+
 <a
-class="work-link"
+
 href="https://arxiv.org/abs/2605.24821"
-target="_blank">
+
+target="_blank"
+
+rel="noopener noreferrer">
 
 View on arXiv →
 
 </a>
 
 
+<a href="#publications">
+
+Publication details →
+
+</a>
+
+
 </div>
 
 
+</article>
 
-<div class="work-card reveal">
 
 
-<div class="work-label">
+<article class="project-feature reveal">
 
-Ongoing project
+
+<div class="feature-label">
+
+Current project
 
 </div>
 
 
 <h3>
 
-Finite-field constructions
-for polygonal-number-type sequences
+Algebraic constructions
+over finite fields
 
 </h3>
 
 
 <p>
 
-Exploring algebraic varieties
-and polynomial systems whose
-finite-field rational point counts
+Investigating polynomial and geometric
+constructions whose finite-field
+rational-point counts
 realize structured numerical sequences.
 
 </p>
 
 
-<a
-class="work-link"
-href="#contact">
+<div class="inline-links">
 
-Ask me about this project →
+<a href="#contact">
+
+Discuss this project →
 
 </a>
+
+</div>
+
+
+</article>
 
 
 </div>
@@ -3012,10 +3982,13 @@ Ask me about this project →
 <section id="publications">
 
 
-<div class="section-title reveal">
+<div class="content-width">
 
 
-<div class="section-kicker">
+<div class="section-header reveal">
+
+
+<div class="eyebrow">
 
 Research output
 
@@ -3031,8 +4004,9 @@ Publications & preprints
 
 <p>
 
-Use the search and filters below
-as this list grows.
+Searchable and filterable,
+so this page remains usable
+when the publication list becomes longer.
 
 </p>
 
@@ -3041,7 +4015,16 @@ as this list grows.
 
 
 
-<div class="publication-tools reveal">
+<div class="publication-controls reveal">
+
+
+<label
+class="visually-hidden"
+for="publicationSearch">
+
+Search publications
+
+</label>
 
 
 <input
@@ -3052,13 +4035,14 @@ id="publicationSearch"
 
 type="search"
 
-placeholder="Search title, author, topic, year...">
+placeholder="Search publications..."
+
+autocomplete="off">
 
 
 <button
-
-class="filter-button active"
-
+class="filter active"
+type="button"
 data-filter="all">
 
 All
@@ -3067,9 +4051,8 @@ All
 
 
 <button
-
-class="filter-button"
-
+class="filter"
+type="button"
 data-filter="preprint">
 
 Preprints
@@ -3078,9 +4061,8 @@ Preprints
 
 
 <button
-
-class="filter-button"
-
+class="filter"
+type="button"
 data-filter="published">
 
 Published
@@ -3102,16 +4084,32 @@ class="publication reveal"
 data-category="preprint">
 
 
+<div>
+
+
+<div class="publication-year">
+
+2026
+
+</div>
+
+</div>
+
+
+<div>
+
+
 <div class="publication-type">
 
-Preprint · 2026
+Preprint
 
 </div>
 
 
 <h3>
 
-Counting F<sub>q</sub>-Rational Points
+Counting
+F<sub>q</sub>-Rational Points
 on Danielewski and
 Double Danielewski Surfaces
 
@@ -3121,7 +4119,7 @@ Double Danielewski Surfaces
 <p>
 
 Neena Gupta,
-Anit Kuckian,
+<strong>Anit Kuckian</strong>,
 Indranath Sengupta
 
 </p>
@@ -3130,22 +4128,24 @@ Indranath Sengupta
 <p>
 
 Finite fields ·
-Rational points ·
-Affine algebraic geometry
+rational points ·
+affine algebraic geometry
 
 </p>
 
 
-<div class="publication-links">
+<div class="inline-links">
 
 
 <a
+
 href="https://arxiv.org/abs/2605.24821"
-target="_blank">
 
-<i class="fa-solid fa-file-pdf"></i>
+target="_blank"
 
-arXiv
+rel="noopener noreferrer">
+
+arXiv →
 
 </a>
 
@@ -3153,7 +4153,22 @@ arXiv
 </div>
 
 
+</div>
+
+
 </article>
+
+
+</div>
+
+
+<p
+id="noPublications"
+hidden>
+
+No publications match your search.
+
+</p>
 
 
 </div>
@@ -3168,14 +4183,17 @@ arXiv
 ========================================================= -->
 
 <section
-id="news"
-class="section-soft">
+class="section-soft"
+id="news">
 
 
-<div class="section-title reveal">
+<div class="content-width">
 
 
-<div class="section-kicker">
+<div class="section-header reveal">
+
+
+<div class="eyebrow">
 
 Updates
 
@@ -3191,10 +4209,9 @@ News
 
 <p>
 
-Selected academic updates,
-new projects,
-talks,
-and research milestones.
+Recent academic updates,
+research milestones,
+and activities.
 
 </p>
 
@@ -3206,7 +4223,7 @@ and research milestones.
 <div class="news-list">
 
 
-<div class="news-item reveal">
+<article class="news-item reveal">
 
 
 <div class="news-date">
@@ -3216,7 +4233,7 @@ July 2026
 </div>
 
 
-<div class="news-content">
+<div>
 
 
 <h3>
@@ -3238,11 +4255,11 @@ at IIT Gandhinagar.
 </div>
 
 
-</div>
+</article>
 
 
 
-<div class="news-item reveal">
+<article class="news-item reveal">
 
 
 <div class="news-date">
@@ -3252,22 +4269,21 @@ at IIT Gandhinagar.
 </div>
 
 
-<div class="news-content">
+<div>
 
 
 <h3>
 
-New preprint on rational points
-of Danielewski-type surfaces
+New preprint available on arXiv
 
 </h3>
 
 
 <p>
 
-Joint work with Neena Gupta
-and Indranath Sengupta
-is available on arXiv.
+Joint work on rational points
+of Danielewski and
+Double Danielewski surfaces.
 
 </p>
 
@@ -3275,11 +4291,11 @@ is available on arXiv.
 </div>
 
 
-</div>
+</article>
 
 
 
-<div class="news-item reveal">
+<article class="news-item reveal">
 
 
 <div class="news-date">
@@ -3289,7 +4305,7 @@ is available on arXiv.
 </div>
 
 
-<div class="news-content">
+<div>
 
 
 <h3>
@@ -3301,16 +4317,19 @@ Summer Research Internship Program
 
 <p>
 
-Worked on Danielewski surfaces,
-Double Danielewski surfaces,
-cancellation,
-and rational-point counting
+Worked on
+Danielewski-type surfaces,
+finite-field point counting,
+and the Zariski Cancellation Problem
 at IIT Gandhinagar.
 
 </p>
 
 
 </div>
+
+
+</article>
 
 
 </div>
@@ -3330,10 +4349,13 @@ at IIT Gandhinagar.
 <section id="cv">
 
 
-<div class="section-title reveal">
+<div class="content-width">
 
 
-<div class="section-kicker">
+<div class="section-header reveal">
+
+
+<div class="eyebrow">
 
 Curriculum Vitae
 
@@ -3349,38 +4371,42 @@ Academic background
 
 <p>
 
-A short web version of my CV.
-A complete PDF can be linked using the button below.
+A concise web version of my CV.
 
 </p>
 
 
-<br>
-
+<div
+style="
+margin-top:22px;
+">
 
 <a
-class="button button-primary"
-href="cv.pdf"
-target="_blank">
 
-<i class="fa-solid fa-download"></i>
+class="button button-primary"
+
+href="cv.pdf"
+
+target="_blank">
 
 Download full CV
 
 </a>
+
+</div>
 
 
 </div>
 
 
 
-<div class="cv-grid">
+<div class="cv-columns">
 
 
 <div>
 
 
-<h3 class="cv-heading">
+<h3 class="cv-title">
 
 Education
 
@@ -3397,18 +4423,16 @@ M.Sc. Mathematics
 </h3>
 
 
-<div class="year">
+<span class="cv-meta">
 
-IIT Gandhinagar
+Indian Institute of Technology Gandhinagar
 
-</div>
+</span>
 
 
 <p>
 
-Graduate study in mathematics
-with emphasis on algebra
-and related areas.
+Graduate study in mathematics.
 
 </p>
 
@@ -3427,17 +4451,17 @@ B.Sc.
 </h3>
 
 
-<div class="year">
+<span class="cv-meta">
 
-Add institution
+ADD YOUR COLLEGE HERE
 
-</div>
+</span>
 
 
 <p>
 
-Add your undergraduate institution
-and dates here.
+Add your undergraduate
+institution and dates.
 
 </p>
 
@@ -3446,7 +4470,7 @@ and dates here.
 
 
 
-<h3 class="cv-heading">
+<h3 class="cv-title">
 
 Awards
 
@@ -3481,9 +4505,9 @@ Government of India.
 <div>
 
 
-<h3 class="cv-heading">
+<h3 class="cv-title">
 
-Research experience
+Research Experience
 
 </h3>
 
@@ -3498,11 +4522,11 @@ Sabarmati Bridge Fellow
 </h3>
 
 
-<div class="year">
+<span class="cv-meta">
 
 2026 – Present
 
-</div>
+</span>
 
 
 <p>
@@ -3526,19 +4550,20 @@ Summer Research Internship Program
 </h3>
 
 
-<div class="year">
+<span class="cv-meta">
 
 2025
 
-</div>
+</span>
 
 
 <p>
 
 Research on
-Danielewski-type varieties,
-Zariski Cancellation,
-and rational-point counting.
+Danielewski and
+Double Danielewski surfaces,
+finite-field point counting,
+and cancellation.
 
 </p>
 
@@ -3547,9 +4572,9 @@ and rational-point counting.
 
 
 
-<h3 class="cv-heading">
+<h3 class="cv-title">
 
-Research tools
+Tools
 
 </h3>
 
@@ -3559,7 +4584,7 @@ Research tools
 
 <h3>
 
-Mathematical computation
+Mathematical Computing
 
 </h3>
 
@@ -3584,6 +4609,9 @@ TikZ
 </div>
 
 
+</div>
+
+
 </section>
 
 
@@ -3593,14 +4621,17 @@ TikZ
 ========================================================= -->
 
 <section
-id="notes"
-class="section-soft">
+class="section-soft"
+id="notes">
 
 
-<div class="section-title reveal">
+<div class="content-width">
 
 
-<div class="section-kicker">
+<div class="section-header reveal">
+
+
+<div class="eyebrow">
 
 Mathematical writing
 
@@ -3616,11 +4647,10 @@ Notes & projects
 
 <p>
 
-Eventually this can become a collection
-of lecture notes,
+A future home for
+expository mathematics,
 research notes,
-computations,
-and expository mathematics.
+and computations.
 
 </p>
 
@@ -3632,22 +4662,10 @@ and expository mathematics.
 <div class="notes-grid">
 
 
-<div class="note-card reveal">
+<article class="note reveal">
 
 
-<img
-
-class="note-image"
-
-src="https://picsum.photos/seed/finitefields/700/400"
-
-alt="">
-
-
-<div class="note-body">
-
-
-<div class="note-tag">
+<div class="note-type">
 
 Finite Fields
 
@@ -3663,91 +4681,76 @@ Finite-field notes
 
 <p>
 
-Factorization,
+Irreducible polynomials,
 primitive elements,
 cyclotomic cosets,
-and useful examples.
+factorization,
+and worked examples.
 
 </p>
 
 
+<div class="note-footer">
+
+Coming soon
+
 </div>
 
 
-</div>
+</article>
 
 
 
-<div class="note-card reveal">
+<article class="note reveal">
 
 
-<img
+<div class="note-type">
 
-class="note-image"
-
-src="https://picsum.photos/seed/polygonal/700/400"
-
-alt="">
-
-
-<div class="note-body">
-
-
-<div class="note-tag">
-
-Current project
+Research
 
 </div>
 
 
 <h3>
 
-Polygonal numbers
-over finite fields
+Polygonal-number constructions
 
 </h3>
 
 
 <p>
 
-Polynomial constructions
-and rational-point counting ideas.
+Working notes on
+finite-field point-counting
+constructions and generating varieties.
 
 </p>
 
 
+<div class="note-footer">
+
+Research notes
+
 </div>
 
 
-</div>
+</article>
 
 
 
-<div class="note-card reveal">
+<article class="note reveal">
 
 
-<img
+<div class="note-type">
 
-class="note-image"
-
-src="https://picsum.photos/seed/algebra-geometry/700/400"
-
-alt="">
-
-
-<div class="note-body">
-
-
-<div class="note-tag">
-
-Affine algebra
+Affine Algebra
 
 </div>
 
 
 <h3>
 
-Danielewski surfaces
+Danielewski-type varieties
 
 </h3>
 
@@ -3756,13 +4759,20 @@ Danielewski surfaces
 
 Notes on filtrations,
 exponential maps,
-invariants,
+Makar-Limanov invariants,
 and cancellation.
 
 </p>
 
 
+<div class="note-footer">
+
+Expository notes
+
 </div>
+
+
+</article>
 
 
 </div>
@@ -3782,10 +4792,13 @@ and cancellation.
 <section id="contact">
 
 
-<div class="section-title reveal">
+<div class="content-width">
 
 
-<div class="section-kicker">
+<div class="section-header reveal">
+
+
+<div class="eyebrow">
 
 Contact
 
@@ -3801,10 +4814,9 @@ Get in touch
 
 <p>
 
-I am happy to discuss mathematics,
-research,
-collaboration,
-or related academic questions.
+For research discussions,
+academic correspondence,
+or collaboration.
 
 </p>
 
@@ -3813,155 +4825,105 @@ or related academic questions.
 
 
 
-<div class="contact-layout">
+<div class="contact-grid">
 
 
 <div class="contact-card reveal">
 
 
-<div class="contact-item">
+<div class="contact-row">
 
+<small>
 
-<div class="contact-icon">
+Affiliation
 
-<i class="fa-solid fa-building-columns"></i>
+</small>
 
-</div>
-
-
-<div>
-
-
-<h3>
-
-Institution
-
-</h3>
-
-
-<p>
+<strong>
 
 Indian Institute of Technology Gandhinagar
 
-</p>
-
-
-</div>
-
+</strong>
 
 </div>
 
 
+<div class="contact-row">
 
-<div class="contact-item">
+<small>
 
+Position
 
-<div class="contact-icon">
+</small>
 
-<i class="fa-solid fa-location-dot"></i>
+<strong>
+
+Sabarmati Bridge Fellow
+
+</strong>
 
 </div>
 
 
-<div>
+<div class="contact-row">
 
-
-<h3>
+<small>
 
 Location
 
-</h3>
+</small>
 
-
-<p>
+<strong>
 
 Gandhinagar,
 Gujarat,
 India
 
-</p>
-
-
-</div>
-
+</strong>
 
 </div>
 
 
+<div class="contact-row">
 
-<div class="contact-item">
-
-
-<div class="contact-icon">
-
-<i class="fa-solid fa-envelope"></i>
-
-</div>
-
-
-<div>
-
-
-<h3>
+<small>
 
 Email
 
-</h3>
+</small>
 
-
-<p>
-
-<a href="mailto:YOUR_EMAIL">
+<strong id="emailText">
 
 YOUR_EMAIL
 
-</a>
-
-</p>
-
+</strong>
 
 </div>
 
 
-</div>
+<div class="contact-row">
 
-
-
-<div class="contact-item">
-
-
-<div class="contact-icon">
-
-<i class="fa-brands fa-github"></i>
-
-</div>
-
-
-<div>
-
-
-<h3>
+<small>
 
 GitHub
 
-</h3>
+</small>
 
-
-<p>
+<strong>
 
 <a
-href="https://github.com/Anit-Kuckian"
-target="_blank">
 
-github.com/Anit-Kuckian
+href="https://github.com/Anit-Kuckian"
+
+target="_blank"
+
+rel="noopener noreferrer">
+
+Anit-Kuckian
 
 </a>
 
-</p>
-
-
-</div>
-
+</strong>
 
 </div>
 
@@ -3970,45 +4932,76 @@ github.com/Anit-Kuckian
 
 
 
-<div class="contact-card contact-message reveal">
+<div class="contact-card reveal">
 
 
-<h3>
+<div class="contact-intro">
 
-Research correspondence
+I am always happy to discuss mathematics.
 
-</h3>
+</div>
 
 
-<p>
+<p class="contact-copy">
 
 If you would like to discuss
 finite fields,
 coding theory,
 commutative algebra,
+affine algebraic geometry,
 or one of my current projects,
-feel free to email me.
-
-</p>
-
-
-<p>
-
-For research-related correspondence,
 email is the best way to reach me.
 
 </p>
 
 
-<a
-class="button button-primary"
-href="mailto:YOUR_EMAIL">
 
-<i class="fa-solid fa-envelope"></i>
+<div class="contact-actions">
+
+
+<a
+
+class="button button-primary"
+
+href="mailto:YOUR_EMAIL">
 
 Send an email
 
 </a>
+
+
+<button
+
+class="copy-button"
+
+type="button"
+
+id="copyEmail">
+
+Copy email
+
+</button>
+
+
+</div>
+
+
+<p
+
+id="copyStatus"
+
+aria-live="polite"
+
+style="
+font-size:12px;
+color:var(--success);
+margin-top:10px;
+">
+
+</p>
+
+
+</div>
 
 
 </div>
@@ -4020,6 +5013,7 @@ Send an email
 </section>
 
 
+
 </main>
 
 
@@ -4028,19 +5022,45 @@ Send an email
      FOOTER
 ========================================================= -->
 
-<footer>
+<footer class="site-footer">
 
 
 ©
-<span id="currentYear"></span>
+<span id="year"></span>
 Anit Kuckian
 
 &nbsp; · &nbsp;
 
 Mathematics
 
+&nbsp; · &nbsp;
+
+Built with plain HTML,
+CSS,
+and JavaScript.
+
 
 </footer>
+
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button
+
+class="back-to-top"
+
+id="backToTop"
+
+type="button"
+
+aria-label="Back to top">
+
+↑
+
+</button>
 
 
 
@@ -4050,131 +5070,11 @@ Mathematics
 
 <script>
 
-
-/* =========================================================
-   TYPING EFFECT
-========================================================= */
-
-const words = [
-
-    "Finite Fields",
-
-    "Algebraic Coding Theory",
-
-    "Commutative Algebra",
-
-    "Affine Algebraic Geometry"
-
-];
-
-
-const typedText =
-document.getElementById(
-    "typedText"
-);
-
-
-let wordIndex = 0;
-
-let charIndex = 0;
-
-let deleting = false;
-
-
-function typingLoop() {
-
-
-    const word =
-    words[wordIndex];
-
-
-    if (!deleting) {
-
-
-        typedText.textContent =
-        word.substring(
-            0,
-            charIndex + 1
-        );
-
-
-        charIndex++;
-
-
-        if (
-            charIndex ===
-            word.length
-        ) {
-
-
-            deleting = true;
-
-
-            setTimeout(
-                typingLoop,
-                1300
-            );
-
-
-            return;
-
-        }
-
-
-    } else {
-
-
-        typedText.textContent =
-        word.substring(
-            0,
-            charIndex - 1
-        );
-
-
-        charIndex--;
-
-
-        if (
-            charIndex === 0
-        ) {
-
-
-            deleting = false;
-
-
-            wordIndex =
-            (
-                wordIndex + 1
-            )
-            %
-            words.length;
-
-        }
-
-    }
-
-
-    setTimeout(
-
-        typingLoop,
-
-        deleting
-        ?
-        42
-        :
-        82
-
-    );
-
-}
-
-
-typingLoop();
-
+"use strict";
 
 
 /* =========================================================
-   MOBILE SIDEBAR
+   ELEMENTS
 ========================================================= */
 
 const sidebar =
@@ -4182,80 +5082,122 @@ document.getElementById(
     "sidebar"
 );
 
-
-const mobileMenu =
+const mobileToggle =
 document.getElementById(
-    "mobileMenu"
+    "mobileToggle"
+);
+
+const mobileBackdrop =
+document.getElementById(
+    "mobileBackdrop"
+);
+
+const navLinks =
+Array.from(
+    document.querySelectorAll(
+        ".nav-link"
+    )
 );
 
 
-mobileMenu.addEventListener(
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+function openMenu() {
+
+    sidebar.classList.add(
+        "open"
+    );
+
+    mobileBackdrop.classList.add(
+        "visible"
+    );
+
+    mobileToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+    mobileToggle.setAttribute(
+        "aria-label",
+        "Close navigation"
+    );
+
+    mobileToggle.textContent =
+    "×";
+
+}
+
+
+function closeMenu() {
+
+    sidebar.classList.remove(
+        "open"
+    );
+
+    mobileBackdrop.classList.remove(
+        "visible"
+    );
+
+    mobileToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    mobileToggle.setAttribute(
+        "aria-label",
+        "Open navigation"
+    );
+
+    mobileToggle.textContent =
+    "☰";
+
+}
+
+
+mobileToggle.addEventListener(
     "click",
     function () {
 
+        if (
+            sidebar.classList.contains(
+                "open"
+            )
+        ) {
 
-        sidebar
-        .classList
-        .toggle(
-            "open"
-        );
+            closeMenu();
 
+        } else {
 
-        mobileMenu.innerHTML =
+            openMenu();
 
-        sidebar
-        .classList
-        .contains(
-            "open"
-        )
-
-        ?
-
-        '<i class="fa-solid fa-xmark"></i>'
-
-        :
-
-        '<i class="fa-solid fa-bars"></i>';
-
+        }
 
     }
 );
 
 
+mobileBackdrop.addEventListener(
+    "click",
+    closeMenu
+);
 
-/* =========================================================
-   CLOSE MOBILE SIDEBAR AFTER CLICK
-========================================================= */
 
-document
-.querySelectorAll(
-    ".nav-link"
-)
-.forEach(
-    function(link) {
-
+navLinks.forEach(
+    function (link) {
 
         link.addEventListener(
             "click",
-            function() {
-
+            function () {
 
                 if (
                     window.innerWidth
-                    <
-                    1000
+                    <=
+                    980
                 ) {
 
-
-                    sidebar
-                    .classList
-                    .remove(
-                        "open"
-                    );
-
-
-                    mobileMenu.innerHTML =
-                    '<i class="fa-solid fa-bars"></i>';
+                    closeMenu();
 
                 }
 
@@ -4266,75 +5208,90 @@ document
 );
 
 
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+            closeMenu();
+
+        }
+
+    }
+);
+
+
 
 /* =========================================================
-   ACTIVE NAVIGATION
+   ACTIVE NAVIGATION SECTION
 ========================================================= */
 
-const pageSections =
-document.querySelectorAll(
-    "main section[id]"
+const sections =
+Array.from(
+    document.querySelectorAll(
+        "main section[id]"
+    )
 );
 
 
-const navLinks =
-document.querySelectorAll(
-    ".nav-link"
-);
-
-
-const navigationObserver =
+const sectionObserver =
 new IntersectionObserver(
 
-    function(entries) {
-
+    function (entries) {
 
         entries.forEach(
-            function(entry) {
-
+            function (entry) {
 
                 if (
-                    entry.isIntersecting
+                    !entry.isIntersecting
                 ) {
 
+                    return;
 
-                    navLinks
-                    .forEach(
-                        function(link) {
-
-
-                            link
-                            .classList
-                            .remove(
-                                "active"
-                            );
-
-                        }
-                    );
+                }
 
 
-                    const active =
-                    document.querySelector(
+                navLinks.forEach(
+                    function (link) {
 
-                        '.nav-link[href="#'
-                        +
-                        entry.target.id
-                        +
-                        '"]'
-
-                    );
-
-
-                    if (active) {
-
-
-                        active
-                        .classList
-                        .add(
+                        link.classList.remove(
                             "active"
                         );
 
+                        link.removeAttribute(
+                            "aria-current"
+                        );
+
                     }
+                );
+
+
+                const current =
+                document.querySelector(
+
+                    '.nav-link[href="#'
+                    +
+                    entry.target.id
+                    +
+                    '"]'
+
+                );
+
+
+                if (current) {
+
+                    current.classList.add(
+                        "active"
+                    );
+
+                    current.setAttribute(
+                        "aria-current",
+                        "true"
+                    );
 
                 }
 
@@ -4346,19 +5303,17 @@ new IntersectionObserver(
     {
 
         rootMargin:
-        "-35% 0px -55% 0px"
+        "-36% 0px -55% 0px"
 
     }
 
 );
 
 
-pageSections
-.forEach(
-    function(section) {
+sections.forEach(
+    function (section) {
 
-
-        navigationObserver.observe(
+        sectionObserver.observe(
             section
         );
 
@@ -4368,164 +5323,83 @@ pageSections
 
 
 /* =========================================================
-   REVEAL ANIMATION
+   REVEAL EFFECT
 ========================================================= */
 
-const revealObserver =
-new IntersectionObserver(
-
-    function(entries) {
-
-
-        entries.forEach(
-            function(entry) {
+const reduceMotion =
+window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
 
 
-                if (
-                    entry.isIntersecting
-                ) {
+if (reduceMotion) {
 
-
-                    entry.target
-                    .classList
-                    .add(
-                        "visible"
-                    );
-
-                }
-
-            }
-        );
-
-    },
-
-    {
-
-        threshold:
-        0.08
-
-    }
-
-);
-
-
-document
-.querySelectorAll(
-    ".reveal"
-)
-.forEach(
-    function(element) {
-
-
-        revealObserver.observe(
-            element
-        );
-
-    }
-);
-
-
-
-/* =========================================================
-   PUBLICATION SEARCH / FILTER
-========================================================= */
-
-const searchInput =
-document.getElementById(
-    "publicationSearch"
-);
-
-
-const publicationItems =
-Array.from(
-
-    document.querySelectorAll(
-        ".publication"
+    document
+    .querySelectorAll(
+        ".reveal"
     )
-
-);
-
-
-const filterButtons =
-Array.from(
-
-    document.querySelectorAll(
-        ".filter-button"
-    )
-
-);
-
-
-let publicationFilter =
-"all";
-
-
-function updatePublications() {
-
-
-    const query =
-
-    searchInput
-    .value
-    .toLowerCase()
-    .trim();
-
-
-    publicationItems
     .forEach(
-        function(publication) {
+        function (item) {
 
-
-            const text =
-
-            publication
-            .textContent
-            .toLowerCase();
-
-
-            const category =
-
-            publication
-            .dataset
-            .category;
-
-
-            const matchesSearch =
-
-            !query
-            ||
-            text.includes(
-                query
+            item.classList.add(
+                "visible"
             );
 
+        }
+    );
 
-            const matchesCategory =
+} else {
 
-            publicationFilter
-            ===
-            "all"
+    const revealObserver =
+    new IntersectionObserver(
 
-            ||
+        function (entries) {
 
-            category
-            ===
-            publicationFilter;
+            entries.forEach(
+                function (entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target
+                        .classList
+                        .add(
+                            "visible"
+                        );
+
+                        revealObserver
+                        .unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+
+            threshold:
+            0.08
+
+        }
+
+    );
 
 
-            publication.style.display =
+    document
+    .querySelectorAll(
+        ".reveal"
+    )
+    .forEach(
+        function (item) {
 
-            matchesSearch
-            &&
-            matchesCategory
-
-            ?
-
-            ""
-
-            :
-
-            "none";
-
+            revealObserver.observe(
+                item
+            );
 
         }
     );
@@ -4533,32 +5407,130 @@ function updatePublications() {
 }
 
 
-searchInput.addEventListener(
 
-    "input",
+/* =========================================================
+   PUBLICATION SEARCH
+========================================================= */
 
-    updatePublications
+const publicationSearch =
+document.getElementById(
+    "publicationSearch"
+);
 
+const publications =
+Array.from(
+    document.querySelectorAll(
+        ".publication"
+    )
+);
+
+const filters =
+Array.from(
+    document.querySelectorAll(
+        ".filter"
+    )
+);
+
+const noPublications =
+document.getElementById(
+    "noPublications"
 );
 
 
-filterButtons.forEach(
-    function(button) {
+let activeFilter =
+"all";
 
+
+function updatePublications() {
+
+    const query =
+    publicationSearch
+    .value
+    .trim()
+    .toLowerCase();
+
+
+    let visibleCount = 0;
+
+
+    publications.forEach(
+        function (publication) {
+
+            const text =
+            publication
+            .textContent
+            .toLowerCase();
+
+
+            const category =
+            publication.dataset.category;
+
+
+            const categoryMatches =
+
+            activeFilter === "all"
+
+            ||
+
+            category ===
+            activeFilter;
+
+
+            const searchMatches =
+
+            query === ""
+
+            ||
+
+            text.includes(
+                query
+            );
+
+
+            const show =
+
+            categoryMatches
+            &&
+            searchMatches;
+
+
+            publication.hidden =
+            !show;
+
+
+            if (show) {
+
+                visibleCount++;
+
+            }
+
+        }
+    );
+
+
+    noPublications.hidden =
+    visibleCount !== 0;
+
+}
+
+
+publicationSearch.addEventListener(
+    "input",
+    updatePublications
+);
+
+
+filters.forEach(
+    function (button) {
 
         button.addEventListener(
             "click",
-            function() {
+            function () {
 
+                filters.forEach(
+                    function (item) {
 
-                filterButtons
-                .forEach(
-                    function(btn) {
-
-
-                        btn
-                        .classList
-                        .remove(
+                        item.classList.remove(
                             "active"
                         );
 
@@ -4566,21 +5538,16 @@ filterButtons.forEach(
                 );
 
 
-                button
-                .classList
-                .add(
+                button.classList.add(
                     "active"
                 );
 
 
-                publicationFilter =
-                button
-                .dataset
-                .filter;
+                activeFilter =
+                button.dataset.filter;
 
 
                 updatePublications();
-
 
             }
         );
@@ -4591,86 +5558,194 @@ filterButtons.forEach(
 
 
 /* =========================================================
-   DARK / LIGHT MODE
+   THEME
 ========================================================= */
 
-const themeButton =
+const themeToggle =
 document.getElementById(
-    "themeButton"
+    "themeToggle"
 );
 
 
-const storedTheme =
-localStorage.getItem(
-    "anit-site-theme"
-);
+function currentTheme() {
 
-
-if (
-    storedTheme
-    ===
-    "dark"
-) {
-
-
-    document.body
-    .classList
-    .add(
-        "dark-mode"
+    return document
+    .documentElement
+    .getAttribute(
+        "data-theme"
     );
-
-
-    themeButton.innerHTML =
-    '<i class="fa-solid fa-sun"></i>';
 
 }
 
 
-themeButton.addEventListener(
+themeToggle.addEventListener(
     "click",
-    function() {
-
-
-        document.body
-        .classList
-        .toggle(
-            "dark-mode"
-        );
-
+    function () {
 
         const dark =
 
-        document.body
-        .classList
-        .contains(
-            "dark-mode"
+        currentTheme()
+        ===
+        "dark"
+
+        ||
+
+        (
+            !currentTheme()
+            &&
+            window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches
         );
 
 
-        themeButton.innerHTML =
-
+        const next =
         dark
-
         ?
-
-        '<i class="fa-solid fa-sun"></i>'
-
+        "light"
         :
+        "dark";
 
-        '<i class="fa-solid fa-moon"></i>';
+
+        document.documentElement
+        .setAttribute(
+            "data-theme",
+            next
+        );
 
 
         localStorage.setItem(
+            "anit-theme",
+            next
+        );
 
-            "anit-site-theme",
+    }
+);
 
-            dark
-            ?
-            "dark"
-            :
-            "light"
+
+
+/* =========================================================
+   COPY EMAIL
+========================================================= */
+
+const copyEmail =
+document.getElementById(
+    "copyEmail"
+);
+
+const emailText =
+document.getElementById(
+    "emailText"
+);
+
+const copyStatus =
+document.getElementById(
+    "copyStatus"
+);
+
+
+copyEmail.addEventListener(
+    "click",
+    async function () {
+
+        const email =
+        emailText.textContent.trim();
+
+
+        try {
+
+            await navigator
+            .clipboard
+            .writeText(
+                email
+            );
+
+
+            copyStatus.textContent =
+            "Email copied.";
+
+        } catch (error) {
+
+            copyStatus.textContent =
+            "Select the email above to copy it.";
+
+        }
+
+
+        window.setTimeout(
+            function () {
+
+                copyStatus.textContent =
+                "";
+
+            },
+
+            2200
 
         );
+
+    }
+);
+
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+const backToTop =
+document.getElementById(
+    "backToTop"
+);
+
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        if (
+            window.scrollY
+            >
+            700
+        ) {
+
+            backToTop.classList.add(
+                "visible"
+            );
+
+        } else {
+
+            backToTop.classList.remove(
+                "visible"
+            );
+
+        }
+
+    },
+
+    {
+        passive: true
+    }
+
+);
+
+
+backToTop.addEventListener(
+    "click",
+    function () {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior:
+            reduceMotion
+            ?
+            "auto"
+            :
+            "smooth"
+
+        });
 
     }
 );
@@ -4683,7 +5758,7 @@ themeButton.addEventListener(
 
 document
 .getElementById(
-    "currentYear"
+    "year"
 )
 .textContent =
 new Date()
