@@ -15,9 +15,7 @@
 >
 
 <meta name="author" content="Anit Kuckian">
-
 <meta name="robots" content="index, follow">
-
 <meta name="theme-color" content="#081522">
 
 <link
@@ -25,10 +23,6 @@
     href="https://anit-kuckian.github.io/"
 >
 
-
-<!-- =========================================================
-     SOCIAL METADATA
-========================================================= -->
 
 <meta property="og:type" content="website">
 
@@ -47,10 +41,6 @@
     content="https://anit-kuckian.github.io/"
 >
 
-
-<!-- =========================================================
-     STRUCTURED PROFILE DATA
-========================================================= -->
 
 <script type="application/ld+json">
 {
@@ -81,16 +71,14 @@
 </script>
 
 
-<!-- =========================================================
-     LOAD SAVED THEME
-========================================================= -->
-
 <script>
 
 (function () {
 
     const theme =
-        localStorage.getItem("anit-theme");
+        localStorage.getItem(
+            "anit-theme"
+        );
 
     if (theme) {
 
@@ -110,7 +98,7 @@
 <style>
 
 /* =========================================================
-   DESIGN SYSTEM
+   DESIGN
 ========================================================= */
 
 :root {
@@ -118,25 +106,18 @@
     --sidebar-width: 305px;
 
     --navy: #071522;
-
     --navy-soft: #102332;
 
     --accent: #3297b3;
-
     --accent-dark: #166f89;
-
     --accent-soft: #e8f5f8;
 
     --page: #ffffff;
-
     --surface: #f6f8fa;
-
     --card: #ffffff;
 
     --text: #24292f;
-
     --muted: #68727c;
-
     --heading: #16364e;
 
     --border: #e1e7eb;
@@ -144,7 +125,6 @@
     --focus: #f09b32;
 
     --green: #27825f;
-
     --red: #b14a42;
 
     --radius: 10px;
@@ -177,15 +157,11 @@
 html[data-theme="dark"] {
 
     --page: #101820;
-
     --surface: #151f28;
-
     --card: #19242e;
 
     --text: #e7edf1;
-
     --muted: #aab5be;
-
     --heading: #d9edf4;
 
     --border: #2a3741;
@@ -194,7 +170,7 @@ html[data-theme="dark"] {
 
     --shadow:
         0 17px 45px
-        rgba(0,0,0,0.27);
+        rgba(0,0,0,.27);
 
 }
 
@@ -204,16 +180,12 @@ html[data-theme="dark"] {
 ========================================================= */
 
 * {
-
     box-sizing: border-box;
-
 }
 
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 
@@ -245,16 +217,12 @@ a {
 
 button,
 input {
-
     font: inherit;
-
 }
 
 
 button {
-
     cursor: pointer;
-
 }
 
 
@@ -268,9 +236,7 @@ img {
 
 
 section {
-
     scroll-margin-top: 20px;
-
 }
 
 
@@ -283,7 +249,6 @@ section {
     position: fixed;
 
     top: 12px;
-
     left: 12px;
 
     z-index: 5000;
@@ -304,9 +269,7 @@ section {
 
 
 .skip-link:focus {
-
     transform: none;
-
 }
 
 
@@ -375,9 +338,7 @@ input:focus-visible {
 ========================================================= */
 
 .profile {
-
     text-align: center;
-
 }
 
 
@@ -447,7 +408,7 @@ input:focus-visible {
 
 
 /* =========================================================
-   PROFILE ACTIONS
+   PROFILE BUTTONS
 ========================================================= */
 
 .profile-actions {
@@ -479,8 +440,7 @@ input:focus-visible {
 
     border-radius: 6px;
 
-    background:
-        #102130;
+    background: #102130;
 
     color: #e4edf4;
 
@@ -494,8 +454,7 @@ input:focus-visible {
 .profile-action:hover,
 .theme-toggle:hover {
 
-    background:
-        #17354a;
+    background: #17354a;
 
 }
 
@@ -505,9 +464,7 @@ input:focus-visible {
 ========================================================= */
 
 .navigation {
-
     margin-top: 28px;
-
 }
 
 
@@ -607,10 +564,7 @@ section {
 
 
 .section-soft {
-
-    background:
-        var(--surface);
-
+    background: var(--surface);
 }
 
 
@@ -734,11 +688,9 @@ section {
     position: absolute;
 
     width: 520px;
-
     height: 520px;
 
     right: -180px;
-
     top: -160px;
 
     border:
@@ -757,11 +709,9 @@ section {
     position: absolute;
 
     width: 300px;
-
     height: 300px;
 
     right: 12%;
-
     bottom: -190px;
 
     border:
@@ -804,9 +754,7 @@ section {
 
 
 #greetingText {
-
     display: inline-block;
-
 }
 
 
@@ -833,16 +781,12 @@ section {
 
     0%,
     48% {
-
         opacity: 1;
-
     }
 
     49%,
     100% {
-
         opacity: 0;
-
     }
 
 }
@@ -928,7 +872,7 @@ section {
 
 
 /* =========================================================
-   ABHYANKAR QUOTE
+   QUOTE
 ========================================================= */
 
 .hero-quote {
@@ -1179,10 +1123,7 @@ section {
 
 
 .about-text {
-
-    color:
-        var(--muted);
-
+    color: var(--muted);
 }
 
 
@@ -1230,9 +1171,7 @@ section {
 
 
 .about-detail strong {
-
     font-size: 14px;
-
 }
 
 
@@ -1353,13 +1292,11 @@ section {
 
 
 /* =========================================================
-   POLYNOMIAL OF THE DAY
+   POLYNOMIAL GAME
 ========================================================= */
 
 .polynomial-shell {
-
     max-width: 700px;
-
 }
 
 
@@ -1367,7 +1304,8 @@ section {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
     align-items: center;
 
@@ -1440,6 +1378,20 @@ section {
 }
 
 
+.difficulty-button.solved-correct::after {
+
+    content: " ✓";
+
+}
+
+
+.difficulty-button.solved-wrong::after {
+
+    content: " •";
+
+}
+
+
 .polynomial-score {
 
     display: inline-flex;
@@ -1474,16 +1426,11 @@ section {
 
 
 .score-chip strong {
-
-    color:
-        var(--heading);
-
+    color: var(--heading);
 }
 
 
 .polynomial-card {
-
-    position: relative;
 
     max-width: 640px;
 
@@ -1502,8 +1449,6 @@ section {
     box-shadow:
         var(--shadow);
 
-    overflow: hidden;
-
 }
 
 
@@ -1511,9 +1456,11 @@ section {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
-    align-items: flex-start;
+    align-items:
+        flex-start;
 
     flex-wrap: wrap;
 
@@ -1666,6 +1613,15 @@ section {
 }
 
 
+.guess-button:disabled {
+
+    opacity: .65;
+
+    cursor: default;
+
+}
+
+
 .check-answer {
 
     min-height: 40px;
@@ -1712,9 +1668,7 @@ section {
 
 
 .polynomial-result[hidden] {
-
     display: none;
-
 }
 
 
@@ -1731,18 +1685,12 @@ section {
 
 
 .correct-answer {
-
-    color:
-        var(--green);
-
+    color: var(--green);
 }
 
 
 .wrong-answer {
-
-    color:
-        var(--red);
-
+    color: var(--red);
 }
 
 
@@ -1782,48 +1730,47 @@ section {
 
 
 /* =========================================================
-   PERFECT 4/4 CELEBRATION
+   PERMANENT 4/4 MESSAGE
 ========================================================= */
 
 .perfect-celebration {
 
-    margin-top: 20px;
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 17px;
 
     padding:
-        18px 18px;
+        12px 14px;
 
     border:
         1px solid
-        var(--border);
+        rgba(39,130,95,.25);
 
-    border-radius: 9px;
+    border-radius: 8px;
 
     background:
-        var(--accent-soft);
-
-    text-align: center;
-
-    color:
-        var(--heading);
+        rgba(39,130,95,.07);
 
 }
 
 
 .perfect-celebration[hidden] {
-
     display: none;
-
 }
 
 
 .perfect-field-symbol {
 
-    width: 62px;
+    flex:
+        0 0 auto;
 
-    height: 62px;
+    width: 42px;
 
-    margin:
-        0 auto 8px;
+    height: 42px;
 
     display: flex;
 
@@ -1833,46 +1780,30 @@ section {
 
     border:
         1px solid
-        var(--accent);
+        var(--green);
 
     border-radius: 50%;
 
     color:
-        var(--accent-dark);
+        var(--green);
 
     font-family:
         var(--serif);
 
-    font-size: 24px;
-
-}
-
-
-.perfect-celebration.show
-.perfect-field-symbol {
-
-    animation:
-        perfectFieldPulse
-        1.35s ease-out;
-
-}
-
-
-.perfect-celebration.show {
-
-    animation:
-        perfectCelebrationFade
-        2.3s ease both;
+    font-size: 18px;
 
 }
 
 
 .perfect-title {
 
+    color:
+        var(--heading);
+
     font-family:
         var(--serif);
 
-    font-size: 19px;
+    font-size: 16px;
 
     font-weight: 700;
 
@@ -1881,84 +1812,10 @@ section {
 
 .perfect-subtitle {
 
-    margin-top: 3px;
-
     color:
         var(--muted);
 
-    font-size: 11px;
-
-}
-
-
-@keyframes perfectFieldPulse {
-
-    0% {
-
-        transform:
-            scale(.72);
-
-        opacity: .2;
-
-    }
-
-    35% {
-
-        transform:
-            scale(1.15);
-
-        opacity: 1;
-
-    }
-
-    65% {
-
-        transform:
-            scale(.96);
-
-    }
-
-    100% {
-
-        transform:
-            scale(1);
-
-    }
-
-}
-
-
-@keyframes perfectCelebrationFade {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateY(5px);
-
-    }
-
-    15% {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-
-    }
-
-    82% {
-
-        opacity: 1;
-
-    }
-
-    100% {
-
-        opacity: 0;
-
-    }
+    font-size: 10px;
 
 }
 
@@ -2148,9 +2005,7 @@ section {
 ========================================================= */
 
 .news-list {
-
     max-width: 870px;
-
 }
 
 
@@ -2450,9 +2305,7 @@ section {
 
 
 .contact-row:last-child {
-
     border-bottom: 0;
-
 }
 
 
@@ -2490,10 +2343,7 @@ section {
 
 
 .contact-copy {
-
-    color:
-        var(--muted);
-
+    color: var(--muted);
 }
 
 
@@ -2511,7 +2361,7 @@ section {
 
 
 /* =========================================================
-   FOOTER / Q.E.D.
+   FOOTER
 ========================================================= */
 
 .site-footer {
@@ -2537,9 +2387,7 @@ section {
 
 
 .footer-normal {
-
     display: block;
-
 }
 
 
@@ -2566,25 +2414,21 @@ section {
 
 .site-footer.proof-mode
 .footer-normal {
-
     display: none;
-
 }
 
 
 .site-footer.proof-mode
 .footer-proof {
-
     display: block;
-
 }
 
 
 .qed-button {
 
-    padding: 0;
-
     margin-left: 8px;
+
+    padding: 0;
 
     border: 0;
 
@@ -2602,9 +2446,7 @@ section {
 
 
 .qed-button:hover {
-
     text-decoration: underline;
-
 }
 
 
@@ -2617,7 +2459,6 @@ section {
     position: fixed;
 
     right: 20px;
-
     bottom: 20px;
 
     z-index: 900;
@@ -2669,7 +2510,6 @@ section {
     position: fixed;
 
     top: 14px;
-
     right: 14px;
 
     z-index: 1300;
@@ -2781,9 +2621,7 @@ section {
 
 
     .mobile-toggle {
-
         display: block;
-
     }
 
 
@@ -2798,9 +2636,7 @@ section {
 
 
     .about-photo {
-
         max-width: 370px;
-
     }
 
 }
@@ -2818,16 +2654,12 @@ section {
 
 
     .hero {
-
         padding-top: 95px;
-
     }
 
 
     .hero h1 {
-
         font-size: 55px;
-
     }
 
 
@@ -2886,9 +2718,7 @@ section {
 (prefers-reduced-motion: reduce) {
 
     html {
-
         scroll-behavior: auto;
-
     }
 
 
@@ -2915,9 +2745,7 @@ section {
 
 
     .greeting-cursor {
-
         animation: none;
-
     }
 
 }
@@ -2934,9 +2762,7 @@ section {
     class="skip-link"
     href="#main"
 >
-
 Skip to main content
-
 </a>
 
 
@@ -2947,9 +2773,7 @@ Skip to main content
     aria-label="Open menu"
     aria-expanded="false"
 >
-
 ☰
-
 </button>
 
 
@@ -2985,23 +2809,17 @@ Skip to main content
 
 
 <h2 class="profile-name">
-
 Anit Kuckian
-
 </h2>
 
 
 <p class="profile-role">
-
 Mathematics · IIT Gandhinagar
-
 </p>
 
 
 <span class="profile-status">
-
 Sabarmati Bridge Fellow
-
 </span>
 
 
@@ -3014,9 +2832,7 @@ Sabarmati Bridge Fellow
     target="_blank"
     rel="noopener noreferrer"
 >
-
 GitHub
-
 </a>
 
 
@@ -3024,9 +2840,7 @@ GitHub
     class="profile-action"
     href="#"
 >
-
 Scholar
-
 </a>
 
 
@@ -3034,9 +2848,7 @@ Scholar
     class="profile-action"
     href="#"
 >
-
 ORCID
-
 </a>
 
 
@@ -3045,9 +2857,7 @@ ORCID
     id="themeToggle"
     type="button"
 >
-
 Theme
-
 </button>
 
 
@@ -3202,23 +3012,17 @@ Last updated September 2026
 
 
 <div class="hero-kicker">
-
 MATHEMATICS
-
 </div>
 
 
 <h1>
-
 Anit Kuckian
-
 </h1>
 
 
 <p class="hero-main-line">
-
 I do mathematics.
-
 </p>
 
 
@@ -3234,9 +3038,7 @@ May They Forever Rule the World!”
 
 
 <cite>
-
 — Shreeram S. Abhyankar
-
 </cite>
 
 
@@ -3258,9 +3060,7 @@ at the Indian Institute of Technology Gandhinagar.
     class="button button-primary"
     href="#research"
 >
-
 Research
-
 </a>
 
 
@@ -3268,9 +3068,7 @@ Research
     class="button button-ghost"
     href="#publications"
 >
-
 Publications
-
 </a>
 
 
@@ -3278,9 +3076,7 @@ Publications
     class="button button-ghost"
     href="cv.html"
 >
-
 CV
-
 </a>
 
 
@@ -3307,16 +3103,12 @@ CV
 
 
 <div class="eyebrow">
-
 About
-
 </div>
 
 
 <h2>
-
 A little about me
-
 </h2>
 
 
@@ -3496,24 +3288,17 @@ Gandhinagar, India
 
 
 <div class="eyebrow">
-
 Now
-
 </div>
 
 
 <h2>
-
 Current focus
-
 </h2>
 
 
 <p>
-
-A few things currently occupying
-my mathematical attention.
-
+A few things currently occupying my mathematical attention.
 </p>
 
 
@@ -3576,23 +3361,17 @@ Computational algebra
 
 
 <div class="eyebrow">
-
 Research
-
 </div>
 
 
 <h2>
-
 Research interests
-
 </h2>
 
 
 <p>
-
 The main themes I currently think about.
-
 </p>
 
 
@@ -3604,118 +3383,83 @@ The main themes I currently think about.
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Finite Fields and Applications
-
 </h3>
 
-
 <p>
-
 Polynomial arithmetic,
 irreducibility,
 primitive elements,
 factorization,
 rational points,
 and algebraic applications of finite fields.
-
 </p>
-
 
 </div>
 
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Algebraic Coding Theory
-
 </h3>
 
-
 <p>
-
 Codes over finite fields,
 covering problems,
 algebraic constructions,
 and structural questions arising in coding theory.
-
 </p>
-
 
 </div>
 
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Commutative Algebra
-
 </h3>
 
-
 <p>
-
 Affine domains,
 polynomial rings,
 filtrations,
 exponential maps,
 and related invariants.
-
 </p>
-
 
 </div>
 
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Affine Algebraic Geometry
-
 </h3>
 
-
 <p>
-
 Danielewski-type varieties,
 Makar-Limanov invariants,
 and questions related to cancellation.
-
 </p>
-
 
 </div>
 
 
 <div class="research-row reveal">
 
-
 <h3>
-
 Computational Algebra
-
 </h3>
 
-
 <p>
-
 Symbolic and experimental mathematics
 using SageMath,
 Macaulay2,
 Python,
 and related tools.
-
 </p>
-
 
 </div>
 
@@ -3746,16 +3490,12 @@ and related tools.
 
 
 <div class="eyebrow">
-
 A small daily challenge
-
 </div>
 
 
 <h2>
-
 Polynomial of the Day
-
 </h2>
 
 
@@ -3781,9 +3521,7 @@ is reducible or irreducible.
     type="button"
     data-difficulty="easy"
 >
-
 Easy
-
 </button>
 
 
@@ -3792,9 +3530,7 @@ Easy
     type="button"
     data-difficulty="medium"
 >
-
 Medium
-
 </button>
 
 
@@ -3803,9 +3539,7 @@ Medium
     type="button"
     data-difficulty="hard"
 >
-
 Hard
-
 </button>
 
 
@@ -3814,9 +3548,7 @@ Hard
     type="button"
     data-difficulty="extreme"
 >
-
 Extreme
-
 </button>
 
 
@@ -3864,9 +3596,7 @@ Streak:
     class="polynomial-difficulty"
     id="difficultyLabel"
 >
-
 Easy
-
 </div>
 
 
@@ -3901,9 +3631,7 @@ over the indicated finite field?
     type="button"
     data-guess="reducible"
 >
-
 Reducible
-
 </button>
 
 
@@ -3912,9 +3640,7 @@ Reducible
     type="button"
     data-guess="irreducible"
 >
-
 Irreducible
-
 </button>
 
 
@@ -3927,9 +3653,7 @@ Irreducible
     type="button"
     disabled
 >
-
 Check answer
-
 </button>
 
 
@@ -3955,9 +3679,9 @@ Check answer
 </div>
 
 
-<!-- =====================================================
-     PERFECT FIELD DAY
-===================================================== -->
+<!-- =========================================================
+     PERMANENT CONGRATULATIONS
+========================================================= -->
 
 <div
     class="perfect-celebration"
@@ -3974,6 +3698,9 @@ Check answer
 </div>
 
 
+<div>
+
+
 <div class="perfect-title">
 
 Perfect field day — 4/4.
@@ -3983,7 +3710,10 @@ Perfect field day — 4/4.
 
 <div class="perfect-subtitle">
 
-Every polynomial solved correctly.
+Congratulations. Every challenge solved correctly today.
+
+</div>
+
 
 </div>
 
@@ -3997,6 +3727,12 @@ Easy: degree 2 ·
 Medium: degree 3 ·
 Hard: degree 4–5 ·
 Extreme: degree 6–7
+
+<br>
+
+Each difficulty contains a deterministic
+365-challenge cycle with no repeated challenge
+inside that cycle.
 
 </div>
 
@@ -4024,23 +3760,17 @@ Extreme: degree 6–7
 
 
 <div class="eyebrow">
-
 Research output
-
 </div>
 
 
 <h2>
-
 Publications & preprints
-
 </h2>
 
 
 <p>
-
 Search and filter the list as it grows.
-
 </p>
 
 
@@ -4064,9 +3794,7 @@ Search and filter the list as it grows.
     type="button"
     data-filter="all"
 >
-
 All
-
 </button>
 
 
@@ -4075,9 +3803,7 @@ All
     type="button"
     data-filter="preprint"
 >
-
 Preprints
-
 </button>
 
 
@@ -4086,9 +3812,7 @@ Preprints
     type="button"
     data-filter="published"
 >
-
 Published
-
 </button>
 
 
@@ -4105,9 +3829,7 @@ Published
 
 
 <div class="publication-year">
-
 2026
-
 </div>
 
 
@@ -4115,9 +3837,7 @@ Published
 
 
 <div class="publication-type">
-
 Preprint
-
 </div>
 
 
@@ -4156,9 +3876,7 @@ affine algebraic geometry
     target="_blank"
     rel="noopener noreferrer"
 >
-
 arXiv →
-
 </a>
 
 
@@ -4178,9 +3896,7 @@ arXiv →
     id="noPublications"
     hidden
 >
-
 No publications match your search.
-
 </p>
 
 
@@ -4207,16 +3923,12 @@ No publications match your search.
 
 
 <div class="eyebrow">
-
 Updates
-
 </div>
 
 
 <h2>
-
 News
-
 </h2>
 
 
@@ -4230,9 +3942,7 @@ News
 
 
 <div class="news-date">
-
 July 2026
-
 </div>
 
 
@@ -4265,9 +3975,7 @@ at IIT Gandhinagar.
 
 
 <div class="news-date">
-
 2026
-
 </div>
 
 
@@ -4275,17 +3983,14 @@ at IIT Gandhinagar.
 
 
 <h3>
-
 Preprint available on arXiv
-
 </h3>
 
 
 <p>
 
 Joint work on rational points
-of Danielewski and
-Double Danielewski surfaces.
+of Danielewski and Double Danielewski surfaces.
 
 </p>
 
@@ -4300,9 +4005,7 @@ Double Danielewski surfaces.
 
 
 <div class="news-date">
-
 2025
-
 </div>
 
 
@@ -4310,9 +4013,7 @@ Double Danielewski surfaces.
 
 
 <h3>
-
 Summer Research Internship Program
-
 </h3>
 
 
@@ -4320,8 +4021,7 @@ Summer Research Internship Program
 
 Research on Danielewski-type surfaces,
 finite-field point counting,
-and cancellation
-at IIT Gandhinagar.
+and cancellation at IIT Gandhinagar.
 
 </p>
 
@@ -4355,16 +4055,12 @@ at IIT Gandhinagar.
 
 
 <div class="eyebrow">
-
 Curriculum Vitae
-
 </div>
 
 
 <h2>
-
 Academic background
-
 </h2>
 
 
@@ -4383,9 +4079,7 @@ The full CV can live on your existing CV page.
     class="button button-primary"
     href="cv.html"
 >
-
 View full CV
-
 </a>
 
 
@@ -4402,9 +4096,7 @@ View full CV
 
 
 <h3 class="cv-heading">
-
 Education
-
 </h3>
 
 
@@ -4412,23 +4104,17 @@ Education
 
 
 <h3>
-
 M.Sc. Mathematics
-
 </h3>
 
 
 <span class="cv-meta">
-
 Indian Institute of Technology Gandhinagar
-
 </span>
 
 
 <p>
-
 Graduate study in mathematics.
-
 </p>
 
 
@@ -4439,23 +4125,17 @@ Graduate study in mathematics.
 
 
 <h3>
-
 B.Sc.
-
 </h3>
 
 
 <span class="cv-meta">
-
 Add institution here
-
 </span>
 
 
 <p>
-
 Add undergraduate information here.
-
 </p>
 
 
@@ -4463,9 +4143,7 @@ Add undergraduate information here.
 
 
 <h3 class="cv-heading">
-
 Awards
-
 </h3>
 
 
@@ -4473,9 +4151,7 @@ Awards
 
 
 <h3>
-
 INSPIRE Scholarship
-
 </h3>
 
 
@@ -4497,9 +4173,7 @@ Government of India.
 
 
 <h3 class="cv-heading">
-
 Research experience
-
 </h3>
 
 
@@ -4507,23 +4181,17 @@ Research experience
 
 
 <h3>
-
 Sabarmati Bridge Fellow
-
 </h3>
 
 
 <span class="cv-meta">
-
 2026 – Present
-
 </span>
 
 
 <p>
-
 Indian Institute of Technology Gandhinagar.
-
 </p>
 
 
@@ -4534,16 +4202,12 @@ Indian Institute of Technology Gandhinagar.
 
 
 <h3>
-
 Summer Research Internship Program
-
 </h3>
 
 
 <span class="cv-meta">
-
 2025
-
 </span>
 
 
@@ -4560,9 +4224,7 @@ and cancellation.
 
 
 <h3 class="cv-heading">
-
 Tools
-
 </h3>
 
 
@@ -4570,9 +4232,7 @@ Tools
 
 
 <h3>
-
 Mathematical computing
-
 </h3>
 
 
@@ -4619,16 +4279,12 @@ TikZ
 
 
 <div class="eyebrow">
-
 Beyond current research
-
 </div>
 
 
 <h2>
-
 Reading & learning
-
 </h2>
 
 
@@ -4652,9 +4308,7 @@ or revisiting.
 
 
 <div class="learning-label">
-
 Current reading
-
 </div>
 
 
@@ -4662,9 +4316,7 @@ Current reading
 
 
 <h3>
-
 Finite Fields
-
 </h3>
 
 
@@ -4689,9 +4341,7 @@ and applications.
 
 
 <div class="learning-label">
-
 Developing
-
 </div>
 
 
@@ -4699,9 +4349,7 @@ Developing
 
 
 <h3>
-
 Algebraic Coding Theory
-
 </h3>
 
 
@@ -4726,9 +4374,7 @@ and finite-field constructions.
 
 
 <div class="learning-label">
-
 Exploring
-
 </div>
 
 
@@ -4736,9 +4382,7 @@ Exploring
 
 
 <h3>
-
 Computational Algebra
-
 </h3>
 
 
@@ -4762,9 +4406,7 @@ and support structural arguments.
 
 
 <div class="learning-label">
-
 Mathematical habit
-
 </div>
 
 
@@ -4772,9 +4414,7 @@ Mathematical habit
 
 
 <h3>
-
 Examples first, structure afterwards
-
 </h3>
 
 
@@ -4818,16 +4458,12 @@ the general statement.
 
 
 <div class="eyebrow">
-
 Contact
-
 </div>
 
 
 <h2>
-
 Get in touch
-
 </h2>
 
 
@@ -4851,12 +4487,12 @@ or collaboration.
 
 <div class="contact-row">
 
-<small>Affiliation</small>
+<small>
+Affiliation
+</small>
 
 <strong>
-
 Indian Institute of Technology Gandhinagar
-
 </strong>
 
 </div>
@@ -4864,12 +4500,12 @@ Indian Institute of Technology Gandhinagar
 
 <div class="contact-row">
 
-<small>Position</small>
+<small>
+Position
+</small>
 
 <strong>
-
 Sabarmati Bridge Fellow
-
 </strong>
 
 </div>
@@ -4877,14 +4513,12 @@ Sabarmati Bridge Fellow
 
 <div class="contact-row">
 
-<small>Location</small>
+<small>
+Location
+</small>
 
 <strong>
-
-Gandhinagar,
-Gujarat,
-India
-
+Gandhinagar, Gujarat, India
 </strong>
 
 </div>
@@ -4892,12 +4526,12 @@ India
 
 <div class="contact-row">
 
-<small>Email</small>
+<small>
+Email
+</small>
 
 <strong>
-
 YOUR_EMAIL
-
 </strong>
 
 </div>
@@ -4905,7 +4539,9 @@ YOUR_EMAIL
 
 <div class="contact-row">
 
-<small>GitHub</small>
+<small>
+GitHub
+</small>
 
 <strong>
 
@@ -4914,9 +4550,7 @@ YOUR_EMAIL
     target="_blank"
     rel="noopener noreferrer"
 >
-
 Anit-Kuckian
-
 </a>
 
 </strong>
@@ -4957,9 +4591,7 @@ email is the best way to reach me.
     class="button button-primary"
     href="mailto:YOUR_EMAIL"
 >
-
 Send an email
-
 </a>
 
 
@@ -4982,7 +4614,7 @@ Send an email
 
 
 <!-- =========================================================
-     FOOTER / QED
+     FOOTER
 ========================================================= -->
 
 <footer
@@ -5009,9 +4641,7 @@ Mathematics
     id="qedButton"
     type="button"
 >
-
 Q.E.D.
-
 </button>
 
 
@@ -5022,9 +4652,7 @@ Q.E.D.
 
 
 <strong>
-
 Lemma.
-
 </strong>
 
 You have reached the end of the page.
@@ -5033,9 +4661,7 @@ You have reached the end of the page.
 
 
 <strong>
-
 Proof.
-
 </strong>
 
 There is nowhere left to scroll.
@@ -5051,9 +4677,7 @@ There is nowhere left to scroll.
     id="qedReturn"
     type="button"
 >
-
 Return to ordinary mathematics
-
 </button>
 
 
@@ -5069,9 +4693,7 @@ Return to ordinary mathematics
     type="button"
     aria-label="Back to top"
 >
-
 ↑
-
 </button>
 
 
@@ -5097,548 +4719,548 @@ const reducedMotion =
 
 
 /* =========================================================
-   MULTILINGUAL GREETINGS
+   GREETINGS
 ========================================================= */
 
 const greetingLanguages = [
 
-    {
-        language: "Mandarin Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Spanish",
-        morning: "Buenos días",
-        afternoon: "Buenas tardes",
-        evening: "Buenas noches"
-    },
-
-    {
-        language: "English",
-        morning: "Good morning",
-        afternoon: "Good afternoon",
-        evening: "Good evening"
-    },
-
-    {
-        language: "Bengali",
-        morning: "শুভ সকাল",
-        afternoon: "শুভ অপরাহ্ন",
-        evening: "শুভ সন্ধ্যা"
-    },
-
-    {
-        language: "Hindi",
-        morning: "सुप्रभात",
-        afternoon: "नमस्कार",
-        evening: "शुभ संध्या"
-    },
-
-    {
-        language: "Portuguese",
-        morning: "Bom dia",
-        afternoon: "Boa tarde",
-        evening: "Boa noite"
-    },
-
-    {
-        language: "Russian",
-        morning: "Доброе утро",
-        afternoon: "Добрый день",
-        evening: "Добрый вечер"
-    },
-
-    {
-        language: "Japanese",
-        morning: "おはようございます",
-        afternoon: "こんにちは",
-        evening: "こんばんは"
-    },
-
-    {
-        language: "German",
-        morning: "Guten Morgen",
-        afternoon: "Guten Tag",
-        evening: "Guten Abend"
-    },
-
-    {
-        language: "Wu Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Javanese",
-        morning: "Sugeng enjing",
-        afternoon: "Sugeng siang",
-        evening: "Sugeng sonten"
-    },
-
-    {
-        language: "Korean",
-        morning: "좋은 아침입니다",
-        afternoon: "안녕하세요",
-        evening: "좋은 저녁입니다"
-    },
-
-    {
-        language: "French",
-        morning: "Bonjour",
-        afternoon: "Bon après-midi",
-        evening: "Bonsoir"
-    },
-
-    {
-        language: "Vietnamese",
-        morning: "Chào buổi sáng",
-        afternoon: "Chào buổi chiều",
-        evening: "Chào buổi tối"
-    },
-
-    {
-        language: "Telugu",
-        morning: "శుభోదయం",
-        afternoon: "శుభ మధ్యాహ్నం",
-        evening: "శుభ సాయంత్రం"
-    },
-
-    {
-        language: "Cantonese",
-        morning: "早晨",
-        afternoon: "午安",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Marathi",
-        morning: "शुभ सकाळ",
-        afternoon: "शुभ दुपार",
-        evening: "शुभ संध्याकाळ"
-    },
-
-    {
-        language: "Tamil",
-        morning: "காலை வணக்கம்",
-        afternoon: "மதிய வணக்கம்",
-        evening: "மாலை வணக்கம்"
-    },
-
-    {
-        language: "Turkish",
-        morning: "Günaydın",
-        afternoon: "İyi günler",
-        evening: "İyi akşamlar"
-    },
-
-    {
-        language: "Urdu",
-        morning: "صبح بخیر",
-        afternoon: "دوپہر بخیر",
-        evening: "شام بخیر"
-    },
-
-    {
-        language: "Min Nan Chinese",
-        morning: "早安",
-        afternoon: "午安",
-        evening: "暗安"
-    },
-
-    {
-        language: "Jinyu Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Gujarati",
-        morning: "સુપ્રભાત",
-        afternoon: "શુભ બપોર",
-        evening: "શુભ સાંજ"
-    },
-
-    {
-        language: "Polish",
-        morning: "Dzień dobry",
-        afternoon: "Dzień dobry",
-        evening: "Dobry wieczór"
-    },
-
-    {
-        language: "Egyptian Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Ukrainian",
-        morning: "Доброго ранку",
-        afternoon: "Добрий день",
-        evening: "Добрий вечір"
-    },
-
-    {
-        language: "Italian",
-        morning: "Buongiorno",
-        afternoon: "Buon pomeriggio",
-        evening: "Buonasera"
-    },
-
-    {
-        language: "Xiang Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Malayalam",
-        morning: "സുപ്രഭാതം",
-        afternoon: "ശുഭ ഉച്ചതിരിഞ്ഞ്",
-        evening: "ശുഭ സായാഹ്നം"
-    },
-
-    {
-        language: "Hakka Chinese",
-        morning: "早晨",
-        afternoon: "午安",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Kannada",
-        morning: "ಶುಭೋದಯ",
-        afternoon: "ಶುಭ ಮಧ್ಯಾಹ್ನ",
-        evening: "ಶುಭ ಸಂಜೆ"
-    },
-
-    {
-        language: "Odia",
-        morning: "ଶୁଭ ସକାଳ",
-        afternoon: "ଶୁଭ ଅପରାହ୍ନ",
-        evening: "ଶୁଭ ସନ୍ଧ୍ୟା"
-    },
-
-    {
-        language: "Western Punjabi",
-        morning: "صبح بخیر",
-        afternoon: "دوپہر بخیر",
-        evening: "شام بخیر"
-    },
-
-    {
-        language: "Sundanese",
-        morning: "Wilujeng enjing",
-        afternoon: "Wilujeng siang",
-        evening: "Wilujeng sonten"
-    },
-
-    {
-        language: "Eastern Punjabi",
-        morning: "ਸ਼ੁਭ ਸਵੇਰ",
-        afternoon: "ਸ਼ੁਭ ਦੁਪਹਿਰ",
-        evening: "ਸ਼ੁਭ ਸ਼ਾਮ"
-    },
-
-    {
-        language: "Romanian",
-        morning: "Bună dimineața",
-        afternoon: "Bună ziua",
-        evening: "Bună seara"
-    },
-
-    {
-        language: "Bhojpuri",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहरिया",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "South Azerbaijani",
-        morning: "Sabahınız xeyir",
-        afternoon: "Gününüz xeyir",
-        evening: "Axşamınız xeyir"
-    },
-
-    {
-        language: "Persian",
-        morning: "صبح بخیر",
-        afternoon: "ظهر بخیر",
-        evening: "عصر بخیر"
-    },
-
-    {
-        language: "Maithili",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहर",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "Hausa",
-        morning: "Barka da safiya",
-        afternoon: "Barka da rana",
-        evening: "Barka da yamma"
-    },
-
-    {
-        language: "Algerian Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك مبروك",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Burmese",
-        morning: "မင်္ဂလာနံနက်ခင်းပါ",
-        afternoon: "မင်္ဂလာနေ့လယ်ခင်းပါ",
-        evening: "မင်္ဂလာညနေခင်းပါ"
-    },
-
-    {
-        language: "Serbo-Croatian",
-        morning: "Dobro jutro",
-        afternoon: "Dobar dan",
-        evening: "Dobro veče"
-    },
-
-    {
-        language: "Gan Chinese",
-        morning: "早上好",
-        afternoon: "下午好",
-        evening: "晚上好"
-    },
-
-    {
-        language: "Awadhi",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहर",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "Thai",
-        morning: "สวัสดีตอนเช้า",
-        afternoon: "สวัสดีตอนบ่าย",
-        evening: "สวัสดีตอนเย็น"
-    },
-
-    {
-        language: "Dutch",
-        morning: "Goedemorgen",
-        afternoon: "Goedemiddag",
-        evening: "Goedenavond"
-    },
-
-    {
-        language: "Yoruba",
-        morning: "Ẹ káàárọ̀",
-        afternoon: "Ẹ káàsán",
-        evening: "Ẹ káalẹ́"
-    },
-
-    {
-        language: "Sindhi",
-        morning: "صبح جو سلام",
-        afternoon: "منجهند جو سلام",
-        evening: "شام جو سلام"
-    },
-
-    {
-        language: "Moroccan Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك مبروك",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Saidi Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Northern Uzbek",
-        morning: "Xayrli tong",
-        afternoon: "Xayrli kun",
-        evening: "Xayrli kech"
-    },
-
-    {
-        language: "Malay",
-        morning: "Selamat pagi",
-        afternoon: "Selamat tengah hari",
-        evening: "Selamat petang"
-    },
-
-    {
-        language: "Amharic",
-        morning: "እንደምን አደሩ",
-        afternoon: "እንደምን ዋሉ",
-        evening: "መልካም ምሽት"
-    },
-
-    {
-        language: "Indonesian",
-        morning: "Selamat pagi",
-        afternoon: "Selamat siang",
-        evening: "Selamat malam"
-    },
-
-    {
-        language: "Igbo",
-        morning: "Ụtụtụ ọma",
-        afternoon: "Ehihie ọma",
-        evening: "Mgbede ọma"
-    },
-
-    {
-        language: "Tagalog",
-        morning: "Magandang umaga",
-        afternoon: "Magandang hapon",
-        evening: "Magandang gabi"
-    },
-
-    {
-        language: "Nepali",
-        morning: "शुभ प्रभात",
-        afternoon: "शुभ दिउँसो",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "Sudanese Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Saraiki",
-        morning: "صبح بخیر",
-        afternoon: "دوپہر بخیر",
-        evening: "شام بخیر"
-    },
-
-    {
-        language: "Cebuano",
-        morning: "Maayong buntag",
-        afternoon: "Maayong hapon",
-        evening: "Maayong gabii"
-    },
-
-    {
-        language: "North Levantine Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مسا الخير"
-    },
-
-    {
-        language: "Northeastern Thai",
-        morning: "สวัสดีตอนเช้า",
-        afternoon: "สวัสดีตอนบ่าย",
-        evening: "สวัสดีตอนเย็น"
-    },
-
-    {
-        language: "Assamese",
-        morning: "সুপ্ৰভাত",
-        afternoon: "শুভ আবেলি",
-        evening: "শুভ সন্ধিয়া"
-    },
-
-    {
-        language: "Hungarian",
-        morning: "Jó reggelt",
-        afternoon: "Jó napot",
-        evening: "Jó estét"
-    },
-
-    {
-        language: "Chittagonian",
-        morning: "শুভ সকাল",
-        afternoon: "শুভ অপরাহ্ন",
-        evening: "শুভ সন্ধ্যা"
-    },
-
-    {
-        language: "Mesopotamian Arabic",
-        morning: "صباح الخير",
-        afternoon: "نهارك سعيد",
-        evening: "مساء الخير"
-    },
-
-    {
-        language: "Madurese",
-        morning: "Salamet lagghu",
-        afternoon: "Salamet siang",
-        evening: "Salamet malem"
-    },
-
-    {
-        language: "Sinhala",
-        morning: "සුභ උදෑසනක්",
-        afternoon: "සුභ දහවලක්",
-        evening: "සුභ සන්ධ්‍යාවක්"
-    },
-
-    {
-        language: "Haryanvi",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दोपहर",
-        evening: "शुभ संध्या"
-    },
-
-    {
-        language: "Marwari",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दोपहर",
-        evening: "शुभ संध्या"
-    },
-
-    {
-        language: "Czech",
-        morning: "Dobré ráno",
-        afternoon: "Dobré odpoledne",
-        evening: "Dobrý večer"
-    },
-
-    {
-        language: "Greek",
-        morning: "Καλημέρα",
-        afternoon: "Καλό απόγευμα",
-        evening: "Καλησπέρα"
-    },
-
-    {
-        language: "Magahi",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहर",
-        evening: "शुभ साँझ"
-    },
-
-    {
-        language: "Chhattisgarhi",
-        morning: "सुप्रभात",
-        afternoon: "शुभ दुपहर",
-        evening: "शुभ संझा"
-    }
+{
+language: "Mandarin Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Spanish",
+morning: "Buenos días",
+afternoon: "Buenas tardes",
+evening: "Buenas noches"
+},
+
+{
+language: "English",
+morning: "Good morning",
+afternoon: "Good afternoon",
+evening: "Good evening"
+},
+
+{
+language: "Bengali",
+morning: "শুভ সকাল",
+afternoon: "শুভ অপরাহ্ন",
+evening: "শুভ সন্ধ্যা"
+},
+
+{
+language: "Hindi",
+morning: "सुप्रभात",
+afternoon: "नमस्कार",
+evening: "शुभ संध्या"
+},
+
+{
+language: "Portuguese",
+morning: "Bom dia",
+afternoon: "Boa tarde",
+evening: "Boa noite"
+},
+
+{
+language: "Russian",
+morning: "Доброе утро",
+afternoon: "Добрый день",
+evening: "Добрый вечер"
+},
+
+{
+language: "Japanese",
+morning: "おはようございます",
+afternoon: "こんにちは",
+evening: "こんばんは"
+},
+
+{
+language: "German",
+morning: "Guten Morgen",
+afternoon: "Guten Tag",
+evening: "Guten Abend"
+},
+
+{
+language: "Wu Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Javanese",
+morning: "Sugeng enjing",
+afternoon: "Sugeng siang",
+evening: "Sugeng sonten"
+},
+
+{
+language: "Korean",
+morning: "좋은 아침입니다",
+afternoon: "안녕하세요",
+evening: "좋은 저녁입니다"
+},
+
+{
+language: "French",
+morning: "Bonjour",
+afternoon: "Bon après-midi",
+evening: "Bonsoir"
+},
+
+{
+language: "Vietnamese",
+morning: "Chào buổi sáng",
+afternoon: "Chào buổi chiều",
+evening: "Chào buổi tối"
+},
+
+{
+language: "Telugu",
+morning: "శుభోదయం",
+afternoon: "శుభ మధ్యాహ్నం",
+evening: "శుభ సాయంత్రం"
+},
+
+{
+language: "Cantonese",
+morning: "早晨",
+afternoon: "午安",
+evening: "晚上好"
+},
+
+{
+language: "Marathi",
+morning: "शुभ सकाळ",
+afternoon: "शुभ दुपार",
+evening: "शुभ संध्याकाळ"
+},
+
+{
+language: "Tamil",
+morning: "காலை வணக்கம்",
+afternoon: "மதிய வணக்கம்",
+evening: "மாலை வணக்கம்"
+},
+
+{
+language: "Turkish",
+morning: "Günaydın",
+afternoon: "İyi günler",
+evening: "İyi akşamlar"
+},
+
+{
+language: "Urdu",
+morning: "صبح بخیر",
+afternoon: "دوپہر بخیر",
+evening: "شام بخیر"
+},
+
+{
+language: "Min Nan Chinese",
+morning: "早安",
+afternoon: "午安",
+evening: "暗安"
+},
+
+{
+language: "Jinyu Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Gujarati",
+morning: "સુપ્રભાત",
+afternoon: "શુભ બપોર",
+evening: "શુભ સાંજ"
+},
+
+{
+language: "Polish",
+morning: "Dzień dobry",
+afternoon: "Dzień dobry",
+evening: "Dobry wieczór"
+},
+
+{
+language: "Egyptian Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مساء الخير"
+},
+
+{
+language: "Ukrainian",
+morning: "Доброго ранку",
+afternoon: "Добрий день",
+evening: "Добрий вечір"
+},
+
+{
+language: "Italian",
+morning: "Buongiorno",
+afternoon: "Buon pomeriggio",
+evening: "Buonasera"
+},
+
+{
+language: "Xiang Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Malayalam",
+morning: "സുപ്രഭാതം",
+afternoon: "ശുഭ ഉച്ചതിരിഞ്ഞ്",
+evening: "ശുഭ സായാഹ്നം"
+},
+
+{
+language: "Hakka Chinese",
+morning: "早晨",
+afternoon: "午安",
+evening: "晚上好"
+},
+
+{
+language: "Kannada",
+morning: "ಶುಭೋದಯ",
+afternoon: "ಶುಭ ಮಧ್ಯಾಹ್ನ",
+evening: "ಶುಭ ಸಂಜೆ"
+},
+
+{
+language: "Odia",
+morning: "ଶୁଭ ସକାଳ",
+afternoon: "ଶୁଭ ଅପରାହ୍ନ",
+evening: "ଶୁଭ ସନ୍ଧ୍ୟା"
+},
+
+{
+language: "Western Punjabi",
+morning: "صبح بخیر",
+afternoon: "دوپہر بخیر",
+evening: "شام بخیر"
+},
+
+{
+language: "Sundanese",
+morning: "Wilujeng enjing",
+afternoon: "Wilujeng siang",
+evening: "Wilujeng sonten"
+},
+
+{
+language: "Eastern Punjabi",
+morning: "ਸ਼ੁਭ ਸਵੇਰ",
+afternoon: "ਸ਼ੁਭ ਦੁਪਹਿਰ",
+evening: "ਸ਼ੁਭ ਸ਼ਾਮ"
+},
+
+{
+language: "Romanian",
+morning: "Bună dimineața",
+afternoon: "Bună ziua",
+evening: "Bună seara"
+},
+
+{
+language: "Bhojpuri",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहरिया",
+evening: "शुभ साँझ"
+},
+
+{
+language: "South Azerbaijani",
+morning: "Sabahınız xeyir",
+afternoon: "Gününüz xeyir",
+evening: "Axşamınız xeyir"
+},
+
+{
+language: "Persian",
+morning: "صبح بخیر",
+afternoon: "ظهر بخیر",
+evening: "عصر بخیر"
+},
+
+{
+language: "Maithili",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहर",
+evening: "शुभ साँझ"
+},
+
+{
+language: "Hausa",
+morning: "Barka da safiya",
+afternoon: "Barka da rana",
+evening: "Barka da yamma"
+},
+
+{
+language: "Algerian Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك مبروك",
+evening: "مساء الخير"
+},
+
+{
+language: "Burmese",
+morning: "မင်္ဂလာနံနက်ခင်းပါ",
+afternoon: "မင်္ဂလာနေ့လယ်ခင်းပါ",
+evening: "မင်္ဂလာညနေခင်းပါ"
+},
+
+{
+language: "Serbo-Croatian",
+morning: "Dobro jutro",
+afternoon: "Dobar dan",
+evening: "Dobro veče"
+},
+
+{
+language: "Gan Chinese",
+morning: "早上好",
+afternoon: "下午好",
+evening: "晚上好"
+},
+
+{
+language: "Awadhi",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहर",
+evening: "शुभ साँझ"
+},
+
+{
+language: "Thai",
+morning: "สวัสดีตอนเช้า",
+afternoon: "สวัสดีตอนบ่าย",
+evening: "สวัสดีตอนเย็น"
+},
+
+{
+language: "Dutch",
+morning: "Goedemorgen",
+afternoon: "Goedemiddag",
+evening: "Goedenavond"
+},
+
+{
+language: "Yoruba",
+morning: "Ẹ káàárọ̀",
+afternoon: "Ẹ káàsán",
+evening: "Ẹ káalẹ́"
+},
+
+{
+language: "Sindhi",
+morning: "صبح جو سلام",
+afternoon: "منجهند جو سلام",
+evening: "شام جو سلام"
+},
+
+{
+language: "Moroccan Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك مبروك",
+evening: "مساء الخير"
+},
+
+{
+language: "Saidi Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مساء الخير"
+},
+
+{
+language: "Northern Uzbek",
+morning: "Xayrli tong",
+afternoon: "Xayrli kun",
+evening: "Xayrli kech"
+},
+
+{
+language: "Malay",
+morning: "Selamat pagi",
+afternoon: "Selamat tengah hari",
+evening: "Selamat petang"
+},
+
+{
+language: "Amharic",
+morning: "እንደምን አደሩ",
+afternoon: "እንደምን ዋሉ",
+evening: "መልካም ምሽት"
+},
+
+{
+language: "Indonesian",
+morning: "Selamat pagi",
+afternoon: "Selamat siang",
+evening: "Selamat malam"
+},
+
+{
+language: "Igbo",
+morning: "Ụtụtụ ọma",
+afternoon: "Ehihie ọma",
+evening: "Mgbede ọma"
+},
+
+{
+language: "Tagalog",
+morning: "Magandang umaga",
+afternoon: "Magandang hapon",
+evening: "Magandang gabi"
+},
+
+{
+language: "Nepali",
+morning: "शुभ प्रभात",
+afternoon: "शुभ दिउँसो",
+evening: "शुभ साँझ"
+},
+
+{
+language: "Sudanese Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مساء الخير"
+},
+
+{
+language: "Saraiki",
+morning: "صبح بخیر",
+afternoon: "دوپہر بخیر",
+evening: "شام بخیر"
+},
+
+{
+language: "Cebuano",
+morning: "Maayong buntag",
+afternoon: "Maayong hapon",
+evening: "Maayong gabii"
+},
+
+{
+language: "North Levantine Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مسا الخير"
+},
+
+{
+language: "Northeastern Thai",
+morning: "สวัสดีตอนเช้า",
+afternoon: "สวัสดีตอนบ่าย",
+evening: "สวัสดีตอนเย็น"
+},
+
+{
+language: "Assamese",
+morning: "সুপ্ৰভাত",
+afternoon: "শুভ আবেলি",
+evening: "শুভ সন্ধিয়া"
+},
+
+{
+language: "Hungarian",
+morning: "Jó reggelt",
+afternoon: "Jó napot",
+evening: "Jó estét"
+},
+
+{
+language: "Chittagonian",
+morning: "শুভ সকাল",
+afternoon: "শুভ অপরাহ্ন",
+evening: "শুভ সন্ধ্যা"
+},
+
+{
+language: "Mesopotamian Arabic",
+morning: "صباح الخير",
+afternoon: "نهارك سعيد",
+evening: "مساء الخير"
+},
+
+{
+language: "Madurese",
+morning: "Salamet lagghu",
+afternoon: "Salamet siang",
+evening: "Salamet malem"
+},
+
+{
+language: "Sinhala",
+morning: "සුභ උදෑසනක්",
+afternoon: "සුභ දහවලක්",
+evening: "සුභ සන්ධ්‍යාවක්"
+},
+
+{
+language: "Haryanvi",
+morning: "सुप्रभात",
+afternoon: "शुभ दोपहर",
+evening: "शुभ संध्या"
+},
+
+{
+language: "Marwari",
+morning: "सुप्रभात",
+afternoon: "शुभ दोपहर",
+evening: "शुभ संध्या"
+},
+
+{
+language: "Czech",
+morning: "Dobré ráno",
+afternoon: "Dobré odpoledne",
+evening: "Dobrý večer"
+},
+
+{
+language: "Greek",
+morning: "Καλημέρα",
+afternoon: "Καλό απόγευμα",
+evening: "Καλησπέρα"
+},
+
+{
+language: "Magahi",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहर",
+evening: "शुभ साँझ"
+},
+
+{
+language: "Chhattisgarhi",
+morning: "सुप्रभात",
+afternoon: "शुभ दुपहर",
+evening: "शुभ संझा"
+}
 
 ];
 
 
 /* =========================================================
-   GREETING TYPE
+   GREETING
 ========================================================= */
 
 function getGreetingPeriod() {
@@ -5671,10 +5293,6 @@ function getGreetingPeriod() {
 
 }
 
-
-/* =========================================================
-   GREETING TYPEWRITER
-========================================================= */
 
 const greetingText =
     document.getElementById(
@@ -5838,7 +5456,7 @@ if (reducedMotion) {
 
 
 /* =========================================================
-   POLYNOMIAL ARITHMETIC
+   MODULAR ARITHMETIC
 ========================================================= */
 
 function mod(
@@ -6395,7 +6013,6 @@ function polynomialToHTML(
             ) {
 
                 term +=
-
                     "<sup>"
                     +
                     degree
@@ -6449,7 +6066,7 @@ function factorizationToHTML(
 
 
 /* =========================================================
-   SEEDED RANDOMNESS
+   DETERMINISTIC RANDOMNESS
 ========================================================= */
 
 function stringHash(
@@ -6534,7 +6151,7 @@ function seededRandom(
 
 
 /* =========================================================
-   UTC DATE KEY
+   UTC DATE
 ========================================================= */
 
 function utcDateKey() {
@@ -6548,7 +6165,6 @@ function utcDateKey() {
 
 
     const month =
-
         String(
             now.getUTCMonth() + 1
         )
@@ -6559,7 +6175,6 @@ function utcDateKey() {
 
 
     const day =
-
         String(
             now.getUTCDate()
         )
@@ -6584,21 +6199,79 @@ function utcDateKey() {
 }
 
 
+function utcDayNumber() {
+
+    const now =
+        new Date();
+
+
+    return Math.floor(
+
+        Date.UTC(
+            now.getUTCFullYear(),
+            now.getUTCMonth(),
+            now.getUTCDate()
+        )
+
+        /
+
+        86400000
+
+    );
+
+}
+
+
+function formattedUTCDate() {
+
+    const now =
+        new Date();
+
+
+    return now
+        .toLocaleDateString(
+            undefined,
+            {
+
+                year:
+                    "numeric",
+
+                month:
+                    "long",
+
+                day:
+                    "numeric",
+
+                timeZone:
+                    "UTC"
+
+            }
+        );
+
+}
+
+
 /* =========================================================
-   DIFFICULTY SETTINGS
+   DIFFICULTIES
 ========================================================= */
 
 const difficultySettings = {
 
     easy: {
 
-        label: "Easy",
+        label:
+            "Easy",
 
         primes: [
             2,
             3,
             5,
-            7
+            7,
+            11,
+            13,
+            17,
+            19,
+            23
         ],
 
         degrees: [
@@ -6610,9 +6283,11 @@ const difficultySettings = {
 
     medium: {
 
-        label: "Medium",
+        label:
+            "Medium",
 
         primes: [
+            2,
             3,
             5,
             7,
@@ -6628,7 +6303,8 @@ const difficultySettings = {
 
     hard: {
 
-        label: "Hard",
+        label:
+            "Hard",
 
         primes: [
             2,
@@ -6647,7 +6323,8 @@ const difficultySettings = {
 
     extreme: {
 
-        label: "Extreme",
+        label:
+            "Extreme",
 
         primes: [
             2,
@@ -6666,56 +6343,65 @@ const difficultySettings = {
 
 
 /* =========================================================
-   GENERATE CANDIDATE
+   BUILD 365 UNIQUE CHALLENGES
 ========================================================= */
 
-function generateCandidatePolynomial(
+const challengeCycles = {};
+
+
+function createPolynomialFromCode(
+    code,
     p,
-    degree,
-    random
+    degree
 ) {
 
+    let value =
+        code;
+
+
     const coefficients =
-        Array(
-            degree + 1
-        )
-        .fill(0);
-
-
-    coefficients[0] =
-
-        1
-        +
-        Math.floor(
-            random()
-            *
-            (
-                p - 1
-            )
-        );
+        [];
 
 
     for (
-        let i = 1;
+        let i = 0;
         i < degree;
         i++
     ) {
 
-        coefficients[i] =
+        coefficients.push(
+            value % p
+        );
 
+
+        value =
             Math.floor(
-                random()
-                *
-                p
+                value / p
             );
 
     }
 
 
-    coefficients[
-        degree
-    ] =
-        1;
+    /*
+       Avoid constant term zero,
+       otherwise x is an immediate factor
+       and many questions become too trivial.
+    */
+
+    if (
+        coefficients[0] === 0
+    ) {
+
+        return null;
+
+    }
+
+
+    /*
+       Every daily challenge is monic.
+    */
+
+    coefficients.push(1);
 
 
     return coefficients;
@@ -6724,12 +6410,83 @@ function generateCandidatePolynomial(
 
 
 /* =========================================================
-   DAILY POLYNOMIAL
+   DETERMINISTIC SHUFFLE
 ========================================================= */
 
-function generateDailyPolynomial(
+function shuffleDeterministically(
+    items,
+    seedText
+) {
+
+    const random =
+        seededRandom(
+            stringHash(
+                seedText
+            )
+        );
+
+
+    const result =
+        items.slice();
+
+
+    for (
+        let i =
+            result.length - 1;
+
+        i > 0;
+
+        i--
+    ) {
+
+        const j =
+            Math.floor(
+                random()
+                *
+                (
+                    i + 1
+                )
+            );
+
+
+        [
+            result[i],
+            result[j]
+        ]
+        =
+        [
+            result[j],
+            result[i]
+        ];
+
+    }
+
+
+    return result;
+
+}
+
+
+/* =========================================================
+   BUILD SOURCE POOL
+========================================================= */
+
+function build365ChallengeCycle(
     difficulty
 ) {
+
+    if (
+        challengeCycles[
+            difficulty
+        ]
+    ) {
+
+        return challengeCycles[
+            difficulty
+        ];
+
+    }
+
 
     const settings =
         difficultySettings[
@@ -6737,132 +6494,215 @@ function generateDailyPolynomial(
         ];
 
 
-    const seed =
-
-        stringHash(
-
-            utcDateKey()
-            +
-            "::"
-            +
-            difficulty
-            +
-            "::anit-polynomial"
-
-        );
-
-
-    const random =
-        seededRandom(
-            seed
-        );
-
-
-    const p =
-
-        settings.primes[
-
-            Math.floor(
-                random()
-                *
-                settings.primes.length
-            )
-
-        ];
-
-
-    const degree =
-
-        settings.degrees[
-
-            Math.floor(
-                random()
-                *
-                settings.degrees.length
-            )
-
-        ];
+    const source =
+        [];
 
 
     /*
-       Make roughly half the daily
-       challenges irreducible and half
-       reducible.
+       We limit the number drawn from
+       each (field, degree) combination.
+
+       This prevents one large finite field
+       from dominating the entire cycle.
     */
 
-    const targetIrreducible =
-
-        random()
-        >
-        0.5;
+    const MAX_PER_BUCKET =
+        700;
 
 
-    let polynomial =
-        null;
+    settings.primes
+        .forEach(
+            function (p) {
+
+                settings.degrees
+                    .forEach(
+                        function (degree) {
+
+                            const totalCodes =
+                                Math.pow(
+                                    p,
+                                    degree
+                                );
 
 
-    for (
-        let attempt = 0;
-        attempt < 1500;
-        attempt++
+                            let added =
+                                0;
+
+
+                            for (
+                                let code = 0;
+
+                                code < totalCodes;
+
+                                code++
+                            ) {
+
+                                const polynomial =
+
+                                    createPolynomialFromCode(
+                                        code,
+                                        p,
+                                        degree
+                                    );
+
+
+                                if (
+                                    !polynomial
+                                ) {
+
+                                    continue;
+
+                                }
+
+
+                                source.push(
+                                    {
+
+                                        p:
+                                            p,
+
+                                        degree:
+                                            degree,
+
+                                        polynomial:
+                                            polynomial
+
+                                    }
+                                );
+
+
+                                added++;
+
+
+                                if (
+                                    added >=
+                                    MAX_PER_BUCKET
+                                ) {
+
+                                    break;
+
+                                }
+
+                            }
+
+                        }
+                    );
+
+            }
+        );
+
+
+    if (
+        source.length < 365
     ) {
 
-        const candidate =
-
-            generateCandidatePolynomial(
-                p,
-                degree,
-                random
-            );
-
-
-        const irreducible =
-
-            polynomialIsIrreducible(
-                candidate,
-                p
-            );
-
-
-        if (
-            irreducible
-            ===
-            targetIrreducible
-        ) {
-
-            polynomial =
-                candidate;
-
-            break;
-
-        }
+        throw new Error(
+            "Not enough distinct polynomial challenges."
+        );
 
     }
 
 
-    if (!polynomial) {
+    /*
+       Fixed shuffle.
 
-        polynomial =
+       Every visitor therefore obtains
+       exactly the same 365 challenges
+       in exactly the same order.
+    */
 
-            generateCandidatePolynomial(
-                p,
-                degree,
-                random
-            );
+    const shuffled =
 
-    }
+        shuffleDeterministically(
+
+            source,
+
+            "anit-kuckian-polynomial-cycle-"
+            +
+            difficulty
+            +
+            "-v1"
+
+        );
+
+
+    challengeCycles[
+        difficulty
+    ] =
+        shuffled.slice(
+            0,
+            365
+        );
+
+
+    return challengeCycles[
+        difficulty
+    ];
+
+}
+
+
+/* =========================================================
+   GET TODAY'S CHALLENGE
+========================================================= */
+
+function generateDailyPolynomial(
+    difficulty
+) {
+
+    const cycle =
+
+        build365ChallengeCycle(
+            difficulty
+        );
+
+
+    /*
+       Modulo 365 gives one full cycle.
+
+       Therefore:
+       Day 1 -> challenge 1
+       Day 2 -> challenge 2
+       ...
+       Day 365 -> challenge 365
+
+       No challenge repeats within
+       those 365 consecutive days.
+    */
+
+    const index =
+
+        (
+            (
+                utcDayNumber()
+                %
+                365
+            )
+            +
+            365
+        )
+        %
+        365;
+
+
+    const challenge =
+        cycle[
+            index
+        ];
 
 
     return {
 
         p:
-            p,
-
-        polynomial:
-            polynomial,
+            challenge.p,
 
         degree:
-            degree
+            challenge.degree,
+
+        polynomial:
+            challenge
+                .polynomial
+                .slice()
 
     };
 
@@ -6870,7 +6710,7 @@ function generateDailyPolynomial(
 
 
 /* =========================================================
-   DAILY SCORE
+   SCORE
 ========================================================= */
 
 const SCORE_KEY =
@@ -6879,10 +6719,6 @@ const SCORE_KEY =
 
 const STREAK_KEY =
     "anit-polynomial-streak";
-
-
-const CELEBRATION_KEY =
-    "anit-polynomial-perfect-celebration";
 
 
 function loadDailyScore() {
@@ -6942,12 +6778,13 @@ function loadDailyScore() {
         };
 
 
-        localStorage.setItem(
-            SCORE_KEY,
-            JSON.stringify(
-                data
-            )
-        );
+        localStorage
+            .setItem(
+                SCORE_KEY,
+                JSON.stringify(
+                    data
+                )
+            );
 
     }
 
@@ -6961,12 +6798,13 @@ function saveDailyScore(
     data
 ) {
 
-    localStorage.setItem(
-        SCORE_KEY,
-        JSON.stringify(
-            data
-        )
-    );
+    localStorage
+        .setItem(
+            SCORE_KEY,
+            JSON.stringify(
+                data
+            )
+        );
 
 }
 
@@ -7119,18 +6957,23 @@ function registerCorrectDay() {
         today;
 
 
-    localStorage.setItem(
-        STREAK_KEY,
-        JSON.stringify(
-            streak
-        )
-    );
+    localStorage
+        .setItem(
+            STREAK_KEY,
+            JSON.stringify(
+                streak
+            )
+        );
 
 
     return streak.count;
 
 }
 
+
+/* =========================================================
+   SCORE DISPLAY
+========================================================= */
 
 function displayScore() {
 
@@ -7174,11 +7017,81 @@ function displayScore() {
             " days"
         );
 
+
+    updateDifficultyMarkers(
+        data
+    );
+
+
+    updatePerfectCelebration(
+        data
+    );
+
 }
 
 
 /* =========================================================
-   PERFECT FIELD DAY
+   DIFFICULTY MARKERS
+========================================================= */
+
+function updateDifficultyMarkers(
+    data
+) {
+
+    document
+        .querySelectorAll(
+            ".difficulty-button"
+        )
+        .forEach(
+            function (button) {
+
+                button
+                    .classList
+                    .remove(
+                        "solved-correct",
+                        "solved-wrong"
+                    );
+
+
+                const result =
+                    data.levels[
+                        button.dataset.difficulty
+                    ];
+
+
+                if (
+                    result === true
+                ) {
+
+                    button
+                        .classList
+                        .add(
+                            "solved-correct"
+                        );
+
+                }
+
+
+                if (
+                    result === false
+                ) {
+
+                    button
+                        .classList
+                        .add(
+                            "solved-wrong"
+                        );
+
+                }
+
+            }
+        );
+
+}
+
+
+/* =========================================================
+   PERSISTENT PERFECT MESSAGE
 ========================================================= */
 
 const perfectCelebration =
@@ -7187,123 +7100,32 @@ const perfectCelebration =
     );
 
 
-let perfectCelebrationTimer =
-    null;
+function updatePerfectCelebration(
+    data
+) {
 
-
-function maybeCelebratePerfectDay() {
-
-    const data =
-        loadDailyScore();
-
-
-    if (
+    const score =
         calculateScore(
             data
-        )
-        !==
-        4
-    ) {
-
-        return;
-
-    }
-
-
-    const today =
-        utcDateKey();
-
-
-    const alreadyCelebrated =
-
-        localStorage.getItem(
-            CELEBRATION_KEY
-        );
-
-
-    if (
-        alreadyCelebrated ===
-        today
-    ) {
-
-        return;
-
-    }
-
-
-    localStorage.setItem(
-        CELEBRATION_KEY,
-        today
-    );
-
-
-    perfectCelebration.hidden =
-        false;
-
-
-    perfectCelebration
-        .classList
-        .remove(
-            "show"
         );
 
 
     /*
-       Force browser to notice
-       the state change before animation.
+       Nothing fades away.
+
+       Once the visitor gets 4/4,
+       this remains displayed until
+       the daily score resets tomorrow.
     */
 
-    void perfectCelebration.offsetWidth;
-
-
-    perfectCelebration
-        .classList
-        .add(
-            "show"
-        );
-
-
-    if (
-        perfectCelebrationTimer
-    ) {
-
-        clearTimeout(
-            perfectCelebrationTimer
-        );
-
-    }
-
-
-    perfectCelebrationTimer =
-
-        setTimeout(
-            function () {
-
-                perfectCelebration
-                    .classList
-                    .remove(
-                        "show"
-                    );
-
-
-                perfectCelebration.hidden =
-                    true;
-
-            },
-
-            reducedMotion
-            ?
-            1200
-            :
-            2400
-
-        );
+    perfectCelebration.hidden =
+        score !== 4;
 
 }
 
 
 /* =========================================================
-   POLYNOMIAL INTERFACE
+   POLYNOMIAL UI
 ========================================================= */
 
 const difficultyButtons =
@@ -7389,7 +7211,7 @@ let currentChallenge =
 
 
 /* =========================================================
-   SHOW RESULT
+   SHOW ANSWER
 ========================================================= */
 
 function showPolynomialResult(
@@ -7512,7 +7334,7 @@ function showPolynomialResult(
 
 
 /* =========================================================
-   SAVED RESULT
+   DISPLAY SAVED ANSWER
 ========================================================= */
 
 function displaySavedResult() {
@@ -7543,7 +7365,7 @@ function displaySavedResult() {
 
     guessButtons
         .forEach(
-            button => {
+            function (button) {
 
                 button.disabled =
                     true;
@@ -7573,7 +7395,7 @@ function loadPolynomialChallenge() {
 
     guessButtons
         .forEach(
-            button => {
+            function (button) {
 
                 button.disabled =
                     false;
@@ -7613,23 +7435,7 @@ function loadPolynomialChallenge() {
 
 
     polynomialDate.textContent =
-
-        new Date()
-        .toLocaleDateString(
-            undefined,
-            {
-
-                year:
-                    "numeric",
-
-                month:
-                    "long",
-
-                day:
-                    "numeric"
-
-            }
-        );
+        formattedUTCDate();
 
 
     polynomialDisplay.innerHTML =
@@ -7663,39 +7469,42 @@ difficultyButtons
     .forEach(
         function (button) {
 
-            button.addEventListener(
-                "click",
-                function () {
+            button
+                .addEventListener(
+                    "click",
+                    function () {
 
-                    difficultyButtons
-                        .forEach(
-                            item => {
+                        difficultyButtons
+                            .forEach(
+                                function (item) {
 
-                                item
-                                    .classList
-                                    .remove(
-                                        "active"
-                                    );
+                                    item
+                                        .classList
+                                        .remove(
+                                            "active"
+                                        );
 
-                            }
-                        );
-
-
-                    button
-                        .classList
-                        .add(
-                            "active"
-                        );
+                                }
+                            );
 
 
-                    selectedDifficulty =
-                        button.dataset.difficulty;
+                        button
+                            .classList
+                            .add(
+                                "active"
+                            );
 
 
-                    loadPolynomialChallenge();
+                        selectedDifficulty =
+                            button
+                                .dataset
+                                .difficulty;
 
-                }
-            );
+
+                        loadPolynomialChallenge();
+
+                    }
+                );
 
         }
     );
@@ -7709,49 +7518,52 @@ guessButtons
     .forEach(
         function (button) {
 
-            button.addEventListener(
-                "click",
-                function () {
+            button
+                .addEventListener(
+                    "click",
+                    function () {
 
-                    if (
-                        button.disabled
-                    ) {
+                        if (
+                            button.disabled
+                        ) {
 
-                        return;
+                            return;
+
+                        }
+
+
+                        guessButtons
+                            .forEach(
+                                function (item) {
+
+                                    item
+                                        .classList
+                                        .remove(
+                                            "selected"
+                                        );
+
+                                }
+                            );
+
+
+                        button
+                            .classList
+                            .add(
+                                "selected"
+                            );
+
+
+                        selectedGuess =
+                            button
+                                .dataset
+                                .guess;
+
+
+                        checkPolynomial.disabled =
+                            false;
 
                     }
-
-
-                    guessButtons
-                        .forEach(
-                            item => {
-
-                                item
-                                    .classList
-                                    .remove(
-                                        "selected"
-                                    );
-
-                            }
-                        );
-
-
-                    button
-                        .classList
-                        .add(
-                            "selected"
-                        );
-
-
-                    selectedGuess =
-                        button.dataset.guess;
-
-
-                    checkPolynomial.disabled =
-                        false;
-
-                }
-            );
+                );
 
         }
     );
@@ -7856,7 +7668,7 @@ checkPolynomial
 
             guessButtons
                 .forEach(
-                    button => {
+                    function (button) {
 
                         button.disabled =
                             true;
@@ -7867,15 +7679,6 @@ checkPolynomial
 
             checkPolynomial.disabled =
                 true;
-
-
-            /*
-               If the answer just produced 4/4,
-               show the subtle finite-field
-               celebration.
-            */
-
-            maybeCelebratePerfectDay();
 
         }
     );
@@ -7888,6 +7691,44 @@ checkPolynomial
 displayScore();
 
 loadPolynomialChallenge();
+
+
+/* =========================================================
+   AUTO CHANGE AT NEW UTC DAY
+========================================================= */
+
+let currentlyLoadedUTCDate =
+    utcDateKey();
+
+
+setInterval(
+    function () {
+
+        const newUTCDate =
+            utcDateKey();
+
+
+        if (
+            newUTCDate !==
+            currentlyLoadedUTCDate
+        ) {
+
+            currentlyLoadedUTCDate =
+                newUTCDate;
+
+
+            displayScore();
+
+
+            loadPolynomialChallenge();
+
+        }
+
+    },
+
+    60000
+
+);
 
 
 /* =========================================================
@@ -8272,10 +8113,7 @@ if (
             },
 
             {
-
-                threshold:
-                    0.08
-
+                threshold: 0.08
             }
 
         );
@@ -8405,9 +8243,7 @@ function filterPublications() {
 
 
                 if (show) {
-
                     visible++;
-
                 }
 
             }
@@ -8458,7 +8294,9 @@ filterButtons
 
 
                         currentFilter =
-                            button.dataset.filter;
+                            button
+                                .dataset
+                                .filter;
 
 
                         filterPublications();
@@ -8586,13 +8424,9 @@ backToTop
                         behavior:
 
                             reducedMotion
-
                             ?
-
                             "auto"
-
                             :
-
                             "smooth"
 
                     }
