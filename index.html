@@ -5,14 +5,14 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Anit Kuckian | Mathematics</title>
 
 <meta
-name="description"
-content="Academic website of Anit Kuckian, Sabarmati Bridge Fellow at IIT Gandhinagar. Research interests include finite fields and applications, algebraic coding theory, commutative algebra, affine algebraic geometry, and computational algebra.">
+    name="description"
+    content="Academic website of Anit Kuckian, Sabarmati Bridge Fellow at IIT Gandhinagar. Research interests include finite fields and applications, algebraic coding theory, commutative algebra, affine algebraic geometry, and computational algebra."
+>
 
 <meta name="author" content="Anit Kuckian">
 
@@ -20,10 +20,10 @@ content="Academic website of Anit Kuckian, Sabarmati Bridge Fellow at IIT Gandhi
 
 <meta name="theme-color" content="#081522">
 
-
 <link
-rel="canonical"
-href="https://anit-kuckian.github.io/">
+    rel="canonical"
+    href="https://anit-kuckian.github.io/"
+>
 
 
 <!-- =========================================================
@@ -32,14 +32,20 @@ href="https://anit-kuckian.github.io/">
 
 <meta property="og:type" content="website">
 
-<meta property="og:title"
-      content="Anit Kuckian | Mathematics">
+<meta
+    property="og:title"
+    content="Anit Kuckian | Mathematics"
+>
 
-<meta property="og:description"
-      content="Finite fields and applications, algebra, and related areas.">
+<meta
+    property="og:description"
+    content="Finite fields and applications, algebra, and related areas."
+>
 
-<meta property="og:url"
-      content="https://anit-kuckian.github.io/">
+<meta
+    property="og:url"
+    content="https://anit-kuckian.github.io/"
+>
 
 
 <!-- =========================================================
@@ -47,7 +53,6 @@ href="https://anit-kuckian.github.io/">
 ========================================================= -->
 
 <script type="application/ld+json">
-
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -73,12 +78,11 @@ href="https://anit-kuckian.github.io/">
     "Computational Algebra"
   ]
 }
-
 </script>
 
 
 <!-- =========================================================
-     SAVED THEME
+     LOAD SAVED THEME
 ========================================================= -->
 
 <script>
@@ -86,15 +90,15 @@ href="https://anit-kuckian.github.io/">
 (function () {
 
     const theme =
-    localStorage.getItem("anit-theme");
+        localStorage.getItem("anit-theme");
 
     if (theme) {
 
         document.documentElement
-        .setAttribute(
-            "data-theme",
-            theme
-        );
+            .setAttribute(
+                "data-theme",
+                theme
+            );
 
     }
 
@@ -146,22 +150,22 @@ href="https://anit-kuckian.github.io/">
     --radius: 10px;
 
     --shadow:
-    0 17px 45px
-    rgba(17,39,57,0.08);
+        0 17px 45px
+        rgba(17,39,57,0.08);
 
     --serif:
-    Georgia,
-    "Times New Roman",
-    serif;
+        Georgia,
+        "Times New Roman",
+        serif;
 
     --sans:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
 
 }
 
@@ -189,8 +193,8 @@ html[data-theme="dark"] {
     --accent-soft: #17343f;
 
     --shadow:
-    0 17px 45px
-    rgba(0,0,0,0.27);
+        0 17px 45px
+        rgba(0,0,0,0.27);
 
 }
 
@@ -263,6 +267,13 @@ img {
 }
 
 
+section {
+
+    scroll-margin-top: 20px;
+
+}
+
+
 /* =========================================================
    ACCESSIBILITY
 ========================================================= */
@@ -271,17 +282,15 @@ img {
 
     position: fixed;
 
-    z-index: 5000;
-
     top: 12px;
 
     left: 12px;
 
-    transform:
-    translateY(-160%);
+    z-index: 5000;
 
-    padding:
-    10px 15px;
+    transform: translateY(-160%);
+
+    padding: 10px 15px;
 
     background: white;
 
@@ -306,17 +315,10 @@ button:focus-visible,
 input:focus-visible {
 
     outline:
-    3px solid
-    var(--focus);
+        3px solid
+        var(--focus);
 
     outline-offset: 3px;
-
-}
-
-
-section {
-
-    scroll-margin-top: 20px;
 
 }
 
@@ -330,17 +332,17 @@ section {
     position: fixed;
 
     inset:
-    0 auto 0 0;
+        0 auto 0 0;
 
     width:
-    var(--sidebar-width);
+        var(--sidebar-width);
 
     background:
-    linear-gradient(
-        180deg,
-        #081522,
-        #07111b
-    );
+        linear-gradient(
+            180deg,
+            #081522,
+            #07111b
+        );
 
     color: white;
 
@@ -349,7 +351,7 @@ section {
     z-index: 1000;
 
     transition:
-    transform .3s ease;
+        transform .3s ease;
 
 }
 
@@ -359,7 +361,7 @@ section {
     min-height: 100%;
 
     padding:
-    29px 22px 24px;
+        29px 22px 24px;
 
     display: flex;
 
@@ -386,15 +388,15 @@ section {
     height: 126px;
 
     margin:
-    0 auto 15px;
+        0 auto 15px;
 
     border-radius: 50%;
 
     object-fit: cover;
 
     border:
-    5px solid
-    #294257;
+        5px solid
+        #294257;
 
 }
 
@@ -403,7 +405,8 @@ section {
 
     margin: 0;
 
-    font-family: var(--serif);
+    font-family:
+        var(--serif);
 
     font-size: 24px;
 
@@ -414,10 +417,10 @@ section {
 
 .profile-role {
 
-    color: #9fb0bf;
-
     margin:
-    5px 0 10px;
+        5px 0 10px;
+
+    color: #9fb0bf;
 
     font-size: 13px;
 
@@ -429,12 +432,12 @@ section {
     display: inline-block;
 
     padding:
-    5px 10px;
+        5px 10px;
 
     border-radius: 30px;
 
     background:
-    rgba(50,151,179,.15);
+        rgba(50,151,179,.15);
 
     color: #80d1e7;
 
@@ -465,21 +468,21 @@ section {
 .profile-action,
 .theme-toggle {
 
-    border:
-    1px solid
-    #284052;
-
-    background:
-    #102130;
-
-    color: #e4edf4;
-
     min-height: 38px;
 
     padding:
-    7px 10px;
+        7px 10px;
+
+    border:
+        1px solid
+        #284052;
 
     border-radius: 6px;
+
+    background:
+        #102130;
+
+    color: #e4edf4;
 
     font-size: 11px;
 
@@ -492,7 +495,7 @@ section {
 .theme-toggle:hover {
 
     background:
-    #17354a;
+        #17354a;
 
 }
 
@@ -512,9 +515,9 @@ section {
 
     list-style: none;
 
-    padding: 0;
-
     margin: 0;
+
+    padding: 0;
 
 }
 
@@ -524,16 +527,16 @@ section {
     display: grid;
 
     grid-template-columns:
-    27px 1fr;
+        27px 1fr;
 
     align-items: center;
 
     min-height: 40px;
 
-    padding:
-    6px 12px;
-
     margin-bottom: 2px;
+
+    padding:
+        6px 12px;
 
     border-radius: 7px;
 
@@ -552,7 +555,7 @@ section {
     color: white;
 
     background:
-    var(--navy-soft);
+        var(--navy-soft);
 
 }
 
@@ -589,7 +592,7 @@ main,
 .site-footer {
 
     margin-left:
-    var(--sidebar-width);
+        var(--sidebar-width);
 
 }
 
@@ -597,8 +600,8 @@ main,
 section {
 
     padding:
-    88px
-    clamp(28px,7vw,95px);
+        88px
+        clamp(28px,7vw,95px);
 
 }
 
@@ -606,7 +609,7 @@ section {
 .section-soft {
 
     background:
-    var(--surface);
+        var(--surface);
 
 }
 
@@ -614,16 +617,16 @@ section {
 .content {
 
     width:
-    min(
-        1080px,
-        100%
-    );
+        min(
+            1080px,
+            100%
+        );
 
 }
 
 
 /* =========================================================
-   SECTION HEADINGS
+   HEADINGS
 ========================================================= */
 
 .section-heading {
@@ -637,11 +640,12 @@ section {
 
 .eyebrow {
 
-    color:
-    var(--accent-dark);
+    margin-bottom: 7px;
 
-    text-transform:
-    uppercase;
+    color:
+        var(--accent-dark);
+
+    text-transform: uppercase;
 
     letter-spacing: .15em;
 
@@ -649,28 +653,26 @@ section {
 
     font-weight: 800;
 
-    margin-bottom: 7px;
-
 }
 
 
 .section-heading h2 {
 
     margin:
-    0 0 12px;
+        0 0 12px;
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size:
-    clamp(
-        31px,
-        4vw,
-        43px
-    );
+        clamp(
+            31px,
+            4vw,
+            43px
+        );
 
     font-weight: 400;
 
@@ -684,7 +686,7 @@ section {
     margin: 0;
 
     color:
-    var(--muted);
+        var(--muted);
 
 }
 
@@ -709,18 +711,18 @@ section {
 
     background:
 
-    radial-gradient(
-        circle at 84% 20%,
-        rgba(70,180,210,.18),
-        transparent 28%
-    ),
+        radial-gradient(
+            circle at 84% 20%,
+            rgba(70,180,210,.18),
+            transparent 28%
+        ),
 
-    linear-gradient(
-        130deg,
-        #071421 0%,
-        #0b2233 58%,
-        #12384e 100%
-    );
+        linear-gradient(
+            130deg,
+            #071421 0%,
+            #0b2233 58%,
+            #12384e 100%
+        );
 
 }
 
@@ -735,15 +737,15 @@ section {
 
     height: 520px;
 
-    border-radius: 50%;
-
-    border:
-    1px solid
-    rgba(255,255,255,.08);
-
     right: -180px;
 
     top: -160px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius: 50%;
 
 }
 
@@ -758,15 +760,15 @@ section {
 
     height: 300px;
 
-    border-radius: 50%;
-
-    border:
-    1px solid
-    rgba(255,255,255,.06);
-
     right: 12%;
 
     bottom: -190px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.06);
+
+    border-radius: 50%;
 
 }
 
@@ -790,11 +792,11 @@ section {
     color: #8fd7ea;
 
     font-size:
-    clamp(
-        21px,
-        2.4vw,
-        30px
-    );
+        clamp(
+            21px,
+            2.4vw,
+            30px
+        );
 
     font-weight: 600;
 
@@ -821,7 +823,8 @@ section {
     background: #8fd7ea;
 
     animation:
-    greetingBlink .8s infinite;
+        greetingBlink
+        .8s infinite;
 
 }
 
@@ -872,8 +875,7 @@ section {
 
     letter-spacing: .17em;
 
-    text-transform:
-    uppercase;
+    text-transform: uppercase;
 
 }
 
@@ -881,17 +883,17 @@ section {
 .hero h1 {
 
     margin:
-    0 0 22px;
+        0 0 22px;
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size:
-    clamp(
-        58px,
-        8vw,
-        91px
-    );
+        clamp(
+            58px,
+            8vw,
+            91px
+        );
 
     font-weight: 400;
 
@@ -905,22 +907,22 @@ section {
 .hero-main-line {
 
     margin:
-    0 0 17px;
+        0 0 17px;
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size:
-    clamp(
-        18px,
-        2vw,
-        24px
-    );
+        clamp(
+            18px,
+            2vw,
+            24px
+        );
 
     font-weight: 400;
 
     color:
-    rgba(255,255,255,.88);
+        rgba(255,255,255,.88);
 
 }
 
@@ -934,14 +936,14 @@ section {
     max-width: 720px;
 
     margin:
-    27px 0 0;
+        27px 0 0;
 
     padding:
-    3px 0 3px 24px;
+        3px 0 3px 24px;
 
     border-left:
-    2px solid
-    var(--accent);
+        2px solid
+        var(--accent);
 
 }
 
@@ -951,17 +953,17 @@ section {
     margin: 0;
 
     color:
-    rgba(255,255,255,.82);
+        rgba(255,255,255,.82);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size:
-    clamp(
-        17px,
-        2vw,
-        21px
-    );
+        clamp(
+            17px,
+            2vw,
+            21px
+        );
 
     font-style: italic;
 
@@ -977,10 +979,10 @@ section {
     margin-top: 9px;
 
     color:
-    rgba(255,255,255,.50);
+        rgba(255,255,255,.50);
 
     font-family:
-    var(--sans);
+        var(--sans);
 
     font-size: 12px;
 
@@ -996,7 +998,7 @@ section {
     margin-top: 27px;
 
     color:
-    rgba(255,255,255,.68);
+        rgba(255,255,255,.68);
 
     font-size: 15px;
 
@@ -1017,7 +1019,7 @@ section {
 
 
 /* =========================================================
-   BUTTONS
+   GENERAL BUTTON
 ========================================================= */
 
 .button {
@@ -1031,13 +1033,13 @@ section {
     min-height: 44px;
 
     padding:
-    9px 17px;
-
-    border-radius: 6px;
+        9px 17px;
 
     border:
-    1px solid
-    transparent;
+        1px solid
+        transparent;
+
+    border-radius: 6px;
 
     text-decoration: none;
 
@@ -1046,7 +1048,7 @@ section {
     font-weight: 700;
 
     transition:
-    transform .2s;
+        transform .2s;
 
 }
 
@@ -1054,7 +1056,7 @@ section {
 .button:hover {
 
     transform:
-    translateY(-2px);
+        translateY(-2px);
 
 }
 
@@ -1064,7 +1066,7 @@ section {
     color: white;
 
     background:
-    var(--accent);
+        var(--accent);
 
 }
 
@@ -1074,7 +1076,7 @@ section {
     color: white;
 
     background:
-    var(--accent-dark);
+        var(--accent-dark);
 
 }
 
@@ -1084,10 +1086,10 @@ section {
     color: white;
 
     border-color:
-    rgba(255,255,255,.32);
+        rgba(255,255,255,.32);
 
     background:
-    rgba(255,255,255,.04);
+        rgba(255,255,255,.04);
 
 }
 
@@ -1097,7 +1099,7 @@ section {
     color: white;
 
     background:
-    rgba(255,255,255,.10);
+        rgba(255,255,255,.10);
 
 }
 
@@ -1111,8 +1113,8 @@ section {
     display: grid;
 
     grid-template-columns:
-    minmax(250px,335px)
-    1fr;
+        minmax(250px,335px)
+        1fr;
 
     gap: 55px;
 
@@ -1130,10 +1132,10 @@ section {
     object-fit: cover;
 
     border-radius:
-    var(--radius);
+        var(--radius);
 
     box-shadow:
-    var(--shadow);
+        var(--shadow);
 
 }
 
@@ -1141,10 +1143,10 @@ section {
 .about-intro {
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 22px;
 
@@ -1156,20 +1158,20 @@ section {
 .about-humour {
 
     margin:
-    22px 0;
+        22px 0;
 
     padding:
-    17px 20px;
+        17px 20px;
 
     border-left:
-    3px solid
-    var(--accent);
+        3px solid
+        var(--accent);
 
     background:
-    var(--accent-soft);
+        var(--accent-soft);
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-size: 15px;
 
@@ -1179,7 +1181,7 @@ section {
 .about-text {
 
     color:
-    var(--muted);
+        var(--muted);
 
 }
 
@@ -1189,10 +1191,10 @@ section {
     display: grid;
 
     grid-template-columns:
-    repeat(2,1fr);
+        repeat(2,1fr);
 
     gap:
-    0 28px;
+        0 28px;
 
     margin-top: 27px;
 
@@ -1202,11 +1204,11 @@ section {
 .about-detail {
 
     padding:
-    12px 0;
+        12px 0;
 
     border-top:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -1216,10 +1218,9 @@ section {
     display: block;
 
     color:
-    var(--muted);
+        var(--muted);
 
-    text-transform:
-    uppercase;
+    text-transform: uppercase;
 
     font-size: 9px;
 
@@ -1259,14 +1260,14 @@ section {
     gap: 8px;
 
     padding:
-    9px 13px;
+        9px 13px;
 
     background:
-    var(--card);
+        var(--card);
 
     border:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
     border-radius: 50px;
 
@@ -1284,7 +1285,7 @@ section {
     border-radius: 50%;
 
     background:
-    var(--green);
+        var(--green);
 
 }
 
@@ -1296,8 +1297,8 @@ section {
 .research-list {
 
     border-top:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -1307,17 +1308,17 @@ section {
     display: grid;
 
     grid-template-columns:
-    minmax(210px,.7fr)
-    1.3fr;
+        minmax(210px,.7fr)
+        1.3fr;
 
     gap: 30px;
 
     padding:
-    22px 0;
+        22px 0;
 
     border-bottom:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -1327,10 +1328,10 @@ section {
     margin: 0;
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 19px;
 
@@ -1344,7 +1345,7 @@ section {
     margin: 0;
 
     color:
-    var(--muted);
+        var(--muted);
 
     font-size: 14px;
 
@@ -1366,8 +1367,7 @@ section {
 
     display: flex;
 
-    justify-content:
-    space-between;
+    justify-content: space-between;
 
     align-items: center;
 
@@ -1376,47 +1376,6 @@ section {
     flex-wrap: wrap;
 
     margin-bottom: 20px;
-
-}
-
-
-.polynomial-score {
-
-    display: inline-flex;
-
-    gap: 8px;
-
-    flex-wrap: wrap;
-
-}
-
-
-.score-chip {
-
-    padding:
-    6px 10px;
-
-    border:
-    1px solid
-    var(--border);
-
-    border-radius: 30px;
-
-    background:
-    var(--card);
-
-    color:
-    var(--muted);
-
-    font-size: 11px;
-
-}
-
-
-.score-chip strong {
-
-    color:
-    var(--heading);
 
 }
 
@@ -1439,19 +1398,19 @@ section {
     min-height: 40px;
 
     padding:
-    8px 14px;
+        8px 14px;
 
     border:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
     border-radius: 7px;
 
     background:
-    var(--card);
+        var(--card);
 
     color:
-    var(--text);
+        var(--text);
 
     font-weight: 600;
 
@@ -1463,42 +1422,87 @@ section {
 .difficulty-button:hover {
 
     border-color:
-    var(--accent);
+        var(--accent);
 
 }
 
 
 .difficulty-button.active {
 
+    color: white;
+
     background:
-    var(--accent);
+        var(--accent);
 
     border-color:
-    var(--accent);
+        var(--accent);
 
-    color: white;
+}
+
+
+.polynomial-score {
+
+    display: inline-flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+
+.score-chip {
+
+    padding:
+        6px 10px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 30px;
+
+    background:
+        var(--card);
+
+    color:
+        var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+.score-chip strong {
+
+    color:
+        var(--heading);
 
 }
 
 
 .polynomial-card {
 
+    position: relative;
+
     max-width: 640px;
 
     padding:
-    22px 24px;
+        22px 24px;
 
     background:
-    var(--card);
+        var(--card);
 
     border:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
     border-radius: 12px;
 
     box-shadow:
-    var(--shadow);
+        var(--shadow);
+
+    overflow: hidden;
 
 }
 
@@ -1507,11 +1511,9 @@ section {
 
     display: flex;
 
-    justify-content:
-    space-between;
+    justify-content: space-between;
 
-    align-items:
-    flex-start;
+    align-items: flex-start;
 
     flex-wrap: wrap;
 
@@ -1525,7 +1527,7 @@ section {
 .polynomial-date {
 
     color:
-    var(--muted);
+        var(--muted);
 
     font-size: 11px;
 
@@ -1535,18 +1537,17 @@ section {
 .polynomial-difficulty {
 
     padding:
-    5px 10px;
+        5px 10px;
 
     border-radius: 30px;
 
     background:
-    var(--accent-soft);
+        var(--accent-soft);
 
     color:
-    var(--accent-dark);
+        var(--accent-dark);
 
-    text-transform:
-    uppercase;
+    text-transform: uppercase;
 
     letter-spacing: .08em;
 
@@ -1560,25 +1561,24 @@ section {
 .polynomial-display {
 
     margin:
-    8px 0 6px;
+        8px 0 6px;
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size:
-    clamp(
-        22px,
-        3.4vw,
-        32px
-    );
+        clamp(
+            22px,
+            3.4vw,
+            32px
+        );
 
     line-height: 1.4;
 
-    overflow-wrap:
-    anywhere;
+    overflow-wrap: anywhere;
 
 }
 
@@ -1588,10 +1588,10 @@ section {
     margin-bottom: 20px;
 
     color:
-    var(--muted);
+        var(--muted);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 15px;
 
@@ -1625,19 +1625,19 @@ section {
     min-height: 40px;
 
     padding:
-    8px 15px;
+        8px 15px;
+
+    border:
+        1px solid
+        var(--border);
 
     border-radius: 7px;
 
-    border:
-    1px solid
-    var(--border);
-
     background:
-    var(--card);
+        var(--card);
 
     color:
-    var(--text);
+        var(--text);
 
     transition: .2s;
 
@@ -1647,7 +1647,7 @@ section {
 .guess-button:hover {
 
     border-color:
-    var(--accent);
+        var(--accent);
 
 }
 
@@ -1655,13 +1655,13 @@ section {
 .guess-button.selected {
 
     border-color:
-    var(--accent);
+        var(--accent);
 
     background:
-    var(--accent-soft);
+        var(--accent-soft);
 
     color:
-    var(--accent-dark);
+        var(--accent-dark);
 
 }
 
@@ -1673,14 +1673,14 @@ section {
     margin-top: 14px;
 
     padding:
-    8px 17px;
+        8px 17px;
 
     border: 0;
 
     border-radius: 7px;
 
     background:
-    var(--accent);
+        var(--accent);
 
     color: white;
 
@@ -1705,8 +1705,8 @@ section {
     padding-top: 18px;
 
     border-top:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -1723,7 +1723,7 @@ section {
     margin-bottom: 8px;
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 20px;
 
@@ -1733,7 +1733,7 @@ section {
 .correct-answer {
 
     color:
-    var(--green);
+        var(--green);
 
 }
 
@@ -1741,7 +1741,7 @@ section {
 .wrong-answer {
 
     color:
-    var(--red);
+        var(--red);
 
 }
 
@@ -1751,18 +1751,18 @@ section {
     margin-top: 12px;
 
     padding:
-    13px 14px;
+        13px 14px;
 
     border-radius: 7px;
 
     background:
-    var(--surface);
+        var(--surface);
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 17px;
 
@@ -1774,9 +1774,191 @@ section {
     margin-top: 16px;
 
     color:
-    var(--muted);
+        var(--muted);
 
     font-size: 10px;
+
+}
+
+
+/* =========================================================
+   PERFECT 4/4 CELEBRATION
+========================================================= */
+
+.perfect-celebration {
+
+    margin-top: 20px;
+
+    padding:
+        18px 18px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 9px;
+
+    background:
+        var(--accent-soft);
+
+    text-align: center;
+
+    color:
+        var(--heading);
+
+}
+
+
+.perfect-celebration[hidden] {
+
+    display: none;
+
+}
+
+
+.perfect-field-symbol {
+
+    width: 62px;
+
+    height: 62px;
+
+    margin:
+        0 auto 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--accent);
+
+    border-radius: 50%;
+
+    color:
+        var(--accent-dark);
+
+    font-family:
+        var(--serif);
+
+    font-size: 24px;
+
+}
+
+
+.perfect-celebration.show
+.perfect-field-symbol {
+
+    animation:
+        perfectFieldPulse
+        1.35s ease-out;
+
+}
+
+
+.perfect-celebration.show {
+
+    animation:
+        perfectCelebrationFade
+        2.3s ease both;
+
+}
+
+
+.perfect-title {
+
+    font-family:
+        var(--serif);
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+}
+
+
+.perfect-subtitle {
+
+    margin-top: 3px;
+
+    color:
+        var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+@keyframes perfectFieldPulse {
+
+    0% {
+
+        transform:
+            scale(.72);
+
+        opacity: .2;
+
+    }
+
+    35% {
+
+        transform:
+            scale(1.15);
+
+        opacity: 1;
+
+    }
+
+    65% {
+
+        transform:
+            scale(.96);
+
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes perfectCelebrationFade {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(5px);
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+    82% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+    }
 
 }
 
@@ -1801,24 +1983,24 @@ section {
 .publication-search {
 
     flex:
-    1 1 280px;
+        1 1 280px;
 
     min-height: 43px;
 
     padding:
-    8px 13px;
+        8px 13px;
 
     border:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
     border-radius: 6px;
 
     background:
-    var(--card);
+        var(--card);
 
     color:
-    var(--text);
+        var(--text);
 
 }
 
@@ -1828,19 +2010,19 @@ section {
     min-height: 43px;
 
     padding:
-    8px 13px;
+        8px 13px;
 
     border:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
     border-radius: 6px;
 
     background:
-    var(--card);
+        var(--card);
 
     color:
-    var(--text);
+        var(--text);
 
 }
 
@@ -1848,12 +2030,12 @@ section {
 .filter.active {
 
     background:
-    var(--accent);
+        var(--accent);
 
     color: white;
 
     border-color:
-    var(--accent);
+        var(--accent);
 
 }
 
@@ -1863,16 +2045,16 @@ section {
     display: grid;
 
     grid-template-columns:
-    85px 1fr;
+        85px 1fr;
 
     gap: 24px;
 
     padding:
-    25px 0;
+        25px 0;
 
     border-top:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -1880,8 +2062,8 @@ section {
 .publication:last-child {
 
     border-bottom:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -1889,10 +2071,10 @@ section {
 .publication-year {
 
     color:
-    var(--accent-dark);
+        var(--accent-dark);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 21px;
 
@@ -1902,10 +2084,9 @@ section {
 .publication-type {
 
     color:
-    var(--muted);
+        var(--muted);
 
-    text-transform:
-    uppercase;
+    text-transform: uppercase;
 
     font-size: 9px;
 
@@ -1919,13 +2100,13 @@ section {
 .publication h3 {
 
     margin:
-    5px 0;
+        5px 0;
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 20px;
 
@@ -1937,10 +2118,10 @@ section {
 .publication p {
 
     margin:
-    3px 0;
+        3px 0;
 
     color:
-    var(--muted);
+        var(--muted);
 
     font-size: 14px;
 
@@ -1978,16 +2159,16 @@ section {
     display: grid;
 
     grid-template-columns:
-    125px 1fr;
+        125px 1fr;
 
     gap: 24px;
 
     padding:
-    20px 0;
+        20px 0;
 
     border-bottom:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -1995,7 +2176,7 @@ section {
 .news-date {
 
     color:
-    var(--accent-dark);
+        var(--accent-dark);
 
     font-size: 12px;
 
@@ -2007,13 +2188,13 @@ section {
 .news-item h3 {
 
     margin:
-    0 0 4px;
+        0 0 4px;
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 18px;
 
@@ -2027,7 +2208,7 @@ section {
     margin: 0;
 
     color:
-    var(--muted);
+        var(--muted);
 
     font-size: 14px;
 
@@ -2043,7 +2224,7 @@ section {
     display: grid;
 
     grid-template-columns:
-    1fr 1fr;
+        1fr 1fr;
 
     gap: 48px;
 
@@ -2053,10 +2234,10 @@ section {
 .cv-heading {
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-weight: 400;
 
@@ -2072,11 +2253,11 @@ section {
     margin-left: 7px;
 
     padding:
-    0 0 26px 23px;
+        0 0 26px 23px;
 
     border-left:
-    1px solid
-    var(--accent);
+        1px solid
+        var(--accent);
 
 }
 
@@ -2098,7 +2279,7 @@ section {
     border-radius: 50%;
 
     background:
-    var(--accent);
+        var(--accent);
 
 }
 
@@ -2108,7 +2289,7 @@ section {
     margin: 0;
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-size: 15px;
 
@@ -2120,10 +2301,10 @@ section {
     display: inline-block;
 
     margin:
-    4px 0;
+        4px 0;
 
     color:
-    var(--accent-dark);
+        var(--accent-dark);
 
     font-size: 11px;
 
@@ -2137,7 +2318,7 @@ section {
     margin: 0;
 
     color:
-    var(--muted);
+        var(--muted);
 
     font-size: 13px;
 
@@ -2145,14 +2326,14 @@ section {
 
 
 /* =========================================================
-   READING & LEARNING
+   READING
 ========================================================= */
 
 .learning-list {
 
     border-top:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -2162,16 +2343,16 @@ section {
     display: grid;
 
     grid-template-columns:
-    150px 1fr;
+        150px 1fr;
 
     gap: 30px;
 
     padding:
-    20px 0;
+        20px 0;
 
     border-bottom:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -2179,10 +2360,9 @@ section {
 .learning-label {
 
     color:
-    var(--accent-dark);
+        var(--accent-dark);
 
-    text-transform:
-    uppercase;
+    text-transform: uppercase;
 
     font-size: 9px;
 
@@ -2196,13 +2376,13 @@ section {
 .learning-row h3 {
 
     margin:
-    0 0 5px;
+        0 0 5px;
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-weight: 400;
 
@@ -2216,7 +2396,7 @@ section {
     margin: 0;
 
     color:
-    var(--muted);
+        var(--muted);
 
     font-size: 14px;
 
@@ -2232,8 +2412,8 @@ section {
     display: grid;
 
     grid-template-columns:
-    .9fr
-    1.1fr;
+        .9fr
+        1.1fr;
 
     gap: 27px;
 
@@ -2245,14 +2425,14 @@ section {
     padding: 29px;
 
     background:
-    var(--card);
+        var(--card);
 
     border:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
     border-radius:
-    var(--radius);
+        var(--radius);
 
 }
 
@@ -2260,11 +2440,11 @@ section {
 .contact-row {
 
     padding:
-    13px 0;
+        13px 0;
 
     border-bottom:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
 }
 
@@ -2281,10 +2461,9 @@ section {
     display: block;
 
     color:
-    var(--muted);
+        var(--muted);
 
-    text-transform:
-    uppercase;
+    text-transform: uppercase;
 
     font-size: 9px;
 
@@ -2298,10 +2477,10 @@ section {
 .contact-intro {
 
     color:
-    var(--heading);
+        var(--heading);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 24px;
 
@@ -2313,7 +2492,7 @@ section {
 .contact-copy {
 
     color:
-    var(--muted);
+        var(--muted);
 
 }
 
@@ -2332,25 +2511,25 @@ section {
 
 
 /* =========================================================
-   FOOTER + QED EASTER EGG
+   FOOTER / Q.E.D.
 ========================================================= */
 
 .site-footer {
 
     padding:
-    27px 20px;
+        27px 20px;
 
     background:
-    var(--surface);
+        var(--surface);
 
     border-top:
-    1px solid
-    var(--border);
+        1px solid
+        var(--border);
 
     text-align: center;
 
     color:
-    var(--muted);
+        var(--muted);
 
     font-size: 12px;
 
@@ -2373,10 +2552,10 @@ section {
     margin: 0 auto;
 
     color:
-    var(--text);
+        var(--text);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-size: 14px;
 
@@ -2403,23 +2582,21 @@ section {
 
 .qed-button {
 
-    margin-left: 8px;
-
     padding: 0;
+
+    margin-left: 8px;
 
     border: 0;
 
     background: transparent;
 
     color:
-    var(--accent-dark);
+        var(--accent-dark);
 
     font-family:
-    var(--serif);
+        var(--serif);
 
     font-weight: 700;
-
-    cursor: pointer;
 
 }
 
@@ -2439,11 +2616,11 @@ section {
 
     position: fixed;
 
-    z-index: 900;
-
     right: 20px;
 
     bottom: 20px;
+
+    z-index: 900;
 
     width: 45px;
 
@@ -2454,7 +2631,7 @@ section {
     border-radius: 50%;
 
     background:
-    var(--accent);
+        var(--accent);
 
     color: white;
 
@@ -2463,7 +2640,7 @@ section {
     pointer-events: none;
 
     transform:
-    translateY(10px);
+        translateY(10px);
 
     transition: .25s;
 
@@ -2491,11 +2668,11 @@ section {
 
     position: fixed;
 
-    z-index: 1300;
-
     top: 14px;
 
     right: 14px;
+
+    z-index: 1300;
 
     width: 45px;
 
@@ -2506,7 +2683,7 @@ section {
     border-radius: 50%;
 
     background:
-    var(--accent);
+        var(--accent);
 
     color: white;
 
@@ -2524,14 +2701,14 @@ section {
     z-index: 950;
 
     background:
-    rgba(0,0,0,.55);
+        rgba(0,0,0,.55);
 
     opacity: 0;
 
     pointer-events: none;
 
     transition:
-    opacity .25s;
+        opacity .25s;
 
 }
 
@@ -2554,11 +2731,11 @@ section {
     opacity: 0;
 
     transform:
-    translateY(14px);
+        translateY(14px);
 
     transition:
-    opacity .5s,
-    transform .5s;
+        opacity .5s,
+        transform .5s;
 
 }
 
@@ -2582,7 +2759,7 @@ section {
     .sidebar {
 
         transform:
-        translateX(-100%);
+            translateX(-100%);
 
     }
 
@@ -2590,7 +2767,7 @@ section {
     .sidebar.open {
 
         transform:
-        translateX(0);
+            translateX(0);
 
     }
 
@@ -2615,7 +2792,7 @@ section {
     .contact-layout {
 
         grid-template-columns:
-        1fr;
+            1fr;
 
     }
 
@@ -2635,7 +2812,7 @@ section {
     section {
 
         padding:
-        68px 23px;
+            68px 23px;
 
     }
 
@@ -2657,7 +2834,7 @@ section {
     .about-details {
 
         grid-template-columns:
-        1fr;
+            1fr;
 
     }
 
@@ -2668,7 +2845,7 @@ section {
     .publication {
 
         grid-template-columns:
-        1fr;
+            1fr;
 
         gap: 6px;
 
@@ -2678,7 +2855,7 @@ section {
     .difficulty-button {
 
         flex:
-        1 1 90px;
+            1 1 90px;
 
     }
 
@@ -2686,7 +2863,7 @@ section {
     .guess-button {
 
         flex:
-        1 1 120px;
+            1 1 120px;
 
     }
 
@@ -2694,7 +2871,7 @@ section {
     .polynomial-card {
 
         padding:
-        20px 18px;
+            20px 18px;
 
     }
 
@@ -2720,10 +2897,10 @@ section {
     *::after {
 
         animation-duration:
-        .01ms !important;
+            .01ms !important;
 
         transition-duration:
-        .01ms !important;
+            .01ms !important;
 
     }
 
@@ -2754,24 +2931,22 @@ section {
 
 
 <a
-class="skip-link"
-href="#main">
+    class="skip-link"
+    href="#main"
+>
 
 Skip to main content
 
 </a>
 
 
-<!-- =========================================================
-     MOBILE
-========================================================= -->
-
 <button
-class="mobile-toggle"
-id="mobileToggle"
-type="button"
-aria-label="Open menu"
-aria-expanded="false">
+    class="mobile-toggle"
+    id="mobileToggle"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+>
 
 ☰
 
@@ -2779,9 +2954,9 @@ aria-expanded="false">
 
 
 <div
-class="backdrop"
-id="backdrop">
-</div>
+    class="backdrop"
+    id="backdrop"
+></div>
 
 
 <!-- =========================================================
@@ -2789,8 +2964,9 @@ id="backdrop">
 ========================================================= -->
 
 <aside
-class="sidebar"
-id="sidebar">
+    class="sidebar"
+    id="sidebar"
+>
 
 
 <div class="sidebar-inner">
@@ -2800,11 +2976,12 @@ id="sidebar">
 
 
 <img
-class="profile-photo"
-src="https://picsum.photos/seed/anit-profile/500/500"
-width="126"
-height="126"
-alt="Temporary profile photograph">
+    class="profile-photo"
+    src="https://picsum.photos/seed/anit-profile/500/500"
+    width="126"
+    height="126"
+    alt="Temporary profile photograph"
+>
 
 
 <h2 class="profile-name">
@@ -2832,9 +3009,11 @@ Sabarmati Bridge Fellow
 
 
 <a
-class="profile-action"
-href="https://github.com/Anit-Kuckian"
-target="_blank">
+    class="profile-action"
+    href="https://github.com/Anit-Kuckian"
+    target="_blank"
+    rel="noopener noreferrer"
+>
 
 GitHub
 
@@ -2842,8 +3021,9 @@ GitHub
 
 
 <a
-class="profile-action"
-href="#">
+    class="profile-action"
+    href="#"
+>
 
 Scholar
 
@@ -2851,8 +3031,9 @@ Scholar
 
 
 <a
-class="profile-action"
-href="#">
+    class="profile-action"
+    href="#"
+>
 
 ORCID
 
@@ -2860,9 +3041,10 @@ ORCID
 
 
 <button
-class="theme-toggle"
-id="themeToggle"
-type="button">
+    class="theme-toggle"
+    id="themeToggle"
+    type="button"
+>
 
 Theme
 
@@ -2876,159 +3058,90 @@ Theme
 
 
 <nav
-class="navigation"
-aria-label="Main navigation">
+    class="navigation"
+    aria-label="Main navigation"
+>
 
 
 <ul>
 
 
 <li>
-<a
-class="nav-link active"
-href="#home">
-
-<span class="navigation-number">
-01
-</span>
-
+<a class="nav-link active" href="#home">
+<span class="navigation-number">01</span>
 Home
-
 </a>
 </li>
 
 
 <li>
-<a
-class="nav-link"
-href="#about">
-
-<span class="navigation-number">
-02
-</span>
-
+<a class="nav-link" href="#about">
+<span class="navigation-number">02</span>
 About
-
 </a>
 </li>
 
 
 <li>
-<a
-class="nav-link"
-href="#focus">
-
-<span class="navigation-number">
-03
-</span>
-
+<a class="nav-link" href="#focus">
+<span class="navigation-number">03</span>
 Current Focus
-
 </a>
 </li>
 
 
 <li>
-<a
-class="nav-link"
-href="#research">
-
-<span class="navigation-number">
-04
-</span>
-
+<a class="nav-link" href="#research">
+<span class="navigation-number">04</span>
 Research
-
 </a>
 </li>
 
 
 <li>
-<a
-class="nav-link"
-href="#polynomial">
-
-<span class="navigation-number">
-05
-</span>
-
+<a class="nav-link" href="#polynomial">
+<span class="navigation-number">05</span>
 Polynomial of the Day
-
 </a>
 </li>
 
 
 <li>
-<a
-class="nav-link"
-href="#publications">
-
-<span class="navigation-number">
-06
-</span>
-
+<a class="nav-link" href="#publications">
+<span class="navigation-number">06</span>
 Publications
-
 </a>
 </li>
 
 
 <li>
-<a
-class="nav-link"
-href="#news">
-
-<span class="navigation-number">
-07
-</span>
-
+<a class="nav-link" href="#news">
+<span class="navigation-number">07</span>
 News
-
 </a>
 </li>
 
 
 <li>
-<a
-class="nav-link"
-href="#cv">
-
-<span class="navigation-number">
-08
-</span>
-
+<a class="nav-link" href="#cv">
+<span class="navigation-number">08</span>
 CV
-
 </a>
 </li>
 
 
 <li>
-<a
-class="nav-link"
-href="#learning">
-
-<span class="navigation-number">
-09
-</span>
-
+<a class="nav-link" href="#learning">
+<span class="navigation-number">09</span>
 Reading & Learning
-
 </a>
 </li>
 
 
 <li>
-<a
-class="nav-link"
-href="#contact">
-
-<span class="navigation-number">
-10
-</span>
-
+<a class="nav-link" href="#contact">
+<span class="navigation-number">10</span>
 Contact
-
 </a>
 </li>
 
@@ -3068,16 +3181,18 @@ Last updated September 2026
 ========================================================= -->
 
 <section
-class="hero"
-id="home">
+    class="hero"
+    id="home"
+>
 
 
 <div class="content hero-content">
 
 
 <div
-class="visitor-greeting"
-aria-live="polite">
+    class="visitor-greeting"
+    aria-live="polite"
+>
 
 <span id="greetingText"></span>
 
@@ -3140,8 +3255,9 @@ at the Indian Institute of Technology Gandhinagar.
 
 
 <a
-class="button button-primary"
-href="#research">
+    class="button button-primary"
+    href="#research"
+>
 
 Research
 
@@ -3149,8 +3265,9 @@ Research
 
 
 <a
-class="button button-ghost"
-href="#publications">
+    class="button button-ghost"
+    href="#publications"
+>
 
 Publications
 
@@ -3158,8 +3275,9 @@ Publications
 
 
 <a
-class="button button-ghost"
-href="cv.html">
+    class="button button-ghost"
+    href="cv.html"
+>
 
 CV
 
@@ -3212,12 +3330,13 @@ A little about me
 
 
 <img
-class="about-photo"
-src="https://picsum.photos/seed/anit-about-new/600/600"
-width="600"
-height="600"
-loading="lazy"
-alt="Temporary profile photograph">
+    class="about-photo"
+    src="https://picsum.photos/seed/anit-about-new/600/600"
+    width="600"
+    height="600"
+    loading="lazy"
+    alt="Temporary profile photograph"
+>
 
 
 </div>
@@ -3281,9 +3400,7 @@ and computational algebra.
 
 <div class="about-detail">
 
-<small>
-Current position
-</small>
+<small>Current position</small>
 
 <strong>
 Sabarmati Bridge Fellow
@@ -3294,9 +3411,7 @@ Sabarmati Bridge Fellow
 
 <div class="about-detail">
 
-<small>
-Institution
-</small>
+<small>Institution</small>
 
 <strong>
 IIT Gandhinagar
@@ -3307,9 +3422,7 @@ IIT Gandhinagar
 
 <div class="about-detail">
 
-<small>
-Primary research
-</small>
+<small>Primary research</small>
 
 <strong>
 Finite Fields and Applications
@@ -3320,9 +3433,7 @@ Finite Fields and Applications
 
 <div class="about-detail">
 
-<small>
-Broader research
-</small>
+<small>Broader research</small>
 
 <strong>
 Algebra
@@ -3333,9 +3444,7 @@ Algebra
 
 <div class="about-detail">
 
-<small>
-Degree
-</small>
+<small>Degree</small>
 
 <strong>
 M.Sc. Mathematics
@@ -3346,9 +3455,7 @@ M.Sc. Mathematics
 
 <div class="about-detail">
 
-<small>
-Location
-</small>
+<small>Location</small>
 
 <strong>
 Gandhinagar, India
@@ -3377,8 +3484,9 @@ Gandhinagar, India
 ========================================================= -->
 
 <section
-class="section-soft"
-id="focus">
+    class="section-soft"
+    id="focus"
+>
 
 
 <div class="content">
@@ -3416,47 +3524,32 @@ my mathematical attention.
 
 
 <div class="focus-item">
-
 <span class="focus-dot"></span>
-
 Generalized covering radius
-
 </div>
 
 
 <div class="focus-item">
-
 <span class="focus-dot"></span>
-
 Finite-field point counting
-
 </div>
 
 
 <div class="focus-item">
-
 <span class="focus-dot"></span>
-
 Algebraic coding theory
-
 </div>
 
 
 <div class="focus-item">
-
 <span class="focus-dot"></span>
-
 Danielewski-type varieties
-
 </div>
 
 
 <div class="focus-item">
-
 <span class="focus-dot"></span>
-
 Computational algebra
-
 </div>
 
 
@@ -3511,85 +3604,118 @@ The main themes I currently think about.
 
 <div class="research-row reveal">
 
+
 <h3>
+
 Finite Fields and Applications
+
 </h3>
 
+
 <p>
+
 Polynomial arithmetic,
 irreducibility,
 primitive elements,
 factorization,
 rational points,
-and algebraic applications
-of finite fields.
+and algebraic applications of finite fields.
+
 </p>
+
 
 </div>
 
 
 <div class="research-row reveal">
 
+
 <h3>
+
 Algebraic Coding Theory
+
 </h3>
 
+
 <p>
+
 Codes over finite fields,
 covering problems,
 algebraic constructions,
-and structural questions
-arising in coding theory.
+and structural questions arising in coding theory.
+
 </p>
+
 
 </div>
 
 
 <div class="research-row reveal">
 
+
 <h3>
+
 Commutative Algebra
+
 </h3>
 
+
 <p>
+
 Affine domains,
 polynomial rings,
 filtrations,
 exponential maps,
 and related invariants.
+
 </p>
+
 
 </div>
 
 
 <div class="research-row reveal">
 
+
 <h3>
+
 Affine Algebraic Geometry
+
 </h3>
 
+
 <p>
+
 Danielewski-type varieties,
 Makar-Limanov invariants,
 and questions related to cancellation.
+
 </p>
+
 
 </div>
 
 
 <div class="research-row reveal">
 
+
 <h3>
+
 Computational Algebra
+
 </h3>
 
+
 <p>
+
 Symbolic and experimental mathematics
 using SageMath,
 Macaulay2,
 Python,
 and related tools.
+
 </p>
+
 
 </div>
 
@@ -3608,8 +3734,9 @@ and related tools.
 ========================================================= -->
 
 <section
-class="section-soft"
-id="polynomial">
+    class="section-soft"
+    id="polynomial"
+>
 
 
 <div class="content polynomial-shell">
@@ -3650,9 +3777,10 @@ is reducible or irreducible.
 
 
 <button
-class="difficulty-button active"
-type="button"
-data-difficulty="easy">
+    class="difficulty-button active"
+    type="button"
+    data-difficulty="easy"
+>
 
 Easy
 
@@ -3660,9 +3788,10 @@ Easy
 
 
 <button
-class="difficulty-button"
-type="button"
-data-difficulty="medium">
+    class="difficulty-button"
+    type="button"
+    data-difficulty="medium"
+>
 
 Medium
 
@@ -3670,9 +3799,10 @@ Medium
 
 
 <button
-class="difficulty-button"
-type="button"
-data-difficulty="hard">
+    class="difficulty-button"
+    type="button"
+    data-difficulty="hard"
+>
 
 Hard
 
@@ -3680,9 +3810,10 @@ Hard
 
 
 <button
-class="difficulty-button"
-type="button"
-data-difficulty="extreme">
+    class="difficulty-button"
+    type="button"
+    data-difficulty="extreme"
+>
 
 Extreme
 
@@ -3724,15 +3855,15 @@ Streak:
 
 
 <div
-class="polynomial-date"
-id="polynomialDate">
-
-</div>
+    class="polynomial-date"
+    id="polynomialDate"
+></div>
 
 
 <div
-class="polynomial-difficulty"
-id="difficultyLabel">
+    class="polynomial-difficulty"
+    id="difficultyLabel"
+>
 
 Easy
 
@@ -3743,17 +3874,15 @@ Easy
 
 
 <div
-class="polynomial-display"
-id="polynomialDisplay">
-
-</div>
+    class="polynomial-display"
+    id="polynomialDisplay"
+></div>
 
 
 <div
-class="polynomial-field"
-id="polynomialField">
-
-</div>
+    class="polynomial-field"
+    id="polynomialField"
+></div>
 
 
 <div class="polynomial-question">
@@ -3768,9 +3897,10 @@ over the indicated finite field?
 
 
 <button
-class="guess-button"
-type="button"
-data-guess="reducible">
+    class="guess-button"
+    type="button"
+    data-guess="reducible"
+>
 
 Reducible
 
@@ -3778,9 +3908,10 @@ Reducible
 
 
 <button
-class="guess-button"
-type="button"
-data-guess="irreducible">
+    class="guess-button"
+    type="button"
+    data-guess="irreducible"
+>
 
 Irreducible
 
@@ -3791,10 +3922,11 @@ Irreducible
 
 
 <button
-class="check-answer"
-id="checkPolynomial"
-type="button"
-disabled>
+    class="check-answer"
+    id="checkPolynomial"
+    type="button"
+    disabled
+>
 
 Check answer
 
@@ -3802,21 +3934,56 @@ Check answer
 
 
 <div
-class="polynomial-result"
-id="polynomialResult"
-hidden>
+    class="polynomial-result"
+    id="polynomialResult"
+    hidden
+>
 
 
 <div
-class="result-heading"
-id="resultHeading">
+    class="result-heading"
+    id="resultHeading"
+></div>
+
+
+<div
+    class="factorization-box"
+    id="factorizationBox"
+></div>
+
 
 </div>
 
 
+<!-- =====================================================
+     PERFECT FIELD DAY
+===================================================== -->
+
 <div
-class="factorization-box"
-id="factorizationBox">
+    class="perfect-celebration"
+    id="perfectCelebration"
+    hidden
+    aria-live="polite"
+>
+
+
+<div class="perfect-field-symbol">
+
+𝔽<sub>q</sub>
+
+</div>
+
+
+<div class="perfect-title">
+
+Perfect field day — 4/4.
+
+</div>
+
+
+<div class="perfect-subtitle">
+
+Every polynomial solved correctly.
 
 </div>
 
@@ -3826,7 +3993,10 @@ id="factorizationBox">
 
 <div class="daily-note">
 
-Easy: degree 2 · Medium: degree 3 · Hard: degree 4–5 · Extreme: degree 6–7
+Easy: degree 2 ·
+Medium: degree 3 ·
+Hard: degree 4–5 ·
+Extreme: degree 6–7
 
 </div>
 
@@ -3881,17 +4051,19 @@ Search and filter the list as it grows.
 
 
 <input
-class="publication-search"
-id="publicationSearch"
-type="search"
-placeholder="Search publications..."
-aria-label="Search publications">
+    class="publication-search"
+    id="publicationSearch"
+    type="search"
+    placeholder="Search publications..."
+    aria-label="Search publications"
+>
 
 
 <button
-class="filter active"
-type="button"
-data-filter="all">
+    class="filter active"
+    type="button"
+    data-filter="all"
+>
 
 All
 
@@ -3899,9 +4071,10 @@ All
 
 
 <button
-class="filter"
-type="button"
-data-filter="preprint">
+    class="filter"
+    type="button"
+    data-filter="preprint"
+>
 
 Preprints
 
@@ -3909,9 +4082,10 @@ Preprints
 
 
 <button
-class="filter"
-type="button"
-data-filter="published">
+    class="filter"
+    type="button"
+    data-filter="published"
+>
 
 Published
 
@@ -3925,8 +4099,9 @@ Published
 
 
 <article
-class="publication reveal"
-data-category="preprint">
+    class="publication reveal"
+    data-category="preprint"
+>
 
 
 <div class="publication-year">
@@ -3977,8 +4152,10 @@ affine algebraic geometry
 
 
 <a
-href="https://arxiv.org/abs/2605.24821"
-target="_blank">
+    href="https://arxiv.org/abs/2605.24821"
+    target="_blank"
+    rel="noopener noreferrer"
+>
 
 arXiv →
 
@@ -3998,8 +4175,9 @@ arXiv →
 
 
 <p
-id="noPublications"
-hidden>
+    id="noPublications"
+    hidden
+>
 
 No publications match your search.
 
@@ -4017,8 +4195,9 @@ No publications match your search.
 ========================================================= -->
 
 <section
-class="section-soft"
-id="news">
+    class="section-soft"
+    id="news"
+>
 
 
 <div class="content">
@@ -4062,14 +4241,16 @@ July 2026
 
 <h3>
 
-Joined IIT Gandhinagar as a Sabarmati Bridge Fellow
+Joined IIT Gandhinagar
+as a Sabarmati Bridge Fellow
 
 </h3>
 
 
 <p>
 
-Continuing research in mathematics at IIT Gandhinagar.
+Continuing research in mathematics
+at IIT Gandhinagar.
 
 </p>
 
@@ -4103,7 +4284,8 @@ Preprint available on arXiv
 <p>
 
 Joint work on rational points
-of Danielewski and Double Danielewski surfaces.
+of Danielewski and
+Double Danielewski surfaces.
 
 </p>
 
@@ -4138,7 +4320,8 @@ Summer Research Internship Program
 
 Research on Danielewski-type surfaces,
 finite-field point counting,
-and cancellation at IIT Gandhinagar.
+and cancellation
+at IIT Gandhinagar.
 
 </p>
 
@@ -4197,8 +4380,9 @@ The full CV can live on your existing CV page.
 
 
 <a
-class="button button-primary"
-href="cv.html">
+    class="button button-primary"
+    href="cv.html"
+>
 
 View full CV
 
@@ -4228,7 +4412,9 @@ Education
 
 
 <h3>
+
 M.Sc. Mathematics
+
 </h3>
 
 
@@ -4253,7 +4439,9 @@ Graduate study in mathematics.
 
 
 <h3>
+
 B.Sc.
+
 </h3>
 
 
@@ -4415,12 +4603,13 @@ TikZ
 
 
 <!-- =========================================================
-     READING & LEARNING
+     READING
 ========================================================= -->
 
 <section
-class="section-soft"
-id="learning">
+    class="section-soft"
+    id="learning"
+>
 
 
 <div class="content">
@@ -4662,12 +4851,12 @@ or collaboration.
 
 <div class="contact-row">
 
-<small>
-Affiliation
-</small>
+<small>Affiliation</small>
 
 <strong>
+
 Indian Institute of Technology Gandhinagar
+
 </strong>
 
 </div>
@@ -4675,12 +4864,12 @@ Indian Institute of Technology Gandhinagar
 
 <div class="contact-row">
 
-<small>
-Position
-</small>
+<small>Position</small>
 
 <strong>
+
 Sabarmati Bridge Fellow
+
 </strong>
 
 </div>
@@ -4688,14 +4877,14 @@ Sabarmati Bridge Fellow
 
 <div class="contact-row">
 
-<small>
-Location
-</small>
+<small>Location</small>
 
 <strong>
+
 Gandhinagar,
 Gujarat,
 India
+
 </strong>
 
 </div>
@@ -4703,12 +4892,12 @@ India
 
 <div class="contact-row">
 
-<small>
-Email
-</small>
+<small>Email</small>
 
 <strong>
+
 YOUR_EMAIL
+
 </strong>
 
 </div>
@@ -4716,15 +4905,15 @@ YOUR_EMAIL
 
 <div class="contact-row">
 
-<small>
-GitHub
-</small>
+<small>GitHub</small>
 
 <strong>
 
 <a
-href="https://github.com/Anit-Kuckian"
-target="_blank">
+    href="https://github.com/Anit-Kuckian"
+    target="_blank"
+    rel="noopener noreferrer"
+>
 
 Anit-Kuckian
 
@@ -4765,8 +4954,9 @@ email is the best way to reach me.
 
 
 <a
-class="button button-primary"
-href="mailto:YOUR_EMAIL">
+    class="button button-primary"
+    href="mailto:YOUR_EMAIL"
+>
 
 Send an email
 
@@ -4792,12 +4982,13 @@ Send an email
 
 
 <!-- =========================================================
-     FOOTER + QED EASTER EGG
+     FOOTER / QED
 ========================================================= -->
 
 <footer
-class="site-footer"
-id="siteFooter">
+    class="site-footer"
+    id="siteFooter"
+>
 
 
 <div class="footer-normal">
@@ -4812,15 +5003,17 @@ Mathematics
 
 &nbsp; · &nbsp;
 
+
 <button
-class="qed-button"
-id="qedButton"
-type="button"
-aria-label="QED">
+    class="qed-button"
+    id="qedButton"
+    type="button"
+>
 
 Q.E.D.
 
 </button>
+
 
 </div>
 
@@ -4854,9 +5047,10 @@ There is nowhere left to scroll.
 
 
 <button
-class="qed-button"
-id="qedReturn"
-type="button">
+    class="qed-button"
+    id="qedReturn"
+    type="button"
+>
 
 Return to ordinary mathematics
 
@@ -4869,15 +5063,12 @@ Return to ordinary mathematics
 </footer>
 
 
-<!-- =========================================================
-     BACK TO TOP
-========================================================= -->
-
 <button
-class="back-to-top"
-id="backToTop"
-type="button"
-aria-label="Back to top">
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+>
 
 ↑
 
@@ -4898,11 +5089,11 @@ aria-label="Back to top">
 ========================================================= */
 
 const reducedMotion =
-window
-.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-)
-.matches;
+    window
+    .matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    )
+    .matches;
 
 
 /* =========================================================
@@ -4911,549 +5102,549 @@ window
 
 const greetingLanguages = [
 
-{
-language: "Mandarin Chinese",
-morning: "早上好",
-afternoon: "下午好",
-evening: "晚上好"
-},
-
-{
-language: "Spanish",
-morning: "Buenos días",
-afternoon: "Buenas tardes",
-evening: "Buenas noches"
-},
-
-{
-language: "English",
-morning: "Good morning",
-afternoon: "Good afternoon",
-evening: "Good evening"
-},
-
-{
-language: "Bengali",
-morning: "শুভ সকাল",
-afternoon: "শুভ অপরাহ্ন",
-evening: "শুভ সন্ধ্যা"
-},
-
-{
-language: "Hindi",
-morning: "सुप्रभात",
-afternoon: "नमस्कार",
-evening: "शुभ संध्या"
-},
-
-{
-language: "Portuguese",
-morning: "Bom dia",
-afternoon: "Boa tarde",
-evening: "Boa noite"
-},
-
-{
-language: "Russian",
-morning: "Доброе утро",
-afternoon: "Добрый день",
-evening: "Добрый вечер"
-},
-
-{
-language: "Japanese",
-morning: "おはようございます",
-afternoon: "こんにちは",
-evening: "こんばんは"
-},
-
-{
-language: "German",
-morning: "Guten Morgen",
-afternoon: "Guten Tag",
-evening: "Guten Abend"
-},
-
-{
-language: "Wu Chinese",
-morning: "早上好",
-afternoon: "下午好",
-evening: "晚上好"
-},
-
-{
-language: "Javanese",
-morning: "Sugeng enjing",
-afternoon: "Sugeng siang",
-evening: "Sugeng sonten"
-},
-
-{
-language: "Korean",
-morning: "좋은 아침입니다",
-afternoon: "안녕하세요",
-evening: "좋은 저녁입니다"
-},
-
-{
-language: "French",
-morning: "Bonjour",
-afternoon: "Bon après-midi",
-evening: "Bonsoir"
-},
-
-{
-language: "Vietnamese",
-morning: "Chào buổi sáng",
-afternoon: "Chào buổi chiều",
-evening: "Chào buổi tối"
-},
-
-{
-language: "Telugu",
-morning: "శుభోదయం",
-afternoon: "శుభ మధ్యాహ్నం",
-evening: "శుభ సాయంత్రం"
-},
-
-{
-language: "Cantonese",
-morning: "早晨",
-afternoon: "午安",
-evening: "晚上好"
-},
-
-{
-language: "Marathi",
-morning: "शुभ सकाळ",
-afternoon: "शुभ दुपार",
-evening: "शुभ संध्याकाळ"
-},
-
-{
-language: "Tamil",
-morning: "காலை வணக்கம்",
-afternoon: "மதிய வணக்கம்",
-evening: "மாலை வணக்கம்"
-},
-
-{
-language: "Turkish",
-morning: "Günaydın",
-afternoon: "İyi günler",
-evening: "İyi akşamlar"
-},
-
-{
-language: "Urdu",
-morning: "صبح بخیر",
-afternoon: "دوپہر بخیر",
-evening: "شام بخیر"
-},
-
-{
-language: "Min Nan Chinese",
-morning: "早安",
-afternoon: "午安",
-evening: "暗安"
-},
-
-{
-language: "Jinyu Chinese",
-morning: "早上好",
-afternoon: "下午好",
-evening: "晚上好"
-},
-
-{
-language: "Gujarati",
-morning: "સુપ્રભાત",
-afternoon: "શુભ બપોર",
-evening: "શુભ સાંજ"
-},
-
-{
-language: "Polish",
-morning: "Dzień dobry",
-afternoon: "Dzień dobry",
-evening: "Dobry wieczór"
-},
-
-{
-language: "Egyptian Arabic",
-morning: "صباح الخير",
-afternoon: "نهارك سعيد",
-evening: "مساء الخير"
-},
-
-{
-language: "Ukrainian",
-morning: "Доброго ранку",
-afternoon: "Добрий день",
-evening: "Добрий вечір"
-},
-
-{
-language: "Italian",
-morning: "Buongiorno",
-afternoon: "Buon pomeriggio",
-evening: "Buonasera"
-},
-
-{
-language: "Xiang Chinese",
-morning: "早上好",
-afternoon: "下午好",
-evening: "晚上好"
-},
-
-{
-language: "Malayalam",
-morning: "സുപ്രഭാതം",
-afternoon: "ശുഭ ഉച്ചതിരിഞ്ഞ്",
-evening: "ശുഭ സായാഹ്നം"
-},
-
-{
-language: "Hakka Chinese",
-morning: "早晨",
-afternoon: "午安",
-evening: "晚上好"
-},
-
-{
-language: "Kannada",
-morning: "ಶುಭೋದಯ",
-afternoon: "ಶುಭ ಮಧ್ಯಾಹ್ನ",
-evening: "ಶುಭ ಸಂಜೆ"
-},
-
-{
-language: "Odia",
-morning: "ଶୁଭ ସକାଳ",
-afternoon: "ଶୁଭ ଅପରାହ୍ନ",
-evening: "ଶୁଭ ସନ୍ଧ୍ୟା"
-},
-
-{
-language: "Western Punjabi",
-morning: "صبح بخیر",
-afternoon: "دوپہر بخیر",
-evening: "شام بخیر"
-},
-
-{
-language: "Sundanese",
-morning: "Wilujeng enjing",
-afternoon: "Wilujeng siang",
-evening: "Wilujeng sonten"
-},
-
-{
-language: "Eastern Punjabi",
-morning: "ਸ਼ੁਭ ਸਵੇਰ",
-afternoon: "ਸ਼ੁਭ ਦੁਪਹਿਰ",
-evening: "ਸ਼ੁਭ ਸ਼ਾਮ"
-},
-
-{
-language: "Romanian",
-morning: "Bună dimineața",
-afternoon: "Bună ziua",
-evening: "Bună seara"
-},
-
-{
-language: "Bhojpuri",
-morning: "सुप्रभात",
-afternoon: "शुभ दुपहरिया",
-evening: "शुभ साँझ"
-},
-
-{
-language: "South Azerbaijani",
-morning: "Sabahınız xeyir",
-afternoon: "Gününüz xeyir",
-evening: "Axşamınız xeyir"
-},
-
-{
-language: "Persian",
-morning: "صبح بخیر",
-afternoon: "ظهر بخیر",
-evening: "عصر بخیر"
-},
-
-{
-language: "Maithili",
-morning: "सुप्रभात",
-afternoon: "शुभ दुपहर",
-evening: "शुभ साँझ"
-},
-
-{
-language: "Hausa",
-morning: "Barka da safiya",
-afternoon: "Barka da rana",
-evening: "Barka da yamma"
-},
-
-{
-language: "Algerian Arabic",
-morning: "صباح الخير",
-afternoon: "نهارك مبروك",
-evening: "مساء الخير"
-},
-
-{
-language: "Burmese",
-morning: "မင်္ဂလာနံနက်ခင်းပါ",
-afternoon: "မင်္ဂလာနေ့လယ်ခင်းပါ",
-evening: "မင်္ဂလာညနေခင်းပါ"
-},
-
-{
-language: "Serbo-Croatian",
-morning: "Dobro jutro",
-afternoon: "Dobar dan",
-evening: "Dobro veče"
-},
-
-{
-language: "Gan Chinese",
-morning: "早上好",
-afternoon: "下午好",
-evening: "晚上好"
-},
-
-{
-language: "Awadhi",
-morning: "सुप्रभात",
-afternoon: "शुभ दुपहर",
-evening: "शुभ साँझ"
-},
-
-{
-language: "Thai",
-morning: "สวัสดีตอนเช้า",
-afternoon: "สวัสดีตอนบ่าย",
-evening: "สวัสดีตอนเย็น"
-},
-
-{
-language: "Dutch",
-morning: "Goedemorgen",
-afternoon: "Goedemiddag",
-evening: "Goedenavond"
-},
-
-{
-language: "Yoruba",
-morning: "Ẹ káàárọ̀",
-afternoon: "Ẹ káàsán",
-evening: "Ẹ káalẹ́"
-},
-
-{
-language: "Sindhi",
-morning: "صبح جو سلام",
-afternoon: "منجهند جو سلام",
-evening: "شام جو سلام"
-},
-
-{
-language: "Moroccan Arabic",
-morning: "صباح الخير",
-afternoon: "نهارك مبروك",
-evening: "مساء الخير"
-},
-
-{
-language: "Saidi Arabic",
-morning: "صباح الخير",
-afternoon: "نهارك سعيد",
-evening: "مساء الخير"
-},
-
-{
-language: "Northern Uzbek",
-morning: "Xayrli tong",
-afternoon: "Xayrli kun",
-evening: "Xayrli kech"
-},
-
-{
-language: "Malay",
-morning: "Selamat pagi",
-afternoon: "Selamat tengah hari",
-evening: "Selamat petang"
-},
-
-{
-language: "Amharic",
-morning: "እንደምን አደሩ",
-afternoon: "እንደምን ዋሉ",
-evening: "መልካም ምሽት"
-},
-
-{
-language: "Indonesian",
-morning: "Selamat pagi",
-afternoon: "Selamat siang",
-evening: "Selamat malam"
-},
-
-{
-language: "Igbo",
-morning: "Ụtụtụ ọma",
-afternoon: "Ehihie ọma",
-evening: "Mgbede ọma"
-},
-
-{
-language: "Tagalog",
-morning: "Magandang umaga",
-afternoon: "Magandang hapon",
-evening: "Magandang gabi"
-},
-
-{
-language: "Nepali",
-morning: "शुभ प्रभात",
-afternoon: "शुभ दिउँसो",
-evening: "शुभ साँझ"
-},
-
-{
-language: "Sudanese Arabic",
-morning: "صباح الخير",
-afternoon: "نهارك سعيد",
-evening: "مساء الخير"
-},
-
-{
-language: "Saraiki",
-morning: "صبح بخیر",
-afternoon: "دوپہر بخیر",
-evening: "شام بخیر"
-},
-
-{
-language: "Cebuano",
-morning: "Maayong buntag",
-afternoon: "Maayong hapon",
-evening: "Maayong gabii"
-},
-
-{
-language: "North Levantine Arabic",
-morning: "صباح الخير",
-afternoon: "نهارك سعيد",
-evening: "مسا الخير"
-},
-
-{
-language: "Northeastern Thai",
-morning: "สวัสดีตอนเช้า",
-afternoon: "สวัสดีตอนบ่าย",
-evening: "สวัสดีตอนเย็น"
-},
-
-{
-language: "Assamese",
-morning: "সুপ্ৰভাত",
-afternoon: "শুভ আবেলি",
-evening: "শুভ সন্ধিয়া"
-},
-
-{
-language: "Hungarian",
-morning: "Jó reggelt",
-afternoon: "Jó napot",
-evening: "Jó estét"
-},
-
-{
-language: "Chittagonian",
-morning: "শুভ সকাল",
-afternoon: "শুভ অপরাহ্ন",
-evening: "শুভ সন্ধ্যা"
-},
-
-{
-language: "Mesopotamian Arabic",
-morning: "صباح الخير",
-afternoon: "نهارك سعيد",
-evening: "مساء الخير"
-},
-
-{
-language: "Madurese",
-morning: "Salamet lagghu",
-afternoon: "Salamet siang",
-evening: "Salamet malem"
-},
-
-{
-language: "Sinhala",
-morning: "සුභ උදෑසනක්",
-afternoon: "සුභ දහවලක්",
-evening: "සුභ සන්ධ්‍යාවක්"
-},
-
-{
-language: "Haryanvi",
-morning: "सुप्रभात",
-afternoon: "शुभ दोपहर",
-evening: "शुभ संध्या"
-},
-
-{
-language: "Marwari",
-morning: "सुप्रभात",
-afternoon: "शुभ दोपहर",
-evening: "शुभ संध्या"
-},
-
-{
-language: "Czech",
-morning: "Dobré ráno",
-afternoon: "Dobré odpoledne",
-evening: "Dobrý večer"
-},
-
-{
-language: "Greek",
-morning: "Καλημέρα",
-afternoon: "Καλό απόγευμα",
-evening: "Καλησπέρα"
-},
-
-{
-language: "Magahi",
-morning: "सुप्रभात",
-afternoon: "शुभ दुपहर",
-evening: "शुभ साँझ"
-},
-
-{
-language: "Chhattisgarhi",
-morning: "सुप्रभात",
-afternoon: "शुभ दुपहर",
-evening: "शुभ संझा"
-}
+    {
+        language: "Mandarin Chinese",
+        morning: "早上好",
+        afternoon: "下午好",
+        evening: "晚上好"
+    },
+
+    {
+        language: "Spanish",
+        morning: "Buenos días",
+        afternoon: "Buenas tardes",
+        evening: "Buenas noches"
+    },
+
+    {
+        language: "English",
+        morning: "Good morning",
+        afternoon: "Good afternoon",
+        evening: "Good evening"
+    },
+
+    {
+        language: "Bengali",
+        morning: "শুভ সকাল",
+        afternoon: "শুভ অপরাহ্ন",
+        evening: "শুভ সন্ধ্যা"
+    },
+
+    {
+        language: "Hindi",
+        morning: "सुप्रभात",
+        afternoon: "नमस्कार",
+        evening: "शुभ संध्या"
+    },
+
+    {
+        language: "Portuguese",
+        morning: "Bom dia",
+        afternoon: "Boa tarde",
+        evening: "Boa noite"
+    },
+
+    {
+        language: "Russian",
+        morning: "Доброе утро",
+        afternoon: "Добрый день",
+        evening: "Добрый вечер"
+    },
+
+    {
+        language: "Japanese",
+        morning: "おはようございます",
+        afternoon: "こんにちは",
+        evening: "こんばんは"
+    },
+
+    {
+        language: "German",
+        morning: "Guten Morgen",
+        afternoon: "Guten Tag",
+        evening: "Guten Abend"
+    },
+
+    {
+        language: "Wu Chinese",
+        morning: "早上好",
+        afternoon: "下午好",
+        evening: "晚上好"
+    },
+
+    {
+        language: "Javanese",
+        morning: "Sugeng enjing",
+        afternoon: "Sugeng siang",
+        evening: "Sugeng sonten"
+    },
+
+    {
+        language: "Korean",
+        morning: "좋은 아침입니다",
+        afternoon: "안녕하세요",
+        evening: "좋은 저녁입니다"
+    },
+
+    {
+        language: "French",
+        morning: "Bonjour",
+        afternoon: "Bon après-midi",
+        evening: "Bonsoir"
+    },
+
+    {
+        language: "Vietnamese",
+        morning: "Chào buổi sáng",
+        afternoon: "Chào buổi chiều",
+        evening: "Chào buổi tối"
+    },
+
+    {
+        language: "Telugu",
+        morning: "శుభోదయం",
+        afternoon: "శుభ మధ్యాహ్నం",
+        evening: "శుభ సాయంత్రం"
+    },
+
+    {
+        language: "Cantonese",
+        morning: "早晨",
+        afternoon: "午安",
+        evening: "晚上好"
+    },
+
+    {
+        language: "Marathi",
+        morning: "शुभ सकाळ",
+        afternoon: "शुभ दुपार",
+        evening: "शुभ संध्याकाळ"
+    },
+
+    {
+        language: "Tamil",
+        morning: "காலை வணக்கம்",
+        afternoon: "மதிய வணக்கம்",
+        evening: "மாலை வணக்கம்"
+    },
+
+    {
+        language: "Turkish",
+        morning: "Günaydın",
+        afternoon: "İyi günler",
+        evening: "İyi akşamlar"
+    },
+
+    {
+        language: "Urdu",
+        morning: "صبح بخیر",
+        afternoon: "دوپہر بخیر",
+        evening: "شام بخیر"
+    },
+
+    {
+        language: "Min Nan Chinese",
+        morning: "早安",
+        afternoon: "午安",
+        evening: "暗安"
+    },
+
+    {
+        language: "Jinyu Chinese",
+        morning: "早上好",
+        afternoon: "下午好",
+        evening: "晚上好"
+    },
+
+    {
+        language: "Gujarati",
+        morning: "સુપ્રભાત",
+        afternoon: "શુભ બપોર",
+        evening: "શુભ સાંજ"
+    },
+
+    {
+        language: "Polish",
+        morning: "Dzień dobry",
+        afternoon: "Dzień dobry",
+        evening: "Dobry wieczór"
+    },
+
+    {
+        language: "Egyptian Arabic",
+        morning: "صباح الخير",
+        afternoon: "نهارك سعيد",
+        evening: "مساء الخير"
+    },
+
+    {
+        language: "Ukrainian",
+        morning: "Доброго ранку",
+        afternoon: "Добрий день",
+        evening: "Добрий вечір"
+    },
+
+    {
+        language: "Italian",
+        morning: "Buongiorno",
+        afternoon: "Buon pomeriggio",
+        evening: "Buonasera"
+    },
+
+    {
+        language: "Xiang Chinese",
+        morning: "早上好",
+        afternoon: "下午好",
+        evening: "晚上好"
+    },
+
+    {
+        language: "Malayalam",
+        morning: "സുപ്രഭാതം",
+        afternoon: "ശുഭ ഉച്ചതിരിഞ്ഞ്",
+        evening: "ശുഭ സായാഹ്നം"
+    },
+
+    {
+        language: "Hakka Chinese",
+        morning: "早晨",
+        afternoon: "午安",
+        evening: "晚上好"
+    },
+
+    {
+        language: "Kannada",
+        morning: "ಶುಭೋದಯ",
+        afternoon: "ಶುಭ ಮಧ್ಯಾಹ್ನ",
+        evening: "ಶುಭ ಸಂಜೆ"
+    },
+
+    {
+        language: "Odia",
+        morning: "ଶୁଭ ସକାଳ",
+        afternoon: "ଶୁଭ ଅପରାହ୍ନ",
+        evening: "ଶୁଭ ସନ୍ଧ୍ୟା"
+    },
+
+    {
+        language: "Western Punjabi",
+        morning: "صبح بخیر",
+        afternoon: "دوپہر بخیر",
+        evening: "شام بخیر"
+    },
+
+    {
+        language: "Sundanese",
+        morning: "Wilujeng enjing",
+        afternoon: "Wilujeng siang",
+        evening: "Wilujeng sonten"
+    },
+
+    {
+        language: "Eastern Punjabi",
+        morning: "ਸ਼ੁਭ ਸਵੇਰ",
+        afternoon: "ਸ਼ੁਭ ਦੁਪਹਿਰ",
+        evening: "ਸ਼ੁਭ ਸ਼ਾਮ"
+    },
+
+    {
+        language: "Romanian",
+        morning: "Bună dimineața",
+        afternoon: "Bună ziua",
+        evening: "Bună seara"
+    },
+
+    {
+        language: "Bhojpuri",
+        morning: "सुप्रभात",
+        afternoon: "शुभ दुपहरिया",
+        evening: "शुभ साँझ"
+    },
+
+    {
+        language: "South Azerbaijani",
+        morning: "Sabahınız xeyir",
+        afternoon: "Gününüz xeyir",
+        evening: "Axşamınız xeyir"
+    },
+
+    {
+        language: "Persian",
+        morning: "صبح بخیر",
+        afternoon: "ظهر بخیر",
+        evening: "عصر بخیر"
+    },
+
+    {
+        language: "Maithili",
+        morning: "सुप्रभात",
+        afternoon: "शुभ दुपहर",
+        evening: "शुभ साँझ"
+    },
+
+    {
+        language: "Hausa",
+        morning: "Barka da safiya",
+        afternoon: "Barka da rana",
+        evening: "Barka da yamma"
+    },
+
+    {
+        language: "Algerian Arabic",
+        morning: "صباح الخير",
+        afternoon: "نهارك مبروك",
+        evening: "مساء الخير"
+    },
+
+    {
+        language: "Burmese",
+        morning: "မင်္ဂလာနံနက်ခင်းပါ",
+        afternoon: "မင်္ဂလာနေ့လယ်ခင်းပါ",
+        evening: "မင်္ဂလာညနေခင်းပါ"
+    },
+
+    {
+        language: "Serbo-Croatian",
+        morning: "Dobro jutro",
+        afternoon: "Dobar dan",
+        evening: "Dobro veče"
+    },
+
+    {
+        language: "Gan Chinese",
+        morning: "早上好",
+        afternoon: "下午好",
+        evening: "晚上好"
+    },
+
+    {
+        language: "Awadhi",
+        morning: "सुप्रभात",
+        afternoon: "शुभ दुपहर",
+        evening: "शुभ साँझ"
+    },
+
+    {
+        language: "Thai",
+        morning: "สวัสดีตอนเช้า",
+        afternoon: "สวัสดีตอนบ่าย",
+        evening: "สวัสดีตอนเย็น"
+    },
+
+    {
+        language: "Dutch",
+        morning: "Goedemorgen",
+        afternoon: "Goedemiddag",
+        evening: "Goedenavond"
+    },
+
+    {
+        language: "Yoruba",
+        morning: "Ẹ káàárọ̀",
+        afternoon: "Ẹ káàsán",
+        evening: "Ẹ káalẹ́"
+    },
+
+    {
+        language: "Sindhi",
+        morning: "صبح جو سلام",
+        afternoon: "منجهند جو سلام",
+        evening: "شام جو سلام"
+    },
+
+    {
+        language: "Moroccan Arabic",
+        morning: "صباح الخير",
+        afternoon: "نهارك مبروك",
+        evening: "مساء الخير"
+    },
+
+    {
+        language: "Saidi Arabic",
+        morning: "صباح الخير",
+        afternoon: "نهارك سعيد",
+        evening: "مساء الخير"
+    },
+
+    {
+        language: "Northern Uzbek",
+        morning: "Xayrli tong",
+        afternoon: "Xayrli kun",
+        evening: "Xayrli kech"
+    },
+
+    {
+        language: "Malay",
+        morning: "Selamat pagi",
+        afternoon: "Selamat tengah hari",
+        evening: "Selamat petang"
+    },
+
+    {
+        language: "Amharic",
+        morning: "እንደምን አደሩ",
+        afternoon: "እንደምን ዋሉ",
+        evening: "መልካም ምሽት"
+    },
+
+    {
+        language: "Indonesian",
+        morning: "Selamat pagi",
+        afternoon: "Selamat siang",
+        evening: "Selamat malam"
+    },
+
+    {
+        language: "Igbo",
+        morning: "Ụtụtụ ọma",
+        afternoon: "Ehihie ọma",
+        evening: "Mgbede ọma"
+    },
+
+    {
+        language: "Tagalog",
+        morning: "Magandang umaga",
+        afternoon: "Magandang hapon",
+        evening: "Magandang gabi"
+    },
+
+    {
+        language: "Nepali",
+        morning: "शुभ प्रभात",
+        afternoon: "शुभ दिउँसो",
+        evening: "शुभ साँझ"
+    },
+
+    {
+        language: "Sudanese Arabic",
+        morning: "صباح الخير",
+        afternoon: "نهارك سعيد",
+        evening: "مساء الخير"
+    },
+
+    {
+        language: "Saraiki",
+        morning: "صبح بخیر",
+        afternoon: "دوپہر بخیر",
+        evening: "شام بخیر"
+    },
+
+    {
+        language: "Cebuano",
+        morning: "Maayong buntag",
+        afternoon: "Maayong hapon",
+        evening: "Maayong gabii"
+    },
+
+    {
+        language: "North Levantine Arabic",
+        morning: "صباح الخير",
+        afternoon: "نهارك سعيد",
+        evening: "مسا الخير"
+    },
+
+    {
+        language: "Northeastern Thai",
+        morning: "สวัสดีตอนเช้า",
+        afternoon: "สวัสดีตอนบ่าย",
+        evening: "สวัสดีตอนเย็น"
+    },
+
+    {
+        language: "Assamese",
+        morning: "সুপ্ৰভাত",
+        afternoon: "শুভ আবেলি",
+        evening: "শুভ সন্ধিয়া"
+    },
+
+    {
+        language: "Hungarian",
+        morning: "Jó reggelt",
+        afternoon: "Jó napot",
+        evening: "Jó estét"
+    },
+
+    {
+        language: "Chittagonian",
+        morning: "শুভ সকাল",
+        afternoon: "শুভ অপরাহ্ন",
+        evening: "শুভ সন্ধ্যা"
+    },
+
+    {
+        language: "Mesopotamian Arabic",
+        morning: "صباح الخير",
+        afternoon: "نهارك سعيد",
+        evening: "مساء الخير"
+    },
+
+    {
+        language: "Madurese",
+        morning: "Salamet lagghu",
+        afternoon: "Salamet siang",
+        evening: "Salamet malem"
+    },
+
+    {
+        language: "Sinhala",
+        morning: "සුභ උදෑසනක්",
+        afternoon: "සුභ දහවලක්",
+        evening: "සුභ සන්ධ්‍යාවක්"
+    },
+
+    {
+        language: "Haryanvi",
+        morning: "सुप्रभात",
+        afternoon: "शुभ दोपहर",
+        evening: "शुभ संध्या"
+    },
+
+    {
+        language: "Marwari",
+        morning: "सुप्रभात",
+        afternoon: "शुभ दोपहर",
+        evening: "शुभ संध्या"
+    },
+
+    {
+        language: "Czech",
+        morning: "Dobré ráno",
+        afternoon: "Dobré odpoledne",
+        evening: "Dobrý večer"
+    },
+
+    {
+        language: "Greek",
+        morning: "Καλημέρα",
+        afternoon: "Καλό απόγευμα",
+        evening: "Καλησπέρα"
+    },
+
+    {
+        language: "Magahi",
+        morning: "सुप्रभात",
+        afternoon: "शुभ दुपहर",
+        evening: "शुभ साँझ"
+    },
+
+    {
+        language: "Chhattisgarhi",
+        morning: "सुप्रभात",
+        afternoon: "शुभ दुपहर",
+        evening: "शुभ संझा"
+    }
 
 ];
 
 
 /* =========================================================
-   GREETING PERIOD
+   GREETING TYPE
 ========================================================= */
 
 function getGreetingPeriod() {
 
     const hour =
-    new Date().getHours();
+        new Date().getHours();
 
 
     if (
@@ -5486,9 +5677,9 @@ function getGreetingPeriod() {
 ========================================================= */
 
 const greetingText =
-document.getElementById(
-    "greetingText"
-);
+    document.getElementById(
+        "greetingText"
+    );
 
 
 let greetingIndex = 0;
@@ -5498,13 +5689,13 @@ let greetingCharacter = 0;
 let deletingGreeting = false;
 
 let greetingPeriod =
-getGreetingPeriod();
+    getGreetingPeriod();
 
 
 function animateGreeting() {
 
     const newPeriod =
-    getGreetingPeriod();
+        getGreetingPeriod();
 
 
     if (
@@ -5513,7 +5704,7 @@ function animateGreeting() {
     ) {
 
         greetingPeriod =
-        newPeriod;
+            newPeriod;
 
         greetingIndex = 0;
 
@@ -5525,19 +5716,19 @@ function animateGreeting() {
 
 
     const entry =
-    greetingLanguages[
-        greetingIndex
-    ];
+        greetingLanguages[
+            greetingIndex
+        ];
 
 
     const phrase =
-    entry[
-        greetingPeriod
-    ];
+        entry[
+            greetingPeriod
+        ];
 
 
     greetingText.title =
-    entry.language;
+        entry.language;
 
 
     if (
@@ -5545,10 +5736,10 @@ function animateGreeting() {
     ) {
 
         greetingText.textContent =
-        phrase.substring(
-            0,
-            greetingCharacter + 1
-        );
+            phrase.substring(
+                0,
+                greetingCharacter + 1
+            );
 
 
         greetingCharacter++;
@@ -5560,7 +5751,7 @@ function animateGreeting() {
         ) {
 
             deletingGreeting =
-            true;
+                true;
 
 
             setTimeout(
@@ -5576,10 +5767,10 @@ function animateGreeting() {
     } else {
 
         greetingText.textContent =
-        phrase.substring(
-            0,
-            greetingCharacter - 1
-        );
+            phrase.substring(
+                0,
+                greetingCharacter - 1
+            );
 
 
         greetingCharacter--;
@@ -5590,18 +5781,18 @@ function animateGreeting() {
         ) {
 
             deletingGreeting =
-            false;
+                false;
 
 
             greetingIndex =
 
-            (
-                greetingIndex + 1
-            )
+                (
+                    greetingIndex + 1
+                )
 
-            %
+                %
 
-            greetingLanguages.length;
+                greetingLanguages.length;
 
 
             setTimeout(
@@ -5635,9 +5826,9 @@ function animateGreeting() {
 if (reducedMotion) {
 
     greetingText.textContent =
-    greetingLanguages[0][
-        greetingPeriod
-    ];
+        greetingLanguages[0][
+            greetingPeriod
+        ];
 
 } else {
 
@@ -5650,7 +5841,10 @@ if (reducedMotion) {
    POLYNOMIAL ARITHMETIC
 ========================================================= */
 
-function mod(a, p) {
+function mod(
+    a,
+    p
+) {
 
     return (
         (
@@ -5665,10 +5859,12 @@ function mod(a, p) {
 }
 
 
-function trimPolynomial(poly) {
+function trimPolynomial(
+    poly
+) {
 
     const result =
-    poly.slice();
+        poly.slice();
 
 
     while (
@@ -5689,10 +5885,14 @@ function trimPolynomial(poly) {
 }
 
 
-function polynomialDegree(poly) {
+function polynomialDegree(
+    poly
+) {
 
     return (
-        trimPolynomial(poly)
+        trimPolynomial(
+            poly
+        )
         .length
         -
         1
@@ -5701,13 +5901,16 @@ function polynomialDegree(poly) {
 }
 
 
-function modularInverse(a, p) {
+function modularInverse(
+    a,
+    p
+) {
 
     a =
-    mod(
-        a,
-        p
-    );
+        mod(
+            a,
+            p
+        );
 
 
     for (
@@ -5750,71 +5953,71 @@ function dividePolynomials(
 ) {
 
     let remainder =
-    trimPolynomial(
+        trimPolynomial(
 
-        dividend.map(
-            coefficient =>
-            mod(
-                coefficient,
-                p
+            dividend.map(
+                coefficient =>
+                mod(
+                    coefficient,
+                    p
+                )
             )
-        )
 
-    );
+        );
 
 
     divisor =
-    trimPolynomial(
+        trimPolynomial(
 
-        divisor.map(
-            coefficient =>
-            mod(
-                coefficient,
-                p
+            divisor.map(
+                coefficient =>
+                mod(
+                    coefficient,
+                    p
+                )
             )
-        )
 
-    );
+        );
 
 
     const divisorDegree =
-    polynomialDegree(
-        divisor
-    );
+        polynomialDegree(
+            divisor
+        );
 
 
     const divisorLeading =
-    divisor[
-        divisor.length - 1
-    ];
+        divisor[
+            divisor.length - 1
+        ];
 
 
     const inverseLeading =
-    modularInverse(
-        divisorLeading,
-        p
-    );
+        modularInverse(
+            divisorLeading,
+            p
+        );
 
 
     const quotient =
-    Array(
+        Array(
 
-        Math.max(
+            Math.max(
 
-            1,
+                1,
 
-            polynomialDegree(
-                remainder
+                polynomialDegree(
+                    remainder
+                )
+                -
+                divisorDegree
+                +
+                1
+
             )
-            -
-            divisorDegree
-            +
-            1
 
         )
-
-    )
-    .fill(0);
+        .fill(0);
 
 
     while (
@@ -5836,37 +6039,37 @@ function dividePolynomials(
     ) {
 
         const remainderDegree =
-        polynomialDegree(
-            remainder
-        );
+            polynomialDegree(
+                remainder
+            );
 
 
         const difference =
 
-        remainderDegree
-        -
-        divisorDegree;
+            remainderDegree
+            -
+            divisorDegree;
 
 
         const coefficient =
 
-        mod(
+            mod(
 
-            remainder[
-                remainder.length - 1
-            ]
-            *
-            inverseLeading,
+                remainder[
+                    remainder.length - 1
+                ]
+                *
+                inverseLeading,
 
-            p
+                p
 
-        );
+            );
 
 
         quotient[
             difference
         ] =
-        coefficient;
+            coefficient;
 
 
         for (
@@ -5879,27 +6082,27 @@ function dividePolynomials(
                 i + difference
             ] =
 
-            mod(
+                mod(
 
-                remainder[
-                    i + difference
-                ]
-                -
-                coefficient
-                *
-                divisor[i],
+                    remainder[
+                        i + difference
+                    ]
+                    -
+                    coefficient
+                    *
+                    divisor[i],
 
-                p
+                    p
 
-            );
+                );
 
         }
 
 
         remainder =
-        trimPolynomial(
-            remainder
-        );
+            trimPolynomial(
+                remainder
+            );
 
     }
 
@@ -5907,14 +6110,14 @@ function dividePolynomials(
     return {
 
         quotient:
-        trimPolynomial(
-            quotient
-        ),
+            trimPolynomial(
+                quotient
+            ),
 
         remainder:
-        trimPolynomial(
-            remainder
-        )
+            trimPolynomial(
+                remainder
+            )
 
     };
 
@@ -5931,15 +6134,15 @@ function findPolynomialFactor(
 ) {
 
     const degree =
-    polynomialDegree(
-        polynomial
-    );
+        polynomialDegree(
+            polynomial
+        );
 
 
     const maximumDegree =
-    Math.floor(
-        degree / 2
-    );
+        Math.floor(
+            degree / 2
+        );
 
 
     for (
@@ -5949,10 +6152,10 @@ function findPolynomialFactor(
     ) {
 
         const candidates =
-        Math.pow(
-            p,
-            factorDegree
-        );
+            Math.pow(
+                p,
+                factorDegree
+            );
 
 
         for (
@@ -5962,11 +6165,11 @@ function findPolynomialFactor(
         ) {
 
             let value =
-            code;
+                code;
 
 
             const candidate =
-            [];
+                [];
 
 
             for (
@@ -5981,9 +6184,9 @@ function findPolynomialFactor(
 
 
                 value =
-                Math.floor(
-                    value / p
-                );
+                    Math.floor(
+                        value / p
+                    );
 
             }
 
@@ -5993,21 +6196,21 @@ function findPolynomialFactor(
 
             const division =
 
-            dividePolynomials(
-                polynomial,
-                candidate,
-                p
-            );
+                dividePolynomials(
+                    polynomial,
+                    candidate,
+                    p
+                );
 
 
             const zeroRemainder =
 
-            division
-            .remainder
-            .every(
-                coefficient =>
-                coefficient === 0
-            );
+                division
+                .remainder
+                .every(
+                    coefficient =>
+                    coefficient === 0
+                );
 
 
             if (
@@ -6017,10 +6220,10 @@ function findPolynomialFactor(
                 return {
 
                     factor:
-                    candidate,
+                        candidate,
 
                     quotient:
-                    division.quotient
+                        division.quotient
 
                 };
 
@@ -6037,7 +6240,7 @@ function findPolynomialFactor(
 
 
 /* =========================================================
-   COMPLETE FACTORIZATION
+   FACTORIZATION
 ========================================================= */
 
 function factorPolynomial(
@@ -6046,9 +6249,9 @@ function factorPolynomial(
 ) {
 
     polynomial =
-    trimPolynomial(
-        polynomial
-    );
+        trimPolynomial(
+            polynomial
+        );
 
 
     if (
@@ -6067,10 +6270,10 @@ function factorPolynomial(
 
 
     const found =
-    findPolynomialFactor(
-        polynomial,
-        p
-    );
+        findPolynomialFactor(
+            polynomial,
+            p
+        );
 
 
     if (!found) {
@@ -6117,7 +6320,7 @@ function polynomialIsIrreducible(
 
 
 /* =========================================================
-   DISPLAY POLYNOMIAL
+   POLYNOMIAL DISPLAY
 ========================================================= */
 
 function polynomialToHTML(
@@ -6125,18 +6328,18 @@ function polynomialToHTML(
 ) {
 
     polynomial =
-    trimPolynomial(
-        polynomial
-    );
+        trimPolynomial(
+            polynomial
+        );
 
 
     const terms =
-    [];
+        [];
 
 
     for (
         let degree =
-        polynomial.length - 1;
+            polynomial.length - 1;
 
         degree >= 0;
 
@@ -6144,9 +6347,9 @@ function polynomialToHTML(
     ) {
 
         const coefficient =
-        polynomial[
-            degree
-        ];
+            polynomial[
+                degree
+            ];
 
 
         if (
@@ -6159,7 +6362,7 @@ function polynomialToHTML(
 
 
         let term =
-        "";
+            "";
 
 
         if (
@@ -6167,9 +6370,9 @@ function polynomialToHTML(
         ) {
 
             term =
-            String(
-                coefficient
-            );
+                String(
+                    coefficient
+                );
 
         } else {
 
@@ -6178,13 +6381,13 @@ function polynomialToHTML(
             ) {
 
                 term +=
-                coefficient;
+                    coefficient;
 
             }
 
 
             term +=
-            "x";
+                "x";
 
 
             if (
@@ -6193,11 +6396,11 @@ function polynomialToHTML(
 
                 term +=
 
-                "<sup>"
-                +
-                degree
-                +
-                "</sup>";
+                    "<sup>"
+                    +
+                    degree
+                    +
+                    "</sup>";
 
             }
 
@@ -6229,18 +6432,18 @@ function factorizationToHTML(
 ) {
 
     return factors
-    .map(
-        factor =>
+        .map(
+            factor =>
 
-        "("
-        +
-        polynomialToHTML(
-            factor
+            "("
+            +
+            polynomialToHTML(
+                factor
+            )
+            +
+            ")"
         )
-        +
-        ")"
-    )
-    .join("");
+        .join("");
 
 }
 
@@ -6249,10 +6452,12 @@ function factorizationToHTML(
    SEEDED RANDOMNESS
 ========================================================= */
 
-function stringHash(text) {
+function stringHash(
+    text
+) {
 
     let hash =
-    2166136261;
+        2166136261;
 
 
     for (
@@ -6262,14 +6467,14 @@ function stringHash(text) {
     ) {
 
         hash ^=
-        text.charCodeAt(i);
+            text.charCodeAt(i);
 
 
         hash =
-        Math.imul(
-            hash,
-            16777619
-        );
+            Math.imul(
+                hash,
+                16777619
+            );
 
     }
 
@@ -6281,32 +6486,34 @@ function stringHash(text) {
 }
 
 
-function seededRandom(seed) {
+function seededRandom(
+    seed
+) {
 
     return function () {
 
         seed +=
-        0x6D2B79F5;
+            0x6D2B79F5;
 
 
         let t =
-        seed;
+            seed;
 
 
         t =
-        Math.imul(
-            t ^ t >>> 15,
-            t | 1
-        );
+            Math.imul(
+                t ^ t >>> 15,
+                t | 1
+            );
 
 
         t ^=
-        t
-        +
-        Math.imul(
-            t ^ t >>> 7,
-            t | 61
-        );
+            t
+            +
+            Math.imul(
+                t ^ t >>> 7,
+                t | 61
+            );
 
 
         return (
@@ -6326,36 +6533,40 @@ function seededRandom(seed) {
 }
 
 
+/* =========================================================
+   UTC DATE KEY
+========================================================= */
+
 function utcDateKey() {
 
     const now =
-    new Date();
+        new Date();
 
 
     const year =
-    now.getUTCFullYear();
+        now.getUTCFullYear();
 
 
     const month =
 
-    String(
-        now.getUTCMonth() + 1
-    )
-    .padStart(
-        2,
-        "0"
-    );
+        String(
+            now.getUTCMonth() + 1
+        )
+        .padStart(
+            2,
+            "0"
+        );
 
 
     const day =
 
-    String(
-        now.getUTCDate()
-    )
-    .padStart(
-        2,
-        "0"
-    );
+        String(
+            now.getUTCDate()
+        )
+        .padStart(
+            2,
+            "0"
+        );
 
 
     return (
@@ -6381,19 +6592,16 @@ const difficultySettings = {
 
     easy: {
 
-        label:
-        "Easy",
+        label: "Easy",
 
-        primes:
-        [
+        primes: [
             2,
             3,
             5,
             7
         ],
 
-        degrees:
-        [
+        degrees: [
             2
         ]
 
@@ -6402,19 +6610,16 @@ const difficultySettings = {
 
     medium: {
 
-        label:
-        "Medium",
+        label: "Medium",
 
-        primes:
-        [
+        primes: [
             3,
             5,
             7,
             11
         ],
 
-        degrees:
-        [
+        degrees: [
             3
         ]
 
@@ -6423,19 +6628,16 @@ const difficultySettings = {
 
     hard: {
 
-        label:
-        "Hard",
+        label: "Hard",
 
-        primes:
-        [
+        primes: [
             2,
             3,
             5,
             7
         ],
 
-        degrees:
-        [
+        degrees: [
             4,
             5
         ]
@@ -6445,18 +6647,15 @@ const difficultySettings = {
 
     extreme: {
 
-        label:
-        "Extreme",
+        label: "Extreme",
 
-        primes:
-        [
+        primes: [
             2,
             3,
             5
         ],
 
-        degrees:
-        [
+        degrees: [
             6,
             7
         ]
@@ -6467,7 +6666,7 @@ const difficultySettings = {
 
 
 /* =========================================================
-   GENERATE DAILY POLYNOMIAL
+   GENERATE CANDIDATE
 ========================================================= */
 
 function generateCandidatePolynomial(
@@ -6477,23 +6676,23 @@ function generateCandidatePolynomial(
 ) {
 
     const coefficients =
-    Array(
-        degree + 1
-    )
-    .fill(0);
+        Array(
+            degree + 1
+        )
+        .fill(0);
 
 
     coefficients[0] =
 
-    1
-    +
-    Math.floor(
-        random()
-        *
-        (
-            p - 1
-        )
-    );
+        1
+        +
+        Math.floor(
+            random()
+            *
+            (
+                p - 1
+            )
+        );
 
 
     for (
@@ -6504,11 +6703,11 @@ function generateCandidatePolynomial(
 
         coefficients[i] =
 
-        Math.floor(
-            random()
-            *
-            p
-        );
+            Math.floor(
+                random()
+                *
+                p
+            );
 
     }
 
@@ -6516,7 +6715,7 @@ function generateCandidatePolynomial(
     coefficients[
         degree
     ] =
-    1;
+        1;
 
 
     return coefficients;
@@ -6524,72 +6723,82 @@ function generateCandidatePolynomial(
 }
 
 
+/* =========================================================
+   DAILY POLYNOMIAL
+========================================================= */
+
 function generateDailyPolynomial(
     difficulty
 ) {
 
     const settings =
-    difficultySettings[
-        difficulty
-    ];
+        difficultySettings[
+            difficulty
+        ];
 
 
     const seed =
 
-    stringHash(
+        stringHash(
 
-        utcDateKey()
-        +
-        "::"
-        +
-        difficulty
-        +
-        "::anit-polynomial"
+            utcDateKey()
+            +
+            "::"
+            +
+            difficulty
+            +
+            "::anit-polynomial"
 
-    );
+        );
 
 
     const random =
-    seededRandom(
-        seed
-    );
+        seededRandom(
+            seed
+        );
 
 
     const p =
 
-    settings.primes[
+        settings.primes[
 
-        Math.floor(
-            random()
-            *
-            settings.primes.length
-        )
+            Math.floor(
+                random()
+                *
+                settings.primes.length
+            )
 
-    ];
+        ];
 
 
     const degree =
 
-    settings.degrees[
+        settings.degrees[
 
-        Math.floor(
-            random()
-            *
-            settings.degrees.length
-        )
+            Math.floor(
+                random()
+                *
+                settings.degrees.length
+            )
 
-    ];
+        ];
 
+
+    /*
+       Make roughly half the daily
+       challenges irreducible and half
+       reducible.
+    */
 
     const targetIrreducible =
 
-    random()
-    >
-    0.5;
+        random()
+        >
+        0.5;
 
 
     let polynomial =
-    null;
+        null;
 
 
     for (
@@ -6600,19 +6809,19 @@ function generateDailyPolynomial(
 
         const candidate =
 
-        generateCandidatePolynomial(
-            p,
-            degree,
-            random
-        );
+            generateCandidatePolynomial(
+                p,
+                degree,
+                random
+            );
 
 
         const irreducible =
 
-        polynomialIsIrreducible(
-            candidate,
-            p
-        );
+            polynomialIsIrreducible(
+                candidate,
+                p
+            );
 
 
         if (
@@ -6622,7 +6831,7 @@ function generateDailyPolynomial(
         ) {
 
             polynomial =
-            candidate;
+                candidate;
 
             break;
 
@@ -6635,11 +6844,11 @@ function generateDailyPolynomial(
 
         polynomial =
 
-        generateCandidatePolynomial(
-            p,
-            degree,
-            random
-        );
+            generateCandidatePolynomial(
+                p,
+                degree,
+                random
+            );
 
     }
 
@@ -6647,13 +6856,13 @@ function generateDailyPolynomial(
     return {
 
         p:
-        p,
+            p,
 
         polynomial:
-        polynomial,
+            polynomial,
 
         degree:
-        degree
+            degree
 
     };
 
@@ -6661,38 +6870,44 @@ function generateDailyPolynomial(
 
 
 /* =========================================================
-   SCORE + STREAK
+   DAILY SCORE
 ========================================================= */
 
 const SCORE_KEY =
-"anit-polynomial-score";
+    "anit-polynomial-score";
 
 
 const STREAK_KEY =
-"anit-polynomial-streak";
+    "anit-polynomial-streak";
+
+
+const CELEBRATION_KEY =
+    "anit-polynomial-perfect-celebration";
 
 
 function loadDailyScore() {
 
     const date =
-    utcDateKey();
+        utcDateKey();
 
 
-    let data = null;
+    let data =
+        null;
 
 
     try {
 
         data =
-        JSON.parse(
-            localStorage.getItem(
-                SCORE_KEY
-            )
-        );
+            JSON.parse(
+                localStorage.getItem(
+                    SCORE_KEY
+                )
+            );
 
     } catch {
 
-        data = null;
+        data =
+            null;
 
     }
 
@@ -6706,21 +6921,21 @@ function loadDailyScore() {
         data = {
 
             date:
-            date,
+                date,
 
             levels: {
 
                 easy:
-                null,
+                    null,
 
                 medium:
-                null,
+                    null,
 
                 hard:
-                null,
+                    null,
 
                 extreme:
-                null
+                    null
 
             }
 
@@ -6742,7 +6957,9 @@ function loadDailyScore() {
 }
 
 
-function saveDailyScore(data) {
+function saveDailyScore(
+    data
+) {
 
     localStorage.setItem(
         SCORE_KEY,
@@ -6754,39 +6971,51 @@ function saveDailyScore(data) {
 }
 
 
-function calculateScore(data) {
+function calculateScore(
+    data
+) {
 
     return Object
-    .values(
-        data.levels
-    )
-    .filter(
-        value =>
-        value === true
-    )
-    .length;
+        .values(
+            data.levels
+        )
+        .filter(
+            value =>
+            value === true
+        )
+        .length;
 
 }
 
+
+/* =========================================================
+   STREAK
+========================================================= */
 
 function previousUTCDate(
     dateString
 ) {
 
     const parts =
-    dateString
-    .split("-")
-    .map(Number);
+        dateString
+        .split("-")
+        .map(Number);
 
 
     const date =
-    new Date(
-        Date.UTC(
-            parts[0],
-            parts[1] - 1,
-            parts[2]
-        )
-    );
+        new Date(
+
+            Date.UTC(
+
+                parts[0],
+
+                parts[1] - 1,
+
+                parts[2]
+
+            )
+
+        );
 
 
     date.setUTCDate(
@@ -6795,32 +7024,34 @@ function previousUTCDate(
 
 
     return date
-    .toISOString()
-    .slice(
-        0,
-        10
-    );
+        .toISOString()
+        .slice(
+            0,
+            10
+        );
 
 }
 
 
 function loadStreak() {
 
-    let streak = null;
+    let streak =
+        null;
 
 
     try {
 
         streak =
-        JSON.parse(
-            localStorage.getItem(
-                STREAK_KEY
-            )
-        );
+            JSON.parse(
+                localStorage.getItem(
+                    STREAK_KEY
+                )
+            );
 
     } catch {
 
-        streak = null;
+        streak =
+            null;
 
     }
 
@@ -6830,10 +7061,10 @@ function loadStreak() {
         streak = {
 
             count:
-            0,
+                0,
 
             lastCorrectDate:
-            null
+                null
 
         };
 
@@ -6848,11 +7079,11 @@ function loadStreak() {
 function registerCorrectDay() {
 
     const today =
-    utcDateKey();
+        utcDateKey();
 
 
     const streak =
-    loadStreak();
+        loadStreak();
 
 
     if (
@@ -6879,13 +7110,13 @@ function registerCorrectDay() {
     } else {
 
         streak.count =
-        1;
+            1;
 
     }
 
 
     streak.lastCorrectDate =
-    today;
+        today;
 
 
     localStorage.setItem(
@@ -6904,148 +7135,396 @@ function registerCorrectDay() {
 function displayScore() {
 
     const data =
-    loadDailyScore();
+        loadDailyScore();
 
 
     const score =
-    calculateScore(
-        data
-    );
+        calculateScore(
+            data
+        );
 
 
     const streak =
-    loadStreak();
+        loadStreak();
 
 
     document
-    .getElementById(
-        "todayScore"
-    )
-    .textContent =
-    score + "/4";
+        .getElementById(
+            "todayScore"
+        )
+        .textContent =
+        score
+        +
+        "/4";
 
 
     document
-    .getElementById(
-        "streakScore"
-    )
-    .textContent =
+        .getElementById(
+            "streakScore"
+        )
+        .textContent =
 
-    streak.count
-    +
-    (
-        streak.count === 1
-        ?
-        " day"
-        :
-        " days"
-    );
+        streak.count
+        +
+        (
+            streak.count === 1
+            ?
+            " day"
+            :
+            " days"
+        );
 
 }
 
 
 /* =========================================================
-   POLYNOMIAL UI
+   PERFECT FIELD DAY
+========================================================= */
+
+const perfectCelebration =
+    document.getElementById(
+        "perfectCelebration"
+    );
+
+
+let perfectCelebrationTimer =
+    null;
+
+
+function maybeCelebratePerfectDay() {
+
+    const data =
+        loadDailyScore();
+
+
+    if (
+        calculateScore(
+            data
+        )
+        !==
+        4
+    ) {
+
+        return;
+
+    }
+
+
+    const today =
+        utcDateKey();
+
+
+    const alreadyCelebrated =
+
+        localStorage.getItem(
+            CELEBRATION_KEY
+        );
+
+
+    if (
+        alreadyCelebrated ===
+        today
+    ) {
+
+        return;
+
+    }
+
+
+    localStorage.setItem(
+        CELEBRATION_KEY,
+        today
+    );
+
+
+    perfectCelebration.hidden =
+        false;
+
+
+    perfectCelebration
+        .classList
+        .remove(
+            "show"
+        );
+
+
+    /*
+       Force browser to notice
+       the state change before animation.
+    */
+
+    void perfectCelebration.offsetWidth;
+
+
+    perfectCelebration
+        .classList
+        .add(
+            "show"
+        );
+
+
+    if (
+        perfectCelebrationTimer
+    ) {
+
+        clearTimeout(
+            perfectCelebrationTimer
+        );
+
+    }
+
+
+    perfectCelebrationTimer =
+
+        setTimeout(
+            function () {
+
+                perfectCelebration
+                    .classList
+                    .remove(
+                        "show"
+                    );
+
+
+                perfectCelebration.hidden =
+                    true;
+
+            },
+
+            reducedMotion
+            ?
+            1200
+            :
+            2400
+
+        );
+
+}
+
+
+/* =========================================================
+   POLYNOMIAL INTERFACE
 ========================================================= */
 
 const difficultyButtons =
 
-Array.from(
+    Array.from(
 
-    document
-    .querySelectorAll(
-        ".difficulty-button"
-    )
+        document.querySelectorAll(
+            ".difficulty-button"
+        )
 
-);
+    );
 
 
 const guessButtons =
 
-Array.from(
+    Array.from(
 
-    document
-    .querySelectorAll(
-        ".guess-button"
-    )
+        document.querySelectorAll(
+            ".guess-button"
+        )
 
-);
+    );
 
 
 const polynomialDisplay =
-document.getElementById(
-    "polynomialDisplay"
-);
+    document.getElementById(
+        "polynomialDisplay"
+    );
 
 
 const polynomialField =
-document.getElementById(
-    "polynomialField"
-);
+    document.getElementById(
+        "polynomialField"
+    );
 
 
 const polynomialDate =
-document.getElementById(
-    "polynomialDate"
-);
+    document.getElementById(
+        "polynomialDate"
+    );
 
 
 const difficultyLabel =
-document.getElementById(
-    "difficultyLabel"
-);
+    document.getElementById(
+        "difficultyLabel"
+    );
 
 
 const checkPolynomial =
-document.getElementById(
-    "checkPolynomial"
-);
+    document.getElementById(
+        "checkPolynomial"
+    );
 
 
 const polynomialResult =
-document.getElementById(
-    "polynomialResult"
-);
+    document.getElementById(
+        "polynomialResult"
+    );
 
 
 const resultHeading =
-document.getElementById(
-    "resultHeading"
-);
+    document.getElementById(
+        "resultHeading"
+    );
 
 
 const factorizationBox =
-document.getElementById(
-    "factorizationBox"
-);
+    document.getElementById(
+        "factorizationBox"
+    );
 
 
 let selectedDifficulty =
-"easy";
+    "easy";
 
 
 let selectedGuess =
-null;
+    null;
 
 
 let currentChallenge =
-null;
+    null;
 
 
 /* =========================================================
-   DISPLAY SAVED RESULT
+   SHOW RESULT
+========================================================= */
+
+function showPolynomialResult(
+    correct
+) {
+
+    const polynomial =
+        currentChallenge.polynomial;
+
+
+    const p =
+        currentChallenge.p;
+
+
+    const irreducible =
+
+        polynomialIsIrreducible(
+            polynomial,
+            p
+        );
+
+
+    polynomialResult.hidden =
+        false;
+
+
+    resultHeading.className =
+
+        "result-heading "
+        +
+        (
+            correct
+            ?
+            "correct-answer"
+            :
+            "wrong-answer"
+        );
+
+
+    resultHeading.textContent =
+
+        correct
+        ?
+        (
+            "Correct — "
+            +
+            (
+                irreducible
+                ?
+                "Irreducible"
+                :
+                "Reducible"
+            )
+        )
+        :
+        (
+            "Answer: "
+            +
+            (
+                irreducible
+                ?
+                "Irreducible"
+                :
+                "Reducible"
+            )
+        );
+
+
+    if (
+        irreducible
+    ) {
+
+        factorizationBox.innerHTML =
+
+            polynomialToHTML(
+                polynomial
+            )
+            +
+            " is irreducible over "
+            +
+            "𝔽<sub>"
+            +
+            p
+            +
+            "</sub>[x].";
+
+    } else {
+
+        const factors =
+
+            factorPolynomial(
+                polynomial,
+                p
+            );
+
+
+        factorizationBox.innerHTML =
+
+            polynomialToHTML(
+                polynomial
+            )
+            +
+            " = "
+            +
+            factorizationToHTML(
+                factors
+            )
+            +
+            " &nbsp; in &nbsp; "
+            +
+            "𝔽<sub>"
+            +
+            p
+            +
+            "</sub>[x].";
+
+    }
+
+}
+
+
+/* =========================================================
+   SAVED RESULT
 ========================================================= */
 
 function displaySavedResult() {
 
     const data =
-    loadDailyScore();
+        loadDailyScore();
 
 
     const saved =
-    data.levels[
-        selectedDifficulty
-    ];
+        data.levels[
+            selectedDifficulty
+        ];
 
 
     if (
@@ -7057,132 +7536,24 @@ function displaySavedResult() {
     }
 
 
-    const polynomial =
-    currentChallenge.polynomial;
-
-
-    const p =
-    currentChallenge.p;
-
-
-    const irreducible =
-
-    polynomialIsIrreducible(
-        polynomial,
-        p
-    );
-
-
-    polynomialResult.hidden =
-    false;
-
-
-    resultHeading.className =
-
-    "result-heading "
-    +
-    (
+    showPolynomialResult(
         saved
-        ?
-        "correct-answer"
-        :
-        "wrong-answer"
     );
-
-
-    resultHeading.textContent =
-
-    saved
-    ?
-    (
-        "Correct — "
-        +
-        (
-            irreducible
-            ?
-            "Irreducible"
-            :
-            "Reducible"
-        )
-    )
-    :
-    (
-        "Answer: "
-        +
-        (
-            irreducible
-            ?
-            "Irreducible"
-            :
-            "Reducible"
-        )
-    );
-
-
-    if (
-        irreducible
-    ) {
-
-        factorizationBox.innerHTML =
-
-        polynomialToHTML(
-            polynomial
-        )
-        +
-        " is irreducible over "
-        +
-        "𝔽<sub>"
-        +
-        p
-        +
-        "</sub>[x].";
-
-    } else {
-
-        const factors =
-
-        factorPolynomial(
-            polynomial,
-            p
-        );
-
-
-        factorizationBox.innerHTML =
-
-        polynomialToHTML(
-            polynomial
-        )
-        +
-        " = "
-        +
-        factorizationToHTML(
-            factors
-        )
-        +
-        " &nbsp; in &nbsp; "
-        +
-        "𝔽<sub>"
-        +
-        p
-        +
-        "</sub>[x].";
-
-    }
 
 
     guessButtons
-    .forEach(
-        button => {
+        .forEach(
+            button => {
 
-            button.disabled =
-            true;
+                button.disabled =
+                    true;
 
-        }
-    );
+            }
+        );
 
 
     checkPolynomial.disabled =
-    true;
+        true;
 
 
     return true;
@@ -7197,86 +7568,86 @@ function displaySavedResult() {
 function loadPolynomialChallenge() {
 
     selectedGuess =
-    null;
+        null;
 
 
     guessButtons
-    .forEach(
-        button => {
+        .forEach(
+            button => {
 
-            button.disabled =
-            false;
+                button.disabled =
+                    false;
 
 
-            button
-            .classList
-            .remove(
-                "selected"
-            );
+                button
+                    .classList
+                    .remove(
+                        "selected"
+                    );
 
-        }
-    );
+            }
+        );
 
 
     checkPolynomial.disabled =
-    true;
+        true;
 
 
     polynomialResult.hidden =
-    true;
+        true;
 
 
     currentChallenge =
 
-    generateDailyPolynomial(
-        selectedDifficulty
-    );
+        generateDailyPolynomial(
+            selectedDifficulty
+        );
 
 
     difficultyLabel.textContent =
 
-    difficultySettings[
-        selectedDifficulty
-    ]
-    .label;
+        difficultySettings[
+            selectedDifficulty
+        ]
+        .label;
 
 
     polynomialDate.textContent =
 
-    new Date()
-    .toLocaleDateString(
-        undefined,
-        {
+        new Date()
+        .toLocaleDateString(
+            undefined,
+            {
 
-            year:
-            "numeric",
+                year:
+                    "numeric",
 
-            month:
-            "long",
+                month:
+                    "long",
 
-            day:
-            "numeric"
+                day:
+                    "numeric"
 
-        }
-    );
+            }
+        );
 
 
     polynomialDisplay.innerHTML =
 
-    "f(x) = "
-    +
-    polynomialToHTML(
-        currentChallenge.polynomial
-    );
+        "f(x) = "
+        +
+        polynomialToHTML(
+            currentChallenge.polynomial
+        );
 
 
     polynomialField.innerHTML =
 
-    "f(x) ∈ 𝔽<sub>"
-    +
-    currentChallenge.p
-    +
-    "</sub>[x]";
+        "f(x) ∈ 𝔽<sub>"
+        +
+        currentChallenge.p
+        +
+        "</sub>[x]";
 
 
     displaySavedResult();
@@ -7289,46 +7660,45 @@ function loadPolynomialChallenge() {
 ========================================================= */
 
 difficultyButtons
-.forEach(
-    function (button) {
+    .forEach(
+        function (button) {
 
-        button
-        .addEventListener(
-            "click",
-            function () {
+            button.addEventListener(
+                "click",
+                function () {
 
-                difficultyButtons
-                .forEach(
-                    item => {
+                    difficultyButtons
+                        .forEach(
+                            item => {
 
-                        item
+                                item
+                                    .classList
+                                    .remove(
+                                        "active"
+                                    );
+
+                            }
+                        );
+
+
+                    button
                         .classList
-                        .remove(
+                        .add(
                             "active"
                         );
 
-                    }
-                );
+
+                    selectedDifficulty =
+                        button.dataset.difficulty;
 
 
-                button
-                .classList
-                .add(
-                    "active"
-                );
+                    loadPolynomialChallenge();
 
+                }
+            );
 
-                selectedDifficulty =
-                button.dataset.difficulty;
-
-
-                loadPolynomialChallenge();
-
-            }
-        );
-
-    }
-);
+        }
+    );
 
 
 /* =========================================================
@@ -7336,56 +7706,55 @@ difficultyButtons
 ========================================================= */
 
 guessButtons
-.forEach(
-    function (button) {
+    .forEach(
+        function (button) {
 
-        button
-        .addEventListener(
-            "click",
-            function () {
+            button.addEventListener(
+                "click",
+                function () {
 
-                if (
-                    button.disabled
-                ) {
+                    if (
+                        button.disabled
+                    ) {
 
-                    return;
+                        return;
 
-                }
+                    }
 
 
-                guessButtons
-                .forEach(
-                    item => {
+                    guessButtons
+                        .forEach(
+                            item => {
 
-                        item
+                                item
+                                    .classList
+                                    .remove(
+                                        "selected"
+                                    );
+
+                            }
+                        );
+
+
+                    button
                         .classList
-                        .remove(
+                        .add(
                             "selected"
                         );
 
-                    }
-                );
+
+                    selectedGuess =
+                        button.dataset.guess;
 
 
-                button
-                .classList
-                .add(
-                    "selected"
-                );
+                    checkPolynomial.disabled =
+                        false;
 
+                }
+            );
 
-                selectedGuess =
-                button.dataset.guess;
-
-
-                checkPolynomial.disabled =
-                false;
-
-            }
-        );
-
-    }
-);
+        }
+    );
 
 
 /* =========================================================
@@ -7393,99 +7762,127 @@ guessButtons
 ========================================================= */
 
 checkPolynomial
-.addEventListener(
-    "click",
-    function () {
+    .addEventListener(
+        "click",
+        function () {
 
-        if (
-            !selectedGuess
-        ) {
+            if (
+                !selectedGuess
+            ) {
 
-            return;
+                return;
 
-        }
-
-
-        const dailyData =
-        loadDailyScore();
+            }
 
 
-        if (
+            const dailyData =
+                loadDailyScore();
+
+
+            if (
+                dailyData.levels[
+                    selectedDifficulty
+                ]
+                !==
+                null
+            ) {
+
+                displaySavedResult();
+
+                return;
+
+            }
+
+
+            const polynomial =
+                currentChallenge.polynomial;
+
+
+            const p =
+                currentChallenge.p;
+
+
+            const irreducible =
+
+                polynomialIsIrreducible(
+                    polynomial,
+                    p
+                );
+
+
+            const correctAnswer =
+
+                irreducible
+                ?
+                "irreducible"
+                :
+                "reducible";
+
+
+            const correct =
+
+                selectedGuess
+                ===
+                correctAnswer;
+
+
             dailyData.levels[
                 selectedDifficulty
-            ]
-            !==
-            null
-        ) {
-
-            displaySavedResult();
-
-            return;
-
-        }
+            ] =
+                correct;
 
 
-        const polynomial =
-        currentChallenge.polynomial;
+            saveDailyScore(
+                dailyData
+            );
 
 
-        const p =
-        currentChallenge.p;
+            if (
+                correct
+            ) {
+
+                registerCorrectDay();
+
+            }
 
 
-        const irreducible =
-
-        polynomialIsIrreducible(
-            polynomial,
-            p
-        );
+            displayScore();
 
 
-        const correctAnswer =
-
-        irreducible
-        ?
-        "irreducible"
-        :
-        "reducible";
+            showPolynomialResult(
+                correct
+            );
 
 
-        const correct =
+            guessButtons
+                .forEach(
+                    button => {
 
-        selectedGuess
-        ===
-        correctAnswer;
+                        button.disabled =
+                            true;
 
-
-        dailyData.levels[
-            selectedDifficulty
-        ] =
-        correct;
+                    }
+                );
 
 
-        saveDailyScore(
-            dailyData
-        );
+            checkPolynomial.disabled =
+                true;
 
 
-        if (correct) {
+            /*
+               If the answer just produced 4/4,
+               show the subtle finite-field
+               celebration.
+            */
 
-            registerCorrectDay();
+            maybeCelebratePerfectDay();
 
         }
-
-
-        displayScore();
-
-
-        displaySavedResult();
-
-    }
-);
+    );
 
 
 /* =========================================================
-   INITIAL POLYNOMIAL
+   INITIAL GAME
 ========================================================= */
 
 displayScore();
@@ -7498,51 +7895,51 @@ loadPolynomialChallenge();
 ========================================================= */
 
 const siteFooter =
-document.getElementById(
-    "siteFooter"
-);
+    document.getElementById(
+        "siteFooter"
+    );
 
 
 const qedButton =
-document.getElementById(
-    "qedButton"
-);
+    document.getElementById(
+        "qedButton"
+    );
 
 
 const qedReturn =
-document.getElementById(
-    "qedReturn"
-);
+    document.getElementById(
+        "qedReturn"
+    );
 
 
 qedButton
-.addEventListener(
-    "click",
-    function () {
+    .addEventListener(
+        "click",
+        function () {
 
-        siteFooter
-        .classList
-        .add(
-            "proof-mode"
-        );
+            siteFooter
+                .classList
+                .add(
+                    "proof-mode"
+                );
 
-    }
-);
+        }
+    );
 
 
 qedReturn
-.addEventListener(
-    "click",
-    function () {
+    .addEventListener(
+        "click",
+        function () {
 
-        siteFooter
-        .classList
-        .remove(
-            "proof-mode"
-        );
+            siteFooter
+                .classList
+                .remove(
+                    "proof-mode"
+                );
 
-    }
-);
+        }
+    );
 
 
 /* =========================================================
@@ -7550,48 +7947,48 @@ qedReturn
 ========================================================= */
 
 const sidebar =
-document.getElementById(
-    "sidebar"
-);
+    document.getElementById(
+        "sidebar"
+    );
 
 
 const mobileToggle =
-document.getElementById(
-    "mobileToggle"
-);
+    document.getElementById(
+        "mobileToggle"
+    );
 
 
 const backdrop =
-document.getElementById(
-    "backdrop"
-);
+    document.getElementById(
+        "backdrop"
+    );
 
 
 function openMenu() {
 
     sidebar
-    .classList
-    .add(
-        "open"
-    );
+        .classList
+        .add(
+            "open"
+        );
 
 
     backdrop
-    .classList
-    .add(
-        "visible"
-    );
+        .classList
+        .add(
+            "visible"
+        );
 
 
     mobileToggle
-    .setAttribute(
-        "aria-expanded",
-        "true"
-    );
+        .setAttribute(
+            "aria-expanded",
+            "true"
+        );
 
 
     mobileToggle.textContent =
-    "×";
+        "×";
 
 }
 
@@ -7599,81 +7996,80 @@ function openMenu() {
 function closeMenu() {
 
     sidebar
-    .classList
-    .remove(
-        "open"
-    );
+        .classList
+        .remove(
+            "open"
+        );
 
 
     backdrop
-    .classList
-    .remove(
-        "visible"
-    );
+        .classList
+        .remove(
+            "visible"
+        );
 
 
     mobileToggle
-    .setAttribute(
-        "aria-expanded",
-        "false"
-    );
+        .setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
 
     mobileToggle.textContent =
-    "☰";
+        "☰";
 
 }
 
 
 mobileToggle
-.addEventListener(
-    "click",
-    function () {
+    .addEventListener(
+        "click",
+        function () {
 
-        if (
-            sidebar
-            .classList
-            .contains(
-                "open"
-            )
-        ) {
+            if (
+                sidebar
+                    .classList
+                    .contains(
+                        "open"
+                    )
+            ) {
 
-            closeMenu();
+                closeMenu();
 
-        } else {
+            } else {
 
-            openMenu();
+                openMenu();
+
+            }
 
         }
-
-    }
-);
+    );
 
 
 backdrop
-.addEventListener(
-    "click",
-    closeMenu
-);
+    .addEventListener(
+        "click",
+        closeMenu
+    );
 
 
 document
-.addEventListener(
-    "keydown",
-    function (event) {
+    .addEventListener(
+        "keydown",
+        function (event) {
 
-        if (
-            event.key
-            ===
-            "Escape"
-        ) {
+            if (
+                event.key ===
+                "Escape"
+            ) {
 
-            closeMenu();
+                closeMenu();
+
+            }
 
         }
-
-    }
-);
+    );
 
 
 /* =========================================================
@@ -7682,221 +8078,223 @@ document
 
 const navLinks =
 
-Array.from(
+    Array.from(
 
-    document
-    .querySelectorAll(
-        ".nav-link"
-    )
+        document
+            .querySelectorAll(
+                ".nav-link"
+            )
 
-);
+    );
 
 
 navLinks
-.forEach(
-    function (link) {
+    .forEach(
+        function (link) {
 
-        link
-        .addEventListener(
-            "click",
-            function () {
+            link
+                .addEventListener(
+                    "click",
+                    function () {
 
-                if (
-                    window.innerWidth
-                    <=
-                    980
-                ) {
+                        if (
+                            window.innerWidth
+                            <=
+                            980
+                        ) {
 
-                    closeMenu();
+                            closeMenu();
 
-                }
-
-            }
-        );
-
-    }
-);
-
-
-const sections =
-
-Array.from(
-
-    document
-    .querySelectorAll(
-        "main section[id]"
-    )
-
-);
-
-
-const navigationObserver =
-
-new IntersectionObserver(
-
-    function (entries) {
-
-        entries
-        .forEach(
-            function (entry) {
-
-                if (
-                    !entry.isIntersecting
-                ) {
-
-                    return;
-
-                }
-
-
-                navLinks
-                .forEach(
-                    function (link) {
-
-                        link
-                        .classList
-                        .remove(
-                            "active"
-                        );
+                        }
 
                     }
                 );
 
-
-                const current =
-
-                document
-                .querySelector(
-
-                    '.nav-link[href="#'
-                    +
-                    entry.target.id
-                    +
-                    '"]'
-
-                );
-
-
-                if (current) {
-
-                    current
-                    .classList
-                    .add(
-                        "active"
-                    );
-
-                }
-
-            }
-        );
-
-    },
-
-    {
-
-        rootMargin:
-        "-36% 0px -55%"
-
-    }
-
-);
-
-
-sections
-.forEach(
-    function (section) {
-
-        navigationObserver
-        .observe(
-            section
-        );
-
-    }
-);
-
-
-/* =========================================================
-   REVEAL
-========================================================= */
-
-if (reducedMotion) {
-
-    document
-    .querySelectorAll(
-        ".reveal"
-    )
-    .forEach(
-        function (element) {
-
-            element
-            .classList
-            .add(
-                "visible"
-            );
-
         }
     );
 
-} else {
 
-    const revealObserver =
+const sections =
+
+    Array.from(
+
+        document
+            .querySelectorAll(
+                "main section[id]"
+            )
+
+    );
+
+
+const navigationObserver =
 
     new IntersectionObserver(
 
         function (entries) {
 
             entries
-            .forEach(
-                function (entry) {
+                .forEach(
+                    function (entry) {
 
-                    if (
-                        entry.isIntersecting
-                    ) {
+                        if (
+                            !entry.isIntersecting
+                        ) {
 
-                        entry
-                        .target
-                        .classList
-                        .add(
-                            "visible"
-                        );
+                            return;
+
+                        }
 
 
-                        revealObserver
-                        .unobserve(
-                            entry.target
-                        );
+                        navLinks
+                            .forEach(
+                                function (link) {
+
+                                    link
+                                        .classList
+                                        .remove(
+                                            "active"
+                                        );
+
+                                }
+                            );
+
+
+                        const current =
+
+                            document
+                                .querySelector(
+
+                                    '.nav-link[href="#'
+                                    +
+                                    entry.target.id
+                                    +
+                                    '"]'
+
+                                );
+
+
+                        if (current) {
+
+                            current
+                                .classList
+                                .add(
+                                    "active"
+                                );
+
+                        }
 
                     }
-
-                }
-            );
+                );
 
         },
 
         {
 
-            threshold:
-            0.08
+            rootMargin:
+                "-36% 0px -55%"
 
         }
 
     );
+
+
+sections
+    .forEach(
+        function (section) {
+
+            navigationObserver
+                .observe(
+                    section
+                );
+
+        }
+    );
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+if (
+    reducedMotion
+) {
+
+    document
+        .querySelectorAll(
+            ".reveal"
+        )
+        .forEach(
+            function (element) {
+
+                element
+                    .classList
+                    .add(
+                        "visible"
+                    );
+
+            }
+        );
+
+} else {
+
+    const revealObserver =
+
+        new IntersectionObserver(
+
+            function (entries) {
+
+                entries
+                    .forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry
+                                    .target
+                                    .classList
+                                    .add(
+                                        "visible"
+                                    );
+
+
+                                revealObserver
+                                    .unobserve(
+                                        entry.target
+                                    );
+
+                            }
+
+                        }
+                    );
+
+            },
+
+            {
+
+                threshold:
+                    0.08
+
+            }
+
+        );
 
 
     document
-    .querySelectorAll(
-        ".reveal"
-    )
-    .forEach(
-        function (element) {
+        .querySelectorAll(
+            ".reveal"
+        )
+        .forEach(
+            function (element) {
 
-            revealObserver
-            .observe(
-                element
-            );
+                revealObserver
+                    .observe(
+                        element
+                    );
 
-        }
-    );
+            }
+        );
 
 }
 
@@ -7906,171 +8304,170 @@ if (reducedMotion) {
 ========================================================= */
 
 const publicationSearch =
-document.getElementById(
-    "publicationSearch"
-);
+    document.getElementById(
+        "publicationSearch"
+    );
 
 
 const publicationItems =
 
-Array.from(
+    Array.from(
 
-    document
-    .querySelectorAll(
-        ".publication"
-    )
+        document
+            .querySelectorAll(
+                ".publication"
+            )
 
-);
+    );
 
 
 const filterButtons =
 
-Array.from(
+    Array.from(
 
-    document
-    .querySelectorAll(
-        ".filter"
-    )
+        document
+            .querySelectorAll(
+                ".filter"
+            )
 
-);
+    );
 
 
 const noPublications =
-document.getElementById(
-    "noPublications"
-);
+    document.getElementById(
+        "noPublications"
+    );
 
 
 let currentFilter =
-"all";
+    "all";
 
 
 function filterPublications() {
 
     const query =
 
-    publicationSearch
-    .value
-    .trim()
-    .toLowerCase();
-
-
-    let visible =
-    0;
-
-
-    publicationItems
-    .forEach(
-        function (publication) {
-
-            const text =
-
-            publication
-            .textContent
+        publicationSearch
+            .value
+            .trim()
             .toLowerCase();
 
 
-            const category =
-            publication.dataset.category;
+    let visible =
+        0;
 
 
-            const show =
+    publicationItems
+        .forEach(
+            function (publication) {
 
-            (
-                currentFilter
-                ===
-                "all"
+                const text =
 
-                ||
-
-                currentFilter
-                ===
-                category
-            )
-
-            &&
-
-            (
-                query
-                ===
-                ""
-
-                ||
-
-                text.includes(
-                    query
-                )
-            );
+                    publication
+                        .textContent
+                        .toLowerCase();
 
 
-            publication.hidden =
-            !show;
+                const category =
+                    publication
+                        .dataset
+                        .category;
 
 
-            if (show) {
+                const show =
 
-                visible++;
+                    (
+                        currentFilter ===
+                        "all"
+
+                        ||
+
+                        currentFilter ===
+                        category
+                    )
+
+                    &&
+
+                    (
+                        query ===
+                        ""
+
+                        ||
+
+                        text.includes(
+                            query
+                        )
+                    );
+
+
+                publication.hidden =
+                    !show;
+
+
+                if (show) {
+
+                    visible++;
+
+                }
 
             }
-
-        }
-    );
+        );
 
 
     noPublications.hidden =
-    visible !== 0;
+        visible !== 0;
 
 }
 
 
 publicationSearch
-.addEventListener(
-    "input",
-    filterPublications
-);
+    .addEventListener(
+        "input",
+        filterPublications
+    );
 
 
 filterButtons
-.forEach(
-    function (button) {
+    .forEach(
+        function (button) {
 
-        button
-        .addEventListener(
-            "click",
-            function () {
+            button
+                .addEventListener(
+                    "click",
+                    function () {
 
-                filterButtons
-                .forEach(
-                    function (item) {
+                        filterButtons
+                            .forEach(
+                                function (item) {
 
-                        item
-                        .classList
-                        .remove(
-                            "active"
-                        );
+                                    item
+                                        .classList
+                                        .remove(
+                                            "active"
+                                        );
+
+                                }
+                            );
+
+
+                        button
+                            .classList
+                            .add(
+                                "active"
+                            );
+
+
+                        currentFilter =
+                            button.dataset.filter;
+
+
+                        filterPublications();
 
                     }
                 );
 
-
-                button
-                .classList
-                .add(
-                    "active"
-                );
-
-
-                currentFilter =
-                button.dataset.filter;
-
-
-                filterPublications();
-
-            }
-        );
-
-    }
-);
+        }
+    );
 
 
 /* =========================================================
@@ -8078,50 +8475,55 @@ filterButtons
 ========================================================= */
 
 const themeToggle =
-document.getElementById(
-    "themeToggle"
-);
+    document.getElementById(
+        "themeToggle"
+    );
 
 
 themeToggle
-.addEventListener(
-    "click",
-    function () {
+    .addEventListener(
+        "click",
+        function () {
 
-        const current =
+            const current =
 
-        document
-        .documentElement
-        .getAttribute(
-            "data-theme"
-        );
-
-
-        const next =
-
-        current === "dark"
-        ?
-        "light"
-        :
-        "dark";
+                document
+                    .documentElement
+                    .getAttribute(
+                        "data-theme"
+                    );
 
 
-        document
-        .documentElement
-        .setAttribute(
-            "data-theme",
-            next
-        );
+            const next =
+
+                current ===
+                "dark"
+
+                ?
+
+                "light"
+
+                :
+
+                "dark";
 
 
-        localStorage
-        .setItem(
-            "anit-theme",
-            next
-        );
+            document
+                .documentElement
+                .setAttribute(
+                    "data-theme",
+                    next
+                );
 
-    }
-);
+
+            localStorage
+                .setItem(
+                    "anit-theme",
+                    next
+                );
+
+        }
+    );
 
 
 /* =========================================================
@@ -8129,73 +8531,75 @@ themeToggle
 ========================================================= */
 
 const backToTop =
-document.getElementById(
-    "backToTop"
-);
+    document.getElementById(
+        "backToTop"
+    );
 
 
 window
-.addEventListener(
-    "scroll",
-    function () {
+    .addEventListener(
+        "scroll",
+        function () {
 
-        if (
-            window.scrollY
-            >
-            650
-        ) {
+            if (
+                window.scrollY
+                >
+                650
+            ) {
 
-            backToTop
-            .classList
-            .add(
-                "visible"
-            );
+                backToTop
+                    .classList
+                    .add(
+                        "visible"
+                    );
 
-        } else {
+            } else {
 
-            backToTop
-            .classList
-            .remove(
-                "visible"
-            );
+                backToTop
+                    .classList
+                    .remove(
+                        "visible"
+                    );
 
+            }
+
+        },
+
+        {
+            passive: true
         }
-
-    },
-
-    {
-        passive:
-        true
-    }
-
-);
+    );
 
 
 backToTop
-.addEventListener(
-    "click",
-    function () {
+    .addEventListener(
+        "click",
+        function () {
 
-        window
-        .scrollTo(
-            {
+            window
+                .scrollTo(
+                    {
 
-                top:
-                0,
+                        top:
+                            0,
 
-                behavior:
+                        behavior:
 
-                reducedMotion
-                ?
-                "auto"
-                :
-                "smooth"
+                            reducedMotion
 
-            }
-        );
+                            ?
 
-    }
-);
+                            "auto"
+
+                            :
+
+                            "smooth"
+
+                    }
+                );
+
+        }
+    );
 
 
 /* =========================================================
@@ -8203,13 +8607,13 @@ backToTop
 ========================================================= */
 
 document
-.getElementById(
-    "year"
-)
-.textContent =
+    .getElementById(
+        "year"
+    )
+    .textContent =
 
-new Date()
-.getFullYear();
+    new Date()
+        .getFullYear();
 
 </script>
 
